@@ -1,110 +1,161 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 
-  <style>@import url('https://fonts.googleapis.com/css2?family=Cabin:wdth@75&family=Noto+Sans+KR:wght@300&display=swap');
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>기말</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+
+
+
+
+    
+        <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Noto+Serif+KR:wght@500&display=swap');
 
 body {
-background-color: #000000;
-  display: block;
-  height: 3040px;
+    background-color: #000000;
+	height: 10000px;
+}
+
+
+
+#namecard {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: fixed;
+    margin: 0 auto;
+	top: 400px;
+	left: 0;
+	right: 0;
+    width: 570px;   
+    height: 360px;      
+    background-color: #fafbfc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#logo {
+    /*position: absolute;*/
+    width: 220px;
+	height: 175px;
+	text-align: center;
+	padding-top: 45px;
+}
+
+#name {
+	font-family: 'Noto Serif KR', serif;
+    font-size: 34px;
+	height: 140px;
+	width: 220px;
+	text-align: center;
 
 }
 
-#card {	
-	
-    top:200px;
-    left:10%;
-    display:block;
-	justify-content: center;
-	position:fixed;
-  	align-items: center;
-    border-radius:80px;
-    height: 1280px;
-    width: 720px;
-	}
-	  
-	  #wow {font-family: 'Cabin', sans-serif;
-		  top: 840px;
-		  position:absolute;
-		  text-align: center;
-		  font-size: 1.4rem;
-		  width: 100%;
-	  }
-  
-	  	  #wow2 {font-family: 'Noto Sans KR', sans-serif;
-		  top: 730px;
-		  position:absolute;
-		  text-align: center;
-		  font-size: 1.15rem;
-		  width: 100%;
-			  
-	  }
-	  
-	  .fab {
-		  position: absolute;
-		  width: 100%;
-		  top:900px;
-	  }
-	  
-	  #icon {
-		  position:absolute;
-		  width:50px;
-		  top: 960px;
-		  left: 47%;
-		  transform: translate(-50% 50%);
-		  
-		  
-	  }
-	  
-	  	  #icons {
+#team {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 21px;
+    width: 350px;
+	top: 5px;
 
-		  width:50px;
-	  
-		  
-	  }
-	  
-	  img{
-		  width: 720px;
-	  }
-  
-  </style>
-	
-	
-	
-	
-	
+}
 
+
+#contact {
+    display: flex;
+	align-items: center;
+    /*position: absolute;*/
+    width:350px;
+	height: 220px;
+}
+#contactA {
+    /*position: relative;*/
+    font-weight: 900;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+	width: 89px;
+	/*margin: 68px 220px;*/
+    }
+
+#contactB {
+    /*position: relative;*/
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+	/*margin: 68px 302px;*/
+    }
+
+			.links {
+			text-decoration: none;
+            color:#000000;
+			}
+			.links:hover {
+            color: #ff0085;
+			}
+			
+        </style>
+
+
+
+
+
+
+
+</head>
 
 <body>
-  
- <div id="card">
-	 
-	 <div id="wow2">
-	 대구가톨릭대학교<br>
-	 디지털디자인과<br>
-	
-	 </div>
-   
-<div id="wow">
-	 7123-3492<br>
-	 alessandro.sejini@gmail.com<br>
-	
-	 </div>
-	 
-	 <div id="icon">
-		<a href="https://www.instagram.com/alsan.se">
-	 <img id="icons" src="images/instagram.svg">
-						  </a>
-	 </div>
-		 
-		 
-<img src="images/cade.png">
-   
-  </div>
-  
-  
-  
-  
+
+
+
+
+
+    <div id="namecard">
+
+        <div id="logo">
+            <img src="images/logos.png">
+        </div>
+
+        <div id="contact">
+            <div id="contactA">
+                Mobile:<br>
+                E-mail:<br>
+                Instagram:
+            </div>
+
+            <div id="contactB">
+                <a class="links" href="tel:+821071233492">010-7123-3492</a><br>
+                <a class="links" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a><br>
+				<a class="links" href="https://www.instagram.com/alsan.se">@alsan.se</a>
+            </div>
+        </div>
+
+        <div id="name">
+            김세진
+        </div>
+
+        <div id="team">
+            재학생<br>
+            디지털디자인과<br>
+            대구가톨릭대학교
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
 </body>
+    
 </html>
+
