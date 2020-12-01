@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>Alessandro Sejini</title>
+    <link rel="stylesheet" href="animate.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
@@ -64,6 +65,7 @@ body {
 }
 
 #name {
+    margin-top: -5px;
 	font-family: 'Noto Serif KR', serif;
     font-size: 34px;
 	height: 140px;
@@ -178,7 +180,45 @@ __SVGATOR_PLAYER__.build({"root":"ea8rwnq0gv2f1","animations":[{"duration":3000,
 </div>
 
 
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
 
+
+<script>
+
+
+$(document).ready(function () {
+    // 텍스트 애니메이션 정의
+	$('.links').textillate({
+        autoStart: false,
+        in: {
+            effect: 'bounce',
+            delayScale: 3,
+            delay: 500,
+            sync: true,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        },
+        out: {
+            effect: 'bounce',
+            delayScale: 1.5,
+            delay: 50,
+            sync: true,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        }   
+    });
+
+    $('.links').textillate('in');
+    setTimeout(function(){
+        $('.links').textillate('out');
+    }, 3000);
+})
+
+</script>
 
 
 
