@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Alessandro Sejini</title>
     <link rel="stylesheet" href="animate.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
@@ -78,7 +77,42 @@ body {
     background-color: #fafbfc;
     border-radius: 10px;
     padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;  
+	text-align: center;
 }
+    .icon {
+        display: flex;
+		margin: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center; 
+        text-align: center;
+        width: 80%;
+        opacity: 0%;
+    }
+
+    .icons {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+    }
+
+
+
+
 
 
 #namecardB {
@@ -93,6 +127,10 @@ height: 360px;
 background-color: #fafbfc;
 border-radius: 10px;
 padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;  
+text-align: center;
 }
 
 
@@ -108,6 +146,10 @@ height: 360px;
 background-color: #fafbfc;
 border-radius: 10px;
 padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;  
+text-align: center;
 }
 
 #parking {
@@ -278,6 +320,9 @@ background-color: #000000;
     opacity: 0%; 
 }
 
+
+
+
         </style>
 
 
@@ -305,7 +350,7 @@ background-color: #000000;
                     <div id="contactB">
                         <a class="links" href="tel:+821071233492">010-7123-3492</a><br>
                         <a class="links" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a><br>
-                        <a class="links" href="https://www.instagram.com/alsan.se">@alsan.se</a>
+                        <a class="links" href="https://www.instagram.com/alsan.se" target="_blank">@alsan.se</a>
                     </div>
                 </div>
         
@@ -323,9 +368,9 @@ background-color: #000000;
 
 
         <div id="water">
-            <div id="namecardA"></div>
-            <div id="namecardB"></div>
-            <div id="namecardC"></div>
+            <a href="#" id="linkA"><div id="namecardA"><div class="icon"><img class="icons" src="images/nmcd_a.png"><p class='title'>Photography</p></div></div></a>
+            <div id="namecardB"><div class="icon"><img class="icons" src="images/nmcd_b.png"><p class='title'>Design</p></div></div>
+            <div id="namecardC"><div class="icon"><img class="icons" src="images/nmcd_c.png"><p class='title'>Quotes</p></div></div>
             <div id="parking"></div>
             <div id="footer">2020©ALSANSE</div>
             <div id="go_up">다시 위로 올려서 명함 보기</div>
@@ -357,7 +402,7 @@ background-color: #000000;
             <div id="contactB">
                 <a class="links" href="tel:+821071233492">010-7123-3492</a><br>
                 <a class="links" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a><br>
-				<a class="links" href="https://www.instagram.com/alsan.se">@alsan.se</a>
+				<a class="links" href="https://www.instagram.com/alsan.se" target="_blank">@alsan.se</a>
             </div>
         </div>
 
@@ -386,7 +431,7 @@ background-color: #000000;
 
 
 
-
+$(document).ready(function(){$('#aaaa').hover(function(){$('#namecardA').animate({'width': '600px',}, 2000);});});
 
 
 
@@ -403,10 +448,6 @@ $(document).ready(function(){
     });
 
 });
-
-
-
-
 
 
 
@@ -453,14 +494,15 @@ $(document).ready(function () {
             $('#scroll').animate({'opacity':'0%', 'top':'1400px'}, 1000, 'easeInBack');}
 
         if(height>=1600) {
-            $('#namecard').animate({'opacity':'0%'}, 300).delay(300).animate({'left':'+1000px'});
+            $('#namecard').animate({'opacity':'0%'}, 300).delay(300).animate({'left':'+10000px'});
             $('#layout').animate({'opacity':'0%'}, 100);
-            $('#parking').animate({'opacity':'0%'}, 100);
+            $('#parking').animate({'opacity':'0%'}, 100).delay(300).animate({'left':'+10000px'});
             $('#rerere').animate({'opacity': '100%'}, 100);
             $('#go_up').delay(2000).animate({'opacity': '100%', 'top':'160px'}, 1200, 'easeOutBack');
             $('#namecardA').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(60).animate({'left':'-720px'}, 400, 'easeOutExpo');
             $('#namecardB').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo');
             $('#namecardC').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(120).animate({'left':'+720px'}, 400, 'easeOutExpo');
+            $('.icon').delay(700).animate({'opacity': '100%'}, 1000);
         } 
 
 
@@ -478,6 +520,7 @@ $(document).ready(function () {
 
 
 });
+
 
 
 </script>
