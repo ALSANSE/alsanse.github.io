@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Alessandro Sejini</title>
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+    
+        <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Noto+Serif+KR:wght@500&display=swap');
+
+body {
+    background-color: #fafbfc;
+	/*height: 2000px;*/
+}
+
+
+
+#exit {
+    background-color: #ff0085;
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    top:50px;
+    left:50px;
+}
+
+
+
+
+        </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+<a href="index.html"><div id="exit"></div></a>
+<img src="images/360.png"><img src="images/540.png"><img src="images/720.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+
+
+<script>
+
+
+
+$(document).ready(function(){$('#aaaa').hover(function(){$('#namecardA').animate({'width': '600px',}, 2000);});});
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('#namecard').animate({top:'240px'}, 2000, 'easeInOutBack');
+        $('#scroll').delay(2000).animate({opacity: '100%', right:'160px'}, 1000, 'easeOutExpo');
+        $('#more').delay(2000).animate({opacity: '100%'}, 1000);
+        $('#indi1').delay(2200).animate({opacity: '100%'}, 600);
+        $('#indi2').delay(2400).animate({opacity: '100%'}, 600);
+        $('#indi3').delay(2600).animate({opacity: '100%'}, 600);
+        $('#indi4').delay(2800).animate({opacity: '100%'}, 600);
+        $('#indi5').delay(3000).animate({opacity: '100%'}, 600);
+        $('#indi6').delay(3200).animate({opacity: '100%'}, 600);
+    });
+
+});
+
+
+
+
+$(document).ready(function () {
+	$('.links').textillate({
+        autoStart: false,
+        loop: true,
+        in: {
+            effect: 'flash',
+            delayScale: 1.5,
+            delay: 50,
+            sync: false,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        },
+        out: {
+            effect: 'flash',
+            delayScale: 1.5,
+            delay: 50,
+            sync: false,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        }   
+    });
+
+    $('.links').textillate('in');
+    setTimeout(function(){
+        $('.links').textillate('out');
+    }, 2600);
+
+
+
+
+
+    $(window).scroll(function () {
+        var height = $(document).scrollTop();
+        log(height);
+
+        if(height>=180) {
+            $('#indi1').animate({'top':'700px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+        if(height>=330) {
+            $('#indi2').animate({'top':'850px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+        if(height>=480) {
+            $('#indi3').animate({'top':'1000px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+        if(height>=630) {
+            $('#indi4').animate({'top':'1150px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+        if(height>=780) {
+            $('#indi5').animate({'top':'1300px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+        if(height>=800) {
+            $('#scroll').animate({'opacity':'0%', 'top':'1400px'}, 1000, 'easeInBack');
+            }
+        
+        if(height>=930) {
+            $('#indi6').animate({'top':'1450px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        }
+
+        if(height>=1600) {
+            $('#namecard').animate({'opacity':'0%'}, 300).delay(300).animate({'left':'-10000px'});
+            $('#layout').animate({'opacity':'0%'}, 100);
+            $('#parking').animate({'opacity':'0%'}, 100).delay(300).animate({'left':'-10000px'});
+            $('#rerere').animate({'opacity': '100%'}, 100);
+            $('#go_up').delay(2000).animate({'opacity': '100%', 'top':'160px'}, 1200, 'easeOutBack');
+            $('#namecardA').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(60).animate({'left':'-720px'}, 400, 'easeOutExpo');
+            $('#namecardB').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo');
+            $('#namecardC').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(120).animate({'left':'+720px'}, 400, 'easeOutExpo');
+            $('.icon').delay(700).animate({'opacity': '100%'}, 1000);
+        } 
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+
+
+
+
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+    
+</html>
+
