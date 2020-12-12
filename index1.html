@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Alessandro Sejini</title>
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+    
+        <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Noto+Serif+KR:wght@500&display=swap');
+
+body {
+    background-color: #000000;
+	/*height: 2000px;*/
+}
+
+
+#namecard {
+    position: fixed;
+    margin: 0 auto;
+	top: -400px;
+	left: 0;
+	right: 0;
+    width: 570px;   
+    height: 360px;      
+    background-color: #fafbfc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+#namecardA {
+
+    position: absolute;
+    margin: 0 auto;
+	top: 240px;
+	left: -720px;
+	right: 0;
+    width: 240px;   
+    height: 720px;      
+    background-color: #fafbfc;
+    border-radius: 40px;
+    padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align: center;
+    opacity: 0%;
+}
+    .icon {
+      display: flex;
+		margin: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+        opacity: 100%;
+    }
+
+    #iconsA {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #titleA {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+        
+    }
+
+    #iconsB {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #titleB {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+        
+    }
+
+    #iconsC {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #titleC {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+        
+    }
+
+
+#namecardB {
+
+    position: absolute;
+    margin: 0 auto;
+	top: 240px;
+	left: 0px;
+	right: 0;
+    width: 240px;   
+    height: 720px;      
+    background-color: #fafbfc;
+    border-radius: 40px;
+    padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align: center;
+    opacity: 0%;
+}
+
+
+#namecardC {
+
+    position: absolute;
+    margin: 0 auto;
+	top: 240px;
+	left: +720px;
+	right: 0;
+    width: 240px;   
+    height: 720px;      
+    background-color: #fafbfc;
+    border-radius: 40px;
+    padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align: center;
+    opacity: 0%;
+}
+
+
+
+
+
+#water {
+position: relative;
+width: 100%;
+height: 1300px;
+/*top: 1600px;
+background-color: #000000;*/
+
+}
+
+
+
+#footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top:1200px;
+    color: #222324;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+#goBack {
+
+
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #000000;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 21px;
+    opacity: 0%;
+}
+
+
+
+
+        </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+        <div id="water">
+            <a href="index3.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
+            <div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div>
+            <div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
+            <div id="footer">2020©ALSANSE</div>
+        </div>
+
+
+        <a href="index.html"><div id="namecard"><p id="goBack">명함 보기</p></div></a>
+
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('#namecard').delay(2000).animate({top:'-350px'}, 2000, 'easeInOutBack');
+        $('#namecardA').delay(1000).animate({opacity: '100%'}, 1000);
+        $('#namecardB').delay(1200).animate({opacity: '100%'}, 1000);
+        $('#namecardC').delay(1400).animate({opacity: '100%'}, 1000);
+    });
+
+});
+
+
+
+
+$(document).ready(function(){
+    $("#namecardA").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsA').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardA").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsA').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardB").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsB').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardB").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsB').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardC").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsC').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardC").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#namecard").on('mouseover', function(){
+        $(this).stop().animate({'top':'-320px'}, 1000, 'easeOutExpo');
+        $('#goBack').stop().animate({'opacity':'100%'}, 1000, 'easeOutExpo');
+    });
+    $("#namecard").on('mouseleave', function(){
+        $(this).stop().animate({'top':'-350px'}, 1000, 'easeOutExpo');
+        $('#goBack').stop().animate({'opacity':'0%'}, 1000, 'easeOutExpo');
+    });
+});
+</script>
+
+
+
+</body>
+    
+</html>
+

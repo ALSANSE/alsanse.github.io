@@ -79,21 +79,39 @@ body {
     padding: 10px;
 	display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
 	text-align: center;
 }
     .icon {
-        display: flex;
+      display: flex;
 		margin: auto;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center; 
+        justify-content: center;
         text-align: center;
         width: 80%;
         opacity: 0%;
     }
 
-    .icons {
+    #iconsA {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #titleA {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+        
+    }
+
+    #iconsB {
         display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -101,18 +119,35 @@ body {
         text-align: center;
         text-align: center;
         width: 100%;
+        margin: 0 auto;
     }
 
-    .title {    
+    #titleB {    
         font-weight: 900;
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 21px;
         color: #000000;
+        
     }
 
+    #iconsC {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+        text-align: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-
-
+    #titleC {    
+        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 21px;
+        color: #000000;
+        
+    }
 
 
 #namecardB {
@@ -322,7 +357,7 @@ top: 1600px;
 
 
     #indi1{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -335,7 +370,7 @@ top: 1600px;
     }
 
     #indi2{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -348,7 +383,7 @@ top: 1600px;
     }
 
     #indi3{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -360,7 +395,7 @@ top: 1600px;
     opacity: 0%; 
     }
     #indi4{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -372,7 +407,7 @@ top: 1600px;
     opacity: 0%;      
     }
     #indi5{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -384,7 +419,7 @@ top: 1600px;
     opacity: 0%;    
     }
     #indi6{
-    border: solid 1px #ff0085;
+    border: solid 2px #ff0085;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -395,6 +430,11 @@ top: 1600px;
     height: 20px;    
     opacity: 0%;   
     }
+
+
+
+
+
         </style>
 
 
@@ -446,9 +486,9 @@ top: 1600px;
 
 
         <div id="water">
-            <a href="index3.html" id="linkA"><div id="namecardA"><div class="icon"><img class="icons" src="images/nmcd_a.png"><p class='title'>Photography</p></div></div></a>
-            <div id="namecardB"><div class="icon"><img class="icons" src="images/nmcd_b.png"><p class='title'>Design</p></div></div>
-            <div id="namecardC"><div class="icon"><img class="icons" src="images/nmcd_c.png"><p class='title'>Quotes</p></div></div>
+            <a href="index3.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
+            <div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div>
+            <div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
             <div id="parking"></div>
             <div id="footer">2020©ALSANSE</div>
             <div id="go_up">다시 위로 올려서 명함 보기</div>
@@ -509,7 +549,7 @@ top: 1600px;
 
 
 
-$(document).ready(function(){$('#aaaa').hover(function(){$('#namecardA').animate({'width': '600px',}, 2000);});});
+
 
 
 
@@ -532,6 +572,8 @@ $(document).ready(function(){
     });
 
 });
+
+
 
 
 
@@ -573,27 +615,27 @@ $(document).ready(function () {
         var height = $(document).scrollTop();
         log(height);
 
-        if(height>=180) {
-            $('#indi1').animate({'top':'700px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=230) {
+            $('#indi1').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
-        if(height>=330) {
-            $('#indi2').animate({'top':'850px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=380) {
+            $('#indi2').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
-        if(height>=480) {
-            $('#indi3').animate({'top':'1000px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=530) {
+            $('#indi3').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
-        if(height>=630) {
-            $('#indi4').animate({'top':'1150px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=680) {
+            $('#indi4').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
-        if(height>=780) {
-            $('#indi5').animate({'top':'1300px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=830) {
+            $('#indi5').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
         if(height>=800) {
             $('#scroll').animate({'opacity':'0%', 'top':'1400px'}, 1000, 'easeInBack');
             }
         
-        if(height>=930) {
-            $('#indi6').animate({'top':'1450px', 'opacity': '0%'}, 3000, 'easeOutExpo');
+        if(height>=980) {
+            $('#indi6').animate({'opacity': '0%', 'width':'1600px', 'height':'1600px'}, 3000, 'easeOutExpo');
         }
 
         if(height>=1600) {
@@ -612,6 +654,7 @@ $(document).ready(function () {
        
     });
 
+
     function log(str){
         $('#log').text(str);
     }
@@ -620,12 +663,33 @@ $(document).ready(function () {
 
 
 
-
-
+});  
+$(document).ready(function(){
+    $("#namecardA").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsA').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardA").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsA').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardB").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsB').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardB").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsB').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardC").on('mouseover', function(){
+        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+        $('#iconsC').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
+    });
+    $("#namecardC").on('mouseleave', function(){
+        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+        $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
+    });
 });
-
-
-
 </script>
 
 
