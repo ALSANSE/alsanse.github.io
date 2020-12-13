@@ -193,9 +193,33 @@ box-shadow:  18px 18px 36px #edeeef,
              -18px -18px 36px #ffffff;
 }
 
+#sec9 {
+    height: 180px;
+display: flex;
+justify-content: center;  
+width: 720px;
+margin: 0 auto;
+margin-top: 400px;
+opacity: 0%;
+border-radius: 40px;
+background: linear-gradient(145deg, #f1f2f3, #ffffff);
+box-shadow:  18px 18px 36px #edeeef, 
+             -18px -18px 36px #ffffff;
+}
 
-
-
+#sec10 {
+    height: 180px;
+display: flex;
+justify-content: center;  
+width: 720px;
+margin: 0 auto;
+margin-top: 400px;
+opacity: 0%;
+border-radius: 40px;
+background: linear-gradient(145deg, #f1f2f3, #ffffff);
+box-shadow:  18px 18px 36px #edeeef, 
+             -18px -18px 36px #ffffff;
+}
 
     .text {
     position: relative;
@@ -292,7 +316,13 @@ box-shadow:  18px 18px 36px #edeeef,
     <div class="text"><h1 class="title"></h1><p class="content">포기해야 실패하는 것이다.<br>계속 시도할 때는 실패한 적이 없는 것이다.</p></div>
 </div>
 
+<div id="sec9">
+    <div class="text"><h1 class="title"></h1><p class="content">어렵기 때문에 가치가 있다.<br>어려운 길은 잘못된 길이 아니다.</p></div>
+</div>
 
+<div id="sec10">
+    <div class="text"><h1 class="title"></h1><p class="content">실패할까 봐 시도를 두려워하지 마라.<br>안 내면 지는 게 가위 바위 보다.</p></div>
+</div>
 
 
 
@@ -378,8 +408,12 @@ $(window).scroll(function () {
         if(height>=3000) {
             $('#sec8').animate({'opacity': '100%', 'margin-top': '320px'}, 600, 'easeOutBack');
         }
-
-
+        if(height>=3500) {
+            $('#sec9').animate({'opacity': '100%', 'margin-top': '320px'}, 600, 'easeOutBack');
+        }
+        if(height>=4000) {
+            $('#sec10').animate({'opacity': '100%', 'margin-top': '320px'}, 600, 'easeOutBack');
+        }
        
     });
 
