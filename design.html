@@ -258,6 +258,50 @@ box-shadow:  18px 18px 36px #edeeef,
 	text-align: center;
 	line-height: 100px;
 }
+
+#more2{
+
+position: absolute;
+margin-top: 645px;
+padding-top: 33px;
+height: 63px;
+width: 100px;
+background: rgba(222,222,222,0.4);
+backdrop-filter: blur(20px);
+border: solid 1px transparent;
+border-radius: 32px;
+background-clip: padding-box;
+box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+text-align: center;
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 900;
+color: #000000;
+text-decoration: none;
+}
+
+
+#more4{
+
+    position: absolute;
+    margin-top: 645px;
+    padding-top: 33px;
+    height: 63px;
+    width: 100px;
+    background: rgba(222,222,222,0.4);
+    backdrop-filter: blur(20px);
+    border: solid 1px transparent;
+    border-radius: 32px;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
 </style>
 
 
@@ -280,6 +324,7 @@ box-shadow:  18px 18px 36px #edeeef,
 <div id="sec2">
     <div class="photo"><img src="design/2.png"></div>
     <div class="text"><h1 class="title">환경백신 프로젝트, 2020</h1><p class="content">대구가톨릭대학교 디지털디자인과 2학년 1학기 인포그래픽스 과목에서 제작한 카드형 뉴스이다. 코로나로 인해 환경이 좋아진 곳들을 소개하며, 사람들이 환경을 얼마나 파괴하는지 깨우치도록 한다.</p></div>
+    <a id="more2" href="https://www.instagram.com/e_vaccine_project/" target="_blank"><div>더보기</div></a>
 </div>
 
 <div id="sec3">
@@ -290,6 +335,7 @@ box-shadow:  18px 18px 36px #edeeef,
 <div id="sec4">
     <div class="photo"><img src="design/4.png"></div>
     <div class="text"><h1 class="title">도비, 2019</h1><p class="content">도비는 디지털 피드백 사운드 디자인이다. 직관적이고 투명한 벨소리, 알람, 효과음 등 사용자에게 최적화된 청각적 경험을 제공한다. 자연스럽고 익숙한 소리를 지향하며 지나치게 진짜같거나 인공적인 악기 소리는 철저하게 배제 하였으며, 최대 두가지의 음색만을 사용하여 간결하다. 기능과 상황에 따른 알림소리, 벨소리, 알람 등 일상의 모든 소리를 편안하게 디자인하는 것이 목표이다. 로고는 음표와 전서구를 융합한 형태이다. 2019년 말에 진행된 아티비티3 기간 동안 제작되었다.</p></div>
+    <a id="more4" href="https://www.instagram.com/p/B7AbUBYnR8L/?utm_source=ig_web_copy_link" target="_blank"><div>더보기</div></a>
 </div>
 
 <div id="sec5">
@@ -368,7 +414,18 @@ $(document).ready(function(){
         $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
         $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
     });
-
+    $("#more4").on('mouseover', function(){
+        $(this).stop().animate({'margin-top':'630px'}, 100, 'easeOutExpo');
+    });
+    $("#more4").on('mouseleave', function(){
+        $(this).stop().animate({'margin-top':'645px'}, 100, 'easeOutExpo');
+    });
+    $("#more2").on('mouseover', function(){
+        $(this).stop().animate({'margin-top':'630px'}, 100, 'easeOutExpo');
+    });
+    $("#more2").on('mouseleave', function(){
+        $(this).stop().animate({'margin-top':'645px'}, 100, 'easeOutExpo');
+    });
 });
 
 

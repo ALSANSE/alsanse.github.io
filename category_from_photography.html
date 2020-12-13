@@ -45,7 +45,10 @@ body {
 	right: 0;
     width: 570px;   
     height: 360px;      
-    background-color: #fafbfc;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(20px);
+    background-clip: padding-box;
+    border: solid 2px rgba(0,0,0,0.1);
     border-radius: 10px;
     padding: 10px;
 }
@@ -286,6 +289,7 @@ background-color: #000000;*/
         <div id="indi2"></div>
         <div id="indi1"></div>
 <div id="namecard"><p id="goBack">명함 보기</p></div>
+
 <!-- <a href="index.html"><div id="namecard"><p id="goBack">명함 보기</p></div></a> -->
 
 
@@ -352,15 +356,15 @@ $(document).ready(function(){
         $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
     $("#namecard").on('mouseover', function(){
-        $(this).stop().animate({'top':'-320px'}, 300, 'easeOutExpo');
+        $("#namecard").stop().animate({'top':'-320px'}, 300, 'easeOutExpo');
         $('#goBack').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
     });
     $("#namecard").on('mouseleave', function(){
-        $(this).stop().animate({'top':'-350px'}, 300, 'easeOutExpo');
+        $("#namecard").stop().animate({'top':'-350px'}, 300, 'easeOutExpo');
         $('#goBack').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
     });
     $("#namecard").on('click', function(){
-        $(this).animate({'top':'-400px'}, 80)
+        $("#namecard").animate({'top':'-400px'}, 80)
         $(location).attr('href','https://alsanse.github.io');
 
 
