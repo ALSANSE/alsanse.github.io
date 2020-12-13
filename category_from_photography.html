@@ -50,6 +50,48 @@ body {
     padding: 10px;
 }
 
+#indi1 {
+    position: fixed;
+    margin: 0 auto;
+	top: -350px;
+	left: 0;
+	right: 0;
+    width: 582px;   
+    height: 365px;      
+    border: solid 2px #ff0085;
+    border-radius: 15px;
+    padding: 10px;
+    opacity: 0%;
+}
+
+#indi2 {
+    position: fixed;
+    margin: 0 auto;
+	top: -350px;
+	left: 0;
+	right: 0;
+    width: 582px;   
+    height: 365px;     
+    border: solid 2px #ffde58;
+    border-radius: 15px;
+    padding: 10px;
+    opacity: 0%;
+}
+
+#indi3 {
+    position: fixed;
+    margin: 0 auto;
+	top: -350px;
+	left: 0;
+	right: 0;
+    width: 582px;   
+    height: 365px;     
+    border: solid 2px #00ffbc;
+    border-radius: 15px;
+    padding: 10px;
+    opacity: 0%;
+}
+
 
 #namecardA {
 
@@ -240,8 +282,9 @@ background-color: #000000;*/
             <a href="quotes.html" id="linkC"><div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div></a>
 
         </div>
-
-
+        <div id="indi3"></div>
+        <div id="indi2"></div>
+        <div id="indi1"></div>
 <div id="namecard"><p id="goBack">명함 보기</p></div>
 <!-- <a href="index.html"><div id="namecard"><p id="goBack">명함 보기</p></div></a> -->
 
@@ -270,10 +313,12 @@ background-color: #000000;*/
 
 $(document).ready(function(){
     $(document).ready(function(){
-        $('#namecard').delay(2400).animate({top:'-350px'}, 2000, 'easeInOutBack');
-        $('#namecardA').delay(1000).animate({opacity: '100%', 'top':'240', 'left':'-720px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 1000, 'easeOutExpo');
-        $('.icon').delay(1900).animate({opacity: '100%'}, 1000);
-
+        $('#namecardA').delay(1000).animate({opacity: '100%', 'top':'240', 'left':'-720px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 600, 'easeOutExpo');
+        $('.icon').delay(1300).animate({opacity: '100%'}, 1000);
+        $('#namecard').delay(1500).animate({top:'-350px'}, 2000, 'easeInOutBack');
+        $('#indi1').delay(3600).animate({'opacity':'100%'},600).animate({'width':'684px', 'height':'432px','border-radius':'18px','opacity':'0%'}, 600, 'easeInCubic');
+        $('#indi2').delay(3800).animate({'opacity':'100%'},600).animate({'width':'684px', 'height':'432px','border-radius':'18px','opacity':'0%'}, 600, 'easeInCubic');
+        $('#indi3').delay(4000).animate({'opacity':'100%'},600).animate({'width':'684px', 'height':'432px','border-radius':'18px','opacity':'0%'}, 600, 'easeInCubic');
     });
 
 });
@@ -307,12 +352,12 @@ $(document).ready(function(){
         $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
     $("#namecard").on('mouseover', function(){
-        $(this).stop().animate({'top':'-320px'}, 1000, 'easeOutExpo');
-        $('#goBack').stop().animate({'opacity':'100%'}, 1000, 'easeOutExpo');
+        $(this).stop().animate({'top':'-320px'}, 300, 'easeOutExpo');
+        $('#goBack').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
     });
     $("#namecard").on('mouseleave', function(){
-        $(this).stop().animate({'top':'-350px'}, 1000, 'easeOutExpo');
-        $('#goBack').stop().animate({'opacity':'0%'}, 1000, 'easeOutExpo');
+        $(this).stop().animate({'top':'-350px'}, 300, 'easeOutExpo');
+        $('#goBack').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
     });
     $("#namecard").on('click', function(){
         $(this).animate({'top':'-400px'}, 80)
