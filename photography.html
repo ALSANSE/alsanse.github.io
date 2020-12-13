@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Alessandro Sejini</title>
+    <title>Photography</title>
     <link rel="stylesheet" href="animate.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
@@ -48,6 +48,21 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:24px;
+    left:80px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #ff0085;
+    overflow: hidden;
+
+}
+
 #container {
     top: 120px;
     position:relative;
@@ -63,8 +78,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 50px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -75,8 +93,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 130px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -85,8 +106,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 180px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -95,8 +119,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 180px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -106,8 +133,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 180px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -116,8 +146,11 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 180px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 #sec7 {
@@ -125,8 +158,23 @@ height: 720px;
 display: flex;
 justify-content: center;  
 width: 60%;
-margin: 180px auto;
+margin: 0 auto;
+margin-top: 180px;
 opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
+}
+
+#sec8 {
+height: 720px;
+display: flex;
+justify-content: center;  
+width: 60%;
+margin: 0 auto;
+margin-top: 180px;
+opacity: 0%;
+box-shadow: 20px 20px 60px rgba(000,000,000, 0.2);
+border-radius: 40px;
 }
 
 
@@ -135,13 +183,16 @@ opacity: 0%;
 
     .photo {
     position: relative;
+
     margin-top: 45px;
+
 
 }
     .text {
     position: relative;
     margin-left: 60px;
     margin-top: 3px;
+    width: 400px;
 }
 
 
@@ -157,6 +208,34 @@ opacity: 0%;
 .content{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
+}
+
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top:200px;
+    color: #dddedf;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+
+
+#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
 }
 </style>
 
@@ -204,7 +283,12 @@ opacity: 0%;
 
 <div id="sec7">
     <div class="photo"><img src="photo/7.png"></div>
-    <div class="text"><h1 class="title">Catherine</h1><p class="content">이 사진은 디자인대학이다.</p></div>
+    <div class="text"><h1 class="title">Catherine</h1><p class="content">이 사진은 디자인대학 건물이다아아아아아아아아아아아아아.</p></div>
+</div>
+
+<div id="sec8">
+    <div class="photo"><img src="photo/8.jpeg"></div>
+    <div class="text"><h1 class="title">빛</h1><p class="content">이 사진은 빛이다.</p></div>
 </div>
 
 
@@ -212,12 +296,13 @@ opacity: 0%;
 
 
 
-
+<div id="footer">2020©ALSANSE</div>
 
 
 </div>
 
 
+<!--<div id="log">0</div>-->
 
 
 
@@ -233,9 +318,8 @@ opacity: 0%;
 
 
 
-
-
-<a href="index1.html"><div id="exit"><img src="images/X.svg"></div></a>
+<p id="exitNoti">닫기</p>
+<a href="category_from_photography.html"><div id="exit"><img src="images/X.svg"></div></a>
 
 
 
@@ -251,8 +335,8 @@ opacity: 0%;
 $(document).ready(function(){
     $(document).ready(function(){
         $('#exit').delay(3000).animate({'opacity': '100%'}, 1000);
-        $('#sec1').delay(800).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeInExpo');
-        $('#sec2').delay(1200).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeInExpo');
+        $('#sec1').delay(800).animate({'opacity': '100%', 'margin-top': '100px'}, 1000, 'easeOutBack');
+        $('#sec2').delay(1200).animate({'opacity': '100%', 'margin-top': '100px'}, 1000, 'easeOutBack');
     });
 
 });
@@ -261,10 +345,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#exit").on('mouseover', function(){
         $(this).stop().animate({'width':'50px', 'height':'50px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'120px', 'opacity':'100%'}, 100, 'easeOutExpo');
     });
     $("#exit").on('mouseleave', function(){
         $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
     });
+
 });
 
 
@@ -272,22 +359,24 @@ $(window).scroll(function () {
         var height = $(document).scrollTop();
         log(height);
 
-        if(height>=700) {
-            $('#sec3').animate({'opacity': '100%', 'margin-top': '-50px'}, 1000, 'easeInQuart');
+        if(height>=850) {
+            $('#sec3').animate({'opacity': '100%','margin-top': '100px'}, 600, 'easeOutBack');
         }
-        if(height>=1500) {
-            $('#sec4').animate({'opacity': '100%', 'margin-top': '-50px'}, 1000, 'easeInQuart');
+        if(height>=1680) {
+            $('#sec4').animate({'opacity': '100%', 'margin-top': '100px'}, 600, 'easeOutBack');
         }
-        if(height>=2300) {
-            $('#sec5').animate({'opacity': '100%', 'margin-top': '-50px'}, 1000, 'easeInQuart');
+        if(height>=2500) {
+            $('#sec5').animate({'opacity': '100%', 'margin-top': '100px'}, 600, 'easeOutBack');
         }
-        if(height>=3100) {
-            $('#sec6').animate({'opacity': '100%', 'margin-top': '-50px'}, 1000, 'easeInQuart');
+        if(height>=3320) {
+            $('#sec6').animate({'opacity': '100%', 'margin-top': '100px'}, 600, 'easeOutBack');
         }
-        if(height>=3900) {
-            $('#sec7').animate({'opacity': '100%', 'margin-top': '-50px'}, 1000, 'easeInQuart');
+        if(height>=4140) {
+            $('#sec7').animate({'opacity': '100%', 'margin-top': '100px'}, 600, 'easeOutBack');
         }
-
+        if(height>=4960) {
+            $('#sec8').animate({'opacity': '100%', 'margin-top': '100px'}, 600, 'easeOutBack');
+        }
 
 
        

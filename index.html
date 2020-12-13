@@ -197,7 +197,7 @@ width: 570px;
 height: 360px;      
 background-color: #000000;
 border: solid 2px;
-border-color: #ff0085;
+border-color: #ffffff;
 border-radius: 10px;
 padding: 10px;
 }
@@ -370,7 +370,7 @@ top: 1600px;
     }
 
     #indi2{
-    border: solid 2px #ff0085;
+    border: solid 2px #00ffbc;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -383,7 +383,7 @@ top: 1600px;
     }
 
     #indi3{
-    border: solid 2px #ff0085;
+    border: solid 2px #ffffff;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -395,7 +395,7 @@ top: 1600px;
     opacity: 0%; 
     }
     #indi4{
-    border: solid 2px #ff0085;
+    border: solid 2px #ffde58;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -419,7 +419,7 @@ top: 1600px;
     opacity: 0%;    
     }
     #indi6{
-    border: solid 2px #ff0085;
+    border: solid 2px #00ffbc;
     border-radius: 100%;
     position: absolute;
     margin: 0 auto;
@@ -486,9 +486,9 @@ top: 1600px;
 
 
         <div id="water">
-            <a href="index3.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
-            <div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div>
-            <div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
+            <a href="photography.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
+            <a href="design.html" id="linkB"><div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div></a>
+            <a href="quotes.html" id="linkC"><div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div></a>
             <div id="parking"></div>
             <div id="footer">2020©ALSANSE</div>
             <div id="go_up">다시 위로 올려서 명함 보기</div>
@@ -666,27 +666,27 @@ $(document).ready(function () {
 });  
 $(document).ready(function(){
     $("#namecardA").on('mouseover', function(){
-        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+    //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsA').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
     $("#namecardA").on('mouseleave', function(){
-        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+    //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsA').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
     $("#namecardB").on('mouseover', function(){
-        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+    //   $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
     $("#namecardB").on('mouseleave', function(){
-        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+    //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
     $("#namecardC").on('mouseover', function(){
-        $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
+    //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
     $("#namecardC").on('mouseleave', function(){
-        $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
+    //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
 });
