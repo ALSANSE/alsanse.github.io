@@ -192,7 +192,7 @@ text-align: center;
 
 position: absolute;
 margin: 0 auto;
-top: 240px;
+top: 610px;
 left: -720px;
 right: 0;
 width: 240px;   
@@ -205,6 +205,7 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 opacity: 0%;
+transform: translate(0%, -50%);
 }
 
 
@@ -213,7 +214,7 @@ opacity: 0%;
 
 position: absolute;
 margin: 0 auto;
-top: 240px;
+top: 610px;
 left: 0px;
 right: 0;
 width: 240px;   
@@ -226,6 +227,7 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 opacity: 0%;
+transform: translate(0%, -50%);
 }
 
 
@@ -233,7 +235,7 @@ opacity: 0%;
 
 position: absolute;
 margin: 0 auto;
-top: 240px;
+top: 610px;
 left: +720px;
 right: 0;
 width: 240px;   
@@ -246,6 +248,7 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 opacity: 0%;
+transform: translate(0%, -50%);
 }
 
 
@@ -763,21 +766,21 @@ $(document).ready(function(){
 
     $("#namecardA1").on('click', function(){
         $(this).animate({'opacity':'100%'}, 200);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'0px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','photography.html');
         });
     });
 
     $("#namecardB1").on('click', function(){
         $(this).animate({'opacity':'100%'}, 200);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'0px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','design.html');
         });
     });
 
     $("#namecardC1").on('click', function(){
         $(this).animate({'opacity':'100%'}, 200);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'0px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','quotes.html');
         });
     });
