@@ -187,6 +187,68 @@ justify-content: center;
 text-align: center;
 }
 
+
+#namecardA1 {
+
+position: absolute;
+margin: 0 auto;
+top: 240px;
+left: -720px;
+right: 0;
+width: 240px;   
+height: 720px;      
+background-color: #fafbfc;
+border-radius: 40px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+opacity: 0%;
+}
+
+
+
+#namecardB1 {
+
+position: absolute;
+margin: 0 auto;
+top: 240px;
+left: 0px;
+right: 0;
+width: 240px;   
+height: 720px;      
+background-color: #fafbfc;
+border-radius: 40px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+opacity: 0%;
+}
+
+
+#namecardC1 {
+
+position: absolute;
+margin: 0 auto;
+top: 240px;
+left: +720px;
+right: 0;
+width: 240px;   
+height: 720px;      
+background-color: #fafbfc;
+border-radius: 40px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+opacity: 0%;
+}
+
+
 #parking {
     position: absolute;
 margin: 0 auto;
@@ -486,12 +548,15 @@ top: 1600px;
 
 
         <div id="water">
-            <a href="photography.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
-            <a href="design.html" id="linkB"><div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div></a>
-            <a href="quotes.html" id="linkC"><div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div></a>
+<div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div>
+<div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div>
+<div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
             <div id="parking"></div>
             <div id="footer">2020©ALSANSE</div>
             <div id="go_up">다시 위로 올려서 명함 보기</div>
+<div id="namecardA1"></div>
+<div id="namecardB1"></div>
+<div id="namecardC1"></div>
         </div>
 
 
@@ -665,30 +730,53 @@ $(document).ready(function () {
 
 });  
 $(document).ready(function(){
-    $("#namecardA").on('mouseover', function(){
+    $("#namecardA1").on('mouseover', function(){
     //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsA').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
-    $("#namecardA").on('mouseleave', function(){
+    $("#namecardA1").on('mouseleave', function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsA').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
-    $("#namecardB").on('mouseover', function(){
+    $("#namecardB1").on('mouseover', function(){
     //   $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
-    $("#namecardB").on('mouseleave', function(){
+    $("#namecardB1").on('mouseleave', function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
-    $("#namecardC").on('mouseover', function(){
+    $("#namecardC1").on('mouseover', function(){
     //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
     });
-    $("#namecardC").on('mouseleave', function(){
+    $("#namecardC1").on('mouseleave', function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
+
+
+    $("#namecardA1").on('click', function(){
+        $(this).animate({'opacity':'100%'}, 200);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','photography.html');
+        });
+    });
+
+    $("#namecardB1").on('click', function(){
+        $(this).animate({'opacity':'100%'}, 200);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','design.html');
+        });
+    });
+
+    $("#namecardC1").on('click', function(){
+        $(this).animate({'opacity':'100%'}, 200);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','quotes.html');
+        });
+    });
+
 });
 </script>
 

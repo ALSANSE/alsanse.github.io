@@ -114,7 +114,50 @@ body {
 	text-align: center;
     opacity: 100%;
 }
-    .icon {
+
+
+
+#namecardB {
+
+    position: absolute;
+    margin: 0 auto;
+	top: 240px;
+	left: 0px;
+	right: 0;
+    width: 240px;   
+    height: 720px;      
+    background-color: #fafbfc;
+    border-radius: 40px;
+    padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align: center;
+    opacity: 100%;
+}
+
+
+#namecardC {
+
+    position: absolute;
+    margin: 0 auto;
+	top: 240px;
+	left: +720px;
+	right: 0;
+    width: 240px;   
+    height: 720px;      
+    background-color: #fafbfc;
+    border-radius: 40px;
+    padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align: center;
+    opacity: 100%;
+}
+
+
+.icon {
       display: flex;
 		margin: auto;
         flex-direction: column;
@@ -182,49 +225,6 @@ body {
     }
 
 
-#namecardB {
-
-    position: absolute;
-    margin: 0 auto;
-	top: 240px;
-	left: 0px;
-	right: 0;
-    width: 240px;   
-    height: 720px;      
-    background-color: #fafbfc;
-    border-radius: 40px;
-    padding: 10px;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-	text-align: center;
-    opacity: 100%;
-}
-
-
-#namecardC {
-
-    position: absolute;
-    margin: 0 auto;
-	top: 240px;
-	left: +720px;
-	right: 0;
-    width: 240px;   
-    height: 720px;      
-    background-color: #fafbfc;
-    border-radius: 40px;
-    padding: 10px;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-	text-align: center;
-    opacity: 100%;
-}
-
-
-
-
-
 #water {
 position: relative;
 width: 100%;
@@ -259,8 +259,11 @@ background-color: #000000;*/
     text-align: center;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 21px;
-    opacity: 0%;
+    font-size: 13px;
+    opacity: 100%;
+
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
 }
 
 
@@ -280,9 +283,16 @@ background-color: #000000;*/
 
         <div id="water">
             <div id="footer">2020©ALSANSE</div>
+            <!--
             <a href="photography.html" id="linkA"><div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div></a>
             <a href="design.html" id="linkB"><div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div></a>
             <a href="quotes.html" id="linkC"><div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div></a>
+            -->
+
+            <div id="namecardA"><div class="icon"><img id="iconsA" src="images/nmcd_a.png"><p id='titleA'>Photography</p></div></div>
+            <div id="namecardB"><div class="icon"><img id="iconsB" src="images/nmcd_b.png"><p id='titleB'>Design</p></div></div>
+            <div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
+            
 
         </div>
         <div id="indi3"></div>
@@ -317,7 +327,7 @@ background-color: #000000;*/
 
 $(document).ready(function(){
     $(document).ready(function(){
-        $('#namecardA').delay(1000).animate({opacity: '100%', 'top':'240', 'left':'-720px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 600, 'easeOutExpo');
+        $('#namecardA').delay(1000).animate({'top':'240', 'left':'-720px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 600, 'easeOutExpo');
         $('.icon').delay(1300).animate({opacity: '100%'}, 1000);
         $('#namecard').delay(1500).animate({top:'-350px'}, 2000, 'easeInOutBack');
         $('#indi1').delay(3600).animate({'opacity':'100%'},600).animate({'width':'684px', 'height':'432px','border-radius':'18px','opacity':'0%'}, 600, 'easeInCubic');
@@ -339,6 +349,7 @@ $(document).ready(function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsA').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
+
     $("#namecardB").on('mouseover', function(){
     //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
@@ -347,6 +358,7 @@ $(document).ready(function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsB').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
+
     $("#namecardC").on('mouseover', function(){
     //    $(this).stop().animate({'width':'320px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'85%'}, 100, 'easeOutExpo');
@@ -355,21 +367,85 @@ $(document).ready(function(){
     //    $(this).stop().animate({'width':'240px'}, 100, 'easeOutExpo');
         $('#iconsC').stop().animate({'width':'100%'}, 100, 'easeOutExpo');
     });
+
     $("#namecard").on('mouseover', function(){
-        $("#namecard").stop().animate({'top':'-320px'}, 300, 'easeOutExpo');
-        $('#goBack').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#goBack').stop().animate({'letter-spacing':'10px'}, 300, 'easeOutExpo');
     });
     $("#namecard").on('mouseleave', function(){
-        $("#namecard").stop().animate({'top':'-350px'}, 300, 'easeOutExpo');
-        $('#goBack').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+        $('#goBack').stop().animate({'letter-spacing':'0px'}, 300, 'easeOutExpo');
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $("#namecard").on('click', function(){
-        $("#namecard").animate({'top':'-400px'}, 80)
-        $(location).attr('href','https://alsanse.github.io');
 
-
-    })
+$('#namecardA').animate({'top':'2000px'}, 500, 'easeInBack');
+$('#namecardB').delay(50).animate({'top':'2000px'}, 500, 'easeInBack');
+$('#namecardC').delay(100).animate({'top':'2000px'}, 500, 'easeInBack');
+$("#namecard").stop().animate({'top':'-420px'}, 600, 'easeInBack', function(){
+$(location).attr('href','https://alsanse.github.io');
 });
+});
+
+    $("#namecardA").on('click', function(){
+        $('.icon').animate({'opacity':'0%'}, 200);
+        $('#namecard').animate({'margin-top':'-400px'}, 4000);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','photography.html');
+        });
+    });
+
+    $("#namecardB").on('click', function(){
+        $('.icon').animate({'opacity':'0%'}, 200);
+        $('#namecard').animate({'margin-top':'-400px'}, 4000);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','design.html');
+        });
+    });
+
+    $("#namecardC").on('click', function(){
+        $('.icon').animate({'opacity':'0%'}, 200);
+        $('#namecard').animate({'margin-top':'-400px'}, 4000);
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+            $(location).attr('href','quotes.html');
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 
