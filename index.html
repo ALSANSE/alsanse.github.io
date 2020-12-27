@@ -514,6 +514,25 @@ top: 1600px;
 
 
 
+    #alert {
+    position: fixed;
+    width: 320px;
+    height: 100px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffde58;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 21px;
+    opacity: 0%; 
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+    }
+
+
+
+
         </style>
 
 
@@ -524,6 +543,7 @@ top: 1600px;
 </head>
 
 <body>
+<div id='alert'>일부 브라우저 및 모바일 화면에서<br> 제대로 작동하지 않을 수 있습니다</div>
 
     <div id='more'>빠르게 내려가세요</div>
     <div id='indi1'></div>
@@ -643,6 +663,7 @@ top: 1600px;
 $(document).ready(function(){
     $(document).ready(function(){
         $('#namecard').animate({top:'240px'}, 2000, 'easeInOutBack');
+        $('#alert').delay(900).animate({opacity: '100%'}, 200);
         $('#scroll').delay(2000).animate({opacity: '100%', right:'160px'}, 1000, 'easeOutExpo');
         $('#more').delay(2000).animate({opacity: '100%'}, 1000);
         $('#indi1').delay(2200).animate({opacity: '100%'}, 600);
@@ -690,6 +711,33 @@ $(document).ready(function () {
     }, 2600);
 
 
+    $('#alert').textillate({
+        autoStart: false,
+        in: {
+            effect: 'wiggle',
+            delayScale: 1.5,
+            delay: 50,
+            sync: true,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        },
+        out: {
+            effect: 'wiggle',
+            delayScale: 1.5,
+            delay: 50,
+            sync: true,
+            shuffle: false,
+            reverse: false,
+            callback: function () {}
+        }   
+    });
+
+    $('#alert').textillate('in');
+    setTimeout(function(){
+        $('#alert').textillate('out');
+    }, 2600);
+
 
 
 
@@ -697,6 +745,9 @@ $(document).ready(function () {
         var height = $(document).scrollTop();
         log(height);
 
+        if(height>=100) {
+            $('#alert').animate({'opacity': '0%'}, 600, 'easeOutExpo');
+        }
         if(height>=230) {
             $('#indi1').animate({'opacity': '0%', 'width':'1000px', 'height':'1000px'}, 3000, 'easeOutExpo');
         }

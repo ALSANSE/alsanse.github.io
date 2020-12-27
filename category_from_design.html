@@ -106,7 +106,7 @@ body {
 
     position: absolute;
     margin: 0 auto;
-	top: 240px;
+	top: 610px;
 	left: -720px;
 	right: 0;
     width: 240px;   
@@ -119,6 +119,7 @@ body {
     justify-content: center;
 	text-align: center;
     opacity: 100%;
+    transform: translate(0%, -50%);
 }
     .icon {
       display: flex;
@@ -192,11 +193,11 @@ body {
 
     position: absolute;
     margin: 0 auto;
-	top: -10px;
+	top: 600px;
 	left: -10px;
     right: 0;
     width: 110%;   
-    height: 110%;      
+    height: 1100%;      
     background-color: #fafbfc;
     border-radius: 0px;
     padding: 10px;
@@ -205,6 +206,7 @@ body {
     justify-content: center;
 	text-align: center;
     opacity: 100%;
+    transform: translate(0%, -50%);
 }
 
 
@@ -212,7 +214,7 @@ body {
 
     position: absolute;
     margin: 0 auto;
-	top: 240px;
+	top: 610px;
 	left: +720px;
 	right: 0;
     width: 240px;   
@@ -225,6 +227,7 @@ body {
     justify-content: center;
 	text-align: center;
     opacity: 100%;
+    transform: translate(0%, -50%);
 }
 
 
@@ -333,7 +336,7 @@ background-color: #000000;*/
 
 $(document).ready(function(){
     $(document).ready(function(){
-        $('#namecardB').delay(1000).animate({'top':'240', 'left':'0px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 600, 'easeOutExpo');
+        $('#namecardB').delay(1000).animate({'top':'610', 'left':'0px', 'width':'240px', 'height':'720px', 'border-radius':'40px'}, 600, 'easeOutExpo');
         $('.icon').delay(1300).animate({opacity: '100%'}, 1000);
         $('#namecard').delay(1500).animate({top:'-350px'}, 2000, 'easeInOutBack');
         $('#indi1').delay(3600).animate({'opacity':'100%'},600).animate({'width':'684px', 'height':'432px','border-radius':'18px','opacity':'0%'}, 600, 'easeInCubic');
@@ -419,7 +422,7 @@ $(location).attr('href','https://alsanse.github.io');
     $("#namecardA").on('click', function(){
         $('.icon').animate({'opacity':'0%'}, 200);
         $('#namecard').animate({'margin-top':'-400px'}, 4000);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','photography.html');
         });
     });
@@ -427,7 +430,7 @@ $(location).attr('href','https://alsanse.github.io');
     $("#namecardB").on('click', function(){
         $('.icon').animate({'opacity':'0%'}, 200);
         $('#namecard').animate({'margin-top':'-400px'}, 4000);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','design.html');
         });
     });
@@ -435,7 +438,7 @@ $(location).attr('href','https://alsanse.github.io');
     $("#namecardC").on('click', function(){
         $('.icon').animate({'opacity':'0%'}, 200);
         $('#namecard').animate({'margin-top':'-400px'}, 4000);
-        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'110%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
+        $(this).delay(200).animate({'top':'-10px', 'left':'-10px', 'width':'110%', 'height':'1100%', 'border-radius':'0'}, 600, 'easeInExpo', function(){
             $(location).attr('href','quotes.html');
         });
     });
