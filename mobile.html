@@ -47,8 +47,8 @@ body {
     position: fixed;
     margin: 0 auto;
 	top: -1000px; /*400*/
-	left: 0;
-	right: 0;
+	left: -100px;
+	/*right: 0;*/
     width: 1140px;  /*570*/ 
     height: 720px; /*360*/     
     background-color: #fafbfc;
@@ -72,7 +72,7 @@ body {
 
     position: absolute;
     margin: 0 auto;
-	top: 480px;   /*240*/
+	top: 274px;   /*240*/
 	left: 0;
 	right: 0;
     width: 720px;	/*360*/   
@@ -90,10 +90,10 @@ body {
 		  
 		  
     .icon {
-      display: flex;
+      display: inline;
 		margin: auto;
-        flex-direction: column;
-        flex-wrap: wrap;
+       /* flex-direction: column;
+        flex-wrap: nowrap;*/
         justify-content: center;
         text-align: center;
         width: 80%;
@@ -101,16 +101,19 @@ body {
     }
 
     #iconsA {
+		position: relative;
         display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center; 
         text-align: center;
-        width: 100%;
+        height: 330px;
         margin: 0 auto;
+						object-fit: cover;
     }
 
     #titleA {    
+				position: relative;
         font-weight: 900;
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 42px;  /*21*/
@@ -125,8 +128,9 @@ body {
     justify-content: center; 
         text-align: center;
         text-align: center;
-        width: 100%;
+        height: 100%;
         margin: 0 auto;
+						object-fit: cover;
     }
 
     #titleB {    
@@ -144,8 +148,9 @@ body {
     justify-content: center; 
         text-align: center;
         text-align: center;
-        width: 100%;
+        height: 100%;
         margin: 0 auto;
+						object-fit: cover;
     }
 
     #titleC {    
@@ -161,7 +166,7 @@ body {
 
 position: absolute;
 margin: 0 auto;
-top: 480px;  /*240*/
+	top: 274px;  /*240*/
 left: 0;
 right: 0;
 width: 720px;	/*360*/   
@@ -173,6 +178,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;  
 text-align: center;
+
 }
 
 
@@ -180,7 +186,7 @@ text-align: center;
 
 position: absolute;
 margin: 0 auto;
-top: 480px;	/*240*/
+	top: 274px;	/*240*/
 left: 0;
 right: 0;
 width: 720px;	/*360*/   
@@ -192,6 +198,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;  
 text-align: center;
+
 }
 
 
@@ -263,16 +270,17 @@ transform: translate(0%, -50%);
     position: absolute;
 margin: 0 auto;
 top: 480px;  /*240*/
-left: 0;
-right: 0;
+left: -112px;
 width: 1140px; /*570*/   
 height: 720px; /*360*/      
 background-color: #000000;
 border: solid 4px; /*2*/
 border-color: #ffffff;
-border-radius: 20px;	/*10*/
+border-radius: 24px;	/*10*/
 padding: 20px;	/*10*/
-		transform: rotate(90deg);
+transform: rotate(90deg);
+
+
 
 }
 
@@ -370,8 +378,8 @@ top: 3200px;  	/*1600*/
     position: absolute;
     margin: 0 auto;
 	top: 480px;	/*240*/
-	left: 0;
-	right: 0;
+	left: -100px;
+
     width: 1140px; /*570*/   
     height: 720px;	/*360*/      
     background-color: #fafbfc;
@@ -395,8 +403,8 @@ top: 3200px;  	/*1600*/
 
 #go_up {
     position: absolute;
-    width: 300px;
-    height: 100px;
+    width: 600px;
+    height: 200px;
     top: -400px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -404,7 +412,7 @@ top: 3200px;  	/*1600*/
     text-align: center;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 21px;
+    font-size: 42px;
     opacity: 0%;
     -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
 }
@@ -507,16 +515,16 @@ top: 3200px;  	/*1600*/
 
     #alert {
     position: fixed;
-    width: 320px;
-    height: 100px;
-    top: 100px;
+    width: 640px;
+    height: 200px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffde58;
     text-align: center;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 21px;
+    font-size: 42px;
     opacity: 0%; 
     -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
     }
@@ -558,7 +566,7 @@ top: 3200px;  	/*1600*/
 </head>
 
 <body>
-<div id='alert'>일부 브라우저 및 모바일 화면에서<br> 제대로 작동하지 않을 수 있습니다</div>
+<div id='alert'>공사중</div>
 
     <div id='more'>빠르게 내려가세요</div>
     <div id='indi1'></div>
@@ -781,9 +789,9 @@ $(document).ready(function () {
             $('#parking').animate({'opacity':'0%'}, 100).delay(300).animate({'left':'-10000px'});
             $('#rerere').animate({'opacity': '100%'}, 100);
             $('#go_up').delay(2000).animate({'opacity': '100%', 'top':'160px'}, 1200, 'easeOutBack');
-            $('#namecardA').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(60).animate({'left':'-720px'}, 400, 'easeOutExpo');
-            $('#namecardB').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo');
-            $('#namecardC').animate({'border-radius': '40px', 'width':'240px', 'height':'720px'}, 600, 'easeInExpo').delay(120).animate({'left':'+720px'}, 400, 'easeOutExpo');
+            $('#namecardA').animate({'border-radius': '40px', 'width':'720px', 'height':'360px'}, 600, 'easeInExpo').delay(60).animate({'top':'-720px'}, 400, 'easeOutExpo');
+            $('#namecardB').animate({'border-radius': '40px', 'width':'720px', 'height':'360px'}, 600, 'easeInExpo');
+            $('#namecardC').animate({'border-radius': '40px', 'width':'720px', 'height':'360px'}, 600, 'easeInExpo').delay(120).animate({'top':'+720px'}, 400, 'easeOutExpo');
             $('.icon').delay(700).animate({'opacity': '100%'}, 1000);
         } 
 
