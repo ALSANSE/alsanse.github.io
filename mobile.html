@@ -90,7 +90,7 @@ body {
 		  
 		  
     .icon {
-      display: inline;
+      display: inline-flex;
 		margin: auto;
        /* flex-direction: column;
         flex-wrap: nowrap;*/
@@ -122,18 +122,19 @@ body {
     }
 
     #iconsB {
+		position: relative;
         display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center; 
         text-align: center;
-        text-align: center;
-        height: 100%;
+        height: 330px;
         margin: 0 auto;
 						object-fit: cover;
     }
 
     #titleB {    
+				position: relative;
         font-weight: 900;
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 42px;  /*21*/
@@ -142,21 +143,22 @@ body {
     }
 
     #iconsC {
+		position: relative;
         display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center; 
         text-align: center;
-        text-align: center;
-        height: 100%;
+        height: 330px;
         margin: 0 auto;
 						object-fit: cover;
     }
 
     #titleC {    
+				position: relative;
         font-weight: 900;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 42px;	/*21*/
+        font-size: 42px;  /*21*/
         color: #000000;
         
     }
@@ -566,7 +568,7 @@ top: 3200px;  	/*1600*/
 </head>
 
 <body>
-<div id='alert'>공사중</div>
+<div id='alert'>공사중. 컴퓨터로 방문하십시오.</div>
 
     <div id='more'>빠르게 내려가세요</div>
     <div id='indi1'></div>
@@ -613,7 +615,7 @@ top: 3200px;  	/*1600*/
 <div id="namecardC"><div class="icon"><img id="iconsC" src="images/nmcd_c.png"><p id='titleC'>Quotes</p></div></div>
             <div id="parking"></div>
             <div id="footer">2020©ALSANSE</div>
-            <div id="go_up">다시 위로 올려서 명함 보기</div>
+ <div id="go_up">다시 위로 올려서 명함 보기</div>
 <div id="namecardA1"></div>
 <div id="namecardB1"></div>
 <div id="namecardC1"></div>
@@ -621,8 +623,6 @@ top: 3200px;  	/*1600*/
 
 
 
-
-        <!--이하 스크롤 유도 애니메이션 svg 파일-->
        
 
     <div id="namecard">
