@@ -128,9 +128,9 @@ body {
 	width: 60%;
 	margin: 0 auto;
 	opacity: 0%;
-	border-radius: 54px;
+	border-radius: 27px;
 	}
-		 
+
 			 
 			 
 </style>
@@ -221,9 +221,7 @@ $(document).ready(function(){
     });
 	
 	    $("#exit").on('click', function(){
-        $('body').animate({'opacity':'0%'}, 600, 'easeInExpo', function(){
-            $(location).attr('href','3_info.html');
-        });
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info.html');});
 			
 });
 
