@@ -14,6 +14,9 @@
     
          <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
+			 
+			 @media screen and (min-width: 1081px) {
+			 
 body {
     background-color: #111519;
 	/*height: 2000px;*/
@@ -131,6 +134,130 @@ body {
 	border-radius: 27px;
 	}
 
+			 }
+			 
+			 
+			 
+			 			 @media screen and (max-width: 1080px) {
+			 
+body {
+    background-color: #111519;
+	/*height: 2000px;*/
+    -ms-overflow-style: none; 
+   } 
+   
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+
+
+#exit {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top:80px;
+    left:120%;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+}
+
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:51px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+			 
+			 
+			 
+			 
+
+#container {
+    position:relative;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	top: 42px;
+
+}
+
+
+
+
+
+
+
+#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 200px;
+	top: 200px;
+	display: flex;
+	flex-direction: column;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 40px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+	position: relative;
+}
+
+		
+.panel {
+	overflow: hidden;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	opacity: 0%;
+	border-radius: 27px;
+	}
+
+			 }
 			 
 			 
 </style>
