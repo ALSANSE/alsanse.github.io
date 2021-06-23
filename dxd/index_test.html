@@ -1368,6 +1368,12 @@ $(document).ready(function(){
         });
     });
 	
+	$("#entr_3").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_entr.html');
+        });
+    });
+	
 	
 	
 	
@@ -1400,7 +1406,12 @@ $(document).ready(function(){
         $(location).attr('href','3_mgrp.html');
         });
     });
-	
+		$("#entr_3m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_entr.html');
+        });
+    });
 });
 
 
