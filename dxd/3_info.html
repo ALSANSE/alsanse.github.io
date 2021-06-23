@@ -1119,21 +1119,21 @@ opacity: 0%;
 	
 <div id="sec2">
 	<div class="title"><p class="work">경희한의원 픽토그램 </p><p class="name">강현지　임관혁　최민영</p></div>
-	<img id="pic2" src="images/testhumb.jpg">
+	<img id="pic2" src="images/3/info/kh_t.png">
 </div>
 
 	
 	
 <div id="sec3">
 	<div class="title"><p class="work">대구 83타워 픽토그램 </p><p class="name">김나희　박은지　정지원</p></div>
-	<img id="pic3" src="images/testhumb.jpg">
+	<img id="pic3" src="images/3/info/83tower_t.jpg">
 </div>
 
 	
 	
 <div id="sec4">
 	<div class="title"><p class="work">수성유원지 픽토그램 </p><p class="name">김미현　우민정　조송희　홍예린</p></div>
-	<img id="pic4" src="images/testhumb.jpg">
+	<img id="pic4" src="images/3/info/suseong_t.jpg">
 </div>
 
 
@@ -1189,28 +1189,28 @@ opacity: 0%;
 			<div id="go3_p">
 				<ul class='menu'><p class='grad'>3학년</p>
 					<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
-					<li><a href='#' class="menuText">브랜딩과뉴미디어</a></li>
-					<li><a href='#' class="menuText">인터랙션디자인</a></li>
-					<li><a href='#' class="menuText">모션그래픽</a></li>
-					<li><a href='#' class="menuText">엔터테인먼트디자인2</a></li>
+					<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+					<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+					<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+					<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
 				</ul>
 			</div>
 			<div id="go2_p">
 				<ul class='menu'><p class='grad'>2학년</p>
-					<li><a href='#' class="menuText">인포메이션그래픽스</a></li>
-					<li><a href='#' class="menuText">3D컴퓨터그래픽스1</a></li>
-					<li><a href='#' class="menuText">웹디자인</a></li>
-					<li><a href='#' class="menuText">디지털애니메이션</a></li>
-					<li><a href='#' class="menuText">엔터테인먼트디자인1</a></li>
+					<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+					<li><a href='2_entr.html' class="menuText">엔터테인먼트디자인1</a></li>
 				</ul>
 			</div>
 			<div id="go1_p">
 				<ul class='menu'><p class='grad'>1학년</p>
-					<li><a href='#' class="menuText">기초디지털표현</a></li>
-					<li><a href='#' class="menuText">디지털타입페이스</a></li>
-					<li><a href='#' class="menuText">디지털조형</a></li>
-					<li><a href='#' class="menuText">컴퓨터그래픽스1</a></li>
-					<li><a href='#' class="menuText">2D디자인테크실무</a></li>
+					<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+					<li><a href='1_tech.html' class="menuText">2D디자인테크실무</a></li>
 				</ul>
 			</div>	
 
@@ -1384,9 +1384,19 @@ $(document).ready(function(){
 	
 	$("#pic1").on('click', function(){
         $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_takitcon.html');});
-				
-
-});
+	});
+	
+		$("#pic2").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_kh.html');});
+	});
+		$("#pic3").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_83tower.html');});
+	});
+		$("#pic4").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_suseong.html');});
+	});
+	
+	
 });
 
 

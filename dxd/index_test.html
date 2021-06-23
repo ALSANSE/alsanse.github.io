@@ -1134,9 +1134,9 @@ body {
 				<div class="cta">
             		<div id="info_2m"><p class="title">인포메이션그래픽스</p></div>
 					<div id="cg3d_2m"><p class="title">3D컴퓨터그래픽스1</p></div>
-					<div id="entr_2m"><p class="title">웹디자인</p></div>
+					<div id="webd_2m"><p class="title">웹디자인</p></div>
 					<div id="anim_2m"><p class="title">디지털애니메이션</p></div>
-					<div id="webd_2m"><p class="title">엔터테인먼트디자인1</p></div>
+					<div id="entr_2m"><p class="title">엔터테인먼트디자인1</p></div>
             	</div>            
 			</div>
 	
@@ -1350,13 +1350,57 @@ $(document).ready(function(){
         $(location).attr('href','3_info.html');
         });
     });
-
+	
+   $("#brnd_3").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_brnd.html');
+        });
+    });
+	$("#intr_3").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_intr.html');
+        });
+    });
+	
+	$("#mgrp_3").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_mgrp.html');
+        });
+    });
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	$("#info_3m").on('click', function(){
 		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
         $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
         $(location).attr('href','3_info.html');
         });
     });
+	$("#brnd_3m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_brnd.html');
+        });
+    });
+	$("#intr_3m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_intr.html');
+        });
+    });
+	$("#mgrp_3m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','3_mgrp.html');
+        });
+    });
+	
 });
 
 
