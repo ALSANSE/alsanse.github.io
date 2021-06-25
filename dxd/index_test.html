@@ -346,7 +346,7 @@ body {
                -18px -18px 36px #ffffff;
 	}
 			
-#entr_2 {
+#cont_2 {
 
     position: relative;
     width: 180px;  
@@ -724,7 +724,6 @@ body {
 	position: relative;
 	width: 100%;
 	margin-bottom: 300px;
-	border: solid 1px #ff0000;
 	}
 			
 #scroll {
@@ -889,7 +888,7 @@ body {
                -18px -18px 36px #ffffff;
 	}
 			
-#entr_2m {
+#cont_2m {
 
     position: relative;
     width: 60%;   
@@ -1204,9 +1203,9 @@ body {
 				<div class="cta">
             		<div id="info_2"><p class="title">인포메이션그래픽스</p></div>
 					<div id="cg3d_2"><p class="title">3D컴퓨터그래픽스1</p></div>
-					<div id="entr_2"><p class="title">웹디자인</p></div>
+					<div id="webd_2"><p class="title">웹디자인</p></div>
 					<div id="anim_2"><p class="title">디지털애니메이션</p></div>
-					<div id="webd_2"><p class="title">엔터테인먼트디자인1</p></div>
+					<div id="cont_2"><p class="title">디지털콘텐츠디자인1</p></div>
             	</div>            
 			</div>
 	
@@ -1249,7 +1248,7 @@ body {
 					<div id="cg3d_2m"><p class="title">3D컴퓨터그래픽스1</p></div>
 					<div id="webd_2m"><p class="title">웹디자인</p></div>
 					<div id="anim_2m"><p class="title">디지털애니메이션</p></div>
-					<div id="entr_2m"><p class="title">엔터테인먼트디자인1</p></div>
+					<div id="cont_2m"><p class="title">디지털콘텐츠디자인1</p></div>
             	</div>            
 			</div>
 	
@@ -1390,10 +1389,10 @@ $(document).ready(function(){
     $(this).stop().animate({'height':'60px'}, 400, 'easeInOutCirc');
     });
 
-    $("#entr_2").on('mouseover', function(){
+    $("#cont_2").on('mouseover', function(){
     $(this).stop().animate({'height':'120px'}, 200, 'easeOutExpo');
     });
-    $("#entr_2").on('mouseleave', function(){
+    $("#cont_2").on('mouseleave', function(){
     $(this).stop().animate({'height':'60px'}, 400, 'easeInOutCirc');
     });
 
@@ -1517,9 +1516,29 @@ $(document).ready(function(){
         });
     });
 	
+	$("#cg3d_2").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_cg3d.html');
+        });
+    });
 	
+	$("#webd_2").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_webd.html');
+        });
+    });
 	
+	$("#anim_2").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_anim.html');
+        });
+    });
 	
+	$("#cont_2").on('click', function(){
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_cont.html');
+        });
+    });
 	
 	
 	
@@ -1558,6 +1577,30 @@ $(document).ready(function(){
 		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
         $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
         $(location).attr('href','2_info.html');
+        });
+    });
+		$("#cg3d_2m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_cg3d.html');
+        });
+    });
+		$("#webd_2m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_webd.html');
+        });
+    });
+		$("#anim_2m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_anim.html');
+        });
+    });
+		$("#cont_2m").on('click', function(){
+		$(this).animate({'width':'90%'}, 200, 'easeOutExpo');
+        $('#trans').animate({'top':'-5%'}, 800, 'easeInCirc', function(){
+        $(location).attr('href','2_cont.html');
         });
     });
 });

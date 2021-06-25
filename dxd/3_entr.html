@@ -1073,6 +1073,36 @@ opacity: 0%;
 	background-clip: padding-box;
 	background: rgba(49,53,57,0.6);
 }
+	#facebookNoti {
+    position: fixed;
+    height: 0px;
+	padding-top: 2px;
+    width: 233px;
+    top:376px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+	#dxdesignNoti {
+    position: fixed;
+    height: 0px;
+	padding-top: 2px;
+    width: 233px;
+    top:426px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
+
+}
 			 
 			 
 	.menu {
@@ -1305,7 +1335,7 @@ opacity: 0%;
 					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
 					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
 					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
-					<li><a href='2_entr.html' class="menuText">엔터테인먼트디자인1</a></li>
+					<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
 				</ul>
 			</div>
 			<div id="go1_p">
@@ -1314,7 +1344,6 @@ opacity: 0%;
 					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
 					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
 					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
-					<li><a href='1_tech.html' class="menuText">2D디자인테크실무</a></li>
 				</ul>
 			</div>	
 
@@ -1483,12 +1512,11 @@ $(document).ready(function(){
 		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
 });  
 	$('#go1').on('click', function(){
-		$('#go1_p').animate({'height':'310px'}, 600, 'easeOutExpo');
+		$('#go1_p').animate({'height':'270px'}, 600, 'easeOutExpo');
 		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
 		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'350px', 'opacity':'100%'}, 0);
 });
-	
 	
 	
 	
