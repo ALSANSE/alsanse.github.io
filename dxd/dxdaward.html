@@ -37,6 +37,7 @@ body {
 
 #back {
 	position: absolute;	
+	opacity: 0%;
 	}
 
 #exit {
@@ -1288,7 +1289,7 @@ opacity: 0%;
 					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
 					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
 					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
-					<li><a href='2_entr.html' class="menuText">엔터테인먼트디자인1</a></li>
+					<li><a href='2_cont.html' class="menuText">엔터테인먼트디자인1</a></li>
 				</ul>
 			</div>
 			<div id="go1_p">
@@ -1297,7 +1298,6 @@ opacity: 0%;
 					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
 					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
 					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
-					<li><a href='1_tech.html' class="menuText">2D디자인테크실무</a></li>
 				</ul>
 			</div>	
 
@@ -1315,9 +1315,7 @@ $(document).ready(function(){
         $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
 		$('#remote').delay(1200).animate({'opacity': '100%'}, 1000);
         $('#sec1').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
-        $('#sec2').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
-		$('#sec3').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
-        $('#sec4').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000, 'easeOutBack');
+		$('#back').delay(500).animate({'opacity': '100%', 'margin-top': '0px'}, 5000, 'easeOutBack');
     });
 
 });
