@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>about Sustain</title>
+    <link rel="stylesheet" href="animate.css" />
+
+
+
+
+    
+         <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Roboto+Condensed:wght@700&family=Poppins:wght@100&display=swap');
+@media screen and (min-width: 1081px) {
+	
+	
+	
+	
+body {
+    background-color: #000000;
+	/*height: 2000px;*/
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+   } 
+   
+
+	
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+#back {
+	position: absolute;	
+	opacity: 0%;
+	}
+
+#exit {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top:80px;
+    left:80px;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+	z-index: 99;
+}
+
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:51px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+}
+
+			 
+#exitTrans {
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    top:80px;
+    left:80px;
+    opacity: 0%;
+    background-color: #fafbfc;
+	transform: translate(-50%, -50%);
+	border-radius: 100%;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 97;
+}
+			 
+			 
+#container {
+    position:relative;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+
+}
+
+
+
+
+#text_svg {
+	position: relative;
+	width: 100%;
+}
+
+#text {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#sec1 {
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;  
+width: 60%;
+opacity: 0%;
+align-items: center;
+margin-top: 100px;
+margin-bottom: 100px;
+color: #ffffff;
+line-height: 40px;
+font-weight: 100;
+font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+h2{font-weight: 700; }
+h3{font-weight: 100; }
+
+
+
+
+
+
+.profilePC {
+	height: 40%;
+	transform: translate(-50%, 0%);
+	left: 49%;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 36.5%;
+	 }
+
+#profilePC {
+height: 10%;
+	position: relative;
+	border-radius: 27px;
+	margin: 16%;
+	 }
+
+
+
+
+
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 200px;
+	top: 200px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+	position: relative;
+}
+
+
+			 
+
+			
+			 
+#remote {
+	position: fixed;
+    width: 40px;
+    top:200px;
+    left:80px;
+    transform: translate(-50%, 0%);
+	z-index: 99;
+	display: block;
+	opacity: 0%;
+	
+	 }
+
+			 
+			 #goAward {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 38px;
+				 background-color: #eaebec;
+			 }
+			 
+			 #go3 {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+			 
+			 #go2 {
+				width: 40px;
+			 	height: 40px;
+				opacity: 11%;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 28px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 700;
+				line-height: 42px;
+				background-color: #eaebec;
+			 }
+			 
+			 #go1 {
+				width: 40px;
+			 	height: 40px;
+				opacity: 11%;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 28px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 700;
+				line-height: 42px;
+				background-color: #eaebec;
+			 }
+			 #goAbout {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+				#goDown {
+				width: 40px;
+			 	height: 40px;
+				opacity: 0%;
+				margin-bottom: 10px;
+
+			 }
+			 #goF {
+				width: 40px;
+			 	height: 40px;
+				opacity: 11%;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 28px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 700;
+				line-height: 42px;
+				background-color: #eaebec;
+				text-decoration-line: none;
+				color: #000000;
+			 }
+				#goD {
+				width: 40px;
+			 	height: 40px;
+				opacity: 11%;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 16px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 700;
+				line-height: 42px;
+				text-decoration-line: none;
+				background-color: #eaebec;
+				color: #000000;
+			 }
+			 
+#go3_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:250px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}
+			 
+#go2_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:300px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}	
+			 
+#go1_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:350px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}		
+			 
+	#awardNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 233px;
+    top:176px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+
+}
+#aboutNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 233px;
+    top:376px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+
+}
+#facebookNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 233px;
+    top:476px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+
+}
+	
+#dxdesignNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 233px;
+    top: 526px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+
+}
+
+			 
+	
+	
+	.menu {
+		list-style: none;
+		line-height: 40px;
+		font-weight: 400;
+    	font-family: 'Noto Sans KR', sans-serif;
+    	font-size: 14px; 
+		top: 10px;
+		text-decoration: none;
+		color: #000000;
+			 }
+			 
+	.menuText {
+		text-decoration: none;
+		color: #000000;
+			 }
+			
+	.menuText:hover {
+        color: #ffffff;
+			}
+
+	
+	.grad {
+		font-size: 21px;
+		font-weight: 700;
+			 }
+			 
+			 
+			 #quitMenu {
+				width: 40px;
+			 	height: 40px;
+				background-color: #eaebec;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				opacity: 0%;
+				position: fixed;
+				top:0px;
+    			left:80px;
+				transform: translate(-50%, 0%);
+				z-index: 100;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 color: #ff3322;
+				 
+			 }
+			 			 #remote_controller_background_blur_A{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 0px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+				#remote_controller_background_blur_3{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 50px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+			 
+			 	#remote_controller_background_blur_2{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 100px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+			 
+			 
+			 
+			 	#remote_controller_background_blur_1{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 150px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 	#remote_controller_background_blur_about{
+				 
+				 position: fixed;
+				 width: 40px;
+				  height: 40px;
+				 border-radius: 100px;
+				 top: 200px;
+				 z-index: -88;
+				 backdrop-filter: blur(5px);
+				 border: solid 0px transparent;
+				 background-clip: padding-box;
+				 background: rgba(234,235,236,0.1);
+				 box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			  }
+	
+			  #remote_controller_background_blur_F{
+				 
+				 position: fixed;
+				 width: 40px;
+				  height: 40px;
+				 border-radius: 100px;
+				 top: 300px;
+				 z-index: -88;
+				 backdrop-filter: blur(5px);
+				 border: solid 0px transparent;
+				 background-clip: padding-box;
+				 background: rgba(234,235,236,0.1);
+				 box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			  }
+	 
+				  #remote_controller_background_blur_DxD{
+				  
+				  position: fixed;
+				  width: 40px;
+				   height: 40px;
+				  border-radius: 100px;
+				  top: 350px;
+				  z-index: -88;
+				  backdrop-filter: blur(5px);
+				  border: solid 0px transparent;
+				  background-clip: padding-box;
+				  background: rgba(234,235,236,0.1);
+				  box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			   }
+	
+	
+	
+			 }
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 @media screen and (max-width: 1080px) {
+				 
+	body {
+    background-color: #000000;
+	/*height: 2000px;*/
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+
+   } 
+   
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+
+
+#exit {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top:80px;
+    left:120%;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+	z-index: 99;
+}
+
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:51px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+}
+
+			 
+#exitTrans {
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    top:80px;
+    left:80px;
+    opacity: 0%;
+    background-color: #fafbfc;
+	transform: translate(-50%, -50%);
+	border-radius: 100%;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 97;
+}
+			 
+			 
+#container {
+    position:relative;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+#sec1 {
+position: relative;
+margin-bottom: 300px;
+
+align-items: center;
+width: 90%;
+margin: 0 auto;
+margin-top: 300px;
+opacity: 0%;
+color: #ffffff;
+line-height: 1.4;
+font-weight: 400;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 300px;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 500px;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+	position: relative;
+}
+
+		
+
+			
+			 
+#remote {
+	position: fixed;
+    width: 40px;
+    top:200px;
+    left:120%;
+    transform: translate(-50%, 0%);
+	z-index: 99;
+	display: block;
+	opacity: 0%;
+	
+	 }
+
+			 
+			 #goAward {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 38px;
+				 background-color: #eaebec;
+			 }
+			 
+			 #go3 {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+			 
+			 #go2 {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+			 
+			 #go1 {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+			 
+#go3_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:250px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}
+			 
+#go2_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:300px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}	
+			 
+#go1_p {
+	position: fixed;
+	/*background-color: #eaebec;*/
+    top:350px;
+    left:120px;
+	height: 0px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.4);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}		
+			 
+	#awardNoti {
+    position: fixed;
+    height: 38px;
+		padding-top: 2px;
+    width: 233px;
+    top:176px;
+		left: 120%;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+	border-radius: 100px;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(49,53,57,0.6);
+}
+			 
+			 
+	.menu {
+		list-style: none;
+		line-height: 40px;
+		font-weight: 400;
+    	font-family: 'Noto Sans KR', sans-serif;
+    	font-size: 14px; 
+		top: 10px;
+		text-decoration: none;
+		color: #000000;
+			 }
+			 
+	.menuText {
+		text-decoration: none;
+		color: #000000;
+			 }
+			
+	.menuText:hover {
+        color: #ffffff;
+			}
+
+	
+	.grad {
+		font-size: 21px;
+		font-weight: 700;
+			 }
+			 
+			 
+			 #quitMenu {
+				width: 40px;
+			 	height: 40px;
+				background-color: #eaebec;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				opacity: 0%;
+				position: fixed;
+				top:0px;
+    			left:80px;
+				transform: translate(-50%, 0%);
+				z-index: 100;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 color: #ff3322;
+				 
+			 }
+			 			 #remote_controller_background_blur_A{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 0px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+				#remote_controller_background_blur_3{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 50px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+			 
+			 	#remote_controller_background_blur_2{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 100px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+			 
+			 
+			 
+			 
+			 	#remote_controller_background_blur_1{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 150px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 } 
+				#remote_controller_background_blur_F{
+				 
+				position: fixed;
+				width: 40px;
+			 	height: 40px;
+				border-radius: 100px;
+				top: 200px;
+				z-index: -88;
+				backdrop-filter: blur(5px);
+				border: solid 0px transparent;
+				background-clip: padding-box;
+				background: rgba(234,235,236,0.1);
+				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			 }
+
+
+#text_svg {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.profile {
+width: 100%;
+	position: relative;
+	border-radius: 54px;
+	 }
+.profilePC {
+	width:0%;
+	height: 0%;
+	position: relative;
+	overflow: hidden;
+	 }
+#profilePC {
+	width:0%;
+	height: 0%;
+	position: relative;
+	overflow: hidden;
+	 }
+
+
+h1{font-size:3.6rem; font-weight: 700; line-height: 1.4;}
+h2{font-weight: 700; line-height: 1.4;}
+h3{font-weight: 100; line-height: 1.4;}
+h4{font-weight: 700; line-height: 1.4;}
+h5{font-weight: 100; line-height: 1.4;}
+			 }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="container">
+	<div id="sec1">
+Sustain: 대구가톨릭대학교 디지털디자인과 온라인 과제전 2021년 1학기<br>
+		<br>
+과제전 기획/진행: 디지털디자인과 학생회 (회장 최성근)<br>
+과제전 홍보: 디디서포터즈 (동아리장 최민영)<br>
+과제전 웹사이트 제작: 김세진 (3학년)<br>
+과제전 포스터 디자인: 김세진 (3학년)<br>
+과제전 지도교수: 이준, 최수환, 선주연<br>
+		<br>
+		<br>
+		<br>
+수업담당 교수<br>
+		<br>
+1학년<br>
+이준 / 디지털조형<br>
+이도희 / 기초디지털표현<br>
+박주희 / 디지털타입페이스<br>
+정가빈 / 컴퓨터그래픽스1<br>
+<br>
+2학년<br>
+최수환 / 웹디자인, 디지털콘텐츠디자인1<br>
+선주연 / 인포메이션그래픽스<br>
+박은석 / 3D컴퓨터그래픽스1<br>
+이도희 / 디지털애니메이션<br>
+<br>
+3학년<br>
+이준, 최수환 / 인터랙션디자인<br>
+선주연 / 브랜딩과뉴미디어, 인포메이션디자인<br>
+박은석 / 모션그래픽<br>
+신원백 / 엔터테인먼트디자인2<br>
+<br>
+4학년<br>
+이준 / 창의융합디자인1<br>
+최수환 / 디지털콘텐츠디자인스튜디오1<br>
+선주연 / 인포메이션디자인스튜디오1<br>
+<br>
+<br>
+<br>
+주관 및 후원: 대구가톨릭대학교 디지털디자인과<br>
+문의: helpdx@gmail.com,  053-850-3920<br>
+		<br>
+학과홈페이지<br>
+http://dxdesign.kr<br>
+http://dxdesign.cu.ac.kr<br>
+		<br>
+학과페이스북 <br>
+https://www.facebook.com/dxdesign.cu.ac.kr/
+	</div>
+</div>
+
+
+
+</div>
+	
+	
+	
+	
+	<div id="footers">
+			<div id="footers_image"><img id="footer_image" src="images/dxd_logo_w.png"></div>
+			<p id="footer_text">대구가톨릭대학교 디지털디자인과<br>
+			38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br>
+			053-850-3920</p>
+	</div>
+
+<!--<div id="log">0</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="exitNoti">홈으로</p>
+<div id="exit"><img src="images/left.svg"></div>
+<div id="exitTrans"></div>
+		<div id='quitMenu'>✕</div>
+<div id='remote'>
+	<div id='goAward'>⭑
+	</div>
+	<div id='remote_controller_background_blur_A'></div>
+	<div id='go3'>3
+	</div>
+	<div id='remote_controller_background_blur_3'></div>
+	<div id='go2'>2
+	</div>
+	<div id='remote_controller_background_blur_2'></div>
+	<div id='go1'>1
+	</div>
+	<div id='goAbout'>?
+	</div>
+	<div id='remote_controller_background_blur_about'></div>
+
+	<div id='goDown'>
+	</div>
+	<div id='remote_controller_background_blur_1'></div>
+	<a href="https://www.facebook.com/dxdesign.cu.ac.kr/" target="_blank"><div id='goF'>F
+	</div></a>
+	<div id='remote_controller_background_blur_F'></div>
+	
+	<a href="http://dxdesign.kr/" target="_blank"><div id='goD'>DXD
+	</div></a>
+	<div id='remote_controller_background_blur_DxD'></div>
+</div>
+				<p id="awardNoti">　DXDesign Award</p>
+				<p id="aboutNoti">　about Sustain</p>
+				<p id="facebookNoti">　DXD Facebook ⤴</p>
+				<p id="dxdesignNoti">　DXDesign.kr ⤴</p>
+			<div id="go3_p">
+				<ul class='menu'><p class='grad'>3학년</p>
+					<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
+					<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+					<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+					<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+					<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
+				</ul>
+			</div>
+			<div id="go2_p">
+				<ul class='menu'><p class='grad'>2학년</p>
+					<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+					<li><a href='2_cont.html' class="menuText">엔터테인먼트디자인1</a></li>
+				</ul>
+			</div>
+			<div id="go1_p">
+				<ul class='menu'><p class='grad'>1학년</p>
+					<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+				</ul>
+			</div>	
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+
+
+<script>
+
+
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
+		$('#remote').delay(1200).animate({'opacity': '100%'}, 1000);
+        $('#sec1').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
+		$('#back').delay(500).animate({'opacity': '100%', 'margin-top': '0px'}, 5000, 'easeOutBack');
+    });
+
+});
+
+
+$(document).ready(function(){
+    $("#exit").on('mouseover', function(){
+        $(this).stop().animate({'width':'50px', 'height':'50px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+    });
+    $("#exit").on('mouseleave', function(){
+        $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+    });
+    $("#pic1").on('mouseover', function(){
+      //  $(this).stop().animate({'width':'992px', 'height':'558px'}, 1000, 'easeOutElastic');
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+
+    });
+
+
+	
+	
+	
+	
+	
+	$("#goAward").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#awardNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goAward").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
+		$('#awardNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+	$("#goAward").on('click', function(){
+		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
+		$('#remote').animate({'opacity': '0%'}, 600);
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','dxdaward.html');});		
+});
+$("#goAbout").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#aboutNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goAbout").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
+		$('#aboutNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+	$("#goAbout").on('click', function(){
+		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
+		$('#remote').animate({'opacity': '0%'}, 600);
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','about.html');});		
+});
+	
+			$("#goF").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#facebookNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goF").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
+		$('#facebookNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+				$("#goD").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#dxdesignNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goD").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
+		$('#dxdesignNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+			$('#quitMenu').on('click', function(){
+				$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
+				});
+	
+	
+	
+	
+	
+	$("#go3").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');	
+});
+	$("#go3").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
+});
+	$("#go3").on('click', function(){
+		$('#go3_p').animate({'height':'310px'}, 600, 'easeOutExpo');
+		$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'250px', 'opacity':'100%'}, 0);
+});
+	
+	
+
+	
+	
+	
+	
+	
+	$("#go2").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
+});
+	$("#go2").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
+});
+	$('#go2').on('click', function(){
+		$('#go2_p').animate({'height':'310px'}, 600, 'easeOutExpo');
+		$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'300px', 'opacity':'100%'}, 0);
+});
+	
+	
+	
+	
+	
+	
+	
+	$("#go1").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
+});
+	$("#go1").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
+});  
+	$('#go1').on('click', function(){
+		$('#go1_p').animate({'height':'310px'}, 600, 'easeOutExpo');
+		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'350px', 'opacity':'100%'}, 0);
+});
+	
+	
+	
+	
+	
+
+	
+	
+	$("#exit").on('click', function(){
+		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
+		$('#remote').animate({'opacity': '0%'}, 600);
+		$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index_test.html');});		
+});
+	
+
+	
+	
+	$("#pic1").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_takitcon.html');});
+	});
+	
+		$("#pic2").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_kh.html');});
+	});
+		$("#pic3").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_83tower.html');});
+	});
+		$("#pic4").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_suseong.html');});
+	});
+	
+	
+});
+
+
+
+
+</script>
+
+
+
+</body>
+    
+</html>
+

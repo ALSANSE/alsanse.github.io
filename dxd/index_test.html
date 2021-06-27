@@ -30,7 +30,21 @@
 	opacity: 0%;
 	
 	 }
-
+            #goAbout {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #babbbc;
+				text-decoration: none;
+				color: #000000;
+			 }
 				#goF {
 				 width: 40px;
 			 	 height: 40px;
@@ -62,14 +76,32 @@
 				text-decoration: none;
 				color: #000000;
 			 }
-				
+
+    #aboutNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 183px;
+    top:179px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #313539;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
+
+}	
+
+
 
 	#facebookNoti {
     position: fixed;
     height: 38px;
 	padding-top: 2px;
     width: 233px;
-    top:181px;
+    top:231px;
     opacity: 0%;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
@@ -84,8 +116,8 @@
     position: fixed;
     height: 38px;
 	padding-top: 2px;
-    width: 233px;
-    top:231px;
+    width: 283px;
+    top:281px;
     opacity: 0%;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
@@ -680,7 +712,21 @@ body {
 			 	 height: 0px;
 				opacity: 0%;}
 	
-				
+
+
+#aboutNoti {
+    position: fixed;
+    height: 0px;
+
+    width: 0px;
+
+    opacity: 0%;
+
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
+
+}				
 
 	#facebookNoti {
     position: fixed;
@@ -1349,11 +1395,14 @@ body {
 __SVGATOR_PLAYER__.build({"root":"eYLAEt9xv021","animations":[{"duration":3000,"direction":1,"iterations":0,"fill":1,"alternate":false,"speed":1,"elements":{"eYLAEt9xv023":{"transform":{"data":{"t":{"x":-225.00006103515625,"y":-183.5118179321289}},"keys":{"o":[{"t":0,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":300,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":1500,"v":{"x":225.0000610351562,"y":269.0985689321289,"type":"corner"},"e":[0.42,0,0.58,1]}]}},"opacity":[{"t":0,"v":0},{"t":300,"v":1},{"t":1500,"v":1},{"t":2000,"v":0}]},"eYLAEt9xv024":{"transform":{"data":{"t":{"x":-225.00006103515625,"y":-183.5118179321289}},"keys":{"o":[{"t":0,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":600,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":1800,"v":{"x":225.0000610351562,"y":269.0985689321289,"type":"corner"},"e":[0.42,0,0.58,1]}]}},"opacity":[{"t":300,"v":0},{"t":600,"v":1},{"t":1800,"v":1},{"t":2300,"v":0}]},"eYLAEt9xv025":{"transform":{"data":{"t":{"x":-225.00006103515625,"y":-183.5118179321289}},"keys":{"o":[{"t":0,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":900,"v":{"x":225.00006103515625,"y":183.5118179321289,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":2100,"v":{"x":225.0000610351562,"y":269.0985689321289,"type":"corner"},"e":[0.42,0,0.58,1]}]}},"opacity":[{"t":600,"v":0},{"t":900,"v":1},{"t":2100,"v":1},{"t":2600,"v":0}]}}}],"options":{"start":"load","hover":"freeze","click":"freeze","scroll":25,"font":"embed","exportedIds":"unique","svgFormat":"animated","title":"Scroll"},"animationSettings":{"duration":3000,"direction":1,"iterations":0,"fill":1,"alternate":false,"speed":1}})]]></script></svg></div>
 
 <div id='remote'>
+        <div id='goAbout'>?</div>
 		<a href="https://www.facebook.com/dxdesign.cu.ac.kr/" target="_blank"><div id='goF'>F</div></a>
 		<a href="http://dxdesign.kr/" target="_blank"><div id='goD'>DxD</div></a>
 </div>
-				<p id="facebookNoti">　DxD Facebook</p>
-				<p id="dxdesignNoti">　DxDesign.kr</p>
+
+<p id="aboutNoti">　about Sustain</p>
+<p id="facebookNoti">　DxD Facebook ⤴</p>
+<p id="dxdesignNoti">　DxDesign.kr ⤴</p>
 
 	
 
@@ -1499,7 +1548,19 @@ $(document).ready(function(){
     $(this).stop().animate({'height':'60px'}, 400, 'easeInOutCirc');
     });
 
-
+    $("#goAbout").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#aboutNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goAbout").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'18%'}, 100, 'easeInSine');	
+		$('#aboutNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+$("#goAbout").on('click', function(){
+		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
+		$('#remote').animate({'opacity': '0%'}, 600);
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','about.html');});		
+});
 			$("#goF").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
 		$('#facebookNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
