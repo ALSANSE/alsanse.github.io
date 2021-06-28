@@ -729,17 +729,19 @@
 		
 		.sec {
 		position: relative;
-		margin-bottom: 300px;
-		height: 660px;
+		margin-bottom: 600px;
+		left: -300px;
+		top: 300px;
+		height: 810px;
 		display: flex;
 		justify-content: center;  
-		width: 100%;
-		margin: 0 auto;
-		margin-top: 300px;
+		width: 1280px;
+		margin-right: 300px;
 		opacity: 0%;
+		transform: rotate(90deg);
 		}
 		
-		
+
 		
 		
 		#footers {
@@ -998,7 +1000,20 @@
 		
 		}
 					 
-					 
+		#aboutNoti {
+    position: fixed;
+    height: 0px;
+	padding-top: 2px;
+    width: 233px;
+    top:426px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}			 
 			.menu {
 				list-style: none;
 				line-height: 40px;
@@ -1491,7 +1506,7 @@
 			$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
 			$('#remote').animate({'opacity': '0%'}, 600);
 			$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
-			$('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index_test.html');});		
+			$('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
 	});
 		
 	

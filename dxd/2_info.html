@@ -1234,7 +1234,20 @@ width: auto;
 
 
 }
-			 
+#aboutNoti {
+    position: fixed;
+    height: 0px;
+	padding-top: 2px;
+    width: 233px;
+    top:426px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
 			 
 	.menu {
 		list-style: none;
@@ -1380,33 +1393,33 @@ width: auto;
 
 
 	
+
+
+	
 	
 <div id="sec1">
-	<div class="title"><p class="work">모나미 컨셉스토어 </p><p class="name">김문채 김수민 박재인 이지수 홍예지</p></div>
-	<img id="pic1" src="images/2/info/monami_t.jpg">
+	<div class="title"><p class="work">리얼 팩트풀니스 </p><p class="name">김수민　박재인　홍예지</p></div>
+	<img id="pic1" src="images/2/info/real_t.jpg">
 </div>
 
 	
 	
 <div id="sec2">
-	<div class="title"><p class="work">리얼 팩트풀니스 </p><p class="name">김수민　박재인　홍예지</p></div>
-	<img id="pic2" src="images/2/info/real_t.jpg">
+	<div class="title"><p class="work">대한민국 우체국 픽토그램 </p><p class="name">김현수　박성은　정다은　조경현</p></div>
+	<img id="pic2" src="images/2/info/epost_t.jpg">
 </div>
 
 	
 	
 <div id="sec3">
-	<div class="title"><p class="work">대한민국 우체국 픽토그램 </p><p class="name">김현수　박성은　정다은　조경현</p></div>
-	<img id="pic3" src="images/2/info/epost_t.jpg">
-</div>
-
-	
-	
-<div id="sec4">
 	<div class="title"><p class="work">피말리는 코로나 </p><p class="name">김은주　오정민　박다혜</p></div>
-	<img id="pic4" src="images/2/info/covid_t.jpg">
+	<img id="pic3" src="images/2/info/covid_t.jpg">
 </div>
 
+<div id="sec4">
+	<div class="title"><p class="work">모나미 컨셉스토어 </p><p class="name">김문채 김수민 박재인 이지수 홍예지</p></div>
+	<img id="pic4" src="images/2/info/monami_t.jpg">
+</div>
 
 <div id="sec5">
 	<div class="title"><p class="work">코로나 블루 </p><p class="name">김현수　배상훈</p></div>
@@ -1733,22 +1746,22 @@ $("#goAbout").on('mouseover', function(){
 		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
 		$('#remote').animate({'opacity': '0%'}, 600);
 		$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index_test.html');});		
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
 });
 	
 
 	
 	
-	$("#pic1").on('click', function(){
+	$("#pic4").on('click', function(){
         $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','2_info_monami.html');});
 	});
-		$("#pic2").on('click', function(){
+		$("#pic1").on('click', function(){
         $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','2_info_real.html');});
 	});
-		$("#pic3").on('click', function(){
+		$("#pic2").on('click', function(){
         $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','2_info_epost.html');});
 	});
-		$("#pic4").on('click', function(){
+		$("#pic3").on('click', function(){
         $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','2_info_covid.html');});
 	});
 		$("#pic5").on('click', function(){

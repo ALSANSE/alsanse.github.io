@@ -38,6 +38,14 @@ body {
 #back {
 	position: absolute;	
 	opacity: 0%;
+	width: 300%;
+	}
+	#back1 {
+	position: absolute;	
+	opacity: 100%;
+	width: 300%;
+	top: 100%;
+	transform: translate(0%, -100%)
 	}
 
 #exit {
@@ -84,7 +92,7 @@ body {
 			 
 #container {
     position:relative;
-	width: 1680px;
+	width: 960px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
@@ -96,28 +104,20 @@ body {
 
 
 
-
-#text_svg {
+.profile {
+width: 480px;
 	position: relative;
-	width: 100%;
-}
-
-#text {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-}
+	border-radius: 54px;
+	 }
 
 
 
-
-
-
-
-
-
-
+h1{font-size:3.6rem; font-weight: 700; line-height: 1.4;}
+h2{font-weight: 700; line-height: 1.4;}
+h3{font-weight: 100; line-height: 1.8;}
+h4{font-weight: 700; line-height: 1.4;}
+h5{font-weight: 100; line-height: 1.4;}
+			 }
 
 
 #sec1 {
@@ -126,6 +126,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;  
 width: 100%;
+top: 100px;
 opacity: 0%;
 align-items: left;
 margin-top: 100px;
@@ -134,33 +135,9 @@ color: #ffffff;
 line-height: 40px;
 font-weight: 100;
 font-family: 'Noto Sans KR', sans-serif;
-
 }
 
-h2{font-weight: 700; }
-h3{font-weight: 100; }
 
-
-
-
-
-
-.profilePC {
-	height: 40%;
-	transform: translate(-50%, 0%);
-	left: 49%;
-	position: absolute;
-	display: flex;
-	flex-direction: row;
-	top: 36.5%;
-	 }
-
-#profilePC {
-height: 10%;
-	position: relative;
-	border-radius: 27px;
-	margin: 16%;
-	 }
 
 
 
@@ -277,6 +254,26 @@ height: 10%;
 				line-height: 42px;
 				background-color: #eaebec;
 			 }
+			 	#goAbout {
+				 width: 40px;
+			 	 height: 40px;
+				opacity: 11%;
+				 border-radius: 200px;
+				 margin-bottom: 10px;
+				 text-align: center;
+				 font-size: 28px;
+				 font-family: 'Roboto Condensed', sans-serif;
+				 font-weight: 700;
+				 line-height: 42px;
+				 background-color: #eaebec;
+			 }
+				#goDown {
+				width: 40px;
+			 	height: 40px;
+				opacity: 0%;
+				margin-bottom: 10px;
+
+			 }
 				#goF {
 				width: 40px;
 			 	height: 40px;
@@ -344,7 +341,7 @@ height: 10%;
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}	
 			 
-#go1_p {
+	#go1_p {
 	position: fixed;
 	/*background-color: #eaebec;*/
     top:350px;
@@ -360,7 +357,7 @@ height: 10%;
 	background-clip: padding-box;
 	background: rgba(222,222,222,0.4);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-	}		
+	}	
 			 
 	#awardNoti {
     position: fixed;
@@ -376,6 +373,21 @@ height: 10%;
     overflow: hidden;
     -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
 	z-index: 98;
+}
+	#aboutNoti {
+    position: fixed;
+    height: 38px;
+	padding-top: 2px;
+    width: 233px;
+    top:376px;
+    opacity: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+	z-index: 98;
 
 }
 	#facebookNoti {
@@ -383,7 +395,7 @@ height: 10%;
     height: 38px;
 	padding-top: 2px;
     width: 233px;
-    top:376px;
+    top:476px;
     opacity: 0%;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
@@ -400,7 +412,7 @@ height: 10%;
     height: 38px;
 	padding-top: 2px;
     width: 233px;
-    top:426px;
+    top: 526px;
     opacity: 0%;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
@@ -462,7 +474,7 @@ height: 10%;
 				 color: #ff3322;
 				 
 			 }
-			 			 #remote_controller_background_blur_A{
+			 	 #remote_controller_background_blur_A{
 				 
 				position: fixed;
 				width: 40px;
@@ -527,7 +539,7 @@ height: 10%;
 			 }
 	
 	
-				#remote_controller_background_blur_F{
+				#remote_controller_background_blur_about{
 				 
 				position: fixed;
 				width: 40px;
@@ -541,13 +553,13 @@ height: 10%;
 				background: rgba(234,235,236,0.1);
 				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 			 }
-					#remote_controller_background_blur_DxD{
+				#remote_controller_background_blur_F{
 				 
 				position: fixed;
 				width: 40px;
 			 	height: 40px;
 				border-radius: 100px;
-				top: 250px;
+				top: 300px;
 				z-index: -88;
 				backdrop-filter: blur(5px);
 				border: solid 0px transparent;
@@ -556,9 +568,22 @@ height: 10%;
 				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 			 }
 	
+				 #remote_controller_background_blur_DxD{
+				 
+				 position: fixed;
+				 width: 40px;
+				  height: 40px;
+				 border-radius: 100px;
+				 top: 350px;
+				 z-index: -88;
+				 backdrop-filter: blur(5px);
+				 border: solid 0px transparent;
+				 background-clip: padding-box;
+				 background: rgba(234,235,236,0.1);
+				 box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+			  }
 	
-	
-			 }
+			
 			 
 			 
 			 
@@ -672,13 +697,18 @@ height: 10%;
 	justify-content: space-between;
 }
 #back {
-	position: absolute;	
+	position: fixed;	
 	opacity: 0%;
 	width: 100%;
 	transform: translate(-50%, 0%);
 	left: 50%;
+	top: -400px;
 	}
-
+	#back1 {
+	position: fixed;	
+	opacity: 0%;
+	width: 0%;
+	}
 #sec1 {
 position: relative;
 margin-bottom: 300px;
@@ -935,7 +965,7 @@ font-family: 'Noto Sans KR', sans-serif;
 				 color: #ff3322;
 				 
 			 }
-			 			 #remote_controller_background_blur_A{
+			 #remote_controller_background_blur_A{
 				 
 				position: fixed;
 				width: 40px;
@@ -949,7 +979,6 @@ font-family: 'Noto Sans KR', sans-serif;
 				background: rgba(234,235,236,0.1);
 				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 			 }
-			 
 				#remote_controller_background_blur_3{
 				 
 				position: fixed;
@@ -963,9 +992,7 @@ font-family: 'Noto Sans KR', sans-serif;
 				background-clip: padding-box;
 				background: rgba(234,235,236,0.1);
 				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
+			 } 
 			 	#remote_controller_background_blur_2{
 				 
 				position: fixed;
@@ -979,11 +1006,7 @@ font-family: 'Noto Sans KR', sans-serif;
 				background-clip: padding-box;
 				background: rgba(234,235,236,0.1);
 				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
-			 
-			 
+			 }			 
 			 	#remote_controller_background_blur_1{
 				 
 				position: fixed;
@@ -1014,35 +1037,18 @@ font-family: 'Noto Sans KR', sans-serif;
 			 }
 
 
-#text_svg {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-}
 
 .profile {
 width: 100%;
 	position: relative;
 	border-radius: 54px;
 	 }
-.profilePC {
-	width:0%;
-	height: 0%;
-	position: relative;
-	overflow: hidden;
-	 }
-#profilePC {
-	width:0%;
-	height: 0%;
-	position: relative;
-	overflow: hidden;
-	 }
+
 
 
 h1{font-size:3.6rem; font-weight: 700; line-height: 1.4;}
 h2{font-weight: 700; line-height: 1.4;}
-h3{font-weight: 100; line-height: 1.4;}
+h3{font-weight: 100; line-height: 1.8;}
 h4{font-weight: 700; line-height: 1.4;}
 h5{font-weight: 100; line-height: 1.4;}
 			 }
@@ -1063,17 +1069,13 @@ h5{font-weight: 100; line-height: 1.4;}
 
 	
 <img id="back" src="images/dxdaward.jpg">
-
+<img id="back1" src="images/dxdaward1.jpg">
 	
 	
 <div id="sec1">
-<img id="text_svg" src="images/dxdaward1.svg">
-
-</div>
-<div id="text">
 <br>
-<h1>DXDesign Award:<br>
-대구가톨릭대학교<br>디지털디자인과 수상제도</h1>
+<h1>DXDesign Award</h1>
+<h2>대구가톨릭대학교 디지털디자인과 수상제도</h2>
 
 <h3>2021년부터 디지털디자인과는 창의적이고 학문적인 분위기를 조성하고 학생의 자긍심과 소속감을 함양하고자 기존의 우리 학과 수상제도를 확대개편하여 공식수상제도를 수립하고 시범 시행합니다.</h3>
 <br>
@@ -1088,11 +1090,11 @@ h5{font-weight: 100; line-height: 1.4;}
 <br>
 <br>
 <h1>수상부문</h1>
-Honorable DXDesigner of the Year
-<br>
-<h5>(올해의 디디人): 2021년 신설</h5>
-Amazing DXDesign Works of the Semester<br>
-<h5>(학기별 DXDesign 작품상): 기존 제도 유지</h5>
+<h2>Honorable DXDesigner of the Year</h2>
+<h3>(올해의 디디人): 2021년 신설</h3>
+	<br>
+<h2>Amazing DXDesign Works of the Semester</h2>
+<h3>(학기별 DXDesign 작품상): 기존 제도 유지</h3>
 <br>
 <br>
 <br>
@@ -1104,30 +1106,28 @@ Amazing DXDesign Works of the Semester<br>
 <br><br>
 <br>
 <br>
-<h1>Honorable DXDesigner<br>of the Year</h1>
-<h3>올해의 디디人</h3>
+<h1>Honorable DXDesigner<br>of the Year<br>올해의 디디人</h1>
 <br>
-<h4>선정</h4>   
-학기마다 2인(팀)을 후보자로 선정하고, <br>2학기에 최종 수상자를 선발
-<h5>◦1학기 2인(팀), 2학기 2인(팀) 후보자 선정 후,  <br>최종 1인(팀) 선발 시상</h5>
-<br>
-<h4>특전</h4>   
-온라인 과제전 홈페이지와 학과 공식 홈페이지에<br>
-영구 게시 및 소정의 상품 수여
+<h2>선정</h2>   
+<h3>학기마다 2인(팀)을 후보자로 선정하고, <br>2학기에 최종 수상자를 선발<br>◦1학기 2인(팀), 2학기 2인(팀) 후보자 선정 후, 최종 1인(팀) 선발 시상</h3>
 <br><br>
-<h4>대상</h4>
-재학생(1-4학년)
+<h2>특전</h2>   
+<h3>온라인 과제전 홈페이지와 학과 공식 홈페이지에<br>
+영구 게시 및 소정의 상품 수여</h3>
 <br><br>
-<h4>추천</h4> 
-각 수업담당 교수님들이 수업에서 후보자를 추천하고, 
-수상위원회에서 해당학기 2인(2팀)의 후보자를 최종 선정
+<h2>대상</h2>
+<h3>재학생(1-4학년)</h3>
 <br><br>
-<h4>추천방법 및 기준</h4>
-	<h5>◦DXDesign Award 선정위원회(전임교수로 구성)가
+<h2>추천</h2> 
+<h3>각 수업담당 교수님들이 수업에서 후보자를 추천하고, 
+수상위원회에서 해당학기 2인(2팀)의 후보자를 최종 선정</h3>
+<br><br>
+<h2>추천방법 및 기준</h2>
+	<h3>◦DXDesign Award 선정위원회(전임교수로 구성)가
 	    수업담당교수가 추천한 후보자 중에서 최종선정<br>
 	◦학업과 봉사실적을 기준으로 추천<br>
 	◦시범적으로 각 수업  과제전 우수상 수상자는 자동으로 포함<br>
-	◦우수상 선정자 이외에 모범 후보자를 추가 추천 가능</h5>
+	◦우수상 선정자 이외에 모범 후보자를 추가 추천 가능</h3>
 	<br>
 <br>
 <br><br>
@@ -1137,25 +1137,23 @@ Amazing DXDesign Works of the Semester<br>
 <br><br>
 <br>
 <br>
-	<h1>Amazing DXDesign Works<br>of the Semester</h1>
-<h3>학기별 DXDesign 작품상</h3>
+	<h1>Amazing DXDesign Works<br>of the Semester<br>학기별 DXDesign 작품상</h1>
 <br>
-<h4>선정</h4> 
-매학기 각 수업의 우수 작품을 선정 
-<h5>◦우수상: 각 수업에서 가장 우수한 과제전 출품작 선정 시상<br>
-◦노력상: 각 수업 우수상 이외 우수한 출품작을 선정 시상하거나, 
+<h2>선정</h2> 
+<h3>매학기 각 수업의 우수 작품을 선정<br> ◦우수상: 각 수업에서 가장 우수한 과제전 출품작 선정 시상<br>
+◦노력상: 각 수업 우수상 이외 우수한 출품작을 선정 시상하거나,<br> 
 		      월등한 노력을 통해 수업에서 가장 발전과 성취가 높은 학생 
-		     (혹은 작품)을 선정 시상</h5>
+		     (혹은 작품)을 선정 시상</h3>
 
-			 <br>
-			 <h4>선정방법 및 기준</h4>
-각 수업 담당 교수가 선정
+			 <br><br>
+			 <h2>선정방법 및 기준</h2>
+<h3>각 수업 담당 교수가 선정</h3>
 <br><br>
-<h4>특전</h4>  
-온라인 과제전 홈페이지에 영구 게시<br>및 소정의 상품 수여
+<h2>특전</h2>  
+<h3>온라인 과제전 홈페이지에 영구 게시<br>및 소정의 상품 수여</h3>
 <br><br>
-<h4>대상</h4>  
-재학생(1-4학년)
+<h2>대상</h2>  
+<h3>재학생(1-4학년)</h3>
 <br><br><br>
 <br><br><br>
 <br><br><br>
@@ -1165,139 +1163,133 @@ Amazing DXDesign Works of the Semester<br>
 
 
 	<h1>2021년 1학기<br>올해의 디디人 후보자</h1>
-<h3>Nominator, Honorable DXDesigner of the Year, the 1st semester, 2021</h3>
+<h2>Nominator, Honorable DXDesigner of the Year, the 1st semester, 2021</h2>
 <br>
 <br>
 
 
-<h4>김세진 (17학번, 3학년)</h4>
+<h2>김세진 (17학번, 3학년)</h2>
 <img class="profile" src="images/sejin.jpeg">
 	<br>
 	<br>
-<h4>황현우 (17학번, 3학년)</h4>
+<h2>황현우 (17학번, 3학년)</h2>
 <img class="profile" src="images/hyunwoo.png">
 
 <br><br><br>
 <br><br><br>
 <br><br><br>
 <br><br><br>
-	
+
 	<h1>학기별 DXDesign 작품상 수상자</h1> 
-<h3>Amazing DXDesign Works of the Semester</h3>
+<h2>Amazing DXDesign Works of the Semester</h2>
 
 <br><br><br>
 
-	
-<h1>4학년</h1><br>
 
+<h1>4학년</h1>
 <h2>창의융합디자인1, <br>디지털콘텐츠디자인스튜디오1,<br>
-인포메이션디자인스튜디오1 통합</h2><br>
-우수상: 안진영, 오은혜 , 윤현 팀<br>
+인포메이션디자인스튜디오1 통합</h2>
+<h3>우수상: 안진영, 오은혜 , 윤현 팀<br>
 우수상: 박성지, 우준규, 최다성 팀<br>
 노력상: 김민희, 황은정 팀<br>
 노력상: 서보형<br>
-노력상: 정은비
+노력상: 정은비</h3>
 <br><br><br>
 <br><br><br>
 
-<h1>3학년</h1><br>
-<h2>인포메이션디자인</h2><br>
-우수상: takit 브랜드 픽토그램 
-	   <h5>(김세진, 방세훈, 최성근)</h5>
-노력상: 경희한의원 픽토그램 
-	   <h5>(강현지, 임관혁, 최민영)</h5>
-노력상: 대구 83타워 픽토그램 
-	   <h5>(김나희, 박은지, 정지원)</h5>
-<br><br>
-<h2>브랜딩과뉴미디어</h2><br>
-우수상: takit <h5>(김세진,  최성근, 홍예린)</h5>
-노력상: 온무방 <h5>(배기홍, 임관혁, 황현우)</h5>
-노력상: 산타 <h5>(고한세, 신예림, 임현, 최지원)</h5>
-<br><br>
-<h2>모션그래픽</h2><br>
-우수상: ALSANSE 2021 <h5>(김세진)</h5>
-노력상: THIS VIDEO IS <h5>(최성근)</h5>
-노력상: That’s What I Like <h5>(황현우)</h5>
-<br><br>
-<h2>인터랙션디자인</h2><br>
-우수상: SIREN <h5>(고한세, 김세진, 최성근, 황현우)</h5>
-우수상: 드로일패드 <h5>(서보형)</h5>
-노력상: AReminder <h5>(강현지, 임관혁, 최민영)</h5>
-노력상: 버거킹 키오스크 리뉴얼 <h5>(정지현)</h5>
-노력상: AM. PM. <h5>(우민정, 이윤주, 한지민)</h5>
-노력상: 공유킥보드 스마트안전모 <h5>(신예림, 임현, 최지원)</h5>
-<br><br>
-<h2>엔터테인먼트디자인2</h2><br>
-우수상: Escape Room <h5>(남관희, 손경준, 조희수)</h5>
-노력상: STELLA VOX <h5>(신종훈, 임관혁, 최민영)</h5>
-노력상: 과제를 물리쳐라 <h5>(김나희, 김세진, 황현우)</h5>
+<h1>3학년</h1>
+<h2>인포메이션디자인</h2>
+<h3>우수상: takit 브랜드 픽토그램<br>
+(김세진, 방세훈, 최성근)</h3>
+<h3>노력상: 경희한의원 픽토그램 <br>
+(강현지, 임관혁, 최민영)</h3>
+<h3>노력상: 대구 83타워 픽토그램 <br>
+(김나희, 박은지, 정지원)</h3>
+<br>
+<h2>브랜딩과뉴미디어</h2>
+<h3>우수상: takit<br>(김세진,  최성근, 홍예린)</h3>
+<h3>노력상: 온무방<br>(배기홍, 임관혁, 황현우)</h3>
+<h3>노력상: 산타<br>(고한세, 신예림, 임현, 최지원)</h3>
+<br>
+<h2>모션그래픽</h2>
+<h3>우수상: ALSANSE 2021 <br>(김세진)</h3>
+<h3>노력상: THIS VIDEO IS <br>(최성근)</h3>
+<h3>노력상: That’s What I Like <br>(황현우)</h3>
+<br>
+<h2>인터랙션디자인</h2>
+<h3>우수상: SIREN <br>(고한세, 김세진, 최성근, 황현우)</h3>
+<h3>우수상: 드로일패드 <br>(서보형)</h3>
+<h3>노력상: AReminder <br>(강현지, 임관혁, 최민영)</h3>
+<h3>노력상: 버거킹 키오스크 리뉴얼 <br>(정지현)</h3>
+<h3>노력상: AM. PM. <br>(우민정, 이윤주, 한지민)</h3>
+<h3>노력상: 공유킥보드 스마트안전모 <br>(신예림, 임현, 최지원)</h3>
+<br>
+<h2>엔터테인먼트디자인2</h2>
+<h3>우수상: Escape Room <br>(남관희, 손경준, 조희수)</h3>
+<h3>노력상: STELLA VOX <br>(신종훈, 임관혁, 최민영)</h3>
+<h3>노력상: 과제를 물리쳐라 <br>(김나희, 김세진, 황현우)</h3>
 <br><br><br>
 <br><br><br>
 
-<h1>2학년</h1><br>
+<h1>2학년</h1>
 
-<h2>인포메이션그래픽스</h2><br>
-우수상: 모나미 컨샙스토어 픽토그램 
-	   <h5>(김문채, 김수민, 박재인, 이지수, 홍예지)</h5>
-우수상: 리얼 팩트풀니스 
-	   <h5>(김수민, 박재인, 홍예지)</h5>
-노력상: 우체국 인포그래픽 
-	   <h5>(김현수, 박성은, 정다은, 조경현)</h5>
-노력상: 피말리는 코로나 
-	   <h5>(김은주, 박다혜, 오정민)</h5>
+<h2>인포메이션그래픽스</h2>
+<h3>우수상: 김수민, 박재인, 홍예지</h3>
+<h3>노력상: 김현수, 박성은, 정다은, 조경현</h3>
+<h3>노력상: 김은주, 박다혜, 오정민</h3>
 
-<br><br>
-<h2>3D컴퓨터그래픽스1</h2><br>
-우수상: 3ds Max 작업 <h5>(박다혜)</h5>
-노력상: 3d 모험기 <h5>(고수빈)</h5>
-노력상: Max 작업 <h5>(윤정현)</h5>
-<br><br>
+<br>
+<h2>3D컴퓨터그래픽스1</h2>
+<h3>우수상: 3ds Max 작업 <br>(박다혜)</h3>
+<h3>노력상: 3d 모험기 <br>(고수빈)</h3>
+<h3>노력상: Max 작업 <br>(윤정현)</h3>
+<br>
 
 
-<h2>웹디자인</h2><br>
-우수상: LUSH <h5>(김은주, 김한이)</h5>
-우수상: Design Studi5 <h5>(오정민)</h5>
-노력상: YOGGERPRESSO <h5>(김수민, 홍예지)</h5>
-노력상: National Geographic <h5>(이준영)</h5>
-<br><br>
-<h2>디지털애니메이션</h2><br>
-우수상: 소심한 버섯이 <h5>(김한이)</h5>
-노력상: BLU <h5>(김은주)</h5>
-노력상: 힐라 <h5>(김지우)</h5>
-<br><br>
-<h2>디지털콘텐츠디자인1</h2><br>
-우수상: falling blossom <h5>(김은주, 김지우)</h5>
-우수상: Operation: Rescue the Crushed Cookie! <h5>(김한이, 오정민)</h5>
-노력상: 휴식을 찾아서 <h5>(박다혜, 윤정현, 이준영)</h5>
-노력상: 심야 퇴근 <h5>(배상훈)</h5>
+<h2>웹디자인</h2>
+<h3>우수상: LUSH <br>(김은주, 김한이)</h3>
+<h3>우수상: Design Studi5 <br>(오정민)</h3>
+<h3>노력상: YOGGERPRESSO <br>(김수민, 홍예지)</h3>
+<h3>노력상: National Geographic <br>(이준영)</h3>
+<br>
+<h2>디지털애니메이션</h2>
+<h3>우수상: 소심한 버섯이 <br>(김한이)</h3>
+<h3>노력상: BLU <br>(김은주)</h3>
+<h3>노력상: 힐라 <br>(김지우)</h3>
+<br>
+<h2>디지털콘텐츠디자인1</h2>
+<h3>우수상: falling blossom <br>(김은주, 김지우)</h3>
+<h3>우수상: Operation: Rescue the Crushed Cookie! <br>(김한이, 오정민)</h3>
+<h3>노력상: 휴식을 찾아서 <br>(박다혜, 윤정현, 이준영)</h3>
+<h3>노력상: 심야 퇴근 <br>(배상훈)</h3>
 <br><br><br>
 <br><br><br>
-<h1>1학년</h1><br>
+<h1>1학년</h1>
 
-<h2>기초디지털표현</h2><br>
-우수상: Eagle_Poly Design <h5>(서민근)</h5>
-노력상: 해변 <h5>(박소희)</h5>
-노력상: 숲 속의 앵무새 <h5>(류혜정)</h5>
-<br><br>
-<h2>디지털타입페이스</h2><br>
-우수상: 효선이의 50일간의 프로젝트 <h5>(최효선)</h5>
-우수상: We Are Actors <h5>(강지수)</h5>
-노력상: 문자를 그리다 <h5>(장선빈)</h5>
-노력상: Jean Michel Basquiat <h5>(김창화)</h5>
-노력상: 사이버펑크 <h5>(김지현)</h5>
-노력상: 모든게 다 디자인 <h5>(홍수민)</h5>
+<h2>기초디지털표현</h2>
+<h3>우수상: Eagle_Poly Design <br>(서민근)</h3>
+<h3>노력상: 해변 <br>(박소희)</h3>
+<h3>노력상: 숲 속의 앵무새 <br>(류혜정)</h3>
+<br>
+<h2>디지털타입페이스</h2>
+<h3>우수상: 효선이의 50일간의 프로젝트 <br>(최효선)</h3>
+<h3>우수상: We Are Actors <br>(강지수)</h3>
+<h3>노력상: 문자를 그리다 <br>(장선빈)</h3>
+<h3>노력상: Jean Michel Basquiat <br>(김창화)</h3>
+<h3>노력상: 사이버펑크 <br>(김지현)</h3>
+<h3>노력상: 모든게 다 디자인 <br>(홍수민)</h3>
 
-<br><br>
+<br>
 
-<h2>디지털조형</h2><br>
-우수상: Find your HAPPY PLACE <h5>(정수연)</h5>
-우수상: McDonald’s <h5>(류혜정)</h5>
-노력상: JEJU OCEAN FEST <h5>(장선빈)</h5>
-<br><br>
-<h2>컴퓨터그래픽스1</h2><br>
-우수상: 딥티크 탐다오 <h5>(정수연)</h5>
-노력상: PRADA AMBER POUR HOMME <h5>(김창화)</h5>
-노력상: 오렌지 주스 <h5>(한연우)</h5>
+<h2>디지털조형</h2>
+<h3>우수상: Find your HAPPY PLACE <br>(정수연)</h3>
+<h3>우수상: McDonald’s <br>(류혜정)</h3>
+<h3>노력상: JEJU OCEAN FEST <br>(장선빈)</h3>
+<br>
+<h2>컴퓨터그래픽스1</h2>
+<h3>우수상: 딥티크 탐다오 <br>(정수연)</h3>
+<h3>노력상: PRADA AMBER POUR HOMME <br>(김창화)</h3>
+<h3>노력상: 오렌지 주스 <br>(한연우)</h3>
 	</div>
 </div>
 
@@ -1339,15 +1331,26 @@ Amazing DXDesign Works of the Semester<br>
 	<div id='goAward'>⭑
 	</div>
 	<div id='remote_controller_background_blur_A'></div>
+
 	<div id='go3'>3
 	</div>
 	<div id='remote_controller_background_blur_3'></div>
+
 	<div id='go2'>2
 	</div>
 	<div id='remote_controller_background_blur_2'></div>
+
 	<div id='go1'>1
 	</div>
 	<div id='remote_controller_background_blur_1'></div>
+
+	<div id='goAbout'>?
+	</div>
+	<div id='remote_controller_background_blur_about'></div>
+
+	<div id='goDown'>
+	</div>
+
 	<a href="https://www.facebook.com/dxdesign.cu.ac.kr/" target="_blank"><div id='goF'>F
 	</div></a>
 	<div id='remote_controller_background_blur_F'></div>
@@ -1356,9 +1359,12 @@ Amazing DXDesign Works of the Semester<br>
 	</div></a>
 	<div id='remote_controller_background_blur_DxD'></div>
 </div>
-			<p id="awardNoti">　DXDesign Award</p>
-				<p id="facebookNoti">　DXD Facebook</p>
-				<p id="dxdesignNoti">　DXDesign.kr</p>
+
+				<p id="awardNoti">　DXDesign Award</p>
+				<p id="aboutNoti">　about Sustain</p>
+				<p id="facebookNoti">　DXD Facebook ⤴</p>
+				<p id="dxdesignNoti">　DXDesign.kr ⤴</p>
+
 			<div id="go3_p">
 				<ul class='menu'><p class='grad'>3학년</p>
 					<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
@@ -1398,7 +1404,7 @@ Amazing DXDesign Works of the Semester<br>
 $(document).ready(function(){
     $(document).ready(function(){
         $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
-		$('#remote').delay(1200).animate({'opacity': '100%'}, 1000);
+		$('#remote').delay(300).animate({'opacity': '100%'}, 1000);
         $('#sec1').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
 		$('#back').delay(500).animate({'opacity': '100%', 'margin-top': '0px'}, 5000, 'easeOutBack');
     });
@@ -1415,47 +1421,7 @@ $(document).ready(function(){
         $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
         $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
     });
-    $("#pic1").on('mouseover', function(){
-      //  $(this).stop().animate({'width':'992px', 'height':'558px'}, 1000, 'easeOutElastic');
-		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
 
-    });
-    $("#pic1").on('mouseleave', function(){
-      //  $(this).stop().animate({'width':'960px', 'height':'540px'}, 300, 'easeInOutSine');
-		$(this).stop().animate({'top':'+10px'}, 100, 'easeInOutSine');
-
-    });
-	
-	 $("#pic2").on('mouseover', function(){
-      //  $(this).stop().animate({'width':'992px', 'height':'558px'}, 1000, 'easeOutElastic');
-		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
-
-    });
-    $("#pic2").on('mouseleave', function(){
-      //  $(this).stop().animate({'width':'960px', 'height':'540px'}, 300, 'easeInOutSine');
-		$(this).stop().animate({'top':'+10px'}, 100, 'easeInOutSine');
-
-    });
-	 $("#pic3").on('mouseover', function(){
-      //  $(this).stop().animate({'width':'992px', 'height':'558px'}, 1000, 'easeOutElastic');
-		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
-
-    });
-    $("#pic3").on('mouseleave', function(){
-      //  $(this).stop().animate({'width':'960px', 'height':'540px'}, 300, 'easeInOutSine');
-		$(this).stop().animate({'top':'+10px'}, 100, 'easeInOutSine');
-
-    });
-	    $("#pic4").on('mouseover', function(){
-      //  $(this).stop().animate({'width':'992px', 'height':'558px'}, 1000, 'easeOutElastic');
-		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
-
-    });
-    $("#pic4").on('mouseleave', function(){
-      //  $(this).stop().animate({'width':'960px', 'height':'540px'}, 300, 'easeInOutSine');
-		$(this).stop().animate({'top':'+10px'}, 100, 'easeInOutSine');
-
-    });
 
 	
 	
@@ -1475,8 +1441,21 @@ $(document).ready(function(){
 		$('#remote').animate({'opacity': '0%'}, 600);
         $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','dxdaward.html');});		
 });
-	
-			$("#goF").on('mouseover', function(){
+	$("#goAbout").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#aboutNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
+});
+	$("#goAbout").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
+		$('#aboutNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+});
+	$("#goAbout").on('click', function(){
+		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
+		$('#remote').animate({'opacity': '0%'}, 600);
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','about.html');});		
+});
+
+	$("#goF").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
 		$('#facebookNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
 });
@@ -1484,7 +1463,7 @@ $(document).ready(function(){
 		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
 		$('#facebookNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
 });
-				$("#goD").on('mouseover', function(){
+	$("#goD").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
 		$('#dxdesignNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
 });
@@ -1549,7 +1528,7 @@ $(document).ready(function(){
 		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
 });  
 	$('#go1').on('click', function(){
-		$('#go1_p').animate({'height':'310px'}, 600, 'easeOutExpo');
+		$('#go1_p').animate({'height':'270px'}, 600, 'easeOutExpo');
 		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
 		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'350px', 'opacity':'100%'}, 0);
@@ -1566,7 +1545,7 @@ $(document).ready(function(){
 		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
 		$('#remote').animate({'opacity': '0%'}, 600);
 		$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index_test.html');});		
+        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
 });
 	
 
