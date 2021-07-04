@@ -77,7 +77,42 @@
 			z-index: 97;
 		}
 					 
-					 
+		#ham {
+			position: relative;
+			height: 0px;
+			width: 0px;
+			top:70px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+			overflow: hidden;
+		}	 
+
+		#burger {
+			position: fixed;
+			height: 0px;
+			width: 0%;
+			transform: translate(-50%, 0%);
+			left: 200%;
+			top: 150px;
+			opacity: 100%;
+			z-index: 100;
+			background-color: #fafbfc;
+			border-radius: 54px;
+			box-shadow: 0px 0px 0px 300px rgba(49,53,57,1);
+		}	
+
+		#burger_x {
+			position: absolute;
+			height: 0px;
+			width: 0px;
+			top:-80px;
+			right: -50px;
+			opacity: 100%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	
+
 		#container {
 			top: 120px;
 			position:relative;
@@ -745,14 +780,33 @@
 			display: none; 
 			}
 		
-		
+
+
+
+			#nav{
+						width: 98%;
+						height: 140px;
+						left: 50%;
+						transform: translate(-50%, -5%);
+						margin-bottom: 40px;
+						position: fixed;
+						backdrop-filter: blur(15px);
+						border: solid 1px transparent;
+						background-clip: padding-box;
+						background: rgba(49,53,57,0.5);
+						z-index: 99;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+					 }
+
 		
 		#exit {
-			position: fixed;
-			height: 40px;
-			width: 40px;
-			top:80px;
-			left:120%;
+			position: relative;
+			height: 80px;
+			width: 80px;
+			top:70px;
+			left:70px;
 			opacity: 0%;
 			transform: translate(-50%, -50%);
 			z-index: 99;
@@ -760,8 +814,8 @@
 		
 		#exitNoti {
 			position: fixed;
-			height: 40px;
-			width: 80px;
+			height: 0px;
+			width: 0px;
 			top:51px;
 			opacity: 0%;
 			font-family: 'Noto Sans KR', sans-serif;
@@ -776,10 +830,10 @@
 					 
 		#exitTrans {
 			position: fixed;
-			height: 10px;
-			width: 10px;
-			top:80px;
-			left:80px;
+			height: 0px;
+			width: 0px;
+			top:100px;
+			left:100px;
 			opacity: 0%;
 			background-color: #fafbfc;
 			transform: translate(-50%, -50%);
@@ -787,13 +841,72 @@
 			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
 			z-index: 97;
 		}
-					 
-					 
+
+
+		#ham {
+			position: relative;
+			height: 80px;
+			width: 80px;
+			top: 70px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	 
+
+		#burger {
+			position: fixed;
+			height: 1480px;
+			width: 40%;
+			padding: 100px 25%;
+			transform: translate(-50%, 0%);
+			left: 200%;
+			top: 150px;
+			opacity: 100%;
+			z-index: 100;
+			background-color: #fafbfc;
+			border-radius: 54px;
+			box-shadow: 0px 0px 100px 300px rgba(49,53,57,1);
+		}	
+
+		#burger_x {
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			top:-80px;
+			right: -50px;
+			opacity: 100%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	
+
+		.head{
+		font-weight: 100;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 2rem;
+		color: #000000;
+		text-decoration: none;
+		}
+
+		.head_b{
+		font-weight: 700;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 2.4rem;
+		color: #000000;
+		text-decoration: none;
+		}
+
+		.neck{
+		font-weight: 100;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 2rem;
+		color: #000000;
+		text-decoration: none;
+		}
+
 		#container {
-			top: 160px;
+			top: 280px;
 			position:relative;
 			width: 90%;
-		
 			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
@@ -856,23 +969,7 @@
 		
 		
 		
-		
-		
-		
-		#log {
-			position:fixed;
-			top: 100px;
-			left: 100px;
-			width: 200px;
-			height: 100px;
-			background-color:#512da8;
-			color: #fff;
-			font-size: 36px;
-			text-align: center;
-			line-height: 100px;
-		}
-		
-		
+	
 		
 		#footers {
 			position: relative;
@@ -1297,8 +1394,17 @@
 						background: rgba(234,235,236,0.1);
 						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 					 }
-					 }
+					 
 		
+
+
+
+
+
+					 }
+
+
+
 		</style>
 
 
@@ -1306,9 +1412,66 @@
 
 <body>
 
-	<p id="exitNoti">홈으로</p>
+
+
+
+<div id="nav">
+
+<p id="exitNoti">홈으로</p>
 <div id="exit"><img src="images/left.svg"></div>
 <div id="exitTrans"></div>
+	
+<div id="ham"><img src="images/ham.svg"></div>
+
+
+
+
+<div id="burger">
+
+<img id="burger_x" src="images/X.svg">
+<a class="head" href="dxdaward.html">DXDesign Award</a>
+<br><br>
+<a class="head" href="about.html">about Sustain</a>
+<br><br><br>
+
+<p class="head_b">3학년</p>
+<a class="neck" href="3_info.html">인포메이션디자인</a>
+<br><br>
+<a class="neck" href="3_brnd.html">브랜딩과뉴미디어</a>
+<br><br>
+<a class="neck" href="3_intr.html">인터랙션디자인</a>
+<br><br>
+<a class="neck" href="3_mgrp.html">모션그래픽</a>
+<br><br>
+<a class="neck" href="3_entr.html">엔터테인먼트디자인2</a>
+<br><br><br>
+<p class="head_b">2학년</p>
+<a class="neck" href="2_info.html">인포메이션그래픽스</a>
+<br><br>
+<a class="neck" href="2_cg3d.html">3D컴퓨터그래픽스1</a>
+<br><br>
+<a class="neck" href="2_webd.html">웹디자인</a>
+<br><br>
+<a class="neck" href="2_anim.html">디지털애니메이션</a>
+<br><br>
+<a class="neck" href="2_cont.html">디지털콘탠츠디자인1</a>
+<br><br><br>
+<p class="head_b">1학년</p>
+<a class="neck" href="1_basc.html">기초디지털표현</a>
+<br><br>
+<a class="neck" href="1_typo.html">디지털타입페이스</a>
+<br><br>
+<a class="neck" href="1_gest.html">디지털조형</a>
+<br><br>
+<a class="neck" href="1_cmgr.html">컴퓨터그래픽스1</a>
+</div>
+
+</div>
+
+
+
+
+
 		<div id='quitMenu'>✕</div>
 		<div id='remote'>
 			<div id='goAward'>⭑
@@ -1376,8 +1539,6 @@
 
 
 <div id="container">
-
-	
 
 
 	
@@ -1448,6 +1609,7 @@
 $(document).ready(function(){
     $(document).ready(function(){
         $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
+		$('#ham').delay(1000).animate({'opacity': '100%'}, 1000);
 		$('#remote').delay(300).animate({'opacity': '100%'}, 1000);
         $('#sec1').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000,'easeOutBack');
         $('#sec2').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
@@ -1638,7 +1800,13 @@ $("#goAbout").on('mouseover', function(){
 		$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
         $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
 });
-	
+
+	$("#ham").on('click', function(){
+        $('#burger').animate({'opacity':'100%', 'left':'50%'}, 600, 'easeOutExpo');		
+});
+	$("#burger_x").on('click', function(){
+        $('#burger').animate({'opacity':'100%', 'left':'200%'}, 300, 'easeInExpo');		
+});
 
 	
 	
