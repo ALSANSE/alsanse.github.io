@@ -196,20 +196,6 @@
 		
 		
 		
-		#log {
-			position:fixed;
-			top: 100px;
-			left: 100px;
-			width: 200px;
-			height: 100px;
-			background-color:#512da8;
-			color: #fff;
-			font-size: 36px;
-			text-align: center;
-			line-height: 100px;
-		}
-		
-		
 		
 		#footers {
 			position: relative;
@@ -329,19 +315,23 @@
 	 }
 
 			 
-			 #goAward {
+	 #goAward {
 				 width: 40px;
 			 	 height: 40px;
 				opacity: 11%;
 				 border-radius: 200px;
 				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 38px;
 				 background-color: #eaebec;
 			 }
+
+			 #star {
+				 width: 80%;
+			 	 height: 80%;
+				  transform: translate(-50%, -48%);
+				  left: 50%;
+				  top:50%;
+				  position: relative;
+			 }			 
 			 
 			 #go3 {
 				 width: 40px;
@@ -1489,7 +1479,7 @@
 
 		<div id='quitMenu'>✕</div>
 		<div id='remote'>
-			<div id='goAward'>⭑
+			<div id='goAward'><img id="star" src="images/star.svg">
 			</div>
 			<div id='remote_controller_background_blur_A'></div>
 			<div id='go3'>3

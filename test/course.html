@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html lang="kr">
+
+<head>
+<title>대구가톨릭대학교 디지털디자인과</title>
+
+<meta property="og:url" content="http://dxdesign.kr" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="대구가톨릭대학교 디지털디자인과" />
+<meta property="og:description" content="합격을 축하합니다!" />
+<meta property="og:image" content="http://dxdesign.kr/dxd-logo.png" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="course_style.css">
+
+</head>
+
+<body>
+
+
+<div id='remote'>
+    <div id='home'><a href='index.html'><img src='icon_home.svg'></a></div>
+    <div id='prof'><a href='professor.html'><img src='icon_prof.svg'></a></div>
+</div>
+<p id="homeText">메인페이지</p>
+<p id="profText">교수 소개</p>
+
+
+
+<div id="container">
+
+<div class="class">
+<h1>교육과정</h1><h1></h1>
+</div>
+
+<div class="class">
+    <h2>1학년</h2><h2></h2>
+    <div class="season">
+        <h3>1학기</h3>
+        <p class="subject">
+            컴퓨터그래픽스1<br>
+            대가길라잡이<br>
+            기초디지털표현<br>
+            디지털조형<br>
+            디지털타입페이스<br>
+            2D디자인테크실무<br>
+            자기학습설계(I)<br>
+            자기학습설계(II)
+        </p>
+    </div>
+
+    <div class="season">
+        <h3>2학기</h3>
+        <p class="subject">
+            컴퓨터그래픽스2<br>
+            스토리텔링과디자인<br>
+            디자인발상과리서치<br>
+            타입페이스와뉴미디어<br>
+            자기학습설계(I)<br>
+            자기학습설계(II)
+        </p>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="class">
+    <h2>2학년</h2><h2></h2>
+    <div class="season">
+        <h3>1학기</h3>
+        <p class="subject">
+            인포메이션그래픽스<br>
+            디지털콘텐츠디자인1<br>
+            디지털애니메이션<br>
+            웹디자인<br>
+            3D컴퓨터그래픽스1
+        </p>
+    </div>
+
+    <div class="season">
+        <h3>2학기</h3>
+        <p class="subject">
+            디지털디자인1<br>
+            디지털사진<br>
+            디지털비디오<br>
+            3D컴퓨터그래픽스2<br>
+            엔터테인먼트디자인1
+        </p>
+    </div>
+
+</div>
+
+
+
+<div class="class">
+    <h2>3학년</h2><h2></h2>
+    <div class="season">
+        <h3>1학기</h3>
+        <p class="subject">
+            모션그래픽<br>
+            인포메이션디자인<br>
+            브랜딩과뉴미디어<br>
+            디지털디자인리터러시<br>
+            엔터테인먼트디자인2<br>
+            인터랙션디자인
+        </p>
+    </div>
+
+    <div class="season">
+        <h3>2학기</h3>
+        <p class="subject">
+            디지털디자인2<br>
+            사용자경험디자인<br>
+            디지털콘텐츠디자인2<br>
+            프로모션디자인<br>
+            고급디지털표현<br>
+            진로와취업을위한전공별직업윤리<br>
+            피지컬컴퓨팅
+        </p>
+    </div>
+
+</div>
+
+
+
+<div class="class">
+    <h2>4학년</h2><h2></h2>
+    <div class="season">
+        <h3>1학기</h3>
+        <p class="subject">
+            인포메이션디자인스튜디오1<br>
+            디지털콘텐츠디자인스튜디오1<br>
+            창의융합디자인1
+        </p>
+    </div>
+
+    <div class="season">
+        <h3>2학기</h3>
+        <p class="subject">
+            인포메이션디자인스튜디오2<br>
+            디지털콘텐츠디자인스튜디오2<br>
+            창의융합디자인2
+        </p>
+    </div>
+
+</div>
+
+
+
+
+<div id="footer">
+<a href="http://dxdesign.cu.ac.kr"><img src="logo.png" /></a>
+<p>대구가톨릭대학교 디지털디자인과<br />
+38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br />
+053-850-3920</p>
+</div>
+
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('video').bind('contextmenu',function() { return false; });
+});
+
+
+$(document).ready(function(){
+
+    $("#home").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#homeText').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#home").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'33%'}, 100, 'easeInSine');	
+		$('#homeText').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+
+    $("#prof").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+		$('#profText').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#prof").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'33%'}, 100, 'easeInSine');	
+		$('#profText').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+
+
+
+
+	
+
+});
+
+
+</script>
+
+</body>
+
+</html>
