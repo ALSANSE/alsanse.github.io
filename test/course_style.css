@@ -192,4 +192,13 @@ padding: 1rem 76px 0px 76px;
     #footer img {
         width: 160px;
     }
+    .class {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        padding: 1rem;
+    }
+    #remote {
+        left:110%;
+    }
 }

@@ -157,4 +157,7 @@ a:hover {
     #footer img {
         width: 160px;
     }
+    #remote {
+        left:110%;
+    }
 }

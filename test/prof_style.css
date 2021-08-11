@@ -29,6 +29,7 @@ h2 {
     min-width: 240px;
     text-align: left;
     border-top: solid 1px #dadbdc;
+    
 }
 h3 {
 
@@ -40,6 +41,7 @@ h4 {
     line-height: 1.8;
     color: #000;
     margin-bottom: 1rem;
+    
 }
 p {
     margin-bottom: 1.0rem;
@@ -75,12 +77,12 @@ padding: 1rem 76px 0px 76px;
     display: flex;
     margin-bottom: 2rem;
     height: auto;
-    min-height: 220px;
 }
 .box3{
     display: flex;
     margin-bottom: 2rem;
     height: auto;
+    
 }
 #container {
     width: 90%;
@@ -91,19 +93,6 @@ padding: 1rem 76px 0px 76px;
     flex-direction: column;
 }
 
-.empty-100 {
-    height: 1.0rem;
-}
-.caption {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    text-align: center;
-}
-.key {
-    font-size: 2.0rem;
-    font-weight: 700;
-    color:#3449BF;
-}
 
 #footer {
     margin-top: 64px;
@@ -185,5 +174,19 @@ padding: 1rem 76px 0px 76px;
     }
     #footer img {
         width: 160px;
+    }
+    .class {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        padding: 1rem;
+    }
+    .thumb{
+        height: 91px;
+        width: 75px;
+        object-fit: cover;
+    }
+    #remote {
+        left:110%;
     }
 }
