@@ -99,14 +99,14 @@ a:hover {
 #course {
     width: 40px;
 	height: 40px;
-	opacity: 33%;
+	opacity: 66%;
 	margin-bottom: 10px;
 	text-align: center;
 }
 #prof {
     width: 40px;
 	height: 40px;
-	opacity: 33%;
+	opacity: 66%;
 	margin-bottom: 10px;
 	text-align: center;
 }
@@ -160,4 +160,67 @@ a:hover {
     #remote {
         left:110%;
     }
+    #nav{
+        width: 98%;
+        height: 140px;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        margin-bottom: 40px;
+        position: fixed;
+        backdrop-filter: blur(15px);
+        border: solid 1px transparent;
+        background-clip: padding-box;
+        background: rgba(49,53,57,0.6);
+        z-index: 99;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+     }
+    #ham {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        top: 70px;
+        opacity: 100%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }	 
+    #burger {
+        position: fixed;
+        height: 1730px;
+        width: 40%;
+        padding: 80px 10%;
+        transform: translate(-50%, 0%);
+        left: 200%;
+        top: 48px;
+        opacity: 100%;
+        z-index: 100;
+        background-color: #fafbfc;
+        border-radius: 27px;
+        box-shadow: 0px 0px 80px 420px rgba(49,53,57,1);
+    }
+    #burger_x {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        top: 23px;
+        right: -193px;
+        opacity: 100%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+    .head{
+		font-weight: 700;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 1.8rem;
+		color: #000000;
+		text-decoration: none;
+	}
+    .neck{
+		font-weight: 100;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 2.4rem;
+		color: #000000;
+		text-decoration: none;
+	}
 }
