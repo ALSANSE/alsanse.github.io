@@ -144,6 +144,54 @@ a:hover {
 
 }
 
+#ham {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    top:70px;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    overflow: hidden;
+}	 
+
+#subject{
+    color: #ffffff;
+    font-size: 2.1rem;
+    text-align: center;
+    margin-top: 54px;
+    opacity: 0%;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#burger {
+    position: fixed;
+    height: 0px;
+    width: 0%;
+    transform: translate(-50%, 0%);
+    left: 200%;
+    top: 150px;
+    opacity: 100%;
+    z-index: 100;
+    background-color: #fafbfc;
+    border-radius: 54px;
+    box-shadow: 0px 0px 0px 300px rgba(49,53,57,1);
+}	
+
+#burger_x {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top:-80px;
+    right: -50px;
+    opacity: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}	
+
+
+
 @media screen and (max-width: 720px) {
     html {
         font-size: 16px;
