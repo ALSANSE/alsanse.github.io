@@ -197,13 +197,13 @@ a:hover {
         left:110%;
     }
     #container{
-        padding-top: 70px;
+        padding-top: 40px;
     }
     #nav{
-        width: 98%;
-        height: 80px;
+        width: 101%;
+        height: 50px;
         left: 50%;
-        transform: translate(-50%, -20%);
+        transform: translate(-50%, -35%);
         margin-bottom: 40px;
         position: fixed;
         backdrop-filter: blur(15px);
@@ -217,9 +217,9 @@ a:hover {
      }
     #ham {
         position: relative;
-        height: 50px;
-        width: 50px;
-        top: 40px;
+        height: 40px;
+        width: 40px;
+        top: 25px;
         opacity: 100%;
         transform: translate(-50%, -50%);
         z-index: 99;
@@ -239,10 +239,10 @@ a:hover {
     }
     #burger_x {
         position: absolute;
-        height: 50px;
-        width: 50px;
-        top: 40px;
-        right: 32px;
+        height: 40px;
+        width: 40px;
+        top: 25px;
+        right: 19px;
         opacity: 100%;
         transform: translate(-50%, -50%);
         z-index: 99;
@@ -251,7 +251,7 @@ a:hover {
     .cta{
 		font-weight: 100;
 		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 2rem;
+		font-size: 1.2rem;
 
 	}
     .cta:link, .cta:visited {
