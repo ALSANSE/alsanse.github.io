@@ -19,7 +19,23 @@
 </head>
 
 <body>
+	<div id="nav">
 
+		<div id="ham"><img src="ham.svg"></div>
+		
+		
+		
+		
+		<div id="burger">
+		
+		<img id="burger_x" src="X.svg">
+		<a class="cta" href="course.html">교육과정</a>
+		<br><br>
+		<a class="cta" href="professor.html">교수 소개</a>
+			
+		</div>
+		
+		</div>
 
 <div id='remote'>
     <div id='home'><a href='index.html'><img src='icon_home.svg'></a></div>
@@ -190,7 +206,12 @@ $(document).ready(function(){
 		$('#profText').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
     
 
-
+        $("#ham").on('click', function(){
+        $('#burger').animate({'opacity':'100%', 'right':'-5%'}, 600, 'easeOutExpo');		
+});
+	$("#burger_x").on('click', function(){
+        $('#burger').animate({'opacity':'100%', 'right':'-100%'}, 300, 'easeInCirc');		
+});
 
 
 	
