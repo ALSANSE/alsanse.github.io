@@ -40,7 +40,27 @@ h4 {
     line-height: 1.8;
     color: #000;
 }
-
+.y1{
+    width: 100px;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    color: #939699;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.y2{
+    width: 60px;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    color: #939699;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.c{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 144%;
+}
 .detail {
     color: #000;
     text-decoration: none;
