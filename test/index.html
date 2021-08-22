@@ -29,10 +29,15 @@
 		<div id="burger">
 		
 		<img id="burger_x" src="X.svg">
+        <a class="cta" href="index.html">처음으로</a>
+		<br><br>
 		<a class="cta" href="course.html">교육과정</a>
 		<br><br>
 		<a class="cta" href="professor.html">교수 소개</a>
-			
+        <br><br>
+		<a class="cta" href="http://dxdesign.cu.ac.kr">DxD</a>
+        <br><br>
+		<a class="cta" href="https://www.facebook.com/dxdesign.cu.ac.kr/">Facebook</a>	
 		</div>
 		
 		</div>
@@ -45,11 +50,15 @@
 
 
 <div id='remote'>
-    <div id='course'><a href='course.html'><img src='icon_course.svg'></a></div>
-    <div id='prof'><a href='professor.html'><img src='icon_prof.svg'></a></div>
+    <div id='r1'><a href='course.html'><img src='timeline_black_24dp.svg' class="icon"></a></div>
+    <div id='r2'><a href='professor.html'><img src='school_black_24dp.svg' class="icon"></a></div>
+    <div id='r3'><a href='http://dxdesign.cu.ac.kr' target='_blank'><img src='dxd_black_24dp.svg'></a></div>
+    <div id='r4'><a href='https://www.facebook.com/dxdesign.cu.ac.kr/' target='_blank'><img src='facebook_black_24dp.svg'></a></div>
 </div>
-<p id="courseText">교육과정</p>
-<p id="profText">교수 소개</p>
+<p id="r1Text">교육과정</p>
+<p id="r2Text">교수 소개</p>
+<p id="r3Text">DxD ⤴</p>
+<p id="r4Text">Facebook ⤴</p>
 
 
 
@@ -290,21 +299,35 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    $("#course").on('mouseover', function(){
+    $("#r1").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#courseText').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#course").on('mouseleave', function(){
+		$('#r1Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#r1").on('mouseleave', function(){
 		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#courseText').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+		$('#r1Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
     
 
-    $("#prof").on('mouseover', function(){
+    $("#r2").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#profText').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#prof").on('mouseleave', function(){
+		$('#r2Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#r2").on('mouseleave', function(){
 		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#profText').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+		$('#r2Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
 
+        $("#r3").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+		$('#r3Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#r3").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+		$('#r3Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+
+    $("#r4").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+		$('#r4Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+	$("#r4").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+		$('#r4Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
 
 
         $("#ham").on('click', function(){
