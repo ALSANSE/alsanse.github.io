@@ -1,0 +1,27 @@
+<html>
+<style>
+    #header {width: 200px;height: 200px;}
+</style>
+<body>
+
+<div id='header'>
+
+</div>    
+
+<div w3-include-html="a.html"></div>
+<script src="jquery-3.5.1.js"></script>
+
+<script type="text/javascript">   
+    $(document).ready(function(){
+         $("#header").load("a.html")
+        /* id 지정을 통해서도 가능합니다. 
+         $("#header").load("header.html #navbar")
+         */       
+      });
+
+    </script>
+</body>
+
+
+
+</html>
