@@ -60,6 +60,20 @@
 			overflow: hidden;
 		}
 
+
+		.contents{
+			position: absolute;
+			margin-left: 210px;
+			width: 0px;
+			height: 550px;
+			transform: translate(30%, 0%);
+			overflow: hidden;
+		}
+
+		.content{
+			width: 550px;
+		}
+
 		#me{
 			position: relative;
 			width: auto;
@@ -105,30 +119,70 @@
 			height: 34px;
 			border-radius: 100%;
 			opacity: 66%;
+			z-index: 98;
 		}
 
 		#r3Button{
 			overflow: hidden;
 			display: flex;
-			background-color: #ff6442;
 			opacity: 100%;
+			z-index: 100;
+			background-color: #ffffff00;
+		}
+
+		.rLay{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		.rText{
+			position: absolute;
+			font-size: 0.5rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+			top:-50px;
+			text-align: center;
+			overflow: hidden;
+		}
+
+		#r1Text{
+			height: 0px;
+			top: -40px;
+		}
+
+		#r2Text{
+			height: 0px;
+			top: -40px;
+
+		}
+
+		#r4Text{
+			height: 0px;
+			top: -40px;
+		}
+
+		#r5Text{
+			height: 0px;
+			top: -40px;
 		}
 
 		#minilogo{
 			position: relative;
 			top: -100px;
 			width: 100%;
+			z-index: 101;
 		}
 
 		#follower{
 			position: absolute;
-			width: 40px;
-			height: 40px;
+			width: 34px;
+			height: 34px;
 			border-radius: 100%;
-			border: dotted 6px #ffbc58;
-			transform: translate(-9px, -9px);
-			z-index: -9;
+			background-color: #ffbc58;
+			z-index: 99;
 			left: 153px;
+			opacity: 100%;
 		}
 
 		#alsanse-slit{
@@ -166,6 +220,22 @@
 			position: absolute;
 			top: 0px;
 		}
+
+
+
+		#thumb{
+			position: relative;
+			width: auto;
+			height: auto;
+			opacity: 0%;
+		}
+
+		.nails{
+			position: absolute;
+			width: 550px;
+			height: 550px;
+		}
+
 	</style>
 
 
@@ -174,10 +244,24 @@
 
 <body>
 	<div id="circle">
+		<div id="thumb">
+			<img class="nails" id="a" src='indeximage/a.png'>
+			<img class="nails" id="b" src='indeximage/b.png'>
+			<img class="nails" id="c" src='indeximage/c.png'>
+			<img class="nails" id="d" src='indeximage/d.png'>
+		</div>
 		<img id='logo' src='indeximage/alsanse.svg'>
+
 	</div>
 
-
+<div class="contents">
+	<div class="content" id="b_content">
+	SiliconTimer<br>
+	2021<br>
+	dfafdafaefadsf<br>
+	자세히보기<br>
+	</div>
+</div>
 
 
 
@@ -193,22 +277,27 @@
 		<div id="follower"></div>
 
 		<div class='rLay'>
+			<p id="r1Text" class='rText'>SIREN</p>
 			<div id='r1Button' class='rButton'></div>
 		</div>
 		
 		<div class='rLay'>
+			<p id="r2Text" class='rText'>SiliconTimer</p>
 			<div id='r2Button' class='rButton'></div>
 		</div>
 
 		<div class='rLay'>
 			<div id='r3Button' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg'></div>
+
 		</div>
 
 		<div class='rLay'>
+			<p id="r4Text" class='rText'>takit</p>
 			<div id='r4Button' class='rButton'></div>
 		</div>
 
 		<div class='rLay'>
+			<p id="r5Text" class='rText'>BLOODVENTURE</p>
 			<div id='r5Button' class='rButton'></div>
 		</div>
 
@@ -254,33 +343,47 @@ $("#r3Button").on('mouseleave', function(){
 
 $("#r2Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r2Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
 });
 $("#r2Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$("#r2Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+
 });
 
 
 $("#r1Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r1Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
 });
 $("#r1Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
+	$("#r1Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+	
 });
 
 
 $("#r4Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r4Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+
 });
 $("#r4Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$("#r4Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+
 });
 
 
 $("#r5Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r5Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+
 });
 $("#r5Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
+	$("#r5Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+	
 });
 
 
@@ -290,55 +393,80 @@ $("#r5Button").on('mouseleave', function(){
 
 
 $("#r3Button").on('click', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'margin-bottom':'34px'}, 300, 'easeOutCubic');
-	$('#me').stop().animate({'height':'210px'}, 600, 'easeOutCubic');
-	$('#alsanse-slit').stop().animate({'height':'500px'}, 600, 'easeInOutCubic');
-	$('#follower').stop().animate({'left':'153px'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(50).animate({'top':'0px'}, 600, 'easeOutExpo');
-
-
+	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'margin-bottom':'34px', 'left':'0px'}, 300, 'easeInOutCubic');
+	$('#me').stop().delay(100).animate({'height':'210px'}, 600, 'easeInOutCubic');
+	$('#alsanse-slit').stop().delay(100).animate({'height':'500px'}, 600, 'easeInOutCubic');
+	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(100).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(150).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().animate({'width':'0px'}, 200, 'easeInOutCubic');
 });
 
 
 $("#r2Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic');
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
 	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
 	$('#alsanse-slit').stop().animate({'height':'0px'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'76.5px', 'deg':'360'}, 300, 'easeOutExpo');
+	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
 
 });
 
 
 $("#r1Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic');
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
 	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
 	$('#alsanse-slit').stop().animate({'height':'0px'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'0px'}, 300, 'easeOutExpo');
+	$('#follower').stop().animate({'left':'0px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 });
 
 
 $("#r4Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic');
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
 	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
 	$('#alsanse-slit').stop().animate({'height':'0px'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'229.5px'}, 300, 'easeOutExpo');
+	$('#follower').stop().animate({'left':'229.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 });	
 
 $("#r5Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic');
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
 	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
 	$('#alsanse-slit').stop().animate({'height':'0px'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'306px'}, 300, 'easeOutExpo');
+	$('#follower').stop().animate({'left':'306px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 });	
 
 
