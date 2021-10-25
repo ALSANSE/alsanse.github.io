@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SIREN</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+
+		#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+
+		body{
+			width: 375px;
+			background-color: #181919;
+			margin: 0;
+			padding: 0;
+		}
+		
+		
+		img{
+			width: 100%;
+		}
+
+
+	#close{
+		width: 220px;
+		height: 35px;
+		position: absolute;
+		top: 730px;
+		left: 75px;
+	}
+
+	</style>
+
+
+
+</head>
+<!--<div id="log">0</div>-->
+<body>
+
+<a id="close" href="SIRENinterface.html"></a>
+<img src="sirenimage/add.svg">
+
+
+
+
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+
+<script>
+	$(window).scroll(function () {
+        var height = $(document).scrollTop();
+        log(height);
+
+        if(height>=1400) {
+            $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
+        }
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+</script>
+
+</body>
+</html>

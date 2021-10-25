@@ -68,10 +68,74 @@
 			height: 550px;
 			transform: translate(30%, 0%);
 			overflow: hidden;
+			display: flex;
+			align-items: center;
 		}
 
 		.content{
+			position: absolute;
 			width: 550px;
+			display: block;
+		}
+
+		#a_content{
+			opacity: 0%;
+		}
+
+		#b_content{
+			opacity: 0%;
+		}
+
+		#c_content{
+			opacity: 0%;
+			transform: translate(0, -0.5rem);
+		}
+
+		#d_content{
+			opacity: 0%;
+		}
+
+		.contentLogo{
+			position: relative;
+			height: 3rem;
+		}
+
+		.takitLogo{
+			position: relative;
+			height: 4rem;
+		}
+
+
+		h1{
+			position: relative;
+			font-size: 2rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+			color: #919399;
+			margin-top: 0;
+			margin-bottom: 3rem;
+		}
+
+		.contentText{
+			position: relative;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+		}
+
+		.cta{
+			position: relative;
+			font-size: 0.8rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			color: #216f9b;
+			text-decoration: none;
+			width: 100px;
+		}
+
+		.cta:hover{
+			color: #ff6442;
 		}
 
 		#me{
@@ -193,7 +257,7 @@
 			height: 500px;
 			transform: translate(0, -100%);
 			z-index: -99;
-			top: 40%;
+			top: 400px;
 		}
 
 		.al{
@@ -255,12 +319,47 @@
 	</div>
 
 <div class="contents">
-	<div class="content" id="b_content">
-	SiliconTimer<br>
-	2021<br>
-	dfafdafaefadsf<br>
-	자세히보기<br>
+
+	<div class="content" id="a_content">
+		<img class="contentLogo" src="indeximage/sirenlogo.svg">
+		<h1>2021</h1>
+		<p class="contentText">
+			사용자가 목표에 도달하려는 과정에서 방해되는 요소를 차단하며 계획에서<br>
+			벗어나는 것을 방지하고 게으른 성격과 나쁜 습관을 고치는 알람 어플
+		</p>
+		<a class="cta" href="SIREN.html">자세히보기</a>
 	</div>
+
+	<div class="content" id="b_content">
+		<img class="contentLogo" src="indeximage/silicontimerlogo.svg">
+		<h1>2021</h1>
+		<p class="contentText">
+			세상에서 가장 아날로그적인 타이머인<br>
+			모래시계를 디지털로 재해석한 작품
+		</p>
+		<a class="cta" href="SiliconTimer.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="c_content">
+		<img class="takitLogo" src="indeximage/takitlogo.svg">
+		<h1>2021</h1>
+		<p class="contentText">
+			분리수거에 관심이 없거나 게으른 사람들을 위해<br>
+			분리수거를 쉽고 올바르게 즐길 수 있도록 하는 서비스
+		</p>
+		<a class="cta" href="takit.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="d_content">
+		<img class="contentLogo" src="indeximage/bloodventurelogo.svg">
+		<h1>2021</h1>
+		<p class="contentText">
+			적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
+			고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임
+		</p>
+		<a class="cta" href="BLOODVENTURE.html">자세히보기</a>
+	</div>
+
 </div>
 
 
@@ -422,6 +521,11 @@ $("#r2Button").on('click', function(){
 	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#b_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+
 
 });
 
@@ -438,6 +542,12 @@ $("#r1Button").on('click', function(){
 	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#a_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+
 });
 
 
@@ -453,6 +563,11 @@ $("#r4Button").on('click', function(){
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#c_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 });	
 
 $("#r5Button").on('click', function(){
@@ -467,6 +582,12 @@ $("#r5Button").on('click', function(){
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#d_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+
 });	
 
 

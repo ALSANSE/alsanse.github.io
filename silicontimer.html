@@ -67,7 +67,7 @@
 		p2{
 			font-size: 1.1rem;
 			font-family: 'Noto Sans KR', sans-serif;
-			color: #313539;
+			color: #909499;
 			line-height: 2.2rem;
 			width: 640px;
 			}
@@ -165,7 +165,8 @@
 
 
 </head>
-<div id="log">0</div>
+
+<!--<div id="log">0</div>-->
 
 <body>
 	<div id="container">
@@ -221,7 +222,7 @@
 
 <div class="greenpeace">
 	<h1>하드웨어 디자인</h1>
-	<iframe id="vimeo" src="https://player.vimeo.com/video/634514685?h=f158450e71?autoplay=1&loop=1&autopause=0" width="640" height="640" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+	<iframe id="vimeo" src="https://player.vimeo.com/video/634514685?h=f158450e71?&loop=1&autoplay=1&autopause=0" width="640" height="640" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 		<p1>중력에 의해 배터리가 접촉되어 특정 방향에서만 전원이 공급된다.</p1>
 		<div id="pics">
 			<img id="m1" src="silicontimerimage/m1.jpeg">
@@ -235,9 +236,8 @@
 		</p1>
 	</div>
 
-
-
 <div class="greenpeace">
+	<div class="greenpeace"></div>
 	<img id="footerImg"src="silicontimerimage/foot.svg">
 		<h1>결론</h1>
 		<p2>
@@ -255,11 +255,11 @@
         var height = $(document).scrollTop();
         log(height);
 
-        if(height>=1400) {
+        if(height>=1600) {
             $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
         }
 
-        if(height>=2200) {
+        if(height>=2500) {
             $('#e3SQo1jJCNz1').animate({'opacity': '100%','margin-top': '0px'}, 600, 'easeOutSine');
         }
 
