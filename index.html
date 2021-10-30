@@ -25,6 +25,9 @@
 
 
 
+
+
+
 		#log {
 	position:fixed;
 	top: 100px;
@@ -60,6 +63,14 @@
 			overflow: hidden;
 		}
 
+		#main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: fixed;
+			
+		}
 
 		.contents{
 			position: fixed;
@@ -132,10 +143,16 @@
 			color: #216f9b;
 			text-decoration: none;
 			width: 100px;
+			border: 2px solid #216f9b;
+			border-radius: 100px;
+			padding: 1px 8px 2px 8px;
+			margin-top: 1rem;
 		}
 
 		.cta:hover{
 			color: #ff6442;
+			border: 2px solid #ff6442;
+
 		}
 
 		#me{
@@ -147,23 +164,29 @@
 			font-family: 'Noto Sans KR', sans-serif;
 			font-weight: 400;
 			text-align: center;
+			display: flex;
+			flex-direction: column;
 		}
 
 		.name{
 			font-size: 1.6rem;
+			margin: 0;
 			font-family: 'Noto Sans KR', sans-serif;
 			font-weight: 700;
-			margin: 0;
+			margin-bottom: 1rem;
 		}
 
 		.name_contact{
 			font-size: 1rem;
-			line-height: 0.8rem;
 			font-family: 'Noto Sans KR', sans-serif;
 			font-weight: 400;
+			color: #216f9b;
+			text-decoration: none;
 		}
 
-
+		.name_contact:hover{
+		color: #ff6442;
+		}
 
 
 
@@ -204,10 +227,11 @@
 			position: absolute;
 			font-size: 16px;
 			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
+			font-weight: 700;
 			top:-50px;
 			text-align: center;
 			overflow: hidden;
+			color: #ff6442;
 		}
 
 		#r1Text{
@@ -307,6 +331,8 @@
 </head>
 
 <body>
+
+<div id='main'>
 	<div id="circle">
 		<div id="thumb">
 			<img class="nails" id="a" src='indeximage/a.png'>
@@ -315,8 +341,14 @@
 			<img class="nails" id="d" src='indeximage/d.png'>
 		</div>
 		<img id='logo' src='indeximage/alsanse.svg'>
-
 	</div>
+	
+	<div id="me">
+		<p class='name'>김세진</p>
+		<a class='name_contact' href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+		<a class='name_contact' href="https://www.instagram.com/alsan.se">@alsan.se</a>
+	</div>
+</div>
 
 <div class="contents">
 
@@ -364,12 +396,7 @@
 
 
 
-	<div id="me">
-		<p class='name'>김세진</p>
-		<p class='name_contact'>050-7027-99187</p>
-		<p class='name_contact'>alessandro.sejini@gmail.com</p>
-		<p class='name_contact'>@alsan.se</p>
-	</div>
+
 
 
 	<div id='remote'>
@@ -417,7 +444,7 @@
 		<div class='lu'></div>
 		<div class='al'></div>
 		<div class='lu'></div>
-		<div class='se'></div>
+		<div class='se' id='easterEgg'></div>
 		<div class='lu'></div>
 
 
@@ -488,6 +515,12 @@ $("#r5Button").on('mouseleave', function(){
 
 
 
+
+$("#easterEgg").on('click', function(){
+	$(this).animate({'opacity':'0%'}, 1000, 'easeInSine', function(){
+            $(location).attr('href','logo.html');
+        });	
+});
 
 
 

@@ -54,7 +54,7 @@
 			font-family: 'Noto Sans KR', sans-serif;
 			font-weight: 700;
 			color: #ffb600;
-			font-size: 4rem;
+			font-size: 2rem;
 		}
 		p1{
 			font-size: 0.8rem;
@@ -173,6 +173,10 @@
 			text-align: center;
 		}
 
+		.webpTitle{
+			color: #f1f3f9;
+		}
+
 	#interface{
 		width: 378px;
 		height: 811px;
@@ -187,16 +191,19 @@
 		display:none; 
 		width: 0;
 	}
-
+	#intro{
+			position: relative;
+			width: 1440px;
+		}
 	</style>
 
 
 
 </head>
-<!--<div id="log">0</div>-->
+<div id="log">0</div>
 <body>
 	<div id="container">
-		<img src="sirenimage/1.png">
+		<img src="sirenimage/1.png" id="intro">
 		<div class="greenpeace"></div>
 
 	<div class="greenpeace">
@@ -238,11 +245,11 @@
 			스스로 통제하기 어려운 세가지의 상황에 최적화된<br>알람을 제공하는 것이 SIREN의 특징입니다.
 		</p3>
 		<div id="webp1">
-			<div class="webp2"><img class="webp" src="sirenimage/sleep.webp">			<p2 class="webpText">취침알람</p2><p1 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p1></div>
+			<div class="webp2"><img class="webp" src="sirenimage/sleep.webp">			<p2 class="webpText" class="webpTitle">취침알람</p2><p1 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p1></div>
 
-			<div class="webp2"><img class="webp" src="sirenimage/wake.webp">			<p2 class="webpText">기상알람</p2><p1 class="webpText">제시간에 일어나지 않으면<br>매우 강력한 알람소리 재생</p1></div>
+			<div class="webp2"><img class="webp" src="sirenimage/wake.webp">			<p2 class="webpText" class="webpTitle">기상알람</p2><p1 class="webpText">제시간에 일어나지 않으면<br>매우 강력한 알람소리 재생</p1></div>
 
-			<div class="webp2"><img class="webp" src="sirenimage/activity.webp">			<p2 class="webpText">활동알람</p2><p1 class="webpText">서명을 하여 활동을 <br>제대로 실시하도록 동기부여</p1></div>
+			<div class="webp2"><img class="webp" src="sirenimage/activity.webp">			<p2 class="webpText" class="webpTitle">활동알람</p2><p1 class="webpText">서명을 하여 활동을 <br>제대로 실시하도록 동기부여</p1></div>
 
 		</div>
 	</div>
@@ -251,8 +258,9 @@
 
 <div class="greenpeace">
 	<h1>앱 인터페이스</h1>
+	<p3>SIREN의 인터페이스를 체험해보세요</p3>
+	<br>
 	<iframe id=interface src="SIRENinterface.html"></iframe>
-	<p1>SIREN의 인터페이스를 체험해보세요</p1>
 </div>
 
 
@@ -275,7 +283,7 @@
         var height = $(document).scrollTop();
         log(height);
 
-        if(height>=1400) {
+        if(height>=700) {
             $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
         }
 
