@@ -133,6 +133,17 @@
 
 		}
 
+		.endGreenpeace{
+			width: 400px;
+			padding-bottom: 32px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			border: solid 32px #101111;
+
+		}
+
 		#footerImg{
 			position: absolute;
 			width: 90%;
@@ -180,12 +191,15 @@
 	#interface{
 		width: 378px;
 		height: 811px;
+		background-color: #000000;
 		border: solid 24px #000000;
 		border-radius: 55px;
 		overflow: scroll;
 		padding: 0;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+		-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
 	}
 	#interface::-webkit-scrollbar{ 
 		display:none; 
@@ -200,14 +214,14 @@
 
 
 </head>
-<div id="log">0</div>
+<!--<div id="log">0</div>-->
 <body>
 	<div id="container">
 		<img src="sirenimage/1.png" id="intro">
 		<div class="greenpeace"></div>
 
 	<div class="greenpeace">
-		<iframe id="vimeo" src="https://player.vimeo.com/video/566484724?badge=0&autoplay=0&autopause=0&player_id=0&app_id=58479" width="960" height="540" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+		<iframe id="vimeo" src="https://player.vimeo.com/video/640879040?badge=0&autoplay=0&autopause=0&player_id=0&app_id=58479" width="960" height="540" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 		<h2 id='t1'>
 			SIREN은 사용자가 목표에 도달하려는 과정에서<br>
 			방해되는 요소를 차단하며 계획에서 벗어나는 것을 방지하고<br> 
@@ -258,7 +272,6 @@
 
 <div class="greenpeace">
 	<h1>앱 인터페이스</h1>
-	<p3>SIREN의 인터페이스를 체험해보세요</p3>
 	<br>
 	<iframe id=interface src="SIRENinterface.html"></iframe>
 </div>
@@ -266,10 +279,16 @@
 
 
 
-<div class="greenpeace">
+<div class="endGreenpeace">
 		<h1>결론</h1>
 		<p2>
-		 이 프로젝트는...(작성 중)
+			사이렌은 입시생, 취준생, 공시생 등 남은 시간을 효율적으로 사용하여 목표에 도달해야하는 사람들을 주 대상으로 만들어졌습니다. 입맛에 맞게 사용자에게 복종하는 알람과는 다르게 SIREN은 사용자에게 책임을 묻습니다.
+
+
+			하루에 주어진 시간을 제대로 사용하고 있지 못하는 사람, 게으르거나 의지가 약해 계획이 있음에도 잘 실천하지 못하고 후회하는 사람이라면 SIREN을 사용하세요. 당신의 일상 속 교도관이 되어 드리겠습니다. 
+
+
+			<br>게으름과 안일함은 사이렌에 두고 가세요.
 		</p2>
 	</div>
 </div>
@@ -283,7 +302,7 @@
         var height = $(document).scrollTop();
         log(height);
 
-        if(height>=700) {
+        if(height>=1000) {
             $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
         }
 

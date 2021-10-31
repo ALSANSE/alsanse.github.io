@@ -30,6 +30,9 @@
 			margin: 0;
 			padding: 0;
 			-ms-overflow-style: none;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
 		}
 		::-webkit-scrollbar{ 
 		display:none; 
@@ -42,12 +45,207 @@
 
 
 	#close{
-		width: 220px;
+		width: 110px;
 		height: 35px;
 		position: absolute;
 		top: 730px;
 		left: 75px;
 	}
+
+	#week{
+		display: flex;
+		width: 270px;
+		height: 24px;
+		justify-content: space-between;
+		position: absolute;
+		top: 442px;
+	}
+
+
+
+
+	#slider{
+		display: flex;
+		width: 315px;
+		justify-content: space-between;
+		position: absolute;
+		top: 558px;
+	}
+
+	#sliderA{
+		width: 20px;
+		height: 20px;
+	}
+
+	#sliderB{
+		width: 20px;
+		height: 20px;
+	}
+
+	#sliderC{
+		width: 20px;
+		height: 20px;
+	}
+
+	#indi{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 558px;
+	}
+
+
+
+
+
+
+	#sun0{
+		position: absolute;
+		top: 443px;
+		left: 61px;
+		height: 23px;
+		width: 23px;
+		opacity: 1;
+	}
+
+	#mon0{
+		position: absolute;
+		top: 473px;
+		left: 99px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#tue0{
+		position: absolute;
+		top: 443px;
+		left: 137px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+	#wed0{
+		position: absolute;
+		top: 473px;
+		left: 176px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#thu0{
+		position: absolute;
+		top: 473px;
+		left: 214px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#fri0{
+		position: absolute;
+		top: 443px;
+		left: 252px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+	#sat0{
+		position: absolute;
+		top: 443px;
+		left: 291px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+
+	#sun1{
+		position: absolute;
+		top: 473px;
+		left: 61px;
+		height: 23px;
+		width: 23px;
+		opacity: 0;
+	}
+
+	#mon1{
+		position: absolute;
+		top: 443px;
+		left: 99px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+	#tue1{
+		position: absolute;
+		top: 473px;
+		left: 137px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#wed1{
+		position: absolute;
+		top: 443px;
+		left: 176px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+	#thu1{
+		position: absolute;
+		top: 443px;
+		left: 214px;
+		height: 24px;
+		width: 24px;
+		opacity: 1;
+	}
+
+	#fri1{
+		position: absolute;
+		top: 473px;
+		left: 252px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#sat1{
+		position: absolute;
+		top: 473px;
+		left: 291px;
+		height: 24px;
+		width: 24px;
+		opacity: 0;
+	}
+
+	#input {
+		text-align:left;
+		color:#f1f3f9;
+		background-color: rgba(0, 0, 0, 0);
+		top: 655px;
+  		position:absolute;
+  		width: 300px;
+  		height: 30px;
+ 		border-style: none;}
+
+	#input:focus {outline:none;}
+  
+  
+  
+
+
+	
+	
+
+
 
 	</style>
 
@@ -57,33 +255,128 @@
 <!--<div id="log">0</div>-->
 <body>
 
-<a id="close" href="SIRENinterface.html"></a>
+<a id="close" class='cta' href="SIRENinterfaceRepeat.html"></a>
 <img src="sirenimage/add.svg">
 
 
 
 
+	<div id='sun1' class='cta'><img src='sirenimage/sun.svg'></div>
+	<div id='mon1' class='cta'><img src='sirenimage/mon.svg'></div>
+	<div id='tue1' class='cta'><img src='sirenimage/tue.svg'></div>
+	<div id='wed1' class='cta'><img src='sirenimage/wed.svg'></div>
+	<div id='thu1' class='cta'><img src='sirenimage/thu.svg'></div>
+	<div id='fri1' class='cta'><img src='sirenimage/fri.svg'></div>
+	<div id='sat1' class='cta'><img src='sirenimage/sat.svg'></div>
+
+	<div id='sun0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='mon0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='tue0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='wed0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='thu0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='fri0' class='cta'><img src='sirenimage/empty.svg'></div>
+	<div id='sat0' class='cta'><img src='sirenimage/empty.svg'></div>
 
 
-	<script src="jquery-3.5.1.js"></script>
-	<script src="jquery.easing.min.js"></script>
+
+
+<img id='indi' src='sirenimage/indi.svg'>
+
+<div id='slider'>
+	<div id='sliderA' class='cta'></div>
+	<div id='sliderB' class='cta'></div>
+	<div id='sliderC' class='cta'></div>
+</div>
+
+<input id="input" type="text" placeholder="알람 이름" onfocus="this.placeholder=''" onblur="this.placeholder='알람 이름'"><br>
+
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
 
 <script>
-	$(window).scroll(function () {
-        var height = $(document).scrollTop();
-        log(height);
-
-        if(height>=1400) {
-            $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
-        }
+$(document).ready(function(){
 
 
-       
-    });
+$("#sliderA").on('click', function(){
+	$('#indi').animate({'left':'30px'}, 300, 'easeOutExpo');	
+});
 
-    function log(str){
-        $('#log').text(str);
-    }
+$("#sliderB").on('click', function(){
+	$('#indi').animate({'left':'178px'}, 300, 'easeOutExpo');	
+});
+
+$("#sliderC").on('click', function(){
+	$('#indi').animate({'left':'325px'}, 300, 'easeOutExpo');	
+});
+
+
+$("#sun1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#sun0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#sun0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#sun1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#mon1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#mon0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#mon0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#mon1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#tue1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#tue0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#tue0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#tue1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#wed1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#wed0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#wed0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#wed1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#thu1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#thu0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#thu0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#thu1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#fri1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#fri0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#fri0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#fri1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+$("#sat1").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#sat0').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+$("#sat0").on('click', function(){
+	$(this).animate({'opacity':'0', 'top':'473px'}, 0);	
+	$('#sat1').animate({'opacity':'1', 'top':'443px'}, 0);	
+});
+
+
+
+});
 
 </script>
 

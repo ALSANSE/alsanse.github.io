@@ -141,25 +141,6 @@ img{width: 100%;}
 		opacity: 0;
 	}
 	
-	#start{
-		width: 378px;
-		height: 811px;
-		backdrop-filter: blur(5px);
-		border: solid 0px transparent;
-		background-clip: padding-box;
-		background: rgba(0,0,0,0.66);
-		font-family: 'Noto Sans KR', sans-serif;
-		font-weight: 400;
-		color: #f1f3f9;
-		font-size: 1rem;
-		line-height: 2rem;
-		position: fixed;
-		transform: translate(-50%, -50%);
-		left: 50%;
-		top: 50%;
-		z-index: 999;
-		text-align: center;
-	}
 
 
 	</style>
@@ -167,7 +148,6 @@ img{width: 100%;}
 
 
 </head>
-<div id='start'><br><br><br><br><br><br>이곳을 클릭하여<br> SIREN의 인터페이스를<br>직접 체험해보세요.</div>
 <body>
 
 <a id="add" class='cta' href="SIRENadd.html"></a>
@@ -188,10 +168,6 @@ img{width: 100%;}
 
 <script>
 $(document).ready(function(){
-
-$("#start").on('click', function(){
-	$(this).animate({'top':'210%'}, 300, 'easeInCirc');	
-});
 
 
 $("#AwOff").on('click', function(){
