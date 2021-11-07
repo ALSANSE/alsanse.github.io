@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BLOODVENTURE</title>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+
+
+		#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+@keyframes animatedBackground {
+  from {
+    background-position: center 0px;
+	background-size: cover;
+  }
+  to {
+    background-position: center -1840px;
+	background-size: cover;
+  }
+}
+		body{
+			background-color: #000000;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		#bckgrnd{
+			position: fixed;
+			width: 1200px;
+			height: 1840px;
+			background-image: url(bloodventureimage/vessel.svg);
+			background-size: cover;
+			background-position: 0px 0px;
+  			background-repeat: repeat-y;
+  			animation: animatedBackground 8s linear infinite;
+		}
+		#container{
+			width: 90%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 300px;
+			z-index: 0;
+		}
+		
+		img{
+			width: 100%;
+		}
+		.vimeo{
+			position: relative;
+
+		}
+		#vimeo{
+			position: relative;
+			border-radius: 54px;
+			margin-top: 20px;
+		}
+
+		h1{
+			font-family: 'Jua', sans-serif;
+			color: #EA3636;
+			font-size: 2.2rem;
+		}
+		p1{
+			font-size: 0.8rem;
+			font-family: 'Nanum Gothic', sans-serif;
+			color: #909499;
+			line-height: 1.5rem;
+			margin-top: 0.8rem;
+			text-align: center;
+		}
+		p2{
+			font-size: 1.1rem;
+			font-family: 'Nanum Gothic', sans-serif;
+			color: #909499;
+			line-height: 2.2rem;
+			width: 640px;
+			text-align: center;
+			}
+		p3{
+			font-size: 1.1rem;
+			font-family: 'Nanum Gothic', sans-serif;
+			color: #ffffff;
+			line-height: 2.2rem;
+			width: 640px;
+			text-align: center;
+			}
+
+		h2{
+			font-size: 1.4rem;
+			font-family: 'Nanum Gothic', sans-serif;
+			font-weight: 400;
+			color: #FFC69F;
+			line-height: 2.6rem;
+			width: 640px;
+			text-align: center;
+			}
+		h3{
+			font-size: 1.4rem;
+			font-family: 'Nanum Gothic', sans-serif;
+			font-weight: 400;
+			color: #EA3636;
+			line-height: 2.6rem;
+			width: 640px;
+			text-align: center;
+			}
+
+
+		#pics{
+			margin-top: 54px;
+			width: 640px;
+			display: grid;
+			grid-template-columns: 1fr 1fr ;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-gap: 34px;
+		}
+		#m0{
+			grid-column: 1 / 3;
+			grid-row: 1 / 3;
+			border-radius: 54px;
+			width: 640px;
+		}
+		#m1{
+			grid-column: 1;
+			grid-row: 3;
+			border-radius: 54px;
+			width: 303px;
+		}
+		#m2{
+			grid-column: 2;
+			grid-row: 3;
+			border-radius: 54px;
+			width: 303px;
+
+
+		}
+		#m3{
+			grid-column: 1 / 3;
+			grid-row: 5 / 7;
+			border-radius: 54px;
+		}		
+		#m4{
+			grid-column: 1 / 2;
+			grid-row: 7 / 8;
+			border-radius: 54px;
+
+		}
+
+		#m5{
+			grid-column: 1 / 3;
+			grid-row: 4;
+			border-radius: 54px;
+
+		}
+
+		#m6{
+			grid-column: 2 / 3;
+			grid-row: 7 / 8;
+			border-radius: 54px;
+
+		}
+
+		#i1{
+			margin-top: 100px;
+			height: 400px;
+		}
+
+		#i2{
+			width: 100%;
+			opacity: 100%;
+		}
+
+		#t1{
+			margin-top: 180px;
+			opacity: 0%;
+		}
+		#t2{
+			margin-top: 10px;
+			height: 100px;
+			opacity: 100%;
+		}
+
+		#t4{
+			color: #e1e3e9;
+			background-color: black;
+		}
+
+		#eXVWBMPDgLp1{
+			margin-top: 80px;
+			opacity: 0%;
+			height: 400px;
+		}
+
+		.greenpeace{
+			width: 100%;
+			padding-bottom: 16rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#intro{
+			position: relative;
+			width: 640px;
+			margin: 200px 0 100px 0;
+		}
+		#endFrame{
+			position: absolute;
+			width: 305px;
+			height: 527px;
+			border: #515559 solid 8px;
+			transform: translate(0%, 6%);	
+			z-index: -98;	
+		}
+		
+
+
+		.endGreenpeace{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.back{
+			background-color: #F1F3F5;
+			width: 1080px;
+			border-radius: 78px;
+			padding: 16px 0;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 16rem;
+		}
+
+		#leftright{
+			position: relative;
+			display: flex;
+		}
+
+		#left{
+			width: 480px;
+			margin: 0 10px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#right{
+			width: 480px;
+			margin: 0 10px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#key{
+			height: 200px;
+		}
+
+		#dl{
+			border: solid 6px #dA2626;
+			border-radius: 100px;
+			padding: 5px 40px 0px 40px;
+			text-decoration: none;
+
+		}
+
+		#dlt{
+			color: #FFC69F;
+		}
+
+		#dl:hover{
+			text-decoration: none;
+			border: solid 6px #FFC69F;
+		}
+
+	</style>
+
+
+
+</head>
+
+<!--<div id="log">0</div>-->
+
+<body>
+	<div id="bckgrnd"></div>
+	<div id="container">
+
+		<img id='intro' src="indeximage/bloodventurelogo.svg">
+
+
+
+		<div class="greenpeace">
+			<h1>블러드벤쳐</h1>
+			<h2>Blood + Adventure</h2>
+			<p3>적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
+				고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임입니다.</p3>
+		</div>
+
+		<div class="greenpeace"></div>
+
+
+		<div class='back'>
+
+				<iframe id="vimeo" src="https://player.vimeo.com/video/643191532?badge=0&autoplay=0&autopause=0&player_id=0&app_id=58479" width="960" height="540" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+				<br><br><br>
+				<h1>게임 플레이 방법</h1>
+				<img id='key' src='bloodventureimage/key.svg'>
+				<br>
+				<p2>좌/우 방향키로 두 화면을 동시에 제어</p2>
+				<br><br><br>
+				<div id='leftright'>
+					<div id='left'><h3>음식을 피해라!</h3><img src='bloodventureimage/m1.svg'><p2>좌/우 방향키를 눌러 정해진 위치로 이동</p2></div>
+					<div id='right'><h3>부딪히지 말아라!</h3><img src='bloodventureimage/m2.svg'><p2>좌/우 방향키를 눌러 미끄러지듯이 이동</p2></div>
+				</div>
+		</div>
+
+
+		<div class="endGreenpeace">
+			<a id='dl' href="#"><h1 id='dlt'>다운로드</h1></a>
+		</div>
+
+	</div> <!--container-->
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	
+<script>
+	$(window).scroll(function () {
+        var height = $(document).scrollTop();
+        log(height);
+
+        if(height>=650) {
+            $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
+        }
+
+        if(height>=1500) {
+            $('#eXVWBMPDgLp1').animate({'opacity': '100%','margin-top': '0px'}, 600, 'easeOutSine');
+        }
+
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+</script>
+
+</body>
+</html>
