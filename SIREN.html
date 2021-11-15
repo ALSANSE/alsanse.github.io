@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <title>SIREN</title>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap');
 
 		#log {
 	position:fixed;
@@ -51,10 +49,9 @@
 			z-index: 999999;
 		}
 		h1{
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 700;
+			font-family: 'Black Han Sans', sans-serif;
 			color: #ffb600;
-			font-size: 2rem;
+			font-size: 2.2em;
 		}
 		p1{
 			font-size: 0.8rem;
@@ -158,24 +155,32 @@
 		#webp1{
 			display: flex;
 			justify-content: center;
-			flex-direction: row;
+			flex-direction: column;
 			flex-wrap: wrap;
 			width: 1260px;
+
 		}
 
 		.webp2{
 			position: relative;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			border: 1px solid red;
 		}
 
+		.videoText{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
 		.webp{
 			position: relative;
-			border: solid 12px #000000;
-			border-radius: 34px;
-			width: 200px;
+			border: solid 21px #000000;
+			border-radius: 55px;
+			width: 300px;
 			margin: 40px 40px 20px 40px;
 		}
 		.webpText{
@@ -259,11 +264,14 @@
 			스스로 통제하기 어려운 세가지의 상황에 최적화된<br>알람을 제공하는 것이 SIREN의 특징입니다.
 		</p3>
 		<div id="webp1">
-			<div class="webp2"><img class="webp" src="sirenimage/sleep.webp">			<p2 class="webpText" class="webpTitle">취침알람</p2><p1 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p1></div>
+			<div class="webp2">
+				<video class="webp" src="sirenimage/sleep.mp4" autoplay muted loop>sss
+				<div class="videoText"><p2 class="webpText" class="webpTitle">취침알람</p2><p1 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p1></div>
+			</div>
 
-			<div class="webp2"><img class="webp" src="sirenimage/wake.webp">			<p2 class="webpText" class="webpTitle">기상알람</p2><p1 class="webpText">제시간에 일어나지 않으면<br>매우 강력한 알람소리 재생</p1></div>
+			<div class="webp2"><video class="webp" src="sirenimage/wake.mp4" autoplay muted loop>			<p2 class="webpText" class="webpTitle">기상알람</p2><p1 class="webpText">제시간에 일어나지 않으면<br>매우 강력한 알람소리 재생</p1></div>
 
-			<div class="webp2"><img class="webp" src="sirenimage/activity.webp">			<p2 class="webpText" class="webpTitle">활동알람</p2><p1 class="webpText">서명을 하여 활동을 <br>제대로 실시하도록 동기부여</p1></div>
+			<div class="webp2"><video class="webp" src="sirenimage/activity.mp4" autoplay muted loop>			<p2 class="webpText" class="webpTitle">활동알람</p2><p1 class="webpText">서명을 하여 활동을 <br>제대로 실시하도록 동기부여</p1></div>
 
 		</div>
 	</div>
