@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>SIREN</title>
+
+
+<script>
+	(function(d) {
+	  var config = {
+		kitId: 'cxe7jgx',
+		scriptTimeout: 3000,
+		async: true
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+  </script>
+
+
 	<style>
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap');
 
 		#log {
 	position:fixed;
@@ -49,13 +62,13 @@
 			z-index: 999999;
 		}
 		h1{
-			font-family: 'Black Han Sans', sans-serif;
+			font-family: rixrak-sans-pro, sans-serif;
 			color: #ffb600;
 			font-size: 2.2em;
 		}
 		p1{
 			font-size: 0.8rem;
-			font-family: 'Noto Sans KR', sans-serif;
+			font-family: source-han-sans-korean, sans-serif;
 			color: #515359;
 			line-height: 1.5rem;
 			margin-top: 0.8rem;
@@ -63,14 +76,14 @@
 		}
 		p2{
 			font-size: 1.1rem;
-			font-family: 'Noto Sans KR', sans-serif;
+			font-family: source-han-sans-korean, sans-serif;
 			color: #909499;
 			line-height: 2.2rem;
 			width: 640px;
 			}
 		p3{
 			font-size: 1.1rem;
-			font-family: 'Noto Sans KR', sans-serif;
+			font-family: source-han-sans-korean, sans-serif;
 			color: #909499;
 			line-height: 2.2rem;
 			width: 640px;
@@ -79,9 +92,9 @@
 
 		h2{
 			font-size: 1.6rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
-			color: #909499;
+			font-family: source-han-sans-korean, sans-serif;
+			font-weight: 700;
+			color: #bb3333;
 			line-height: 3rem;
 			width: 640px;
 			text-align: center;
@@ -166,15 +179,12 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			align-items: center;
+			align-items: flex-end;
 			border: 1px solid red;
 		}
 
 		.videoText{
 			position: relative;
-			width: 100px;
-			height: 100px;
-			border: 1px solid red;
 		}
 		.webp{
 			position: relative;
@@ -186,7 +196,8 @@
 		.webpText{
 			position: relative;
 			width: 300px;
-			text-align: center;
+			text-align: left;
+			padding-bottom: 20px;
 		}
 
 		.webpTitle{
@@ -227,11 +238,11 @@
 
 	<div class="greenpeace">
 		<iframe id="vimeo" src="https://player.vimeo.com/video/640879040?badge=0&autoplay=0&autopause=0&player_id=0&app_id=58479" width="960" height="540" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-		<h2 id='t1'>
+		<p3 id='t1'>
 			SIREN은 사용자가 목표에 도달하려는 과정에서<br>
 			방해되는 요소를 차단하며 계획에서 벗어나는 것을 방지하고<br> 
 			게으른 성격과 나쁜 습관을 고치기 위해 만들어진 알람 어플입니다. 
-		</h2>
+		</p3>
 	</div>
 
 
@@ -265,8 +276,8 @@
 		</p3>
 		<div id="webp1">
 			<div class="webp2">
-				<video class="webp" src="sirenimage/sleep.mp4" autoplay muted loop>sss
-				<div class="videoText"><p2 class="webpText" class="webpTitle">취침알람</p2><p1 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p1></div>
+				<div><video class="webp" src="sirenimage/sleep.mp4" autoplay muted loop></div>
+				<div class="videoText"><h2 class="webpText" class="webpTitle">취침알람</h2><br><p3 class="webpText">잠을 자지 않고 폰을 게속해서<br>사용하면 강력한 경고 재생</p3></div>
 			</div>
 
 			<div class="webp2"><video class="webp" src="sirenimage/wake.mp4" autoplay muted loop>			<p2 class="webpText" class="webpTitle">기상알람</p2><p1 class="webpText">제시간에 일어나지 않으면<br>매우 강력한 알람소리 재생</p1></div>
