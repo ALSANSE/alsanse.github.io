@@ -46,7 +46,7 @@
 
 <div id='nav'>
 <a class='navText' href="gallery.html">gallery</a>
-<a id='homeButton' href="#"><img src="images/home_on.png"></a>
+<a id='homeButton'><img src="images/home_on.png"></a>
 <a class='navText' href="mission.html">mission</a>
 </div>
 
@@ -63,46 +63,6 @@ $(document).ready(function(){
         $('#guide').delay(2000).animate({left:'150%'}, 1000, 'easeInExpo');
     });
 
-
-
-    $("#r1").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#r1Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#r1").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#r1Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
-    
-
-    $("#r2").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#r2Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#r2").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#r2Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
-
-        $("#r3").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#r3Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#r3").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#r3Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
-    
-
-    $("#r4").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-		$('#r4Text').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
-	$("#r4").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-		$('#r4Text').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
-
-
-        $("#ham").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'right':'-5%'}, 600, 'easeOutExpo');		
-});
-	$("#burger_x").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'right':'-100%'}, 300, 'easeInCirc');		
-});
-    
 
 
 

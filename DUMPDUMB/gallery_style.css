@@ -12,18 +12,19 @@ body{
 }
 
 img{
-    width: 100px;
+    width: 33.3%;
 }
 
 
 
 .gp{
-    margin-top: 50px;
-    margin-bottom: 100px;
-    width: 80%;
+
+    margin-bottom: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -66,7 +67,7 @@ img{
     font-weight: 800;
     font-size: 12px;
     color: #ffffff;
-    text-decoration: underline 2px;
+    text-decoration: underline 2px #ffffff;
     transform: translate(0, 2px);
 }
 
@@ -75,8 +76,14 @@ img{
     font-weight: 800;
     font-size: 12px;
     color: #dd0011;
+    text-decoration: underline 2px #ffffff;
     opacity: 100%;
 
+}
+
+
+#navOn{
+    color: #dd0011;
 }
 
 #homeButton{
