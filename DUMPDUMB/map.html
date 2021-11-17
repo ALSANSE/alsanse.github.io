@@ -22,8 +22,9 @@
 
 <body>
 
-
-<a id=title href="index.html"><img src='images/dpdb_wl.svg'></a>
+<div id='header'>
+<a id=title href="index.html"><img id='titleImg' src='images/dpdb_wl.svg'></a><div></div>
+</div>
 
 <div id='map'>
 	<img id='mapImg' src='images/map.jpg'>
@@ -33,7 +34,7 @@
 </div>
 
 
-<p2 id='guide'>옆으로 스크롤하여 탐색&nbsp;&nbsp;&nbsp;≫</p2>
+<p2 id='guide'>스크롤하여 탐색</p2>
 
 
 
@@ -51,9 +52,18 @@
 
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
+<script src="jquery.textillate.js"></script>
+
 <script>
 
 $(document).ready(function(){
+
+    $(document).ready(function(){
+		
+        $('#guide').delay(2000).animate({left:'150%'}, 1000, 'easeInExpo');
+    });
+
+
 
     $("#r1").on('mouseover', function(){
 		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
