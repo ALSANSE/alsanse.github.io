@@ -69,7 +69,8 @@ p2{
 }
 
 #mapImg{
-    max-height: 99%; width: auto;
+    height: 800px; 
+    width: auto;
 
 }
 
