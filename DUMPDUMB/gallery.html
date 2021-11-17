@@ -22,6 +22,7 @@
 
 <body>
 
+<div id='block'><img src='images/right_arrow.png' width="100px"><p>PC화면을 지원하지 않습니다.<br>브라우저의 폭을 줄여주세요</p><img src='images/left_arrow.png' width="100px"></div>
 
 
 
@@ -51,11 +52,13 @@
 
 	
 <div id='nav'>
-	<p class='navText' id='navOn'>gallery</p>
 	<a id='homeButton' href="map.html"><img id='homeButtonImg' src="images/home_off.png"></a>
-	<a class='navText' href="mission.html">mission</a>
+	<a class='navText' href="webzine.html">WEBZINE</a>
+	<a class='navText' id='navOn'>GALLERY</a>
+	<a class='navText' href="story.html">STORY</a>
 </div>
 
+	<p id='homeText'>MAP</p>
 
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
@@ -64,7 +67,11 @@
 $(document).ready(function(){
 
 
-
+    $(document).ready(function(){
+        $('#homeText')	
+			.delay(600)
+			.animate({opacity:'100%', bottom:'-=10px'}, 300 ,'easeOutSine')
+    });
 
 
 	

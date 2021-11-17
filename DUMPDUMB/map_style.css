@@ -1,4 +1,45 @@
+*:focus { outline:none; }
+body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 
+
+
+body{
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#block{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background: rgba(33,37,41,0.8);
+    backdrop-filter: blur(10px);
+    background-clip: padding-box;
+    border: solid 1px rgba(0,0,0,0.1);
+    z-index: 99999;
+    color: #ff4554;
+    font-family: source-han-sans-korean, sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    @media screen and (max-width: 720px) {
+
+#block{
+    width: 0%;
+    height: 0%;
+
+
+} 
 
   
 
@@ -37,22 +78,9 @@ img{
     width: auto;
 }
 
-.gp{
-    margin-bottom: 100px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-p1{
-    font-size: 0.6rem;
-    color: #a1a3a9;
-    text-align: center;
-    font-family: source-han-sans-korean, sans-serif;
-    font-weight: 400;
 
-}
+
 
 p2{
     font-size: 0.9rem;
@@ -62,18 +90,7 @@ p2{
     font-weight: 200;
 }
 
-.textRed{
-    color: #dd0011;
-}
 
-
-.mean{
-    font-family: wedding-gothic-atf-wide, sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    color: #dd0011;
-
-}
 
 
 
@@ -88,7 +105,7 @@ p2{
 }
 
 #mapImg{
-    height: 800px; 
+    height: 960px; 
     width: auto;
 
 }
@@ -112,16 +129,15 @@ p2{
 .navText{
     font-family: wedding-gothic-atf-wide, sans-serif;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 10px;
     color: #ffffff;
     text-decoration: underline 2px #ffffff;
-    transform: translate(0, 2px);
+    transform: translate(0, 3px);
 }
 
 .navText:hover{
     font-family: wedding-gothic-atf-wide, sans-serif;
     font-weight: 800;
-    font-size: 12px;
     color: #dd0011;
     text-decoration: underline 2px #ffffff;
     opacity: 100%;
@@ -146,7 +162,7 @@ p2{
 }
 
 #pin_photo1{
-    left: 800px;
+    left: 700px;
     top: 200px;
 }
 
@@ -162,8 +178,21 @@ p2{
 
 #guide{
     position: fixed;
-    width: 100px;
+    width: 200px;
     left: 50%;
-    top: 100px;
+    top: 200px;
+    opacity: 0%;
     transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+#guideArrow{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+    }
