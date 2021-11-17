@@ -41,6 +41,7 @@ body{
 #block{
     width: 0%;
     height: 0%;
+    overflow: hidden;
 
 
 } 
@@ -143,7 +144,7 @@ img{
     font-weight: 800;
     color: #ffffff;
     position: fixed;
-    font-size: 4px;
+    font-size: 6px;
     left: 19px;
     bottom: 20px;
     opacity: 0%;
