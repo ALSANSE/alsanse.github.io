@@ -13,7 +13,15 @@ $(document).ready(function(){
         $('#sec4').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
 		$('#sec5').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
 		$('#sec6').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
-    });
+		$('#sec7').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
+        $('#sec8').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
+		$('#sec9').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
+        $('#sec10').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec11').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec12').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec13').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec14').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+	});
 
 });
 
@@ -96,9 +104,9 @@ $(document).ready(function(){
         $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
         $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
 		$('#remote').animate({'opacity': '100%'}, 600);
-		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s3').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s2').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s1').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
         $('body').animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});
 	});
@@ -112,7 +120,7 @@ $(document).ready(function(){
     });
 	
 
-	 $("#pic2").on('mouseover', function(){
+	$("#pic2").on('mouseover', function(){
 		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
     });
     $("#pic2").on('mouseleave', function(){
@@ -120,7 +128,7 @@ $(document).ready(function(){
     });
 
 
-	 $("#pic3").on('mouseover', function(){
+	$("#pic3").on('mouseover', function(){
 		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
     });
     $("#pic3").on('mouseleave', function(){
@@ -144,46 +152,135 @@ $(document).ready(function(){
     });
 	
 	
+    $("#pic6").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic6").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+	
+
+	$("#pic7").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic7").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic8").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic8").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic9").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic9").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic10").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic10").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+	
+	
+    $("#pic11").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic11").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+	
+
+	$("#pic12").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic12").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic13").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic13").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic14").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic14").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+
+	$("#pic15").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic15").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+	
+
+	$("#pic16").on('mouseover', function(){
+		$(this).stop().animate({'top':'-10px'}, 300, 'easeOutExpo');
+    });
+    $("#pic16").on('mouseleave', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+    });
+
+	
 	
 	
 	$("#r1Button").on('click', function(){
 		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
 		$('#r1Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo');
-		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s3').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s2').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s1').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'-50px', 'opacity':'0%'}, 0);
-});
-			$('#quitMenu').on('click', function(){
-				$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#quitMenu').animate({'top':'-50px', 'opacity':'0%'}, 0);
-				});
+	});
+	
+	$('#quitMenu').on('click', function(){
+		$('#s3').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s2').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s1').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'-50px', 'opacity':'0%'}, 0);
+	});
 	
 	
 	
 	
 $("#r2Button").on('click', function(){
-	$('#go3_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-	$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-	$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s3').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s2').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s1').animate({'height':'0px'}, 00, 'easeOutCirc');
 	$('#quitMenu').animate({'top':'50px', 'opacity':'100%'}, 0);
 });
 	
 	
 $("#r3Button").on('click', function(){
-	$('#go2_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-	$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-	$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s2').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s1').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s3').animate({'height':'0px'}, 00, 'easeOutCirc');
 	$('#quitMenu').animate({'top':'100px', 'opacity':'100%'}, 0);
 });
 	
 	
 $("#r4Button").on('click', function(){
-	$('#go1_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-	$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-	$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s1').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s3').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s2').animate({'height':'0px'}, 00, 'easeOutCirc');
 	$('#quitMenu').animate({'top':'150px', 'opacity':'100%'}, 0);
 });	
 	
@@ -212,14 +309,13 @@ $("#ham").on('click', function(){
 });
 
 	
-	
+	/*
 		$("#pic1").on('click', function(){
 		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
 		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-        $('body').animate({'opacity':'100%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_mgrp_ksj.html');});
 	});
 		$("#pic2").on('click', function(){
 		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
@@ -227,31 +323,35 @@ $("#ham").on('click', function(){
 		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-        $('body').animate({'opacity':'100%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_mgrp_csg.html');});
 	});
 		$("#pic3").on('click', function(){
-			$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
 		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-        $('body').animate({'opacity':'100%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_mgrp_hhw.html');});
 	});
 		$("#pic4").on('click', function(){
-			$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
 		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-        $('body').animate({'opacity':'100%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_mgrp_cjw.html');});
 	});
 		$("#pic5").on('click', function(){
-			$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
 		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
 		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-        $('body').animate({'opacity':'100%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_mgrp_syl.html');});
+	});*/
+		$(".pic").on('click', function(){
+		$(this).stop().animate({'top':'0px'}, 100, 'easeInOutSine');
+		$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
 	});
+	
 	
 });

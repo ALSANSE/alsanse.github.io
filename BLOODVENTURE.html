@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>BLOODVENTURE</title>
+
+
+
+
+<script>
+	(function(d) {
+	  var config = {
+		kitId: 'pli6yjr',
+		scriptTimeout: 3000,
+		async: true
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+  </script>
+
+
 	<style>
-@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 
 		#log {
@@ -78,7 +94,8 @@
 		}
 		p1{
 			font-size: 0.8rem;
-			font-family: 'Nanum Gothic', sans-serif;
+			font-family: gulim, sans-serif;
+			font-weight: 300;
 			color: #909499;
 			line-height: 1.5rem;
 			margin-top: 0.8rem;
@@ -86,7 +103,8 @@
 		}
 		p2{
 			font-size: 1.1rem;
-			font-family: 'Nanum Gothic', sans-serif;
+			font-family: gulim, sans-serif;
+			font-weight: 300;
 			color: #909499;
 			line-height: 2.2rem;
 			width: 640px;
@@ -94,7 +112,8 @@
 			}
 		p3{
 			font-size: 1.1rem;
-			font-family: 'Nanum Gothic', sans-serif;
+			font-family: gulim, sans-serif;
+			font-weight: 300;
 			color: #ffffff;
 			line-height: 2.2rem;
 			width: 640px;
@@ -103,8 +122,8 @@
 
 		h2{
 			font-size: 1.4rem;
-			font-family: 'Nanum Gothic', sans-serif;
-			font-weight: 400;
+			font-family: gulim, sans-serif;
+			font-weight: 500;
 			color: #FFC69F;
 			line-height: 2.6rem;
 			width: 640px;
@@ -112,8 +131,8 @@
 			}
 		h3{
 			font-size: 1.4rem;
-			font-family: 'Nanum Gothic', sans-serif;
-			font-weight: 400;
+			font-family: gulim, sans-serif;
+			font-weight: 500;
 			color: #EA3636;
 			line-height: 2.6rem;
 			width: 640px;
@@ -264,15 +283,16 @@
 .one {
 	width: 200px;
 	position: absolute;
-	top: 600px;
-	left: 20%;
+	top: -60px;
+	left: 10%;
+
 }
 
 .three {
 	width: 200px;
 	position: absolute;
-	top: 1200px;
-	left: 30%;
+	top: 300px;
+	left: 66%;
 
 }
 
@@ -284,6 +304,22 @@
 
 }
 
+.four {
+	width: 200px;
+	position: absolute;
+	top: 1200px;
+	left: 20%;
+
+}
+
+.five {
+	width: 200px;
+	position: absolute;
+	top: 1600px;
+	left: 38%;
+
+}
+
 
 .content {
   -webkit-box-align: center;
@@ -292,10 +328,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 200vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-top: 420px;
   margin: 0;
   max-width: 100%;
   position: absolute;
@@ -314,9 +349,12 @@ top: 420px;
 	<div id="bckgrnd"></div>
 
 <article class="content">
-	<div  class="one rellax" data-rellax-speed="13"><img src='bloodventureimage/b1.svg'></div>
+	<div  class="one rellax" data-rellax-speed="4"><img src='bloodventureimage/b1.svg'></div>
 	<div  class="two rellax" data-rellax-speed="8"><img src='bloodventureimage/b2.svg'></div>
 	<div  class="three rellax" data-rellax-speed="10"><img src='bloodventureimage/b3.svg'></div>
+	<div  class="four rellax" data-rellax-speed="11"><img src='bloodventureimage/b3.svg'></div>
+	<div  class="five rellax" data-rellax-speed="16"><img src='bloodventureimage/b1.svg'></div>
+
 </article>
 
 
@@ -329,7 +367,7 @@ top: 420px;
 		<div class="greenpeace">
 			<h1>블러드벤쳐</h1>
 			<h2>Blood + Adventure</h2>
-			<p3>적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
+			<p3>블러드벤쳐는 적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
 				고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임입니다.</p3>
 		</div>
 

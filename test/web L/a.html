@@ -1,6 +1,85 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sejin</title>
+    <link rel="stylesheet" href="animate.css" />
+
     <style>
-        #c {width:100px;height:100px;background-color: blue;}
+
+
+
+body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
+
+
+    #a {
+        font-size: 2rem;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        height: 80px;
+        width: auto;
+        }
+
+div{
+    border: 1px solid red;
+}
+
+#dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: black;
+    margin: 0px 0px 12px 5px;
+    border-width: 1px;
+    border-color: #000000;
+    transform: translate(-50%, 50%);
+    position: relative;
+}
+
+#click{
+    font-size: 1rem;
+    opacity: 0%;
+}
+
     </style>
-<div id='c'></div>
+<div id='a'>
+<div id='text'>wow lol zzzzzz</div>
+    <div id='dot'></div>
+    <div id='click'>←click</div>
+</div>
+
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#a").on('mouseover', function(){
+        $(this).stop().animate({'font-size':'3rem'}, 100);
+        $('#click').stop().animate({'opacity':'100%'}, 100);
+        
+    });
+    $("#a").on('mouseleave', function(){
+        $(this).stop().animate({'font-size':'2rem'}, 100);
+        $('#click').stop().animate({'opacity':'0%'}, 100);
+
+    });
+
+
+    $("#dot").on('click', function(){
+        $(this).animate({'border-width':'7000px'}, 1000, 'easeInExpo', function(){
+            $(location).attr('href','https://alsanse.github.io');
+        });
+        $('#click').stop().animate({'opacity':'0%'}, 100);
+
+    });
+});
+
+</script>
 </html>

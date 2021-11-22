@@ -12,7 +12,8 @@
 
 
     
-	<style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Roboto+Condensed:wght@700&family=Poppins:wght@100&display=swap');
+	<style> 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Roboto+Condensed:wght@700&family=Poppins:wght@100&display=swap');
 		@media screen and (min-width: 1081px) {
 			
 			
@@ -63,19 +64,6 @@
 		}
 		
 					 
-		#exitTrans {
-			position: fixed;
-			height: 10px;
-			width: 10px;
-			top:80px;
-			left:80px;
-			opacity: 0%;
-			background-color: #fafbfc;
-			transform: translate(-50%, -50%);
-			border-radius: 100%;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 97;
-		}
 					 
 		#ham {
 			position: relative;
@@ -240,132 +228,68 @@
 		
 			 
 				 #remote {
-	position: fixed;
-    width: 40px;
-    top:200px;
-    left:80px;
-    transform: translate(-50%, 0%);
-	z-index: 99;
-	display: block;
-	opacity: 0%;
-	
-	 }
+        position: fixed;
+        width: 40px;
+        top:200px;
+        left:80px;
+        transform: translate(-50%, 0%);
+        z-index: 99;
+        display: block;
+        opacity: 100%;
+    }
+    .icon{
+        transform: translate(0%, 32%);
+    }
+    .rLay {
+        display: flex;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .rButton {
+        width: 40px;
+        height: 40px;
+        opacity: 66%;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #d1d5d9;
+
+    }
+    .rEmptyButton {
+        width: 40px;
+        height: 40px;
+    }
+    .rText { 
+        position: absolute;
+        height: 30px;
+        width: 183px;
+		padding-bottom: 10px;
+        opacity: 0%;
+        transform: translate(0, -50%);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 22px;
+        color: #e1e5e9;
+        overflow: hidden;
+        -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+        z-index: -98;
+    }	
+
+
+
+
+
+
 
 			 
-	 #goAward {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 background-color: #eaebec;
-			 }
-			 #star {
-				 width: 80%;
-			 	 height: 80%;
-				  transform: translate(-50%, -48%);
-				  left: 50%;
-				  top:50%;
-				  position: relative;
-			 }	
-			 #go3 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
 			 
-			 #go2 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 
-			 #go1 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 #goAbout {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 #goDown {
-				width: 40px;
-			 	height: 40px;
-				opacity: 0%;
-				margin-bottom: 10px;
+#s3 {
 
-			 }
-				#goF {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-				text-decoration: none;
-				color: #000000;
-			 }
-				#goD {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 16px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #babbbc;
-				text-decoration: none;
-				color: #000000;
-			 }
-			 
-#go3_p {
-	position: fixed;
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:250px;
-    left:120px;
+    top:50px;
+    left:60px;
 	height: 0px;
+	min-width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -374,16 +298,17 @@
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}
 			 
-#go2_p {
-	position: fixed;
+#s2 {
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:300px;
-    left:120px;
+    top:100px;
+    left:60px;
 	height: 0px;
+	width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -392,16 +317,17 @@
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}	
 			 
-#go1_p {
-	position: fixed;
+#s1 {
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:350px;
-    left:120px;
+    top:150px;
+    left:60px;
 	height: 0px;
+	width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -410,93 +336,9 @@
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}		
-			 
-	#awardNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:176px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-	border-radius: 100px;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(49,53,57,0.6);
-}
-#aboutNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:376px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-	border-radius: 100px;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(49,53,57,0.6);
-}
-	#facebookNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:476px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-	border-radius: 100px;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(49,53,57,0.6);
-}
-#dxdesignNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:526px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-	border-radius: 100px;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(49,53,57,0.6);
-
-}
-			 
-			 
 	.menu {
 		list-style: none;
 		line-height: 40px;
@@ -524,136 +366,24 @@
 			 }
 			 
 			 
-			 #quitMenu {
+
+	#quitMenu {
 				width: 40px;
 			 	height: 40px;
+	
 				background-color: #eaebec;
 				border-radius: 200px;
 				margin-bottom: 10px;
 				opacity: 0%;
 				position: fixed;
-				top:0px;
-    			left:80px;
-				transform: translate(-50%, 0%);
+				top:-50px;
+    			left:0px;
+				transform: translate(0%, 0%);
 				z-index: 100;
 				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 color: #ff3322;
+
 				 
 			 }
-			 			 #remote_controller_background_blur_A{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 0px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-				#remote_controller_background_blur_3{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 50px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
-			 	#remote_controller_background_blur_2{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 100px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
-			 
-			 
-			 	#remote_controller_background_blur_1{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 150px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-	
-			 	#remote_controller_background_blur_about{
-				 
-				 position: fixed;
-				 width: 40px;
-				  height: 40px;
-				 border-radius: 100px;
-				 top: 200px;
-				 z-index: -88;
-				 backdrop-filter: blur(5px);
-				 border: solid 0px transparent;
-				 background-clip: padding-box;
-				 background: rgba(234,235,236,0.1);
-				 box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			  }
-	
-				#remote_controller_background_blur_F{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 300px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-				#remote_controller_background_blur_DxD{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 350px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			
-			
-			
 			
 			
 			
@@ -765,20 +495,6 @@
 		}
 		
 					 
-		#exitTrans {
-			position: fixed;
-			height: 0px;
-			width: 0px;
-			top:100px;
-			left:100px;
-			opacity: 0%;
-			background-color: #fafbfc;
-			transform: translate(-50%, -50%);
-			border-radius: 100%;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 97;
-		}
-
 		#subject{
 			color: #ffffff;
 			font-size: 2.5rem;
@@ -950,324 +666,16 @@
 			box-shadow: 0px 6px 12px #212529;
 			}
 					 
-		#remote {
-			position: fixed;
-			width: 40px;
-			top:200px;
-			left:120%;
-			transform: translate(-50%, 0%);
-			z-index: 99;
-			display: block;
-			opacity: 0%;
-			
-			 }
-		
-					 
-			 #goAward {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 background-color: #eaebec;
-			 }
-
-			 #star {
-				 width: 80%;
-			 	 height: 80%;
-				  transform: translate(-50%, -48%);
-				  left: 50%;
-				  top:50%;
-				  position: relative;
-			 }			 
-					 
-					 #go3 {
-						 width: 40px;
-						  height: 40px;
-						opacity: 11%;
-						 border-radius: 200px;
-						 margin-bottom: 10px;
-						 text-align: center;
-						 font-size: 28px;
-						 font-family: 'Roboto Condensed', sans-serif;
-						 font-weight: 700;
-						 line-height: 42px;
-						 background-color: #eaebec;
-					 }
-					 
-					 #go2 {
-						 width: 40px;
-						  height: 40px;
-						opacity: 11%;
-						 border-radius: 200px;
-						 margin-bottom: 10px;
-						 text-align: center;
-						 font-size: 28px;
-						 font-family: 'Roboto Condensed', sans-serif;
-						 font-weight: 700;
-						 line-height: 42px;
-						 background-color: #eaebec;
-					 }
-					 
-					 #go1 {
-						 width: 40px;
-						  height: 40px;
-						opacity: 11%;
-						 border-radius: 200px;
-						 margin-bottom: 10px;
-						 text-align: center;
-						 font-size: 28px;
-						 font-family: 'Roboto Condensed', sans-serif;
-						 font-weight: 700;
-						 line-height: 42px;
-						 background-color: #eaebec;
-					 }
-						 
-					 
-		#go3_p {
-			position: fixed;
-			/*background-color: #eaebec;*/
-			top:250px;
-			left:120px;
-			height: 0px;
-			padding-right: 36px;
-			transform: translate(0%, 0%);
-			z-index: 99;
-			border-radius: 20px;
-			overflow: hidden;
-			backdrop-filter: blur(5px);
-			border: solid 0px transparent;
-			background-clip: padding-box;
-			background: rgba(222,222,222,0.4);
-			box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			}
-					 
-		#go2_p {
-			position: fixed;
-			/*background-color: #eaebec;*/
-			top:300px;
-			left:120px;
-			height: 0px;
-			padding-right: 36px;
-			transform: translate(0%, 0%);
-			z-index: 99;
-			border-radius: 20px;
-			overflow: hidden;
-			backdrop-filter: blur(5px);
-			border: solid 0px transparent;
-			background-clip: padding-box;
-			background: rgba(222,222,222,0.4);
-			box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			}	
-					 
-		#go1_p {
-			position: fixed;
-			/*background-color: #eaebec;*/
-			top:350px;
-			left:120px;
-			height: 0px;
-			padding-right: 36px;
-			transform: translate(0%, 0%);
-			z-index: 99;
-			border-radius: 20px;
-			overflow: hidden;
-			backdrop-filter: blur(5px);
-			border: solid 0px transparent;
-			background-clip: padding-box;
-			background: rgba(222,222,222,0.4);
-			box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			}		
-					 
-			#awardNoti {
-			position: fixed;
-			height: 38px;
-				padding-top: 2px;
-			width: 233px;
-			top:176px;
-				left: 120%;
-			opacity: 0%;
-			font-family: 'Poppins', sans-serif;
-			font-weight: 100;
-			font-size: 24px;
-			color: #fafbfc;
-			overflow: hidden;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 98;
-			border-radius: 100px;
-			backdrop-filter: blur(5px);
-			border: solid 0px transparent;
-			background-clip: padding-box;
-			background: rgba(49,53,57,0.6);
-		}
-			#facebookNoti {
-			position: fixed;
-			height: 0px;
-			padding-top: 2px;
-			width: 233px;
-			top:376px;
-			opacity: 0%;
-			font-family: 'Poppins', sans-serif;
-			font-weight: 100;
-			font-size: 24px;
-			color: #fafbfc;
-			overflow: hidden;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-		}
-			#dxdesignNoti {
-			position: fixed;
-			height: 0px;
-			padding-top: 2px;
-			width: 233px;
-			top:426px;
-			opacity: 0%;
-			font-family: 'Poppins', sans-serif;
-			font-weight: 100;
-			font-size: 24px;
-			color: #fafbfc;
-			overflow: hidden;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-		
-		
-		}
-					 
-		#aboutNoti {
-    position: fixed;
-    height: 0px;
-	padding-top: 2px;
-    width: 233px;
-    top:426px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-}			 
-			.menu {
-				list-style: none;
-				line-height: 40px;
-				font-weight: 400;
-				font-family: 'Noto Sans KR', sans-serif;
-				font-size: 14px; 
-				top: 10px;
-				text-decoration: none;
-				color: #000000;
-					 }
-					 
-			.menuText {
-				text-decoration: none;
-				color: #000000;
-					 }
-					
-			.menuText:hover {
-				color: #ffffff;
-					}
-		
-			
-			.grad {
-				font-size: 21px;
-				font-weight: 700;
-					 }
-					 
-					 
-					 #quitMenu {
-						width: 40px;
-						 height: 40px;
-						background-color: #eaebec;
-						border-radius: 200px;
-						margin-bottom: 10px;
-						opacity: 0%;
-						position: fixed;
-						top:0px;
-						left:80px;
-						transform: translate(-50%, 0%);
-						z-index: 100;
-						 text-align: center;
-						 font-size: 28px;
-						 font-family: 'Roboto Condensed', sans-serif;
-						 font-weight: 700;
-						 line-height: 42px;
-						 color: #ff3322;
-						 
-					 }
-						 #remote_controller_background_blur_A{
-						 
-						position: fixed;
-						width: 40px;
-						 height: 40px;
-						border-radius: 100px;
-						top: 0px;
-						z-index: -88;
-						backdrop-filter: blur(5px);
-						border: solid 0px transparent;
-						background-clip: padding-box;
-						background: rgba(234,235,236,0.1);
-						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-					 }
-					 
-						#remote_controller_background_blur_3{
-						 
-						position: fixed;
-						width: 40px;
-						 height: 40px;
-						border-radius: 100px;
-						top: 50px;
-						z-index: -88;
-						backdrop-filter: blur(5px);
-						border: solid 0px transparent;
-						background-clip: padding-box;
-						background: rgba(234,235,236,0.1);
-						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-					 }
-					 
-					 
-						 #remote_controller_background_blur_2{
-						 
-						position: fixed;
-						width: 40px;
-						 height: 40px;
-						border-radius: 100px;
-						top: 100px;
-						z-index: -88;
-						backdrop-filter: blur(5px);
-						border: solid 0px transparent;
-						background-clip: padding-box;
-						background: rgba(234,235,236,0.1);
-						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-					 }
-					 
-					 
-					 
-					 
-						 #remote_controller_background_blur_1{
-						 
-						position: fixed;
-						width: 40px;
-						 height: 40px;
-						border-radius: 100px;
-						top: 150px;
-						z-index: -88;
-						backdrop-filter: blur(5px);
-						border: solid 0px transparent;
-						background-clip: padding-box;
-						background: rgba(234,235,236,0.1);
-						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-					 } 
-						#remote_controller_background_blur_F{
-						 
-						position: fixed;
-						width: 40px;
-						 height: 40px;
-						border-radius: 100px;
-						top: 200px;
-						z-index: -88;
-						backdrop-filter: blur(5px);
-						border: solid 0px transparent;
-						background-clip: padding-box;
-						background: rgba(234,235,236,0.1);
-						box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-					 }
+			#remote {
+	position: fixed;
+    width: 0px;
+	height: 0px;
+    transform: translate(-50%, 0%);
+	z-index: 99;
+	display: block;
+	opacity: 0%;
+	
+	 }
 					 }
 		
 		</style>
@@ -1282,7 +690,6 @@
 
 		<p id="exitNoti">홈으로</p>
 		<div id="exit"><img src="images/left.svg"></div>
-		<div id="exitTrans"></div>
 		<p id="subject">컴퓨터그래픽스1</p>
 		<div id="ham"><img src="images/ham.svg"></div>
 		
@@ -1345,106 +752,106 @@
 
 	
 	
-<div class="sec">
+<div id="sec1" class="sec">
 	<div class="title"><p class="work">딥티크 탐다오 </p><p class="name">정수연</p></div>
 	<img class="pic" src="images/1/cmgr/deeptik_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec2" class="sec">
 	<div class="title"><p class="work">PRADA AMBER POUR HOMME </p><p class="name">김창화</p></div>
 	<img class="pic" src="images/1/cmgr/prada_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec3" class="sec">
 	<div class="title"><p class="work">오렌지 주스 </p><p class="name">한연우</p></div>
 	<img class="pic" src="images/1/cmgr/orangejuice_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec4" class="sec">
 	<div class="title"><p class="work">렌즈세척액 </p><p class="name">임민석</p></div>
 	<img class="pic" src="images/1/cmgr/lenscleaning_p1.jpg">
 </div>
 
 
-<div class="sec">
+<div id="sec5" class="sec">
 	<div class="title"><p class="work">복숭아 탄산음료 </p><p class="name">김준희</p></div>
 	<img class="pic" src="images/1/cmgr/peachsparkling_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec6" class="sec">
 	<div class="title"><p class="work">숲속의 빛 </p><p class="name">강수민</p></div>
 	<img class="pic" src="images/1/cmgr/forestlight_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec7" class="sec">
 	<div class="title"><p class="work">스파클링워터 인터넷 광고 </p><p class="name">윤정민</p></div>
 	<img class="pic" src="images/1/cmgr/sparklingwater_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec8" class="sec">
 	<div class="title"><p class="work">오렌지 환타 </p><p class="name">정가영</p></div>
 	<img class="pic" src="images/1/cmgr/fanta_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec9" class="sec">
 	<div class="title"><p class="work">유니콘 보드카 </p><p class="name">이숙미</p></div>
 	<img class="pic" src="images/1/cmgr/unicornvodka_p1.jpg">
 </div>
 
 	
 	
-<div class="sec">
+<div id="sec10" class="sec">
 	<div class="title"><p class="work">칠성-사이다 </p><p class="name">류혜정</p></div>
 	<img class="pic" src="images/1/cmgr/chilsungsprite_p1.jpg">
 </div>
 
 
-<div class="sec">
+<div id="sec11" class="sec">
 	<div class="title"><p class="work">코코마드 모아젤 </p><p class="name">박소희</p></div>
 	<img class="pic" src="images/1/cmgr/cocomad_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec12" class="sec">
 	<div class="title"><p class="work">콜라와 함께한 시간 </p><p class="name">이효령</p></div>
 	<img class="pic" src="images/1/cmgr/coke_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec13" class="sec">
 	<div class="title"><p class="work">트라피체, 브로캘 말백 </p><p class="name">홍수민</p></div>
 	<img class="pic" src="images/1/cmgr/broquel_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec14" class="sec">
 	<div class="title"><p class="work">Camel </p><p class="name">이민희</p></div>
 	<img class="pic" src="images/1/cmgr/camel_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec15" class="sec">
 	<div class="title"><p class="work">Cherry </p><p class="name">이경민</p></div>
 	<img class="pic"src="images/1/cmgr/cherry_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec16" class="sec">
 	<div class="title"><p class="work">Liquid Death </p><p class="name">강지수</p></div>
 	<img class="pic" src="images/1/cmgr/liquid_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec17" class="sec">
 	<div class="title"><p class="work">Mole </p><p class="name">서민근</p></div>
 	<img class="pic" src="images/1/cmgr/mole_p1.jpg">
 </div>
 
-<div class="sec">
+<div id="sec18" class="sec">
 	<div class="title"><p class="work"></p><p class="name"></p></div>
 </div>
 
@@ -1462,254 +869,82 @@
 
 
 
+<div id='remote'>
+	<a><div id='quitMenu'><img src='images/x_red_24dp.svg'></div></a>
+    <div class='rLay'>
+		<a href='dxdaward.html'><div id='r1Button' class='rButton'><img src='images/star_rate_black_24dp.svg' class="icon"></div></a>
+		<p id="r1Text" class='rText'>DXDesign Award</p>
+	</div>
 
-
-
-
-
-
-
-
-
-
- 
-		<div id='quitMenu'>✕</div>
-		<div id='remote'>
-			<div id='goAward'><img id="star" src="images/star.svg">
-			</div>
-			<div id='remote_controller_background_blur_A'></div>
-			<div id='go3'>3
-			</div>
-			<div id='remote_controller_background_blur_3'></div>
-			<div id='go2'>2
-			</div>
-			<div id='remote_controller_background_blur_2'></div>
-			<div id='go1'>1
-			</div>
-			<div id='remote_controller_background_blur_1'></div>
-		
-		
-			<div id='goAbout'>?
-			</div>
-			<div id='remote_controller_background_blur_about'></div>
-		
-			<div id='goDown'>
-			</div>
-			
-			<a href="https://www.facebook.com/dxdesign.cu.ac.kr/" target="_blank"><div id='goF'>F
-			</div></a>
-			<div id='remote_controller_background_blur_F'></div>
-			
-			<a href="http://dxdesign.kr/" target="_blank"><div id='goD'>DXD
-			</div></a>
-			<div id='remote_controller_background_blur_DxD'></div>
+    <div class='rLay'>
+	    <a><div id='r2Button' class='rButton'><img src='images/3_black_24dp.svg'></div></a>
+		<div id="s3" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>3학년</p>
+				<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
+				<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+				<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+				<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+				<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
+			</ul>
 		</div>
-		<p id="awardNoti">　DXDesign Award</p>
-		<p id="aboutNoti">　about Sustain</p>
-		<p id="facebookNoti">　DXD Facebook ⤴</p>
-		<p id="dxdesignNoti">　DXDesign.kr ⤴</p>
-			<div id="go3_p">
-				<ul class='menu'><p class='grad'>3학년</p>
-					<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
-					<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
-					<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
-					<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
-					<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
-				</ul>
-			</div>
-			<div id="go2_p">
-				<ul class='menu'><p class='grad'>2학년</p>
-					<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
-					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
-					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
-					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
-					<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
-				</ul>
-			</div>
-			<div id="go1_p">
-				<ul class='menu'><p class='grad'>1학년</p>
-					<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
-					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
-					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
-					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
-				</ul>
-			</div>	
+	</div>
+
+    <div class='rLay'>
+    	<a><div id='r3Button' class='rButton'><img src='images/2_black_24dp.svg'></div></a>
+		<div id="s2" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>2학년</p>
+				<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+				<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+				<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+				<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+				<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+		<a><div id='r4Button' class='rButton'><img src='images/1_black_24dp.svg'></div></a>
+		<div id="s1" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>1학년</p>
+				<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+				<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+				<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+				<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+			</ul>
+		</div>	
+	</div>
+
+    <div class='rLay'>
+		<a href='about.html'><div id='r5Button' class='rButton'><img src='images/q_black_24dp.svg'></div></a>
+		<p id="r5Text" class='rText'>About Sustain</p>
+	</div>
+
+    <div class='rLay'>
+		<div class='rEmptyButton'></div>
+	</div>
+
+    <div class='rLay'>
+		<a href='http://dxdesign.cu.ac.kr' target='_blank'><div id='r6Button' class='rButton'><img src='images/dxd_black_24dp.svg'></div></a>
+		<p id="r6Text" class='rText'>DXD ⤴</p>
+	</div>
+
+    <div class='rLay'>
+		<a href='https://www.facebook.com/dxdesign.cu.ac.kr/' target='_blank'><div id='r7Button' class='rButton'><img src='images/facebook_black_24dp.svg'></div></a>
+		<p id="r7Text" class='rText'>Facebook ⤴</p>
+	</div>
+
+	<div class='rLay'>
+		<a href='https://www.instagram.com/dcudxd/' target='_blank'><div id='r8Button' class='rButton'><img src='images/instagram_black_24dp.svg'></div></a>
+		<p id="r8Text" class='rText'>Instagram ⤴</p>
+	</div>
+
+</div>
 
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script src="jquery.lettering.js"></script>
 <script src="jquery.textillate.js"></script>
-
-
-<script>
-
-
-	$(document).ready(function(){
-		$(document).ready(function(){
-			$('#subject').delay(1000).animate({'opacity': '100%'}, 1000);
-		$('#ham').delay(1000).animate({'opacity': '100%'}, 1000);
-			$('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
-			$('#remote').delay(300).animate({'opacity': '100%'}, 1000);
-			$('.sec').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000,'easeOutBack');
-		});
-	
-	});
-	
-	
-	$(document).ready(function(){
-		$("#exit").on('mouseover', function(){
-			$(this).stop().animate({'width':'50px', 'height':'50px'}, 100, 'easeOutExpo');
-			$('#exitNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-		});
-		$("#exit").on('mouseleave', function(){
-			$(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
-			$('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-		});
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-		
-		$("#goAward").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-			$('#awardNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-	});
-		$("#goAward").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-			$('#awardNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-	});
-		$("#goAward").on('click', function(){
-			$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-			$('#remote').animate({'opacity': '0%'}, 600);
-			$('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','dxdaward.html');});		
-	});
-	$("#goAbout").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-		$('#aboutNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-});
-	$("#goAbout").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-		$('#aboutNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-});
-	$("#goAbout").on('click', function(){
-		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-		$('#remote').animate({'opacity': '0%'}, 600);
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','about.html');});		
-});
-		$("#goF").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-			$('#facebookNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-	});
-		$("#goF").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-			$('#facebookNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-	});
-		$("#goD").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-			$('#dxdesignNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-	});
-		$("#goD").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-			$('#dxdesignNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-	});
-				$('#quitMenu').on('click', function(){
-					$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-					$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-					$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-					$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-					});
-		
-		
-		
-		
-		
-		$("#go3").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');	
-	});
-		$("#go3").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-	});
-		$("#go3").on('click', function(){
-			$('#go3_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-			$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#quitMenu').animate({'top':'250px', 'opacity':'100%'}, 0);
-	});
-		
-		
-	
-		
-		
-		
-		
-		
-		$("#go2").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
-	});
-		$("#go2").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-	});
-		$('#go2').on('click', function(){
-			$('#go2_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-			$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#quitMenu').animate({'top':'300px', 'opacity':'100%'}, 0);
-	});
-		
-		
-		
-		
-		
-		
-		
-		$("#go1").on('mouseover', function(){
-			$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
-	});
-		$("#go1").on('mouseleave', function(){
-			$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-	});  
-		$('#go1').on('click', function(){
-			$('#go1_p').animate({'height':'270px'}, 600, 'easeOutExpo');
-			$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-			$('#quitMenu').animate({'top':'350px', 'opacity':'100%'}, 0);
-	});
-		
-		
-		
-		
-	
-		
-		
-		$("#exit").on('click', function(){
-			$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-			$('#remote').animate({'opacity': '0%'}, 600);
-			$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
-			$('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
-	});
-		
-	$("#ham").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'left':'50%'}, 600, 'easeOutExpo');		
-});
-	$("#burger_x").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'left':'200%'}, 300, 'easeInCirc');		
-});
-
-		
-	});
-	
-	
-	
-	
-	</script>
-
+<script src="subject.js"></script>
 
 
 </body>

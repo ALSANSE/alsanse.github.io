@@ -230,133 +230,68 @@ font-family: 'Noto Sans KR', sans-serif;
 			
 			 
 #remote {
-	position: fixed;
-    width: 40px;
-    top:200px;
-    left:80px;
-    transform: translate(-50%, 0%);
-	z-index: 99;
-	display: block;
-	opacity: 0%;
-	
-	 }
+        position: fixed;
+        width: 40px;
+        top:200px;
+        left:80px;
+        transform: translate(-50%, 0%);
+        z-index: 99;
+        display: block;
+        opacity: 100%;
+    }
+    .icon{
+        transform: translate(0%, 32%);
+    }
+    .rLay {
+        display: flex;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .rButton {
+        width: 40px;
+        height: 40px;
+        opacity: 66%;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #d1d5d9;
+
+    }
+    .rEmptyButton {
+        width: 40px;
+        height: 40px;
+    }
+    .rText { 
+        position: absolute;
+        height: 30px;
+        width: 183px;
+		padding-bottom: 10px;
+        opacity: 0%;
+        transform: translate(0, -50%);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 22px;
+        color: #e1e5e9;
+        overflow: hidden;
+        -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+        z-index: -98;
+    }	
+
+
+
+
+
+
 
 			 
-	 #goAward {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 background-color: #eaebec;
-			 }
+			 
+#s3 {
 
-			 #star {
-				 width: 80%;
-			 	 height: 80%;
-				  transform: translate(-50%, -48%);
-				  left: 50%;
-				  top:50%;
-				  position: relative;
-			 }			 
-			 #go3 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 
-			 #go2 {
-				width: 40px;
-			 	height: 40px;
-				opacity: 11%;
-				border-radius: 200px;
-				margin-bottom: 10px;
-				text-align: center;
-				font-size: 28px;
-				font-family: 'Roboto Condensed', sans-serif;
-				font-weight: 700;
-				line-height: 42px;
-				background-color: #eaebec;
-			 }
-			 
-			 #go1 {
-				width: 40px;
-			 	height: 40px;
-				opacity: 11%;
-				border-radius: 200px;
-				margin-bottom: 10px;
-				text-align: center;
-				font-size: 28px;
-				font-family: 'Roboto Condensed', sans-serif;
-				font-weight: 700;
-				line-height: 42px;
-				background-color: #eaebec;
-			 }
-			 	#goAbout {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-				#goDown {
-				width: 40px;
-			 	height: 40px;
-				opacity: 0%;
-				margin-bottom: 10px;
-
-			 }
-				#goF {
-				width: 40px;
-			 	height: 40px;
-				opacity: 11%;
-				border-radius: 200px;
-				margin-bottom: 10px;
-				text-align: center;
-				font-size: 28px;
-				font-family: 'Roboto Condensed', sans-serif;
-				font-weight: 700;
-				line-height: 42px;
-				background-color: #eaebec;
-				text-decoration-line: none;
-				color: #000000;
-			 }
-				#goD {
-				width: 40px;
-			 	height: 40px;
-				opacity: 11%;
-				border-radius: 200px;
-				margin-bottom: 10px;
-				text-align: center;
-				font-size: 16px;
-				font-family: 'Roboto Condensed', sans-serif;
-				font-weight: 700;
-				line-height: 42px;
-				text-decoration-line: none;
-				background-color: #eaebec;
-				color: #000000;
-			 }
-			 
-#go3_p {
-	position: fixed;
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:250px;
-    left:120px;
+    top:50px;
+    left:60px;
 	height: 0px;
+	min-width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -365,16 +300,17 @@ font-family: 'Noto Sans KR', sans-serif;
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}
 			 
-#go2_p {
-	position: fixed;
+#s2 {
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:300px;
-    left:120px;
+    top:100px;
+    left:60px;
 	height: 0px;
+	width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -383,16 +319,17 @@ font-family: 'Noto Sans KR', sans-serif;
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
 	}	
 			 
-	#go1_p {
-	position: fixed;
+#s1 {
+	position: absolute;
 	/*background-color: #eaebec;*/
-    top:350px;
-    left:120px;
+    top:150px;
+    left:60px;
 	height: 0px;
+	width: 180px;
 	padding-right: 36px;
     transform: translate(0%, 0%);
 	z-index: 99;
@@ -401,78 +338,9 @@ font-family: 'Noto Sans KR', sans-serif;
 	backdrop-filter: blur(5px);
 	border: solid 0px transparent;
 	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
+	background: rgba(222,222,222,0.6);
 	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-	}	
-			 
-	#awardNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:176px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-}
-	#aboutNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:376px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-
-}
-	#facebookNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top:476px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-
-}
-	
-#dxdesignNoti {
-    position: fixed;
-    height: 38px;
-	padding-top: 2px;
-    width: 233px;
-    top: 526px;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-
-}
-
-			 
-	
-	
+	}		
 	.menu {
 		list-style: none;
 		line-height: 40px;
@@ -500,134 +368,24 @@ font-family: 'Noto Sans KR', sans-serif;
 			 }
 			 
 			 
-			 #quitMenu {
+
+	#quitMenu {
 				width: 40px;
 			 	height: 40px;
+	
 				background-color: #eaebec;
 				border-radius: 200px;
 				margin-bottom: 10px;
 				opacity: 0%;
 				position: fixed;
-				top:0px;
-    			left:80px;
-				transform: translate(-50%, 0%);
+				top:-50px;
+    			left:0px;
+				transform: translate(0%, 0%);
 				z-index: 100;
 				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 color: #ff3322;
+
 				 
 			 }
-			 	 #remote_controller_background_blur_A{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 0px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-				#remote_controller_background_blur_3{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 50px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
-			 	#remote_controller_background_blur_2{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 100px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-			 
-			 
-			 
-			 
-			 	#remote_controller_background_blur_1{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 150px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-	
-	
-				#remote_controller_background_blur_about{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 200px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-				#remote_controller_background_blur_F{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 300px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-	
-				 #remote_controller_background_blur_DxD{
-				 
-				 position: fixed;
-				 width: 40px;
-				  height: 40px;
-				 border-radius: 100px;
-				 top: 350px;
-				 z-index: -88;
-				 backdrop-filter: blur(5px);
-				 border: solid 0px transparent;
-				 background-clip: padding-box;
-				 background: rgba(234,235,236,0.1);
-				 box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			  }
 	
 			
 			 
@@ -737,19 +495,6 @@ font-family: 'Noto Sans KR', sans-serif;
 		}
 		
 					 
-		#exitTrans {
-			position: fixed;
-			height: 0px;
-			width: 0px;
-			top:100px;
-			left:100px;
-			opacity: 0%;
-			background-color: #fafbfc;
-			transform: translate(-50%, -50%);
-			border-radius: 100%;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 97;
-		}
 
 		#subject{
 			color: #ffffff;
@@ -896,270 +641,16 @@ font-family: 'Noto Sans KR', sans-serif;
 		
 
 			
-			 
 #remote {
 	position: fixed;
-    width: 40px;
-    top:200px;
-    left:120%;
+    width: 0px;
+	height: 0px;
     transform: translate(-50%, 0%);
 	z-index: 99;
 	display: block;
 	opacity: 0%;
 	
 	 }
-
-			 
-			 #goAward {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 38px;
-				 background-color: #eaebec;
-			 }
-			 
-			 #go3 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 
-			 #go2 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 
-			 #go1 {
-				 width: 40px;
-			 	 height: 40px;
-				opacity: 11%;
-				 border-radius: 200px;
-				 margin-bottom: 10px;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 background-color: #eaebec;
-			 }
-			 
-#go3_p {
-	position: fixed;
-	/*background-color: #eaebec;*/
-    top:250px;
-    left:120px;
-	height: 0px;
-	padding-right: 36px;
-    transform: translate(0%, 0%);
-	z-index: 99;
-	border-radius: 20px;
-	overflow: hidden;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
-	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-	}
-			 
-#go2_p {
-	position: fixed;
-	/*background-color: #eaebec;*/
-    top:300px;
-    left:120px;
-	height: 0px;
-	padding-right: 36px;
-    transform: translate(0%, 0%);
-	z-index: 99;
-	border-radius: 20px;
-	overflow: hidden;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
-	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-	}	
-			 
-#go1_p {
-	position: fixed;
-	/*background-color: #eaebec;*/
-    top:350px;
-    left:120px;
-	height: 0px;
-	padding-right: 36px;
-    transform: translate(0%, 0%);
-	z-index: 99;
-	border-radius: 20px;
-	overflow: hidden;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(222,222,222,0.4);
-	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-	}		
-			 
-	#awardNoti {
-    position: fixed;
-    height: 38px;
-		padding-top: 2px;
-    width: 233px;
-    top:176px;
-		left: 120%;
-    opacity: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-    color: #fafbfc;
-    overflow: hidden;
-    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-	z-index: 98;
-	border-radius: 100px;
-	backdrop-filter: blur(5px);
-	border: solid 0px transparent;
-	background-clip: padding-box;
-	background: rgba(49,53,57,0.6);
-}
-			 
-			 
-	.menu {
-		list-style: none;
-		line-height: 40px;
-		font-weight: 400;
-    	font-family: 'Noto Sans KR', sans-serif;
-    	font-size: 14px; 
-		top: 10px;
-		text-decoration: none;
-		color: #000000;
-			 }
-			 
-	.menuText {
-		text-decoration: none;
-		color: #000000;
-			 }
-			
-	.menuText:hover {
-        color: #ffffff;
-			}
-
-	
-	.grad {
-		font-size: 21px;
-		font-weight: 700;
-			 }
-			 
-			 
-			 #quitMenu {
-				width: 40px;
-			 	height: 40px;
-				background-color: #eaebec;
-				border-radius: 200px;
-				margin-bottom: 10px;
-				opacity: 0%;
-				position: fixed;
-				top:0px;
-    			left:80px;
-				transform: translate(-50%, 0%);
-				z-index: 100;
-				 text-align: center;
-				 font-size: 28px;
-				 font-family: 'Roboto Condensed', sans-serif;
-				 font-weight: 700;
-				 line-height: 42px;
-				 color: #ff3322;
-				 
-			 }
-			 #remote_controller_background_blur_A{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 0px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
-				#remote_controller_background_blur_3{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 50px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 } 
-			 	#remote_controller_background_blur_2{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 100px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }			 
-			 	#remote_controller_background_blur_1{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 150px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 } 
-				#remote_controller_background_blur_F{
-				 
-				position: fixed;
-				width: 40px;
-			 	height: 40px;
-				border-radius: 100px;
-				top: 200px;
-				z-index: -88;
-				backdrop-filter: blur(5px);
-				border: solid 0px transparent;
-				background-clip: padding-box;
-				background: rgba(234,235,236,0.1);
-				box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
-			 }
 
 
 
@@ -1496,272 +987,82 @@ h5{font-weight: 100; line-height: 1.4;}
 
 
 
-
-
-
-
-
-
-
-
- 
-		<div id='quitMenu'>✕</div>
 <div id='remote'>
-	<div id='goAward'><img id="star" src="images/star.svg">
-	</div>
-	<div id='remote_controller_background_blur_A'></div>
-
-	<div id='go3'>3
-	</div>
-	<div id='remote_controller_background_blur_3'></div>
-
-	<div id='go2'>2
-	</div>
-	<div id='remote_controller_background_blur_2'></div>
-
-	<div id='go1'>1
-	</div>
-	<div id='remote_controller_background_blur_1'></div>
-
-	<div id='goAbout'>?
-	</div>
-	<div id='remote_controller_background_blur_about'></div>
-
-	<div id='goDown'>
+	<a><div id='quitMenu'><img src='images/x_red_24dp.svg'></div></a>
+    <div class='rLay'>
+		<a href='dxdaward.html'><div id='r1Button' class='rButton'><img src='images/star_rate_black_24dp.svg' class="icon"></div></a>
+		<p id="r1Text" class='rText'>DXDesign Award</p>
 	</div>
 
-	<a href="https://www.facebook.com/dxdesign.cu.ac.kr/" target="_blank"><div id='goF'>F
-	</div></a>
-	<div id='remote_controller_background_blur_F'></div>
-	
-	<a href="http://dxdesign.kr/" target="_blank"><div id='goD'>DXD
-	</div></a>
-	<div id='remote_controller_background_blur_DxD'></div>
+    <div class='rLay'>
+	    <a><div id='r2Button' class='rButton'><img src='images/3_black_24dp.svg'></div></a>
+		<div id="s3" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>3학년</p>
+				<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
+				<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+				<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+				<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+				<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+    	<a><div id='r3Button' class='rButton'><img src='images/2_black_24dp.svg'></div></a>
+		<div id="s2" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>2학년</p>
+				<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+				<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+				<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+				<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+				<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+		<a><div id='r4Button' class='rButton'><img src='images/1_black_24dp.svg'></div></a>
+		<div id="s1" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>1학년</p>
+				<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+				<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+				<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+				<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+			</ul>
+		</div>	
+	</div>
+
+    <div class='rLay'>
+		<a href='about.html'><div id='r5Button' class='rButton'><img src='images/q_black_24dp.svg'></div></a>
+		<p id="r5Text" class='rText'>About Sustain</p>
+	</div>
+
+    <div class='rLay'>
+		<div class='rEmptyButton'></div>
+	</div>
+
+    <div class='rLay'>
+		<a href='http://dxdesign.cu.ac.kr' target='_blank'><div id='r6Button' class='rButton'><img src='images/dxd_black_24dp.svg'></div></a>
+		<p id="r6Text" class='rText'>DXD ⤴</p>
+	</div>
+
+    <div class='rLay'>
+		<a href='https://www.facebook.com/dxdesign.cu.ac.kr/' target='_blank'><div id='r7Button' class='rButton'><img src='images/facebook_black_24dp.svg'></div></a>
+		<p id="r7Text" class='rText'>Facebook ⤴</p>
+	</div>
+
+	<div class='rLay'>
+		<a href='https://www.instagram.com/dcudxd/' target='_blank'><div id='r8Button' class='rButton'><img src='images/instagram_black_24dp.svg'></div></a>
+		<p id="r8Text" class='rText'>Instagram ⤴</p>
+	</div>
+
 </div>
-
-				<p id="awardNoti">　DXDesign Award</p>
-				<p id="aboutNoti">　about Sustain</p>
-				<p id="facebookNoti">　DXD Facebook ⤴</p>
-				<p id="dxdesignNoti">　DXDesign.kr ⤴</p>
-
-			<div id="go3_p">
-				<ul class='menu'><p class='grad'>3학년</p>
-					<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
-					<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
-					<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
-					<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
-					<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
-				</ul>
-			</div>
-			<div id="go2_p">
-				<ul class='menu'><p class='grad'>2학년</p>
-					<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
-					<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
-					<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
-					<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
-					<li><a href='2_cont.html' class="menuText">엔터테인먼트디자인1</a></li>
-				</ul>
-			</div>
-			<div id="go1_p">
-				<ul class='menu'><p class='grad'>1학년</p>
-					<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
-					<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
-					<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
-					<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
-				</ul>
-			</div>	
 
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script src="jquery.lettering.js"></script>
 <script src="jquery.textillate.js"></script>
-
-
-<script>
-
-
-$(document).ready(function(){
-    $(document).ready(function(){
-		$('#subject').delay(1000).animate({'opacity': '100%'}, 1000);
-		$('#ham').delay(1000).animate({'opacity': '100%'}, 1000);
-        $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
-		$('#remote').delay(300).animate({'opacity': '100%'}, 1000);
-        $('#sec1').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
-		$('#back').delay(500).animate({'opacity': '100%', 'margin-top': '0px'}, 5000, 'easeOutBack');
-    });
-
-});
-
-
-$(document).ready(function(){
-    $("#exit").on('mouseover', function(){
-        $(this).stop().animate({'width':'50px', 'height':'50px'}, 100, 'easeOutExpo');
-        $('#exitNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-    });
-    $("#exit").on('mouseleave', function(){
-        $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
-        $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-    });
-
-
-	
-	
-	
-	
-	
-	$("#goAward").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-		$('#awardNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-});
-	$("#goAward").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-		$('#awardNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-});
-	$("#goAward").on('click', function(){
-		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-		$('#remote').animate({'opacity': '0%'}, 600);
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','dxdaward.html');});		
-});
-	$("#goAbout").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-		$('#aboutNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-});
-	$("#goAbout").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-		$('#aboutNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-});
-	$("#goAbout").on('click', function(){
-		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-		$('#remote').animate({'opacity': '0%'}, 600);
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','about.html');});		
-});
-
-	$("#goF").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-		$('#facebookNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-});
-	$("#goF").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-		$('#facebookNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-});
-	$("#goD").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-		$('#dxdesignNoti').stop().animate({'left':'100px', 'opacity':'100%'}, 100, 'easeOutExpo');
-});
-	$("#goD").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');	
-		$('#dxdesignNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
-});
-			$('#quitMenu').on('click', function(){
-				$('#go3_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#go2_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#go1_p').animate({'height':'0px'}, 200, 'easeOutCirc');
-				$('#quitMenu').animate({'top':'0px', 'opacity':'0%'}, 0);
-				});
-	
-	
-	
-	
-	
-	$("#go3").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');	
-});
-	$("#go3").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-});
-	$("#go3").on('click', function(){
-		$('#go3_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-		$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#quitMenu').animate({'top':'250px', 'opacity':'100%'}, 0);
-});
-	
-	
-
-	
-	
-	
-	
-	
-	$("#go2").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
-});
-	$("#go2").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-});
-	$('#go2').on('click', function(){
-		$('#go2_p').animate({'height':'310px'}, 600, 'easeOutExpo');
-		$('#go1_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#quitMenu').animate({'top':'300px', 'opacity':'100%'}, 0);
-});
-	
-	
-	
-	
-	
-	
-	
-	$("#go1").on('mouseover', function(){
-		$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');		
-});
-	$("#go1").on('mouseleave', function(){
-		$(this).stop().animate({'opacity':'11%'}, 100, 'easeInSine');		
-});  
-	$('#go1').on('click', function(){
-		$('#go1_p').animate({'height':'270px'}, 600, 'easeOutExpo');
-		$('#go2_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#go3_p').animate({'height':'0px'}, 00, 'easeOutCirc');
-		$('#quitMenu').animate({'top':'350px', 'opacity':'100%'}, 0);
-});
-	
-	
-	
-	
-	
-
-	
-	
-	$("#exit").on('click', function(){
-		$(this).animate({'opacity':'0%'}, 600, 'easeOutExpo');
-		$('#remote').animate({'opacity': '0%'}, 600);
-		$('#exitTrans').animate({'opacity':'100%', 'width':'8000px', 'height':'8000px'}, 600, 'easeInExpo');
-        $('body').delay(800).animate({'opacity':'100%'}, 00, 'easeInExpo', function(){$(location).attr('href','index.html');});		
-});
-	
-
-$("#ham").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'left':'50%'}, 600, 'easeOutExpo');		
-});
-	$("#burger_x").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'left':'200%'}, 300, 'easeInCirc');		
-});
-
-	
-	$("#pic1").on('click', function(){
-        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_takitcon.html');});
-	});
-	
-		$("#pic2").on('click', function(){
-        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_kh.html');});
-	});
-		$("#pic3").on('click', function(){
-        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_83tower.html');});
-	});
-		$("#pic4").on('click', function(){
-        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','3_info_suseong.html');});
-	});
-	
-	
-});
-
-
-
-
-</script>
-
-
-
+<script src="subject.js"></script>
 </body>
     
 </html>
