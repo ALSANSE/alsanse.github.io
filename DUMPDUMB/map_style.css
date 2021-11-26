@@ -67,13 +67,14 @@ img{
 
 }
 #location{
-    position: fixed;
+    position: absolute;
     font-family: source-han-sans-korean, sans-serif;
     font-weight: 200;
     font-size: 12px;
     color: #f1f3f9;
-    top:40px;
-    left: 12px;
+    top:420px;
+    left: 10px;
+    transform: rotate(-36deg);
 }
 
 #insta{
