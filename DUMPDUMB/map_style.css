@@ -179,18 +179,28 @@ p2{
 }
 
 #pin_photo1{
-    left: 700px;
-    top: 200px;
+    left: 500px;
+    top: 400px;
 }
 
 #pin_poster1{
-    left: 300px;
-    top: 500px;
+    left: 370px;
+    top: 480px;
+}
+
+#pin_poster2{
+    left: 566px;
+    top: 263px;
+}
+
+#pin_poster3{
+    left: 755px;
+    top: 70px;
 }
 
 #pin_beam1{
-    left: 500px;
-    top: 400px;
+    left: 655px;
+    top: 175px;
 }
 
 #guide{
