@@ -156,6 +156,9 @@
 
 }
 
+.t5{
+	margin-top: 5rem;
+}
 
 .m1{
 	width: 600px;
@@ -168,17 +171,11 @@
 	width: 550px;
 }
 
-#m4{
-	width: 640px;
+.m4{
+	width: 340px;
+	text-align: center;
 }
 
-#m5{
-	width: 550px;
-}
-
-#m6{
-	width: 550px;
-}
 
 
 #logo{
@@ -234,6 +231,22 @@
 		}
 
 
+
+#pics{
+	display: flex;
+	flex-wrap: wrap;
+	width: 740px;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 50px;
+	padding-bottom: 20rem;
+}
+
+#mm{
+	width: 100%;
+}
+
 	</style>
 
 
@@ -283,7 +296,7 @@
 				<br>
 				쓰레기를 각 개인이 분리 배출을 잘 한다면 쓰레기 소각으로 인한 대기 문제, 
 				<br>
-				매립지가 부족한 문제, 쓰레기 분류 업체의 일손 부족 문제를 완화할 있을 것입니다.
+				매립지가 부족한 문제, 쓰레기 분류 업체의 일손 부족 문제를 완화할 수 있을 것입니다.
 			</p3>
 			
 			<h2>목표</h2>
@@ -304,7 +317,10 @@
 			<p4 style="color:#ff0085">핵심 기능</p4>
 			
 
+				<div id='mm'><img src='takitimage/mm.svg'></div>
 
+
+<!--
 
 			<h2>미션과 보상</h2>
 			<p1>지속적인 분리수거 습관 형성을 위해 매일 제공되는 미션을 클리어하면 보상을 받을 수 있다.</p1>
@@ -318,51 +334,58 @@
 			
 			<h2>환경 뉴스</h2>
 			<p1>환경 뉴스를 지속적으로 노출하여 환경 문제에 관심을 들이도록 유도</p1>
-			
+			-->
 			</div>
 			
 			
 			
-			<div class='greenpeace'>
+		<div id='pics'>
 			
 			<p4 style="color:#19c800">브랜드 아이덴티티</p4>
-			<p3 class='t2'>
-				분리수거를 <span id='t3'>유쾌하고 </span><span id='t4'>재미있게</span> 즐기자
+			<p3 class='t2s'>
+				분리수거를 <span id='t3'>유쾌하고 </span><span id='t4'>재미있게</span> 즐기자!
 			</p3>
-			<h2>컬러</h2>
+			<h2 class='t5'>컬러</h2>
 			<div id='m2'><img src='takitimage/takitcolor.svg'></div>
-			<p3 class='t2'>
+			<p3 class='t2s'>
 				브랜드 컬러는 플라스틱에 자주 쓰이는 형광색을 사용하였습니다.
 			</p3>
 			
-			<h2>로고</h2>
+			<h2 class='t5'>로고</h2>
 			<div id='m3'><img src='takitimage/logo.svg'></div>
 
-			<p3 class='t2'>takit에서 보상으로 제공하는 키트의 날카로움을 본따 로고에 형상화 하였습니다. </p3>
-			
-			<h2>분리배출 가이드의 픽토그램</h2>
-			<div id='m4'><img src='takitimage/pictogram_from_logo.svg'></div>
-			<p3 class='t2'>로고의 기울기와 두께, 날카로운 획의 끝을 기반으로 그리드 시스템을 만들었습니다. </p3>
-			<div id='m5'><img src='takitimage/pictogram_frame.svg'></div>
-			<p3 class='t2'>픽토그램은 쓰레기 소재, 분리 배출 방법, 주의사항으로 나뉩니다. </p3>
-			<div id='m6'><img src='takitimage/evolution_of_pictogram.svg'></div>
-			<p3 class='t2'>쓰레기 소재는 세로로 긴 6*9의 비율로 통일했으며<br>
-				배출방법과 주의사항은 쓰레기 소재를 기본형으로 변형하였습니다.</p3>
-			
-			<a id='dl' href='takitguideline.html'><h1 id='dlt'>브랜드 아이덴티티 가이드라인</h1></a>
+			<p3 class='t2s'>takit에서 보상으로 제공하는 키트의 날카로움을 본따 로고에 형상화 하였습니다. </p3>
+
+
+			<h2 class='t5'>분리배출 가이드의 픽토그램</h2>
+			<br>
+			<div class="m4">
+				<div class='m4'><img src='takitimage/pictogram_from_logo.svg'></div>
+				<p1>로고를 기반으로 한 그리드 시스템 </p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/standard_of_pictogram.svg'></div>
+				<p1>세로로 긴 6*9의 비율로 통일된 픽토그램</p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/evolution_of_pictogram.svg'></div>
+				<p1>배출방법과 주의사항은 쓰레기 소재를 기본형으로 변형</p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/pictogram_frame.svg'></div>
+				<p1>픽토그램을 감싸는 프레임으로 각 카테고리 분류</p1>
+			</div>
+
+		</div>
+
+				<a id='dl' href='takitguideline.html'><h1 id='dlt'>브랜드 아이덴티티 가이드라인</h1></a>
 			
 			</div>
 			
-			
-			<div class='greenpeace'>
-			
-			<p4 style="color:#6666f6">인터페이스 체험</p4>
-					
-			<iframe>
-			
-			</iframe>
-			
-			</div>
+	
 
 	<script src="jquery-3.5.1.js"></script>
 	<script src="jquery.easing.min.js"></script>
