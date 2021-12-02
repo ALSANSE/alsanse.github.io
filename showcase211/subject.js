@@ -302,7 +302,7 @@ $("#r4Button").on('click', function(){
 
 	
 $("#ham").on('click', function(){
-        $('#burger').animate({'opacity':'100%', 'left':'50%'}, 600, 'easeOutExpo');		
+        $('#burger').animate({'opacity':'100%', 'left':'0%'}, 600, 'easeOutExpo');		
 });
 	$("#burger_x").on('click', function(){
         $('#burger').animate({'opacity':'100%', 'left':'200%'}, 300, 'easeInCirc');		
