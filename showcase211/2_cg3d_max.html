@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Max 작업</title>
+    <link rel="stylesheet" href="animate.css" />
+
+
+
+
+    
+         <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+			 
+			 @media screen and (min-width: 1081px) {
+			 
+body {
+    background-color: #111519;
+	/*height: 2000px;*/
+    -ms-overflow-style: none; 
+   } 
+   
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+
+
+#exit {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top:80px;
+    left:80px;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+}
+
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:51px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+			 
+			 
+			 
+			 
+
+#container {
+    position:relative;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	top: 0px;
+
+}
+
+
+
+
+
+
+
+#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 200px;
+	top: 200px;
+	display: flex;
+	flex-direction: column;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 40px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+	position: relative;
+}
+
+		
+.panel {
+	overflow: hidden;
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	opacity: 100%;
+	border-radius: 27px;
+	}
+				 
+				 
+				 
+				 
+				 #explan {
+	color: #ffffff;
+	width: 500px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	position: relative;
+	line-height: 1.8;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1rem;
+	font-weight: 100;
+
+			 }
+
+			 }
+			 
+			 
+			 
+			 			 @media screen and (max-width: 1080px) {
+			 
+body {
+    background-color: #000000;
+	/*height: 2000px;*/
+    -ms-overflow-style: none; 
+   } 
+   
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+
+
+#exit {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top:80px;
+    left:120%;
+    opacity: 0%;
+    transform: translate(-50%, -50%);
+}
+
+#exitNoti {
+    position: fixed;
+    height: 40px;
+    width: 80px;
+    top:51px;
+    opacity: 0%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fafbfc;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+			 
+			 
+			 
+			 
+
+#container {
+    position:relative;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+}
+
+
+
+
+
+
+
+#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 300px;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+	position: relative;
+}
+
+		
+.panel {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	opacity: 0%;
+	}
+
+			 
+			 
+#explan {
+	margin-top: 90px;
+	color: #ffffff;
+	width: 90%;	
+	left: 50%;
+	position: relative;
+	transform: translate(-50%, 0%);
+	line-height: 1.8;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1.9rem;
+	font-weight: 100;
+		 }	 
+							 
+							 
+							 
+							 
+							 
+			 }
+</style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="container">
+
+
+	<div class="panel" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/567781848?badge=0&amp;autoplay=1&amp;loop=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="max_P"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+	<div id="footers">
+			<div id="footers_image"><img id="footer_image" src="images/dxd_logo_w.png"></div>
+			<p id="footer_text">대구가톨릭대학교 디지털디자인과<br>
+			38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br>
+			053-850-3920</p>
+	</div>
+
+
+</div>
+
+
+<!--<div id="log">0</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="exitNoti">닫기</p>
+<div id="exit"><img src="images/X.svg"></div>
+
+
+
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+
+
+<script>
+
+
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
+        $('.panel').delay(100).animate({'opacity': '100%'}, 1000, 'easeOutBack');
+    });
+
+});
+
+
+$(document).ready(function(){
+
+    $("#exit").on('mouseover', function(){
+        $(this).stop().animate({'width':'50px', 'height':'50px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'110px', 'opacity':'100%'}, 100, 'easeOutExpo');
+    });
+	
+    $("#exit").on('mouseleave', function(){
+        $(this).stop().animate({'width':'40px', 'height':'40px'}, 100, 'easeOutExpo');
+        $('#exitNoti').stop().animate({'left':'80px', 'opacity':'0%'}, 100, 'easeOutExpo');
+    });
+	
+	$("#exit").on('click', function(){
+        $('body').animate({'opacity':'0%'}, 300, 'easeInExpo', function(){$(location).attr('href','2_cg3d.html');});
+			
+});
+
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+
+
+</script>
+
+
+
+</body>
+    
+</html>
+

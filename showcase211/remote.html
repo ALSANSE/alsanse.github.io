@@ -1,0 +1,377 @@
+<style>
+        
+    #remote {
+        position: fixed;
+        width: 40px;
+        top:200px;
+        left:80px;
+        transform: translate(-50%, 0%);
+        z-index: 99;
+        display: block;
+        opacity: 100%;
+    }
+    .icon{
+        transform: translate(0%, 32%);
+    }
+    .rLay {
+        display: flex;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .rButton {
+        width: 40px;
+        height: 40px;
+        opacity: 66%;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #d1d5d9;
+
+    }
+    .rEmptyButton {
+        width: 40px;
+        height: 40px;
+    }
+    .rText { 
+        position: absolute;
+        height: 30px;
+        width: 183px;
+		padding-bottom: 10px;
+        opacity: 0%;
+        transform: translate(0, -50%);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 22px;
+        color: #e1e5e9;
+        overflow: hidden;
+        -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+        z-index: -98;
+    }	
+
+
+
+
+
+
+
+			 
+			 
+#s3 {
+
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:50px;
+    left:60px;
+	height: 0px;
+	min-width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}
+			 
+#s2 {
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:100px;
+    left:60px;
+	height: 0px;
+	width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}	
+			 
+#s1 {
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:150px;
+    left:60px;
+	height: 0px;
+	width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}		
+			 
+			 
+			 
+	.menu {
+		list-style: none;
+		line-height: 40px;
+		font-weight: 400;
+    	font-family: 'Noto Sans KR', sans-serif;
+    	font-size: 14px; 
+		top: 10px;
+		text-decoration: none;
+		color: #000000;
+			 }
+			 
+	.menuText {
+		text-decoration: none;
+		color: #000000;
+			 }
+			
+	.menuText:hover {
+        color: #ffffff;
+			}
+
+	
+	.grad {
+		font-size: 21px;
+		font-weight: 700;
+			 }
+			 
+			 
+			 #quitMenu {
+				width: 40px;
+			 	height: 40px;
+	
+				background-color: #eaebec;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				opacity: 0%;
+				position: fixed;
+				top:-50px;
+    			left:0px;
+				transform: translate(0%, 0%);
+				z-index: 100;
+				 text-align: center;
+
+				 
+			 }
+
+</style>
+
+<body>
+
+
+<div id='remote'>
+	<a><div id='quitMenu'><img src='images/x_red_24dp.svg'></div></a>
+    <div class='rLay'>
+		<a href='dxdaward.html'><div id='r1Button' class='rButton'><img src='images/star_rate_black_24dp.svg' class="icon"></div></a>
+		<p id="r1Text" class='rText'>DXDesign Award</p>
+	</div>
+
+    <div class='rLay'>
+	    <a><div id='r2Button' class='rButton'><img src='images/3_black_24dp.svg'></div></a>
+		<div id="s3" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>3학년</p>
+				<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
+				<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+				<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+				<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+				<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+    	<a><div id='r3Button' class='rButton'><img src='images/2_black_24dp.svg'></div></a>
+		<div id="s2" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>2학년</p>
+				<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+				<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+				<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+				<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+				<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+		<a><div id='r4Button' class='rButton'><img src='images/1_black_24dp.svg'></div></a>
+		<div id="s1" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>1학년</p>
+				<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+				<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+				<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+				<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+			</ul>
+		</div>	
+	</div>
+
+    <div class='rLay'>
+		<a href='about.html'><div id='r5Button' class='rButton'><img src='images/q_black_24dp.svg'></div></a>
+		<p id="r5Text" class='rText'>About Sustain</p>
+	</div>
+
+    <div class='rLay'>
+		<div class='rEmptyButton'></div>
+	</div>
+
+    <div class='rLay'>
+		<a href='http://dxdesign.cu.ac.kr' target='_blank'><div id='r6Button' class='rButton'><img src='images/dxd_black_24dp.svg'></div></a>
+		<p id="r6Text" class='rText'>DXD ⤴</p>
+	</div>
+
+    <div class='rLay'>
+		<a href='https://www.facebook.com/dxdesign.cu.ac.kr/' target='_blank'><div id='r7Button' class='rButton'><img src='images/facebook_black_24dp.svg'></div></a>
+		<p id="r7Text" class='rText'>Facebook ⤴</p>
+	</div>
+
+	<div class='rLay'>
+		<a href='https://www.instagram.com/dcudxd/' target='_blank'><div id='r8Button' class='rButton'><img src='images/instagram_black_24dp.svg'></div></a>
+		<p id="r8Text" class='rText'>Instagram ⤴</p>
+	</div>
+
+</div>
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+<script src="subject.js"></script>
+
+
+
+
+<script>
+    
+
+
+$(document).ready(function(){
+
+
+
+    $("#r1Button").on('mouseover', function(){
+        $(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#r1Text').stop().animate({'left':'50px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+    $("#r1Button").on('mouseleave', function(){
+        $(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+        $('#r1Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+    $("#r2Button").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	});
+	$("#r2Button").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	});
+
+    $("#r3Button").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	});
+	$("#r3Button").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	});
+    
+    $("#r4Button").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	});
+	$("#r4Button").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	});
+
+    $("#r5Button").on('mouseover', function(){
+        $(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#r5Text').stop().animate({'left':'50px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+    $("#r5Button").on('mouseleave', function(){
+        $(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+        $('#r5Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+    $("#r6Button").on('mouseover', function(){
+        $(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#r6Text').stop().animate({'left':'50px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+    $("#r6Button").on('mouseleave', function(){
+        $(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+        $('#r6Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+       
+    $("#r7Button").on('mouseover', function(){
+        $(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#r7Text').stop().animate({'left':'50px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+    $("#r7Button").on('mouseleave', function(){
+        $(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+        $('#r7Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+    
+    $("#r8Button").on('mouseover', function(){
+        $(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+        $('#r8Text').stop().animate({'left':'50px', 'opacity':'100%'}, 100, 'easeOutExpo'); });
+    $("#r8Button").on('mouseleave', function(){
+        $(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+        $('#r8Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo'); });
+        
+
+
+
+
+
+	
+	$("#r1Button").on('click', function(){
+		$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+		$('#r1Text').stop().animate({'left':'0px', 'opacity':'0%'}, 100, 'easeOutExpo');
+		$('#s3').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s2').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#s1').animate({'height':'0px'}, 200, 'easeOutCirc');
+		$('#quitMenu').animate({'top':'-50px', 'opacity':'0%'}, 0);
+});
+			$('#quitMenu').on('click', function(){
+				$('#s3').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#s2').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#s1').animate({'height':'0px'}, 200, 'easeOutCirc');
+				$('#quitMenu').animate({'top':'-50px', 'opacity':'0%'}, 0);
+				});
+	
+	
+	
+	
+$("#r2Button").on('click', function(){
+	$('#s3').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s2').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s1').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#quitMenu').animate({'top':'50px', 'opacity':'100%'}, 0);
+});
+	
+	
+$("#r3Button").on('click', function(){
+	$('#s2').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s1').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s3').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#quitMenu').animate({'top':'100px', 'opacity':'100%'}, 0);
+});
+	
+	
+$("#r4Button").on('click', function(){
+	$('#s1').animate({'height':'310px'}, 600, 'easeOutExpo');
+	$('#s3').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#s2').animate({'height':'0px'}, 00, 'easeOutCirc');
+	$('#quitMenu').animate({'top':'150px', 'opacity':'100%'}, 0);
+});	
+	
+	
+
+	
+
+	
+});
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+ 

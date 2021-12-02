@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>about Sustain</title>
+    <link rel="stylesheet" href="animate.css" />
+
+
+
+
+    
+         <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Roboto+Condensed:wght@700&family=Poppins:wght@100&display=swap');
+@media screen and (min-width: 1081px) {
+	
+	
+	.links {
+		color: #eaebec;
+	}
+	.links:hover {
+		color: #ffde58;
+	}
+	
+body {
+    background-color: #000000;
+	/*height: 2000px;*/
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+   } 
+   
+
+	
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+#back {
+	position: absolute;	
+	opacity: 0%;
+	}
+
+	#exit {
+			position: fixed;
+			height: 40px;
+			width: 40px;
+			top:80px;
+			left:80px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}
+		
+		#exitNoti {
+			position: fixed;
+			height: 40px;
+			width: 80px;
+			top:51px;
+			opacity: 0%;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			color: #fafbfc;
+			overflow: hidden;
+			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+			z-index: 98;
+		}
+		
+					 
+					 
+		#ham {
+			position: relative;
+			height: 0px;
+			width: 0px;
+			top:70px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+			overflow: hidden;
+		}	 
+
+		#subject{
+
+			font-size: 0rem;
+			text-align: center;
+
+			opacity: 0%;
+
+		}
+
+		#burger {
+			position: fixed;
+			height: 0px;
+			width: 0%;
+			transform: translate(-50%, 0%);
+			left: 200%;
+			top: 150px;
+			opacity: 100%;
+			z-index: 100;
+			background-color: #fafbfc;
+			border-radius: 54px;
+			box-shadow: 0px 0px 0px 300px rgba(49,53,57,1);
+		}	
+
+		#burger_x {
+			position: absolute;
+			height: 0px;
+			width: 0px;
+			top:-80px;
+			right: -50px;
+			opacity: 100%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	
+			 
+			 
+#container {
+	top: 200px;
+    position:relative;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+
+}
+
+
+
+
+#text_svg {
+	position: relative;
+	width: 100%;
+}
+
+#text {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#sec1 {
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;  
+width: 960px;
+opacity: 0%;
+align-items: flex-start;
+margin-top: 100px;
+margin-bottom: 100px;
+color: #ffffff;
+line-height: 40px;
+font-weight: 100;
+font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+h2{font-weight: 700; }
+h3{font-weight: 100; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 200px;
+	top: 200px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 30px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+	position: relative;
+}
+
+
+			 
+
+			
+			 
+#remote {
+        position: fixed;
+        width: 40px;
+        top:200px;
+        left:80px;
+        transform: translate(-50%, 0%);
+        z-index: 99;
+        display: block;
+        opacity: 100%;
+    }
+    .icon{
+        transform: translate(0%, 32%);
+    }
+    .rLay {
+        display: flex;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .rButton {
+        width: 40px;
+        height: 40px;
+        opacity: 66%;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #d1d5d9;
+
+    }
+    .rEmptyButton {
+        width: 40px;
+        height: 40px;
+    }
+    .rText { 
+        position: absolute;
+        height: 30px;
+        width: 183px;
+		padding-bottom: 10px;
+        opacity: 0%;
+        transform: translate(0, -50%);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 22px;
+        color: #e1e5e9;
+        overflow: hidden;
+        -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+        z-index: -98;
+    }	
+
+
+
+
+
+
+
+			 
+			 
+#s3 {
+
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:50px;
+    left:60px;
+	height: 0px;
+	min-width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}
+			 
+#s2 {
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:100px;
+    left:60px;
+	height: 0px;
+	width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}	
+			 
+#s1 {
+	position: absolute;
+	/*background-color: #eaebec;*/
+    top:150px;
+    left:60px;
+	height: 0px;
+	width: 180px;
+	padding-right: 36px;
+    transform: translate(0%, 0%);
+	z-index: 99;
+	border-radius: 20px;
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+	border: solid 0px transparent;
+	background-clip: padding-box;
+	background: rgba(222,222,222,0.6);
+	box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+	}		
+	.menu {
+		list-style: none;
+		line-height: 40px;
+		font-weight: 400;
+    	font-family: 'Noto Sans KR', sans-serif;
+    	font-size: 14px; 
+		top: 10px;
+		text-decoration: none;
+		color: #000000;
+			 }
+			 
+	.menuText {
+		text-decoration: none;
+		color: #000000;
+			 }
+			
+	.menuText:hover {
+        color: #ffffff;
+			}
+
+	
+	.grad {
+		font-size: 21px;
+		font-weight: 700;
+			 }
+			 
+			 
+
+	#quitMenu {
+				width: 40px;
+			 	height: 40px;
+	
+				background-color: #eaebec;
+				border-radius: 200px;
+				margin-bottom: 10px;
+				opacity: 0%;
+				position: fixed;
+				top:-50px;
+    			left:0px;
+				transform: translate(0%, 0%);
+				z-index: 100;
+				 text-align: center;
+
+				 
+			 }
+	
+	
+			 }
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 @media screen and (max-width: 1080px) {
+				 	.links {
+		color: #eaebec;
+	}
+	.links:hover {
+		color: #ffde58;
+	}
+	body {
+    background-color: #000000;
+	/*height: 2000px;*/
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+
+   } 
+   
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+
+
+	#nav{
+						width: 98%;
+						height: 140px;
+						left: 50%;
+						transform: translate(-50%, -5%);
+						margin-bottom: 40px;
+						position: fixed;
+						backdrop-filter: blur(15px);
+						border: solid 1px transparent;
+						background-clip: padding-box;
+						background: rgba(0,0,0,0.6);
+						z-index: 99;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+					 }
+
+		
+		#exit {
+			position: relative;
+			height: 80px;
+			width: 80px;
+			top:70px;
+			left:70px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}
+		
+		#exitNoti {
+			position: fixed;
+			height: 0px;
+			width: 0px;
+			top:51px;
+			opacity: 0%;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			color: #fafbfc;
+			overflow: hidden;
+			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+			z-index: 98;
+		}
+		#subject{
+			color: #ffffff;
+			font-size: 2.5rem;
+			opacity: 0%;
+			font-weight: 400;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		#ham {
+			position: relative;
+			height: 80px;
+			width: 80px;
+			top: 70px;
+			opacity: 0%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	 
+
+		#burger {
+			position: fixed;
+			height: 1730px;
+			width: 40%;
+			padding: 80px 10%;
+			transform: translate(-50%, 0%);
+			left: 200%;
+			top: 48px;
+			opacity: 100%;
+			z-index: 100;
+			background-color: #fafbfc;
+			border-radius: 27px;
+			box-shadow: 0px 0px 80px 420px rgba(0,0,0,1);
+		}	
+
+		#burger_x {
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			top: 23px;
+			right: -193px;
+			opacity: 100%;
+			transform: translate(-50%, -50%);
+			z-index: 99;
+		}	
+
+
+		.head{
+		font-weight: 700;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 1.8rem;
+		color: #000000;
+		text-decoration: none;
+		}
+
+		.neck{
+		font-weight: 100;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 2.4rem;
+		color: #000000;
+		text-decoration: none;
+		}
+			 
+			 
+#container {
+	top: 300px;
+    position:relative;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+#sec1 {
+position: relative;
+margin-bottom: 300px;
+
+align-items: center;
+width: 90%;
+margin: 0 auto;
+margin-top: 300px;
+opacity: 0%;
+color: #ffffff;
+line-height: 3;
+font-weight: 400;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+#footers {
+    position: relative;
+    width: 100%;
+    height: 300px;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 500px;
+}
+	
+			
+#footers_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}
+#footer_image {
+	position: relative;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	height: 50px;
+
+}			
+			
+#footer_text {
+    color: #a1a5a9;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+	position: relative;
+}
+
+		
+					 
+#remote {
+	position: fixed;
+    width: 0px;
+	height: 0px;
+    transform: translate(-50%, 0%);
+	z-index: 99;
+	display: block;
+	opacity: 0%;
+	
+	 }
+
+
+
+
+h1{font-size:3.6rem; font-weight: 700;}
+h2{font-weight: 700; line-height: 1.4;}
+h3{font-size: 1rem; font-weight: 100;}
+h4{font-weight: 700;}
+h5{font-weight: 100;}
+			 }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+	<div id="nav">
+
+		<p id="exitNoti">홈으로</p>
+		<div id="exit"><img src="images/left.svg"></div>
+		<p id="subject">about Sustain</p>
+		<div id="ham"><img src="images/ham.svg"></div>
+		
+		
+		
+		
+		<div id="burger">
+		
+		<img id="burger_x" src="images/X.svg">
+		<a class="neck" href="dxdaward.html">DXDesign Award</a>
+		<br><br>
+		<a class="neck" href="about.html">about Sustain</a>
+		<br><br>
+		<a class="neck" href="https://www.facebook.com/dxdesign.cu.ac.kr/">DXD Facebook ⤴</a>
+		<br><br>
+		<a class="neck" href="http://dxdesign.kr/">DXDesign.kr ⤴</a>
+		<br><br><br>
+		
+		<p class="head">3학년</p>
+		<a class="neck" href="3_info.html">인포메이션디자인</a>
+		<br><br>
+		<a class="neck" href="3_brnd.html">브랜딩과뉴미디어</a>
+		<br><br>
+		<a class="neck" href="3_intr.html">인터랙션디자인</a>
+		<br><br>
+		<a class="neck" href="3_mgrp.html">모션그래픽</a>
+		<br><br>
+		<a class="neck" href="3_entr.html">엔터테인먼트디자인2</a>
+		<br><br><br>
+		<p class="head">2학년</p>
+		<a class="neck" href="2_info.html">인포메이션그래픽스</a>
+		<br><br>
+		<a class="neck" href="2_cg3d.html">3D컴퓨터그래픽스1</a>
+		<br><br>
+		<a class="neck" href="2_webd.html">웹디자인</a>
+		<br><br>
+		<a class="neck" href="2_anim.html">디지털애니메이션</a>
+		<br><br>
+		<a class="neck" href="2_cont.html">디지털콘텐츠디자인1</a>
+		<br><br><br>
+		<p class="head">1학년</p>
+		<a class="neck" href="1_basc.html">기초디지털표현</a>
+		<br><br>
+		<a class="neck" href="1_typo.html">디지털타입페이스</a>
+		<br><br>
+		<a class="neck" href="1_gest.html">디지털조형</a>
+		<br><br>
+		<a class="neck" href="1_cmgr.html">컴퓨터그래픽스1</a>
+		
+		</div>
+		
+		</div>
+		
+
+<div id="container">
+	<div id="sec1">
+<h2>Sustain: 대구가톨릭대학교 디지털디자인과<br>온라인 과제전 2021년 1학기</h2>
+
+<h3>과제전 기획/진행: 디지털디자인과 학생회 (회장 최성근)<br>
+과제전 홍보: 디디서포터즈 (동아리장 최민영)<br>
+과제전 웹사이트 제작: 김세진 (3학년)<br>
+과제전 포스터 디자인: 김세진 (3학년)<br>
+과제전 지도교수: 이준, 최수환, 선주연<br></h3>
+		<br><br><br>
+<h4>수업담당 교수</h4>
+
+<h3>1학년<br>
+이준 / 디지털조형<br>
+이도희 / 기초디지털표현<br>
+박주희 / 디지털타입페이스<br>
+정가빈 / 컴퓨터그래픽스1</h3>
+
+<h3>2학년<br>
+최수환 / 웹디자인, 디지털콘텐츠디자인1<br>
+선주연 / 인포메이션그래픽스<br>
+박은석 / 3D컴퓨터그래픽스1<br>
+이도희 / 디지털애니메이션<br></h3>
+
+<h3>3학년<br>
+이준, 최수환 / 인터랙션디자인<br>
+선주연 / 브랜딩과뉴미디어, 인포메이션디자인<br>
+박은석 / 모션그래픽<br>
+
+<h3>4학년<br>
+이준 / 창의융합디자인1<br>
+최수환 / 디지털콘텐츠디자인스튜디오1<br>
+선주연 / 인포메이션디자인스튜디오1<br></h3>
+		<br><br><br>
+<h3>주관 및 후원: 대구가톨릭대학교 디지털디자인과<br>
+문의: <a class="links" href="mailto:helpdx@gmail.com">helpdx@gmail.com,</a> <a class="links" href="tel:0538503920">053-850-3920</a><br>
+		<br>
+학과홈페이지<br>
+<a class="links" href="http://dxdesign.kr">http://dxdesign.kr</a><br>
+<a class="links" href="http://dxdesign.cu.ac.kr">http://dxdesign.cu.ac.kr</a><br>
+		<br>
+학과페이스북 <br>
+<a class="links" href="https://www.facebook.com/dxdesign.cu.ac.kr/">https://www.facebook.com/dxdesign.cu.ac.kr/</a></h3>
+	</div>
+</div>
+
+
+
+</div>
+	
+	
+	
+	
+	<div id="footers">
+			<div id="footers_image"><img id="footer_image" src="images/dxd_logo_w.png"></div>
+			<p id="footer_text">대구가톨릭대학교 디지털디자인과<br>
+			38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br>
+			053-850-3920</p>
+	</div>
+
+<!--<div id="log">0</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='remote'>
+	<a><div id='quitMenu'><img src='images/x_red_24dp.svg'></div></a>
+    <div class='rLay'>
+		<a href='dxdaward.html'><div id='r1Button' class='rButton'><img src='images/star_rate_black_24dp.svg' class="icon"></div></a>
+		<p id="r1Text" class='rText'>DXDesign Award</p>
+	</div>
+
+    <div class='rLay'>
+	    <a><div id='r2Button' class='rButton'><img src='images/3_black_24dp.svg'></div></a>
+		<div id="s3" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>3학년</p>
+				<li><a href='3_info.html' class="menuText">인포메이션디자인</a></li>
+				<li><a href='3_brnd.html' class="menuText">브랜딩과뉴미디어</a></li>
+				<li><a href='3_intr.html' class="menuText">인터랙션디자인</a></li>
+				<li><a href='3_mgrp.html' class="menuText">모션그래픽</a></li>
+				<li><a href='3_entr.html' class="menuText">엔터테인먼트디자인2</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+    	<a><div id='r3Button' class='rButton'><img src='images/2_black_24dp.svg'></div></a>
+		<div id="s2" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>2학년</p>
+				<li><a href='2_info.html' class="menuText">인포메이션그래픽스</a></li>
+				<li><a href='2_cg3d.html' class="menuText">3D컴퓨터그래픽스1</a></li>
+				<li><a href='2_webd.html' class="menuText">웹디자인</a></li>
+				<li><a href='2_anim.html' class="menuText">디지털애니메이션</a></li>
+				<li><a href='2_cont.html' class="menuText">디지털콘텐츠디자인1</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <div class='rLay'>
+		<a><div id='r4Button' class='rButton'><img src='images/1_black_24dp.svg'></div></a>
+		<div id="s1" class='subjectPannel'>
+			<ul class='menu'><p class='grad'>1학년</p>
+				<li><a href='1_basc.html' class="menuText">기초디지털표현</a></li>
+				<li><a href='1_typo.html' class="menuText">디지털타입페이스</a></li>
+				<li><a href='1_gest.html' class="menuText">디지털조형</a></li>
+				<li><a href='1_cmgr.html' class="menuText">컴퓨터그래픽스1</a></li>
+			</ul>
+		</div>	
+	</div>
+
+    <div class='rLay'>
+		<a href='about.html'><div id='r5Button' class='rButton'><img src='images/q_black_24dp.svg'></div></a>
+		<p id="r5Text" class='rText'>About Sustain</p>
+	</div>
+
+    <div class='rLay'>
+		<div class='rEmptyButton'></div>
+	</div>
+
+    <div class='rLay'>
+		<a href='http://dxdesign.cu.ac.kr' target='_blank'><div id='r6Button' class='rButton'><img src='images/dxd_black_24dp.svg'></div></a>
+		<p id="r6Text" class='rText'>DXD ⤴</p>
+	</div>
+
+    <div class='rLay'>
+		<a href='https://www.facebook.com/dxdesign.cu.ac.kr/' target='_blank'><div id='r7Button' class='rButton'><img src='images/facebook_black_24dp.svg'></div></a>
+		<p id="r7Text" class='rText'>Facebook ⤴</p>
+	</div>
+
+	<div class='rLay'>
+		<a href='https://www.instagram.com/dcudxd/' target='_blank'><div id='r8Button' class='rButton'><img src='images/instagram_black_24dp.svg'></div></a>
+		<p id="r8Text" class='rText'>Instagram ⤴</p>
+	</div>
+
+</div>
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.lettering.js"></script>
+<script src="jquery.textillate.js"></script>
+<script src="subject.js"></script>
+
+
+</body>
+    
+</html>
+
