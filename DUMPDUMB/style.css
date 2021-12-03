@@ -11,13 +11,21 @@ body{
     padding: 0;
 }
 
+#deepBack{
+    background: rgb(33,37,41);
+    background: linear-gradient(90deg, rgba(33,37,41,1) 5%, rgba(33,37,41,0) 15%, rgba(33,37,41,0) 85%, rgba(33,37,41,1) 95%);    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -998;
+}
+
 #back{
     background-color: #212529;
     opacity: 66%;
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: -998;
+    z-index: -997;
 }
 
 #map{
@@ -31,7 +39,8 @@ body{
 }
 
 #mapImg{
-    width: 100%;
+    height: 100%;
+    
 }
 
 #cover{
@@ -110,7 +119,7 @@ p1{
 p2{
     font-size: 0.9rem;
     color: #ffffff;
-    line-height: 2.4rem;
+    line-height: 1.8rem;
     font-family: source-han-sans-korean, sans-serif;
     font-weight: 200;
 }
@@ -133,6 +142,24 @@ text-align: center;
     width: 60px;
     height: 60px;
 }
+
+
+
+#nav{
+    position: fixed;
+    padding: 20px 0 20px 0;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(33,37,41,0) 0%, rgba(33,37,41,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
 
 
 

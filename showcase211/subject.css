@@ -25,6 +25,7 @@ body {
 	#nav{
 		width: 100%;
 		height: 70px;
+		margin-top: 40px;
 		margin-bottom: 40px;
 		position: fixed;
 		background-color: #333639;
@@ -87,37 +88,38 @@ body {
 
 			 
 #ham {
-			position: relative;
-			height: 40px;
-			width: 40px;
-			opacity: 0%;
-			transform: translate(0%, 0);
-			z-index: 99;
-			overflow: hidden;
-		}	 
+	position: relative;
+	height: 0px;
+	width: 0px;
+	opacity: 0%;
+	transform: translate(0%, 0);
+	z-index: 99;
+	overflow: hidden;
+	}	 
 
-		#subject{
-			transform: translate(0, -0.1rem);
-			position: relative;
-			color: #ffffff;
-			font-size: 2rem;
-			text-align: center;
-			opacity: 0%;
-			font-weight: 100;
-			font-family: 'Noto Sans KR', sans-serif;
-		}
+#subject{
+	transform: translate(0, -0.1rem);
+	position: relative;
+	color: #ffffff;
+	font-size: 2rem;
+	text-align: center;
+	opacity: 0%;
+	font-weight: 100;
+	font-family: 'Noto Sans KR', sans-serif;
+	}
 
-		#burger {
-			position: fixed;
-			height: 0px;
-			width: 0%;
-		}	
+#burger {
+	position: fixed;
+	height: 0px;
+	width: 0%;
+	left: 200%;
+	}	
 
-		#burger_x {
-			position: relative;
-			height: 0px;
-			width: 0px;
-		}		 
+#burger_x {
+	position: relative;
+	height: 0px;
+	width: 0px;
+	}		 
 			 
 #container {
     top: 120px;
@@ -461,6 +463,7 @@ width: 220px;
 #nav{
 	width: 100%;
 	height: 56px;
+	margin-top: 0px;
 	margin-bottom: 40px;
 	position: fixed;
 	z-index: 99;
