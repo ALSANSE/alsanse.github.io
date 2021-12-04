@@ -11,39 +11,6 @@ body{
     padding: 0;
 }
 
-#deepBack{
-    background: rgb(33,37,41);
-    background: linear-gradient(0deg, rgba(33,37,41,1) 5%, rgba(33,37,41,0) 15%, rgba(33,37,41,0) 85%, rgba(33,37,41,1) 95%);    
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -998;
-
-}
-
-#back{
-    background-color: #212529;
-    opacity: 66%;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -997;
-}
-
-#map{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -999;
-
-}
-
-#video{
-    height: 100%;
-    
-}
 
 
 
@@ -82,7 +49,50 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
+
+
+
+#deepBack{
+    background: rgb(33,37,41);
+    background: linear-gradient(0deg, rgba(33,37,41,1) 5%, rgba(33,37,41,0) 15%, rgba(33,37,41,0) 85%, rgba(33,37,41,1) 95%);    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -998;
+
+}
+
+#back{
+    background: rgb(33,37,41);
+    background: linear-gradient(180deg, rgba(33,37,41,0) 0%, rgba(33,37,41,1) 5%);    
+    opacity: 88%;
+    width: 100%;
+    height: 770px;
+    top: 550px;
+    position: absolute;
+    z-index: -997;
+}
+
+#map{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -999;
+
+}
+
+#video{
+    height: 100%;
+    width: 100%;
+    
+}
+
+
 
 img{
     width: 100%;
