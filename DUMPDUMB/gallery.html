@@ -95,7 +95,6 @@
 
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
 
 <script>
 
@@ -114,20 +113,6 @@ $(document).ready(function(){
 
 
 });
-
-
-var grid = new Muuri('.gp', {
-  dragEnabled: true,
-  layoutOnInit: false,
-  sortData: {
-    id: function (item, element) {
-      return parseFloat(element.children[0].textContent);
-    }
-  }
-});
-
-grid.sort('id', {layout: 'instant'})
-
 
 
 
