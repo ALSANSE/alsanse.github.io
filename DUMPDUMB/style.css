@@ -57,7 +57,7 @@ body{
 
 #deepBack{
     background: rgb(33,37,41);
-    background: linear-gradient(0deg, rgba(33,37,41,1) 5%, rgba(33,37,41,0) 15%, rgba(33,37,41,0) 85%, rgba(33,37,41,1) 95%);    
+    background: linear-gradient(0deg, rgba(33,37,41,1) 5%, rgba(33,37,41,0) 20%, rgba(33,37,41,0) 80%, rgba(33,37,41,1) 95%);    
     width: 100%;
     height: 100%;
     position: fixed;
