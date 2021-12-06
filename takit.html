@@ -70,7 +70,6 @@
 			font-family: source-han-sans-korean, sans-serif;
 			color: #515359;
 			line-height: 1.5rem;
-			margin-top: 0.8rem;
 			text-align: center;
 		}
 		p2{
@@ -140,7 +139,15 @@
 }
 
 .t2{
-	margin-bottom: 300px;
+	margin-bottom: 50px;
+	transform: translate(0, -100px);
+}
+
+.t2s{
+	width: 100%;
+	transform: translate(0, -30px);
+	margin-bottom: 70px;
+
 }
 
 #t3{
@@ -158,21 +165,23 @@
 
 .t5{
 	margin-top: 5rem;
+	width: 100%;
 }
+
 
 .m1{
 	width: 600px;
 }
 
 #m2{
-	width: 210px;
+	width: 280px;
 }
 #m3{
 	width: 550px;
 }
 
 .m4{
-	width: 340px;
+	width: 512px;
 	text-align: center;
 }
 
@@ -206,36 +215,20 @@
 		}
 
 
-		#dl{
-			border: solid 3px #6666f6;
-			border-radius: 100px;
-			padding: 1px 40px 0px 40px;
-			text-decoration: none;
-			color: #ff0085;
+#link{
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
 
-		}
-
-		#dl:hover{
-			border: solid 3px #19c800;
-			border-radius: 100px;
-			padding: 1px 40px 0px 40px;
-			text-decoration: none;
-			color: #19c800;
-
-		}
-
-
-		#dlt{
-			font-family: rixbusanstation-pro, sans-serif;
-			font-size: 1rem;
-		}
 
 
 
 #pics{
 	display: flex;
 	flex-wrap: wrap;
-	width: 740px;
+	width: 1080px;
 	flex-direction: row;
 	align-items: flex-end;
 	justify-content: center;
@@ -245,6 +238,11 @@
 
 #mm{
 	width: 100%;
+}
+#bi{
+	width: 720px;
+	margin: 0 50px 0 50px;
+	transform: translate(0, -80px);
 }
 
 	</style>
@@ -342,9 +340,7 @@
 		<div id='pics'>
 			
 			<p4 style="color:#19c800">브랜드 아이덴티티</p4>
-			<p3 class='t2s'>
-				분리수거를 <span id='t3'>유쾌하고 </span><span id='t4'>재미있게</span> 즐기자!
-			</p3>
+			<div id='bi'><img src='takitimage/bi.svg'></div>
 			<h2 class='t5'>컬러</h2>
 			<div id='m2'><img src='takitimage/takitcolor.svg'></div>
 			<p3 class='t2s'>
@@ -361,28 +357,32 @@
 			<br>
 			<div class="m4">
 				<div class='m4'><img src='takitimage/pictogram_from_logo.svg'></div>
-				<p1>로고를 기반으로 한 그리드 시스템 </p1>
+				<p1 class='t6'>로고를 기반으로 한 그리드 시스템 </p1>
 			</div>
 
 			<div class="m4">
 				<div class='m4'><img src='takitimage/standard_of_pictogram.svg'></div>
-				<p1>세로로 긴 6*9의 비율로 통일된 픽토그램</p1>
+				<p1 class='t6'>세로로 긴 6*9의 비율로 통일된 픽토그램</p1>
 			</div>
 
 			<div class="m4">
 				<div class='m4'><img src='takitimage/evolution_of_pictogram.svg'></div>
-				<p1>배출방법과 주의사항은 쓰레기 소재를 기본형으로 변형</p1>
+				<p1 class='t6'>배출방법과 주의사항은 쓰레기 소재를 기본형으로 변형</p1>
 			</div>
 
 			<div class="m4">
 				<div class='m4'><img src='takitimage/pictogram_frame.svg'></div>
-				<p1>픽토그램을 감싸는 프레임으로 각 카테고리 분류</p1>
+				<p1 class='t6'>픽토그램을 감싸는 프레임으로 각 카테고리 분류</p1>
 			</div>
 
 		</div>
-
-				<a id='dl' href='takitguideline.html'><h1 id='dlt'>브랜드 아이덴티티 가이드라인</h1></a>
 			
+			<div id='link'>
+				<a href='takitguideline.html'><img src='takitimage/go_to_guideline.svg'></a>
+				<a href='takitpictogram.html'><img src='takitimage/go_to_pictogram.svg'></a>
+			</div>
+		
+		
 			</div>
 			
 	
