@@ -25,8 +25,7 @@
 
 
 
-
-
+html, a{cursor: none;}
 
 		#log {
 	position:fixed;
@@ -61,6 +60,7 @@
 			margin-bottom: 34px;
 			background-color: #ffffff;
 			overflow: hidden;
+			z-index: -399999999;
 		}
 
 		#main{
@@ -198,6 +198,7 @@
 			width: 340px;
 			bottom: 5%;
 			position: fixed;
+			z-index: 9;
 		}
 		
 		.rButton{
@@ -322,8 +323,25 @@
 			position: absolute;
 			width: 550px;
 			height: 550px;
+			z-index: 2;
 		}
 
+
+
+#mouse {
+    position: absolute;
+    width:50px;
+    height:50px;
+	transform: translate(-50%, -50%);
+    opacity: 100%;
+	z-index: -10;
+}
+#mousePad{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	position: absolute;
+}
 	</style>
 
 
@@ -331,16 +349,16 @@
 </head>
 
 <body>
-
+<div id='mousePad'></div>
 <div id='main'>
 	<div id="circle">
 		<div id="thumb">
-			<img class="nails" id="a" src='indeximage/a.png'>
-			<img class="nails" id="b" src='indeximage/b.png'>
-			<img class="nails" id="c" src='indeximage/c.png'>
-			<img class="nails" id="d" src='indeximage/d.png'>
+			<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		</div>
-		<img id='logo' src='indeximage/alsanse.svg'>
+		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 	</div>
 	
 	<div id="me">
@@ -353,7 +371,7 @@
 <div class="contents">
 
 	<div class="content" id="a_content">
-		<img class="contentLogo" src="indeximage/sirenlogo.svg">
+		<img class="contentLogo" src="indeximage/sirenlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		<h1>2021</h1>
 		<p class="contentText">
 			사용자가 목표에 도달하려는 과정에서 방해되는 요소를 차단하며 계획에서<br>
@@ -363,7 +381,7 @@
 	</div>
 
 	<div class="content" id="b_content">
-		<img class="contentLogo" src="indeximage/silicontimerlogo.svg">
+		<img class="contentLogo" src="indeximage/silicontimerlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		<h1>2021</h1>
 		<p class="contentText">
 			세상에서 가장 아날로그적인 타이머인<br>
@@ -373,7 +391,7 @@
 	</div>
 
 	<div class="content" id="c_content">
-		<img class="takitLogo" src="indeximage/takitlogo.svg">
+		<img class="takitLogo" src="indeximage/takitlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		<h1>2021</h1>
 		<p class="contentText">
 			분리수거에 관심이 없거나 게으른 사람들을 위해<br>
@@ -383,7 +401,7 @@
 	</div>
 
 	<div class="content" id="d_content">
-		<img class="contentLogo" src="indeximage/bloodventurelogo.svg">
+		<img class="contentLogo" src="indeximage/bloodventurelogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		<h1>2021</h1>
 		<p class="contentText">
 			적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
@@ -413,7 +431,7 @@
 		</div>
 
 		<div class='rLay'>
-			<div id='r3Button' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg'></div>
+			<div id='r3Button' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 
 		</div>
 
@@ -451,6 +469,9 @@
 	</div>
 
 
+
+	<img id='mouse' src='indeximage/Radiation-half.svg'>
+
 	<script src="jquery-3.5.1.js"></script>
 	<script src="jquery.easing.min.js"></script>
 	
@@ -458,22 +479,71 @@
 $(document).ready(function(){
 
 
+	var mouseX = 0, mouseY = 0;
+            var xp = 0, yp = 0;
+ 
+            $(document).mousemove(function(e){
+            mouseX = e.pageX - 0;
+            mouseY = e.pageY - 0; 
+            });
+  
+            setInterval(function(){
+            xp += ((mouseX - xp)/6);
+            yp += ((mouseY - yp)/6);
+            $("#mouse").css({left: xp +'px', top: yp +'px'});
+            }, 0);
+
+
+
+
+
+
+
+$("#mousePad").on('mouseover', function(){
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
+	$('#logo').animate({'top':'0px'}, 500, 'easeOutExpo');
+
+});
+
+
+$(".name_contact").on('mouseover', function(){
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
+});
+$(".name_contact").on('mouseleave', function(){
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
+});
+
+
+
+$(".cta").on('mouseover', function(){
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
+});
+$(".cta").on('mouseleave', function(){
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
+});
+
 
 $("#r3Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
 });
 $("#r3Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
 });
 
 
 $("#r2Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$("#r2Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
+
 });
 $("#r2Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
 	$("#r2Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
+
 
 });
 
@@ -481,43 +551,46 @@ $("#r2Button").on('mouseleave', function(){
 $("#r1Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$("#r1Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
+
 });
 $("#r1Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
 	$("#r1Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-	
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
 });
 
 
 $("#r4Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$("#r4Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
-
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
 });
 $("#r4Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
 	$("#r4Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
 });
 
 
 $("#r5Button").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$("#r5Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
 
 });
 $("#r5Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
 	$("#r5Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-	
+	$('#mouse').stop().animate({'opacity':'100%', 'width':'50px', 'height':'50px'}, 300, 'easeOutExpo');
 });
 
 
 
 
 
-$("#easterEgg").on('click', function(){
-	$(this).animate({'opacity':'0%'}, 1000, 'easeInSine', function(){
+$("#logo").on('click', function(){
+	$(this).animate({'top':'-1000px'}, 1000, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
         });	
 });
