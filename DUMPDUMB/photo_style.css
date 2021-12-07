@@ -162,6 +162,7 @@ p2{
     justify-content: space-evenly;
     transform: translate(-50%, 0%);
     left: 50%;
+    z-index: 99999999999999;
 }
 
 .navText{

@@ -120,7 +120,10 @@ $(document).ready(function(){
 
     $(document).ready(function(){
         $('#homeText').delay(600).animate({opacity:'100%', bottom:'-=10px'}, 300 ,'easeOutSine');
-		$('#affordance').delay(1000).animate({'margin-bottom':'20px', 'opacity':'0%'}, 400, 'easeOutExpo').hide(300);	
+		$('#affordance').delay(1000)
+		.animate({'width':'-=20px', 'height':'-=20px', 'margin':'+=10px'}, 150, 'easeOutExpo')
+		.animate({'margin-bottom':'20px', 'opacity':'0%'}, 400, 'easeOutExpo')
+		.hide(300);	
 });
 
     });

@@ -115,9 +115,14 @@ p2{
 h3{
     font-family: wedding-gothic-atf-wide, sans-serif;
     font-weight: 500;
-    font-size: 16.85px;
-    color: #dd0011;
-    
+    font-size: 1rem;
+    color: #dd0011;   
+}
+
+#title{
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .textRed{
