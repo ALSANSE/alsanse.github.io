@@ -117,12 +117,14 @@ h3{
     font-weight: 500;
     font-size: 1rem;
     color: #dd0011;   
+    transform: translate(0, -50%);
 }
 
 #title{
     width: 270px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .textRed{
