@@ -7,18 +7,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="intro_style.css">
+<script>
+	(function(d) {
+	  var config = {
+		kitId: 'zfy0ccn',
+		scriptTimeout: 3000,
+		async: true
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+  </script>
 </head>
 
 <body>
 
 <div id='block'><img src='images/right_arrow.png' width="100px"><p>PC화면을 지원하지 않습니다.<br>브라우저의 폭을 줄여주세요</p><img src='images/left_arrow.png' width="100px"></div>
 
-<a id='title' href="intro.html"><img src='images/dpdb_w.svg'></a>
+<div id='title'><img src='images/dpdb_w.svg'></div>
+
+
+<div id='map'>
+	<video preload="auto" width="100%" height="auto" autoplay="autoplay" loop="loop">
+        <source src="images/intro_1.mp4" type="video/mp4">
+    </video>
+</div>
+<div id='deepBack'></div>
+<div id='back'></div>
 
 
 
-<!--
+<div class='gp'></div>
+<div class='gp'></div>
+<div class='gp'></div>
+<div class='gp'></div>
+<div class='gp'></div>
+
+
+<div class='gp'>
+	<div class='mean'><img src='images/dump.svg'></div> 
+	<p1>(특히 적절치 않은 곳에 쓰레기 같은 것을) 버리다</p1>
+	<br>
+	<div class='mean'><img src='images/dumb.svg'></div> 
+	<p1>(일시적으로) 말을 못[안] 하는, 멍청한, 바보 같은</p1>
+</div>
+
+
+<div class='gp'>
+	<p2>
+		<span class='textRed'>DUMBDUMP<p1 class='textRed'> 덤덤</p1></span>은 길거리에 쓰레기를 대범하게 버리고 그 행동을 보고도 묵인, 방관하는 사람들에게 경고의 메시지를 보냅니다. 버스정류장, 화단, 도로, 인도할 것 없이 길거리를 나서면 <span class='textRed'>덤덤</span>하게 버려진 쓰레기를 쉽게 찾아볼 수 있습니다. 사람들은 '길거리에 쓰레기를 버려선 안된다'라는 기본적인 도덕적 문제를 잘 지키지 못하고 있습니다. 부끄러운 줄 모르고 버리고 간 쓰레기들의 흔적에는 오히려 당당함까지 느껴집니다. <span class='textRed'>덤덤</span>이 아카이빙 한 장소에 쓰레기를 버린 기억이 있다면 이 프로젝트에 대해 한 번 더 생각해 볼 필요가 있습니다.
+	</p2>
+</div>
+
+
+
+<div class='gp'>
+	<a href="map.html"><img id='cta' src='images/start.png'></a>
+</div>
+
+
+
+
+<div id='nav'></div>
+<div id='fade'></div>
+
+
 <script src="jquery-3.5.1.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script>
@@ -36,14 +89,14 @@
 
 	$(document).ready(function(){
 		$(document).ready(function(){
-			$('#title').delay(1000).animate({'opacity':'100%'}, 600, 'easeInExpo', function(){
-            $(location).attr('href','intro.html');
+			$('#fade').animate({'opacity':'0%'}, 1000, 'easeOutExpo').animate({'width':'0%', 'height':'0%'}, 0);
 		});
 	
 	});
-});
+
 </script>
--->
+
+
 </body>
 
 </html>
