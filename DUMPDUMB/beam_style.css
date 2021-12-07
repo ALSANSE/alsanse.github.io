@@ -105,9 +105,19 @@ p1{
 p2{
     font-size: 0.9rem;
     color: #ffffff;
-    line-height: 2.4rem;
+    line-height: 1.6rem;
     font-family: source-han-sans-korean, sans-serif;
     font-weight: 200;
+    width: 270px;
+    text-align:left;
+}
+
+h3{
+    font-family: wedding-gothic-atf-wide, sans-serif;
+    font-weight: 500;
+    font-size: 16.85px;
+    color: #dd0011;
+    
 }
 
 .textRed{

@@ -3,10 +3,6 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 
 
 
-a{background-color: #00ff00;
-opacity: 33%;}
-
-
 body{
     background-color: #000000;
     display: flex;
