@@ -73,6 +73,7 @@
 
 <span class='trashcan'>
 <img src="images/dumpy.png">
+<img class='trash' src="images/photo/KakaoTalk_20211115_005436283_01.jpg" loading="lazy">
 <img class='trash' src="images/photo/KakaoTalk_Photo_2021-11-24-13-34-34.jpg" loading="lazy">
 <img class='trash' src="images/photo/KakaoTalk_Photo_2021-11-24-13-34-03.jpg" loading="lazy">
 <img class='trash' src="images/photo/KakaoTalk_20211115_005436283.jpg" loading="lazy">
@@ -90,7 +91,7 @@
 <img class='trash' src="images/photo/KakaoTalk_20211115_005436283_04.jpg" loading="lazy">
 <img class='trash' src="images/photo/KakaoTalk_20211115_005436283_03.jpg" loading="lazy">
 <img class='trash' src="images/photo/KakaoTalk_20211115_005436283_02.jpg" loading="lazy">
-<img class='trash' src="images/photo/KakaoTalk_20211115_005436283_01.jpg" loading="lazy">
+<img class='trash' id='affordance' src="images/photo/KakaoTalk_20211115_005436283_01.jpg" loading="lazy">
 </span>
 
 </div>
@@ -118,9 +119,10 @@ $(document).ready(function(){
 
 
     $(document).ready(function(){
-        $('#homeText')	
-			.delay(600)
-			.animate({opacity:'100%', bottom:'-=10px'}, 300 ,'easeOutSine')
+        $('#homeText').delay(600).animate({opacity:'100%', bottom:'-=10px'}, 300 ,'easeOutSine');
+		$('#affordance').delay(1000).animate({'margin-bottom':'20px', 'opacity':'0%'}, 300, 'easeOutExpo').hide(200);	
+});
+
     });
 
 	$('.trash').on('click', function(){
@@ -131,7 +133,7 @@ $(document).ready(function(){
 });
 
 
-});
+
 
 
 
