@@ -33,6 +33,15 @@
 <div id='map'>
 	<img id='mapImg' src='images/map.jpg'>
 	<a class='pin_small' id='pin_photo1' href="pin_photo1.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo2' href="pin_photo2.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo3' href="pin_photo3.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo4' href="pin_photo4.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo5' href="pin_photo5.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo6x' href="pin_photo6.html"><img src='images/pin_photo_x.png'></a>
+	<a class='pin_small' id='pin_photo6' href="pin_photo6.html"><img src='images/pin_photo_pin.png'></a>
+	<a class='pin_small' id='pin_photo7' href="pin_photo7.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo8' href="pin_photo8.html"><img src='images/pin_photo.png'></a>
+	<a class='pin_small' id='pin_photo9' href="pin_photo9.html"><img src='images/pin_photo.png'></a>
 	<a class='pin_big' id='pin_poster1' href="pin_poster1.html"><img src='images/pin_poster.png'></a>
 	<a class='pin_big' id='pin_poster2' href="pin_poster2.html"><img src='images/pin_poster.png'></a>
 	<a class='pin_big' id='pin_poster3' href="pin_poster3.html"><img src='images/pin_poster.png'></a>
@@ -85,6 +94,14 @@ $(document).ready(function(){
 			.animate({opacity:'0%'}, 300)
 			.animate({width:'0', height:'0'}, 0);
     });
+
+	$('#pin_photo6')	
+			.delay(2400)
+			.animate({top:'-=50px'}, 270, 'easeOutQuad')
+			.delay(20)
+			.animate({top:'+=50px'}, 360, 'easeInQuad')
+			.animate({top:'-=30px'}, 270, 'easeOutCubic')
+			.animate({top:'+=30px'}, 700, 'easeOutBounce')
 
 
 
