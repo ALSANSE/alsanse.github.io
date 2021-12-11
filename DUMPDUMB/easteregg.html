@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<html lang="kr">
+
+<head>
+<title>UMP</title>
+<style>
+	*:focus { outline:none; }
+body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
+
+
+
+body{
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#block{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background: rgba(33,37,41,0.8);
+    backdrop-filter: blur(10px);
+    background-clip: padding-box;
+    border: solid 1px rgba(0,0,0,0.1);
+    z-index: 99999;
+    color: #ff4554;
+    font-family: source-han-sans-korean, sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+
+
+
+    @media screen and (max-width: 720px) {
+
+#block{
+    width: 0%;
+    height: 0%;
+    overflow: hidden;
+
+
+} 
+
+
+body{
+    background-color: #212529;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+.gp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+    flex-direction: column;
+	gap: 44px;
+	opacity: 0%;
+}
+
+
+
+
+
+    }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#212529">
+<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#212529">
+
+<script>
+  </script>
+</head>
+
+<body>
+
+<div id='block'><img src='images/right_arrow.png' width="100px"><p>PC화면을 지원하지 않습니다.<br>브라우저의 폭을 줄여주세요</p><img src='images/left_arrow.png' width="100px"></div>
+
+
+
+
+
+<div class='gp'>
+	<img src='images/ump.svg'>
+	<img src='images/ump_coffee.jpeg'>
+</div>
+
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+
+    $(document).ready(function(){
+
+        $('.gp')
+		.animate({opacity:'100%'}, 1200)
+			.delay(1000)
+			.animate({'opacity':'0%'}, 600, 
+				function(){$(location)
+					.attr('href','https://haeknown.dothome.co.kr');
+
+
+});
+
+});    });
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
