@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>takit</title>
+
+
+<script>
+	(function(d) {
+	  var config = {
+		kitId: 'oxj1nxj',
+		scriptTimeout: 3000,
+		async: true
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+  </script>
+
+	<style>
+
+		#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+
+		body{
+			background-color: #f1f5f9;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#container{
+			width: 90%;
+			background-color: #f1f5f9;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 300px;			
+		}
+		
+		img{
+			width: 100%;
+		}
+		#vimeo{
+			position: relative;
+			border-radius: 8px;
+			z-index: 999999;
+		}
+		p4{
+			font-family: rixbusanstation-pro, sans-serif;
+			font-size: 2.2em;
+			font-style: oblique;
+		}
+		p1{
+			font-size: 0.9rem;
+			font-family: source-han-sans-korean, sans-serif;
+			color: #515359;
+			line-height: 1.5rem;
+			text-align: center;
+		}
+		p2{
+			font-size: 1.1rem;
+			font-family: source-han-sans-korean, sans-serif;
+			color: #313339;
+			line-height: 2.2rem;
+			width: 640px;
+			}
+		p3{
+			font-size: 1.1rem;
+			font-family: source-han-sans-korean, sans-serif;
+			color: #313339;
+			line-height: 2.2rem;
+			width: 640px;
+			text-align: center;
+			}
+
+			h2{
+			font-size: 1.6rem;
+			font-family: source-han-sans-korean, sans-serif;
+			font-weight: 700;
+			color: #000000;
+			line-height: 3rem;
+			width: 640px;
+			text-align: center;
+			}
+
+
+
+		.greenpeace{
+			width: 100%;
+			padding-bottom: 20rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+		.endGreenpeace{
+			width: 400px;
+			padding-bottom: 32px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			border: solid 32px #101111;
+
+		}
+
+		#footerImg{
+			position: absolute;
+			width: 90%;
+			z-index: -99;
+			margin-top: 500px;
+		}
+		#aaa{
+			width: 100px;
+		}
+
+#t1{
+	font-family: rixbusanstation-pro, sans-serif;
+			color: #313339;
+			font-size: 22px;
+
+}
+
+.t2{
+	margin-bottom: 50px;
+	transform: translate(0, -100px);
+}
+
+.t2s{
+	width: 100%;
+	transform: translate(0, -30px);
+	margin-bottom: 70px;
+
+}
+
+#t3{
+	font-family: rixbusanstation-pro, sans-serif;
+	color: #ff0085;
+	font-size: 1.4rem;
+}
+
+#t4{
+	font-family: rixbusanstation-pro, sans-serif;
+	color: #6666f6;
+	font-size: 1.4rem;
+
+}
+
+.t5{
+	margin-top: 5rem;
+	width: 100%;
+}
+
+
+.m1{
+	width: 600px;
+}
+
+#m2{
+	width: 280px;
+}
+#m3{
+	width: 550px;
+}
+
+.m4{
+	width: 512px;
+	text-align: center;
+}
+
+
+
+#logo{
+	width: 87px;
+	transform: translate(0, +4px);
+}
+
+	#interface{
+		width: 378px;
+		height: 811px;
+		background-color: #000000;
+		border: solid 24px #000000;
+		border-radius: 55px;
+		overflow: scroll;
+		padding: 0;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
+	}
+	#interface::-webkit-scrollbar{ 
+		display:none; 
+		width: 0;
+	}
+	#intro{
+			position: relative;
+			width: 1440px;
+		}
+
+
+#link{
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+
+
+
+#pics{
+	display: flex;
+	flex-wrap: wrap;
+	width: 1080px;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 50px;
+	padding-bottom: 20rem;
+}
+
+#mm{
+	width: 100%;
+}
+#bi{
+	width: 720px;
+	margin: 0 50px 0 50px;
+	transform: translate(0, -80px);
+}
+
+	</style>
+
+
+
+</head>
+<!--<div id="log">0</div>-->
+<body>
+	<div id="container">
+		<img src="takitimage/1.png" id="intro">
+
+	<div class="greenpeace">
+		<p3 id='t1'>
+			<span><img id='logo' src='takitimage/logo.svg'></span>은 분리수거에 관심이 없거나 게으른 사람들을 위해
+			<br>
+			분리수거를 쉽고 올바르게 즐길 수 있도록 하는 서비스입니다.
+		</p3>
+		</div>
+			
+			
+			<div class='greenpeace'>
+			
+			<p4 style="color:#6666f6">개요</p4>
+			<br>
+			<br>
+
+
+			<div class='m1'><img src='takitimage/m1.svg'></div>
+			<p3 class='t2'>
+				<br>
+				분리배출되지 않은 일반 쓰레기는 소각되거나 땅에 매립됩니다.
+				<br>
+				쓰레기를 땅에 매립하여 처리하는 건 한계점이 분명합니다.
+			</p3>
+
+
+
+			<div class='m1'><img src='takitimage/m2.svg'></div>
+			<p3 class='t2'>
+				<br>
+				최근 코로나 19의 영향으로 일회용품의 폐기가 증가함에 따라
+				<br>
+				쓰레기 분류 업체의 노동 시간이 함께 증가하고 있습니다. 
+			</p3>
+
+			<div class='m1'><img src='takitimage/m3.svg'></div>
+			<p3 class='t2'>
+				<br>
+				쓰레기를 각 개인이 분리 배출을 잘 한다면 쓰레기 소각으로 인한 대기 문제, 
+				<br>
+				매립지가 부족한 문제, 쓰레기 분류 업체의 일손 부족 문제를 완화할 수 있을 것입니다.
+			</p3>
+			
+			<h2>목표</h2>
+			<p3>
+			takit은 분리배출하는 습관을 길들이기 위해 미션과 보상을 제공하며
+			<br>
+			분리배출 가이드를 통해 배출을 쉽게 할 수 있도록 도와줍니다. 
+			<br>
+			각 개인이 환경 문제에 관심을 가지고 실천하는 것이 takit의 목표입니다.
+			</p3>
+			
+			</div>
+			
+			 
+			
+			<div class='greenpeace'>
+			
+			<p4 style="color:#ff0085">핵심 기능</p4>
+			
+
+				<div id='mm'><img src='takitimage/mm.svg'></div>
+
+
+<!--
+
+			<h2>미션과 보상</h2>
+			<p1>지속적인 분리수거 습관 형성을 위해 매일 제공되는 미션을 클리어하면 보상을 받을 수 있다.</p1>
+			
+			<h2>분리수거 가이드</h2>
+			<p1>올바른 분리배출 방법을 쉽게 찾을 수 있는 가이드를 제공</p1>
+			<p1>쓰레기의 바코드를 인식하여 해당 제품의 분리 방법 검색</p1>
+			
+			<h2>캘린더</h2>
+			<p1>캘린더에서 분리수거 일정을 기록</p1>
+			
+			<h2>환경 뉴스</h2>
+			<p1>환경 뉴스를 지속적으로 노출하여 환경 문제에 관심을 들이도록 유도</p1>
+			-->
+			</div>
+			
+			
+			
+		<div id='pics'>
+			
+			<p4 style="color:#19c800">브랜드 아이덴티티</p4>
+			<div id='bi'><img src='takitimage/bi.svg'></div>
+			<h2 class='t5'>컬러</h2>
+			<div id='m2'><img src='takitimage/takitcolor.svg'></div>
+			<p3 class='t2s'>
+				브랜드 컬러는 플라스틱에 자주 쓰이는 형광색을 사용하였습니다.
+			</p3>
+			
+			<h2 class='t5'>로고</h2>
+			<div id='m3'><img src='takitimage/logo.svg'></div>
+
+			<p3 class='t2s'>takit에서 보상으로 제공하는 키트의 날카로움을 본따 로고에 형상화 하였습니다. </p3>
+
+
+			<h2 class='t5'>분리배출 가이드의 픽토그램</h2>
+			<br>
+			<div class="m4">
+				<div class='m4'><img src='takitimage/pictogram_from_logo.svg'></div>
+				<p1 class='t6'>로고를 기반으로 한 그리드 시스템 </p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/standard_of_pictogram.svg'></div>
+				<p1 class='t6'>세로로 긴 6*9의 비율로 통일된 픽토그램</p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/evolution_of_pictogram.svg'></div>
+				<p1 class='t6'>배출방법과 주의사항은 쓰레기 소재를 기본형으로 변형</p1>
+			</div>
+
+			<div class="m4">
+				<div class='m4'><img src='takitimage/pictogram_frame.svg'></div>
+				<p1 class='t6'>픽토그램을 감싸는 프레임으로 각 카테고리 분류</p1>
+			</div>
+
+		</div>
+			
+			<div id='link'>
+				<a href='takitguideline.html'><img src='takitimage/go_to_guideline.svg'></a>
+				<a href='takitpictogram.html'><img src='takitimage/go_to_pictogram.svg'></a>
+			</div>
+		
+		
+			</div>
+			
+	
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+
+<script>
+	$(window).scroll(function () {
+        var height = $(document).scrollTop();
+        log(height);
+
+        if(height>=1000) {
+            $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
+        }
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+</script>
+
+</body>
+</html>

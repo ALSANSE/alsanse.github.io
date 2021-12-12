@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>takit</title>
+
+
+<script>
+	(function(d) {
+	  var config = {
+		kitId: 'oxj1nxj',
+		scriptTimeout: 3000,
+		async: true
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+  </script>
+
+	<style>
+
+		#log {
+	position:fixed;
+	top: 100px;
+	left: 100px;
+	width: 200px;
+	height: 100px;
+	background-color:#512da8;
+	color: #fff;
+    font-size: 36px;
+	text-align: center;
+	line-height: 100px;
+}
+
+img{
+	width: 100%;
+}
+
+
+		body{
+			background-color: #f1f5f9;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#container{
+			width: 100%;
+			background-color: #f1f5f9;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 300px;			
+		}
+		
+
+		.greenpeace{
+			width: 100%;
+			padding-bottom: 20rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+	#interface{
+		width: 378px;
+		height: 811px;
+		background-color: #000000;
+		border: solid 24px #000000;
+		border-radius: 55px;
+		overflow: scroll;
+		padding: 0;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+
+	}
+	#interface::-webkit-scrollbar{ 
+		display:none; 
+		width: 0;
+	}
+
+
+#link{
+	position: relative;
+	width: 800px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<!--<div id="log">0</div>-->
+<body>
+	<div id="container">
+
+
+	<div class="greenpeace">
+		<img src='takitimage/main1.svg'>
+		<img src='takitimage/main2.svg'>
+		</div>
+			
+			<div id='link'>
+				<a href='takitguideline.html'><img src='takitimage/go_to_guideline.svg'></a>
+				<a href='takitpictogram.html'><img src='takitimage/go_to_pictogram.svg'></a>
+			</div>
+		
+		
+	</div>
+			
+	
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+
+<script>
+	$(window).scroll(function () {
+        var height = $(document).scrollTop();
+        log(height);
+
+        if(height>=1000) {
+            $('#t1').animate({'opacity': '100%','margin-top': '80px'}, 600, 'easeOutSine');
+        }
+
+
+       
+    });
+
+    function log(str){
+        $('#log').text(str);
+    }
+
+</script>
+
+</body>
+</html>
