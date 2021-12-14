@@ -70,7 +70,8 @@ img{
     align-items: flex-end;
     flex-wrap: nowrap;
     flex-direction: row;
-    margin-bottom: 63vw;
+    margin-bottom: 51vw;
+    z-index: 1;
 }
 
 
@@ -186,11 +187,12 @@ img{
     font-family: sandoll-jebi2, sans-serif;
     position: relative;
     color: #fcfcfc;
-    z-index: -10;
+    z-index: 0;
     font-size: 20px;
-    top:-500px
-    
+    top:-500px;
+    text-decoration: none;
 }
+
 
 
 
