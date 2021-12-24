@@ -5,7 +5,8 @@ $(document).ready(function(){
 		$('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
 		$('#subject').delay(1000).animate({'opacity': '100%'}, 1000);
 		$('#ham').delay(1000).animate({'opacity': '100%'}, 1000);
-        $('#exit').delay(1000).animate({'opacity': '100%'}, 1000);
+        $('#back').delay(1000).animate({'opacity': '100%'}, 1000);
+		$('#back1').delay(1000).animate({'opacity': '100%'}, 1000);
 		$('#remote').delay(300).animate({'opacity': '100%'}, 1000);
         $('#sec1').delay(000).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
         $('#sec2').delay(00).animate({'opacity': '100%', 'margin-top': '0px'}, 1000, 'easeOutBack');
@@ -21,6 +22,10 @@ $(document).ready(function(){
 		$('#sec12').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
 		$('#sec13').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
 		$('#sec14').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec15').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec16').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec17').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
+		$('#sec18').delay(00).animate({'opacity': '100%', 'margin-top': '00px'}, 1000,'easeOutBack');
 	});
 
 });

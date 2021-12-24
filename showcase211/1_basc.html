@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="style.css">
     <title>기초디지털표현</title>
-    <link rel="stylesheet" href="animate.css" />
 
 
 
@@ -17,16 +18,20 @@
 	
 	
 	
-	
-body {
+	html {
     background-color: #333639;
-	/*height: 2000px;*/
+}
+
+body {
+
     -ms-overflow-style: none;
 	-webkit-touch-callout: none; 
 	user-select: none; 
 	-moz-user-select: none; 
 	-ms-user-select: none; 
 	-webkit-user-select: none;
+	padding: 0;
+	margin: 0;
    } 
    
    
@@ -36,22 +41,59 @@ body {
 
 
 
+	#nav{
+		width: 100%;
+		height: 70px;
+		padding-top: 40px;
+		margin-bottom: 40px;
+		position: fixed;
+		background-color: #333639;
+		z-index: 99;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		}
+
+#navComp_a{
+	height: 70px;
+	width: 33%;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	display: flex;
+}
+
+#navComp_b{
+	height: 70px;
+	width: 33%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+#navComp_c{
+	height: 70px;
+	width: 33%;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	display: flex;
+}
+
 #exit {
-    position: fixed;
+    position: relative;
     height: 40px;
     width: 40px;
-    top:80px;
-    left:80px;
     opacity: 0%;
-    transform: translate(-50%, -50%);
 	z-index: 99;
+	transform: translate(-50%, 0);
+	margin: 0 0 0 80px;
+
 }
 
 #exitNoti {
-    position: fixed;
-    height: 40px;
-    width: 80px;
-    top:51px;
+    position: absolute;
     opacity: 0%;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
@@ -60,54 +102,43 @@ body {
     overflow: hidden;
     -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
 	z-index: 98;
+
 }
 
 			 
 #ham {
-			position: relative;
-			height: 0px;
-			width: 0px;
-			top:70px;
-			opacity: 0%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-			overflow: hidden;
-		}	 
+	position: relative;
+	height: 0px;
+	width: 0px;
+	opacity: 0%;
+	transform: translate(0%, 0);
+	z-index: 99;
+	overflow: hidden;
+	}	 
 
-		#subject{
-			color: #ffffff;
-			font-size: 2.1rem;
-			text-align: center;
-			margin-top: 54px;
-			opacity: 0%;
-			font-weight: 100;
-			font-family: 'Noto Sans KR', sans-serif;
-		}
+#subject{
+	transform: translate(0, -0.1rem);
+	position: relative;
+	color: #ffffff;
+	font-size: 2rem;
+	text-align: center;
+	opacity: 0%;
+	font-weight: 100;
+	font-family: 'Noto Sans KR', sans-serif;
+	}
 
-		#burger {
-			position: fixed;
-			height: 0px;
-			width: 0%;
-			transform: translate(-50%, 0%);
-			left: 200%;
-			top: 150px;
-			opacity: 100%;
-			z-index: 100;
-			background-color: #fafbfc;
-			border-radius: 54px;
-			box-shadow: 0px 0px 0px 300px rgba(49,53,57,1);
-		}	
+#burger {
+	position: fixed;
+	height: 0px;
+	width: 0%;
+	left: 200%;
+	}	
 
-		#burger_x {
-			position: absolute;
-			height: 0px;
-			width: 0px;
-			top:-80px;
-			right: -50px;
-			opacity: 100%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-		}	
+#burger_x {
+	position: relative;
+	height: 0px;
+	width: 0px;
+	}		 
 		 
 			 
 #container {
@@ -152,7 +183,7 @@ margin-bottom: 80px;
 
 
 
-#footers {
+	#footers {
     position: relative;
     width: 100%;
     height: 200px;
@@ -430,21 +461,22 @@ width: 220px;
 			 
 			 
 			 
-			 @media screen and (max-width: 1080px) {
+			 @media screen and (max-width: 720px) {
 				 
-	body {
-    background-color: #313539;
-
+body { 
+	background-color: #333639;
     -ms-overflow-style: none;
 	-webkit-touch-callout: none; 
 	user-select: none; 
 	-moz-user-select: none; 
 	-ms-user-select: none; 
 	-webkit-user-select: none;
+	padding: 0;
+	margin: 0;
+} 
+   
 
-   } 
-   
-   
+
 ::-webkit-scrollbar { 
     display: none; 
     }
@@ -452,91 +484,92 @@ width: 220px;
 
 
 	#nav{
-						width: 98%;
-						height: 140px;
-						left: 50%;
-						transform: translate(-50%, -5%);
-						margin-bottom: 40px;
-						position: fixed;
-						backdrop-filter: blur(15px);
-						border: solid 1px transparent;
-						background-clip: padding-box;
-						background: rgba(49,53,57,0.6);
-						z-index: 99;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-					 }
+		background-color: #333639;
+	width: 100%;
+	height: 56px;
+	padding-top: 0px;
+	margin-bottom: 40px;
+	position: fixed;
+	z-index: 99;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	}
 
 		
-		#exit {
-			position: relative;
-			height: 80px;
-			width: 80px;
-			top:70px;
-			left:70px;
-			opacity: 0%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-		}
+#exit {
+	position: relative;
+	height: 24px;
+	width: 24px;
+	margin: 0 0 0 15px;
+	transform: translate(0%,0);
+	opacity: 0%;
+	z-index: 99;
+	}
 		
-		#exitNoti {
-			position: fixed;
-			height: 0px;
-			width: 0px;
-			top:51px;
-			opacity: 0%;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 700;
-			font-size: 16px;
-			color: #fafbfc;
-			overflow: hidden;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 98;
-		}
+#exitNoti {
+	display: none;
+	position: absolute;
+	}
 		
 					 
+
 		#subject{
+			position: relative;
+
 			color: #ffffff;
-			font-size: 2.5rem;
+			font-size: 16px;
 			opacity: 0%;
 			font-weight: 400;
 			font-family: 'Noto Sans KR', sans-serif;
+
 		}
 
 		#ham {
 			position: relative;
-			height: 80px;
-			width: 80px;
-			top: 70px;
+			height: 24px;
+			width: 24px;
+			margin: 0 15px 0 0;
 			opacity: 0%;
-			transform: translate(-50%, -50%);
 			z-index: 99;
 		}	 
 
 		#burger {
 			position: fixed;
-			height: 1730px;
-			width: 40%;
-			padding: 80px 10%;
-			transform: translate(-50%, 0%);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			width: 100%;
+			height: 100%;
+			overflow: scroll;
+			transform: translate(0%, 0%);
 			left: 200%;
-			top: 48px;
+			top: 0;
 			opacity: 100%;
 			z-index: 100;
+			backdrop-filter: blur(5px);
+			border: solid 0px transparent;
+			background-clip: padding-box;
+			background: rgba(51, 54, 57, 0.8);
+			box-shadow: 0px 6px 12px rgba(49,53,57,0.4);
+				}	
+
+		.category{
 			background-color: #fafbfc;
-			border-radius: 27px;
-			box-shadow: 0px 0px 80px 420px rgba(49,53,57,1);
-		}	
+			padding: 10%;
+			position: relative;
+			width: 50%;
+			margin: 0 20px 20px 0;
+			border-radius: 20px;
+		}
 
 		#burger_x {
-			position: absolute;
-			height: 80px;
-			width: 80px;
-			top: 23px;
-			right: -193px;
+			position: relative;
+			height: 24px;
+			width: 24px;
+			margin: 15px;
 			opacity: 100%;
-			transform: translate(-50%, -50%);
 			z-index: 99;
 		}	
 
@@ -544,7 +577,7 @@ width: 220px;
 		.head{
 		font-weight: 700;
 		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 1.8rem;
+		font-size: 0.8rem;
 		color: #000000;
 		text-decoration: none;
 		}
@@ -552,134 +585,31 @@ width: 220px;
 		.neck{
 		font-weight: 100;
 		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 2.4rem;
+		font-size: 1.2rem;
 		color: #000000;
 		text-decoration: none;
 		}
 
 		#container {
-			top: 280px;
+			top: 54px;
 			position:relative;
-			width: 90%;
+			width: 100%;
 			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-start;
+			align-items: center;
 		}
-		
-
-		
-		#exit {
-			position: relative;
-			height: 80px;
-			width: 80px;
-			top:70px;
-			left:70px;
-			opacity: 0%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-		}
-		
-		#exitNoti {
-			position: fixed;
-			height: 0px;
-			width: 0px;
-			top:51px;
-			opacity: 0%;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 700;
-			font-size: 16px;
-			color: #fafbfc;
-			overflow: hidden;
-			-ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-			z-index: 98;
-		}
-		
-					 
-
-		#subject{
-			color: #ffffff;
-			font-size: 2.5rem;
-			opacity: 0%;
-			font-weight: 400;
-			font-family: 'Noto Sans KR', sans-serif;
-		}
-
-		#ham {
-			position: relative;
-			height: 80px;
-			width: 80px;
-			top: 70px;
-			opacity: 0%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-		}	 
-
-		#burger {
-			position: fixed;
-			height: 1730px;
-			width: 40%;
-			padding: 80px 10%;
-			transform: translate(-50%, 0%);
-			left: 200%;
-			top: 48px;
-			opacity: 100%;
-			z-index: 100;
-			background-color: #fafbfc;
-			border-radius: 27px;
-			box-shadow: 0px 0px 80px 420px rgba(49,53,57,1);
-		}	
-
-		#burger_x {
-			position: absolute;
-			height: 80px;
-			width: 80px;
-			top: 23px;
-			right: -193px;
-			opacity: 100%;
-			transform: translate(-50%, -50%);
-			z-index: 99;
-		}	
-
-
-		.head{
-		font-weight: 700;
-		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 1.8rem;
-		color: #000000;
-		text-decoration: none;
-		}
-
-		.neck{
-		font-weight: 100;
-		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 2.4rem;
-		color: #000000;
-		text-decoration: none;
-		}
-
-		#container {
-			top: 280px;
-			position:relative;
-			width: 90%;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-		
 		
 
 .sec {
 	position: relative;
-margin-bottom: 300px;
-height: 1080px;
-display: flex;
-justify-content: center;  
-width: 100%;
-margin: 0 auto;
-margin-top: 300px;
-opacity: 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;  
+	width: 90%;
+	margin: 20px 0 40px 0;
+	opacity: 0%;
 }
 
 
@@ -688,11 +618,10 @@ opacity: 0%;
 #footers {
     position: relative;
     width: 100%;
-    height: 300px;
-	top: 100px;
+    height: auto;
 	display: flex;
 	flex-direction: column;
-	margin-top: 500px;
+	margin-top: 100px;
 }
 	
 			
@@ -700,14 +629,13 @@ opacity: 0%;
 	position: relative;
 	transform: translate(-50%, 0%);
 	left: 50%;
-	height: 50px;
+	width: 150px;
 
 }
 #footer_image {
 	position: relative;
-	transform: translate(-50%, 0%);
-	left: 50%;
-	height: 50px;
+	width: 100%;
+	height: auto;
 
 }			
 			
@@ -716,22 +644,21 @@ opacity: 0%;
     text-align: center;
     font-weight: 100;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
 	position: relative;
 }
+
 
 .title {
 	color: #dadbdc;
     text-align: left;
 	position: relative;
-	width: 100%;
 	display: flex;
 	align-items: baseline;
 	flex-direction: row;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	top:-128px;
-	left: 54px;
+	width: 100%;
 }
 	
 .work {
@@ -739,27 +666,23 @@ opacity: 0%;
 text-align: left;
 font-weight: 100;
 font-family: 'Noto Sans KR', sans-serif;
-font-size: 200%;
+font-size: 1rem;
 position: relative;
-width: auto;
-height: 0px;
-
+margin-left: 15px;
 		 }
 
 .name {
-
+margin-left: 15px;
 font-weight: 100;
 font-family: 'Noto Sans KR', sans-serif;
-font-size: 1.4rem;
+font-size: 0.8rem;
 position: relative;
-left: 27px;
-width: auto;
 
 
 		 }
 .pic {
 	overflow: hidden;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	border-radius: 27px;
 	box-shadow: 0px 6px 12px #212529;
@@ -786,62 +709,72 @@ width: auto;
 
 
 	<div id="nav">
-
-		<p id="exitNoti">홈으로</p>
-		<div id="exit"><img src="images/left.svg"></div>
-		<p id="subject">기초디지털표현</p>
-		<div id="ham"><img src="images/ham.svg"></div>
-		
-		
-		
-		
+		<div id="navComp_a">
+			<p id="exitNoti">홈으로</p>
+			<div id="exit"><img src="images/left.svg"></div>
+		</div>
+		<div id="navComp_b">
+			<p id="subject">기초디지털표현</p>
+		</div>
+		<div id="navComp_c">
+			<div id="ham"><img src="images/ham.svg"></div>
+		</div>
+			
+			
+			
 		<div id="burger">
-		
-		<img id="burger_x" src="images/X.svg">
-		<a class="neck" href="dxdaward.html">DXDesign Award</a>
-		<br><br>
-		<a class="neck" href="about.html">about Sustain</a>
-		<br><br>
-		<a class="neck" href="https://www.facebook.com/dxdesign.cu.ac.kr/">DXD Facebook ⤴</a>
-		<br><br>
-		<a class="neck" href="http://dxdesign.kr/">DXDesign.kr ⤴</a>
-		<br><br><br>
-		
-		<p class="head">3학년</p>
-		<a class="neck" href="3_info.html">인포메이션디자인</a>
-		<br><br>
-		<a class="neck" href="3_brnd.html">브랜딩과뉴미디어</a>
-		<br><br>
-		<a class="neck" href="3_intr.html">인터랙션디자인</a>
-		<br><br>
-		<a class="neck" href="3_mgrp.html">모션그래픽</a>
-		<br><br>
-		<a class="neck" href="3_entr.html">엔터테인먼트디자인2</a>
-		<br><br><br>
-		<p class="head">2학년</p>
-		<a class="neck" href="2_info.html">인포메이션그래픽스</a>
-		<br><br>
-		<a class="neck" href="2_cg3d.html">3D컴퓨터그래픽스1</a>
-		<br><br>
-		<a class="neck" href="2_webd.html">웹디자인</a>
-		<br><br>
-		<a class="neck" href="2_anim.html">디지털애니메이션</a>
-		<br><br>
-		<a class="neck" href="2_cont.html">디지털콘텐츠디자인1</a>
-		<br><br><br>
-		<p class="head">1학년</p>
-		<a class="neck" href="1_basc.html">기초디지털표현</a>
-		<br><br>
-		<a class="neck" href="1_typo.html">디지털타입페이스</a>
-		<br><br>
-		<a class="neck" href="1_gest.html">디지털조형</a>
-		<br><br>
-		<a class="neck" href="1_cmgr.html">컴퓨터그래픽스1</a>
-		
+			
+			<img id="burger_x" src="images/X.svg">
+	
+			<div class='category'>
+				<a class="neck" href="dxdaward.html">DXDesign Award</a>
+				<br><br>
+				<a class="neck" href="about.html">about Sustain</a>
+				<br><br><br>
+				<a class="neck" href="http://dxdesign.kr/">DXDesign.kr ⤴</a>
+				<br><br>
+				<a class="neck" href="https://www.facebook.com/dxdesign.cu.ac.kr/">DXD Facebook ⤴</a>
+				<br><br>
+				<a class="neck" href="https://www.instagram.com/dcudxd/">DXD Instagram ⤴</a>
+			</div>
+			<div class='category'>
+				<p class="head">3학년</p>
+				<a class="neck" href="3_info.html">인포메이션디자인</a>
+				<br><br>
+				<a class="neck" href="3_brnd.html">브랜딩과뉴미디어</a>
+				<br><br>
+				<a class="neck" href="3_intr.html">인터랙션디자인</a>
+				<br><br>
+				<a class="neck" href="3_mgrp.html">모션그래픽</a>
+				<br><br>
+				<a class="neck" href="3_entr.html">엔터테인먼트디자인2</a>
+				<br><br><br>
+				<p class="head">2학년</p>
+				<a class="neck" href="2_info.html">인포메이션그래픽스</a>
+				<br><br>
+				<a class="neck" href="2_cg3d.html">3D컴퓨터그래픽스1</a>
+				<br><br>
+				<a class="neck" href="2_webd.html">웹디자인</a>
+				<br><br>
+				<a class="neck" href="2_anim.html">디지털애니메이션</a>
+				<br><br>
+				<a class="neck" href="2_cont.html">디지털콘텐츠디자인1</a>
+				<br><br><br>
+				<p class="head">1학년</p>
+				<a class="neck" href="1_basc.html">기초디지털표현</a>
+				<br><br>
+				<a class="neck" href="1_typo.html">디지털타입페이스</a>
+				<br><br>
+				<a class="neck" href="1_gest.html">디지털조형</a>
+				<br><br>
+				<a class="neck" href="1_cmgr.html">컴퓨터그래픽스1</a>
+			</div>
+	
+	
 		</div>
-		
-		</div>
-		
+			
+	</div>
+			
 
 
 
@@ -934,12 +867,12 @@ width: auto;
 </div>
 
 </div>
-	<div id="footers">
-			<div id="footers_image"><img id="footer_image" src="images/dxd_logo_w.png"></div>
-			<p id="footer_text">대구가톨릭대학교 디지털디자인과<br>
-			38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br>
-			053-850-3920</p>
-	</div>
+<div id="footers">
+	<div id="footers_image"><img id="footer_image" src="images/dxd_logo_w.png"></div>
+	<p id="footer_text">대구가톨릭대학교 디지털디자인과<br>
+	38430 경상북도 경산시 하양읍 하양로 13-13 성카타리나관(D15)<br>
+	053-850-3920</p>
+</div>
 
 <!--<div id="log">0</div>-->
 
