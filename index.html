@@ -26,10 +26,9 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
 <meta property="og:description" content="Portfolio">
-
+<link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-
 
 
 html, a{cursor: none;}
@@ -52,10 +51,12 @@ html, a{cursor: none;}
 		body{
 			background-color: #f1f3f9;
 			display: flex;
-			justify-content: center;
+			justify-content: flex-start;
 			flex-direction: column;
 			align-items: center;
 			height: 900px;
+			padding: 0;
+			margin: 0;
 		}
 		
 		#circle{
@@ -75,15 +76,18 @@ html, a{cursor: none;}
 			align-items: center;
 			flex-direction: column;
 			position: fixed;
-			
+			top: 40vh;
+			transform: translate(0%, -50%);
+
 		}
 
 		.contents{
 			position: fixed;
+			top: 40vh;
 			margin-left: 210px;
 			width: 0px;
 			height: 550px;
-			transform: translate(50%, 0%);
+			transform: translate(50%, -50%);
 			overflow: hidden;
 			display: flex;
 			align-items: center;
@@ -126,8 +130,8 @@ html, a{cursor: none;}
 		h1{
 			position: relative;
 			font-size: 2rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 500;
 			color: #919399;
 			margin-top: 0;
 			margin-bottom: 3rem;
@@ -184,14 +188,22 @@ html, a{cursor: none;}
 
 		.name_contact{
 			font-size: 1rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 500;
 			color: #216f9b;
+			width: 100%;
+			padding-bottom: 7px;
 			text-decoration: none;
+			transform: translate(0, -26px);
+			white-space: nowrap;
+			text-align: center;
+			opacity: 0%;
+
 		}
 
 		.name_contact:hover{
-		color: #ff6442;
+			color: #ff6442;
+			text-decoration: underline;
 		}
 
 
@@ -233,7 +245,7 @@ html, a{cursor: none;}
 		.rText{
 			position: absolute;
 			font-size: 16px;
-			font-family: 'Noto Sans KR', sans-serif;
+			font-family: neue-haas-grotesk-display, sans-serif;
 			font-weight: 700;
 			top:-50px;
 			text-align: center;
@@ -346,7 +358,6 @@ html, a{cursor: none;}
 
 
 
-
 @keyframes animatedBackground {
   from {
     background-position: 0px 0px;
@@ -362,7 +373,7 @@ html, a{cursor: none;}
 
 #mousePad{
 	width: 100vw;
-	height: 130vh;
+	height: 100vh;
 	z-index: 0;
 	position: absolute;
 	opacity: 3%;
@@ -371,6 +382,73 @@ html, a{cursor: none;}
 	animation: animatedBackground 180s ease-in-out infinite alternate;
 
 }
+
+
+#contacts{
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	top: 5vh;
+	position: fixed;
+}
+
+#contact{
+	border-radius: 21px;
+	background: rgba( 241, 243, 249, 0.6 );
+	backdrop-filter: blur( 6px );
+	-webkit-backdrop-filter: blur( 6px );
+	box-shadow:  0px 13px 34px #c1c3c9;
+	height: 42px;
+	width: 100px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+#contactext{
+	height: 42px;
+	font-size: 13px;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+	color: #61656c;
+}
+
+#contactitle{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+
+.contitle{
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#email{
+	width: 0%;
+	opacity: 0%;
+}
+
+#instagram{
+	width: 0%;
+	opacity: 0%;
+
+}
+
+
+
+
+
 
 
 
@@ -451,6 +529,7 @@ html, a{cursor: none;}
 
 <body>
 <div id='mousePad'></div>
+
 <div id='main'>
 	<div id="circle">
 		<div id="thumb">
@@ -464,8 +543,6 @@ html, a{cursor: none;}
 	
 	<div id="me">
 		<p class='name'>김세진</p>
-		<a class='name_contact' href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
-		<a class='name_contact' href="https://www.instagram.com/alsan.se/">@alsan.se</a>
 	</div>
 </div>
 
@@ -513,8 +590,17 @@ html, a{cursor: none;}
 
 </div>
 
-
-
+<div id="contacts">
+	<div id="contact">
+		<img id="contactext" src="indeximage/contact.svg">
+		<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/">@alsan.se</a>
+	</div>
+	<div id="contactitle">
+		<p class='contitle' id="email">E-mail</p>
+		<p class='contitle' id="instagram">Instagram</p>
+	</div>
+</div>
 
 
 
@@ -598,12 +684,31 @@ $(document).ready(function(){
 
 
 
+$("#emailS").on('mouseover', function(){
+	$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+});
+$("#emailS").on('mouseleave', function(){
+	$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
+
+$("#instagramS").on('mouseover', function(){
+	$('#instagram').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+});
+$("#instagramS").on('mouseleave', function(){
+	$('#instagram').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
 
 
 $("#mousePad").on('mouseover', function(){
 	$('#mouse').stop().animate({'opacity':'100%', 'width':'20px', 'height':'20px'}, 300, 'easeOutExpo');
 	$('#logo').animate({'top':'0px'}, 500, 'easeOutExpo');
-
+	$('#contact').stop().animate({'height':'42px','width':'100px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 });
 
 
@@ -616,11 +721,17 @@ $(".name_contact").on('mouseleave', function(){
 
 
 
-$(".cta").on('mouseover', function(){
+$("#contact").on('mouseover', function(){
 	$('#mouse').stop().animate({'opacity':'0%', 'width':'10px', 'height':'10px'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+
 });
-$(".cta").on('mouseleave', function(){
+
+$("#contact").on('mouseleave', function(){
 	$('#mouse').stop().animate({'opacity':'100%', 'width':'20px', 'height':'20px'}, 300, 'easeOutExpo');
+
 });
 
 
