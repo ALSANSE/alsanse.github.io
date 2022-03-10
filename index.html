@@ -31,6 +31,8 @@
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 
+
+
 html, a{cursor: none;}
 
 		#log {
@@ -64,10 +66,12 @@ html, a{cursor: none;}
 			width: 210px;
 			height: 210px;
 			border-radius: 100%;
-			margin-bottom: 34px;
+			margin-bottom: 0px;
 			background-color: #ffffff;
 			overflow: hidden;
 			z-index: -399999999;
+			box-shadow:  0px 13px 34px #c1c3c9;
+
 		}
 
 		#main{
@@ -163,27 +167,6 @@ html, a{cursor: none;}
 			color: #ff6442;
 			border: 2px solid #ff6442;
 
-		}
-
-		#me{
-			position: relative;
-			width: auto;
-			height: 210px;
-			overflow: hidden;
-			font-size: 1.6rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.name{
-			font-size: 1.6rem;
-			margin: 0;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 700;
-			margin-bottom: 1rem;
 		}
 
 		.name_contact{
@@ -301,6 +284,8 @@ html, a{cursor: none;}
 			transform: translate(0, 0);
 			z-index: -99;
 			bottom: 20vh;
+			box-shadow:  0px 5px 13px #c1c3c9;
+
 		}
 
 		.al{
@@ -390,8 +375,8 @@ html, a{cursor: none;}
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	top: 5vh;
-	position: fixed;
+	position: relative;
+	margin-top: 50px;
 }
 
 #contact{
@@ -401,7 +386,7 @@ html, a{cursor: none;}
 	-webkit-backdrop-filter: blur( 6px );
 	box-shadow:  0px 13px 34px #c1c3c9;
 	height: 42px;
-	width: 100px;
+	width: 140px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -541,10 +526,18 @@ html, a{cursor: none;}
 		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 	</div>
 	
-	<div id="me">
-		<p class='name'>김세진</p>
+	<div id="contacts">
+		<div id="contact">
+			<img id="contactext" src="indeximage/contact.svg">
+			<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+			<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+		</div>
+		<div id="contactitle">
+			<p class='contitle' id="email">E-mail</p>
+			<p class='contitle' id="instagram">Instagram</p>
+		</div>
 	</div>
-</div>
+	</div>
 
 <div class="contents">
 
@@ -590,17 +583,6 @@ html, a{cursor: none;}
 
 </div>
 
-<div id="contacts">
-	<div id="contact">
-		<img id="contactext" src="indeximage/contact.svg">
-		<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
-		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/">@alsan.se</a>
-	</div>
-	<div id="contactitle">
-		<p class='contitle' id="email">E-mail</p>
-		<p class='contitle' id="instagram">Instagram</p>
-	</div>
-</div>
 
 
 
@@ -706,7 +688,7 @@ $("#instagramS").on('mouseleave', function(){
 $("#mousePad").on('mouseover', function(){
 	$('#mouse').stop().animate({'opacity':'100%', 'width':'20px', 'height':'20px'}, 300, 'easeOutExpo');
 	$('#logo').animate({'top':'0px'}, 500, 'easeOutExpo');
-	$('#contact').stop().animate({'height':'42px','width':'100px'}, 300, 'easeOutExpo');
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 });
@@ -755,8 +737,6 @@ $("#r2Button").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
 	$("#r2Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
 	$('#mouse').stop().animate({'opacity':'100%', 'width':'20px', 'height':'20px'}, 300, 'easeOutExpo');
-
-
 });
 
 
@@ -806,6 +786,36 @@ $("#logo").on('click', function(){
             $(location).attr('href','logo.html');
         });	
 });
+
+
+
+
+
+$("#alsanse-slit").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#b_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#mousePad').stop().animate({'opacity':'0%'}, 600);
+
+
+});
+
+
+
+
 
 
 
