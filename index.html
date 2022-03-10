@@ -368,7 +368,10 @@
 }
 
 
+
 #contacts{
+	
+	max-height: 200px;
 	min-height: 100px;
 	display: flex;
 	flex-direction: column;
@@ -766,8 +769,7 @@ $("#logo").on('click', function(){
 
 
 $("#alsanse-slit").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
-	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
 	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
 	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
@@ -783,8 +785,7 @@ $("#alsanse-slit").on('click', function(){
 	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-
-
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px'}, 600);
 });
 
 
@@ -795,8 +796,7 @@ $("#alsanse-slit").on('click', function(){
 
 $("#r3Button").on('click', function(){
 	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
-	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'margin-bottom':'34px', 'left':'0px'}, 300, 'easeInOutCubic');
-	$('#me').stop().delay(100).animate({'height':'210px'}, 600, 'easeInOutCubic');
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 300, 'easeInOutCubic');
 	$('#alsanse-slit').stop().delay(100).animate({'height':'150px', 'bottom':'20vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
 	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(100).animate({'top':'-100px'}, 300, 'easeInExpo');
@@ -808,6 +808,7 @@ $("#r3Button").on('click', function(){
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('.contents').stop().animate({'width':'0px'}, 200, 'easeInOutCubic');
 	$('#mousePad').stop().delay(1200).animate({'opacity':'0%'}, 2400);
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px'}, 600);
 
 });
 
