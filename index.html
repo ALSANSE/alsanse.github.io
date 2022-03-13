@@ -42,8 +42,6 @@
 			align-items: center;
 			padding: 0;
 			margin: 0;
-			height: 100vh;
-			overflow: hidden;
 		}
 		
 		#circle{
@@ -334,15 +332,21 @@
 
 }
 
-
-
-
 #background{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	opacity: 100%;
+}
+
+
+#wallpaper{
 	top: -50%;
 	left: -50%;
 	width: 100vw;
 	height: 100vh;
-	z-index: -1;
 	position: absolute;
 	background-image: url(indeximage/solid\ vertical.svg);
 	animation: animatedBackground 30s ease-in-out infinite alternate;
@@ -393,6 +397,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	position: absolute;
+	
+}
+#contactopener{
+	border-radius: 21px;
+	height: 42px;
+	width: 140px;
+	position: absolute;
+	display: none;	
 }
 
 #contactext{
@@ -408,6 +421,8 @@
 	justify-content: center;
 	flex-direction: row;
 	align-items: flex-start;
+	position: absolute;
+	top: 72px;
 }
 
 
@@ -450,6 +465,17 @@
 
 
 
+#contactopener{
+	display: block;	
+}
+
+
+#main{
+	top: 55vh;
+
+}
+
+
 
 
 
@@ -478,7 +504,9 @@
 </head>
 
 <body>
-<div id='background'></div>
+<div id="background">
+	<div id='wallpaper'></div>
+</div>
 <div id='frontground'></div>
 <div id='mousePad'></div>
 
@@ -505,6 +533,7 @@
 			<p class='contitle' id="email">E-mail</p>
 			<p class='contitle' id="instagram">Instagram</p>
 		</div>
+		<div id="contactopener"></div>
 	</div>
 	</div>
 
@@ -689,6 +718,25 @@ $("#interact-slit").on('mouseleave', function(){
 	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
 
 });
+
+
+
+
+$("#contactopener").on('click', function(){
+	$(this).animate({'height':'0px'}, 0);
+	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+});
+
+$("#frontground").on('click', function(){
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});
+
 
 
 
