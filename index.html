@@ -744,7 +744,10 @@ $("#frontground").on('click', function(){
 
 $("#logo").on('click', function(){
 	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
-
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 	$(this).animate({'top':'-1000px'}, 1200, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
         });	
@@ -773,6 +776,11 @@ $("#interact-slit").on('click', function(){
 	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#frontground').stop().animate({'opacity':'100%'}, 600);
 	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
 });
 
 
