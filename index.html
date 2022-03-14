@@ -250,6 +250,7 @@
 			transform: translate(0, 0);
 			z-index: 1;
 			bottom: 10vh;
+			background-color: #ffbc58;
 
 		}
 
@@ -476,11 +477,25 @@
 }
 
 
+#contactitle{
+	display: none;
+}
 
 
 
 
 
+
+#alsanse-slit{
+			bottom: 5vh;
+
+		}
+
+
+		#interact-slit{
+			bottom: 5vh;
+
+		}
 
 
 
@@ -714,8 +729,8 @@ $("#interact-slit").on('mouseover', function(){
 
 });
 $("#interact-slit").on('mouseleave', function(){
-	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 600, 'easeInOutExpo');
-	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
+	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 240, 'easeOutQuint');
+	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 240, 'easeOutQuint');
 
 });
 
