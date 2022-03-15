@@ -202,7 +202,7 @@
 			overflow: hidden;
 			display: flex;
 			opacity: 100%;
-			z-index: 100;
+			z-index: 0;
 			background-color: #ffffff00;
 
 		}
@@ -276,7 +276,7 @@
 			display: flex;
 			height: 150px;
 			width: 40px;
-			z-index: 2;
+			z-index: 20;
 			bottom: 10vh;
 
 		}
@@ -731,8 +731,8 @@ $("#interact-slit").on('mouseover', function(){
 
 });
 $("#interact-slit").on('mouseleave', function(){
-	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 240, 'easeOutQuint');
-	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 240, 'easeOutQuint');
+	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 150, 'easeOutExpo');
+	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 150, 'easeOutExpo');
 
 });
 
@@ -792,7 +792,7 @@ $("#interact-slit").on('click', function(){
 	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#frontground').stop().animate({'opacity':'100%'}, 600);
-	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%'}, 600, 'easeInOutQuart');
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
 	$('#contactopener').animate({'height':'42px'}, 0);
 	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
@@ -821,7 +821,7 @@ $("#homeButton").on('click', function(){
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('.contents').stop().animate({'width':'0px'}, 210, 'easeInOutCubic');
 	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
-	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%'}, 600, 'easeOutQuad');
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
 
 });
 
