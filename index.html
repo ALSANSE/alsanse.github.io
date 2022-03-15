@@ -260,13 +260,13 @@
 
 		#upper-slit{
 			width: 40px;
-			height: 0px;
+			height: 150px;
 			object-fit: fill;
 		}
 
 		#under-slit{
 			width: 40px;
-			height: 150px;
+			height: 0px;
 			object-fit: fill;
 		}
 
@@ -726,13 +726,13 @@ $("#homeButton").on('mouseleave', function(){
 
 
 $("#interact-slit").on('mouseover', function(){
-	$('#upper-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
-	$('#under-slit').stop().animate({'height':'0px','width':'40px'}, 600, 'easeInOutExpo');
+	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
+	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 600, 'easeInOutExpo');
 
 });
 $("#interact-slit").on('mouseleave', function(){
-	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 150, 'easeOutExpo');
-	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 150, 'easeOutExpo');
+	$('#under-slit').stop().animate({'height':'0px','width':'40px'}, 150, 'easeOutExpo');
+	$('#upper-slit').stop().animate({'height':'150px','width':'40px'}, 150, 'easeOutExpo');
 
 });
 
