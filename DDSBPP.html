@@ -1,0 +1,745 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>슈퍼 가챠</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="indeximage/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="indeximage/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="indeximage/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="indeximage/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="indeximage/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="indeximage/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="indeximage/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="indeximage/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="indeximage/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="indeximage/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="indeximage/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="indeximage/favicon/favicon-16x16.png">
+<link rel="manifest" href="indeximage/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#f1f3f9">
+<meta property="og:title" content="슈퍼 가챠">
+<meta property="og:type" content="website">
+<meta property="og:image" content="indeximage/Thumbnail.png">
+<meta property="og:description" content="무료 뽑기">
+<link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+
+
+		body{
+			background-color: #135ACE;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#circle{
+			position: relative;
+			width: 210px;
+			height: 210px;
+			border-radius: 100%;
+			margin-bottom: 0px;
+			background-color: #000000;
+			overflow: hidden;
+			z-index: -399999999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		#main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: fixed;
+			top: 50vh;
+			transform: translate(0%, -75%);
+
+		}
+
+
+		h1{
+			position: relative;
+			font-size: 2rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			color: #000000;
+			margin-top: 0;
+		}
+
+		p{
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+		}
+
+		.name_contact{
+			font-size: 1rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+			color: #216f9b;
+			width: 100%;
+			padding-bottom: 7px;
+			text-decoration: none;
+			transform: translate(0, -26px);
+			white-space: nowrap;
+			text-align: center;
+			opacity: 0%;
+
+		}
+
+		.name_contact:hover{
+			color: #ff6442;
+			text-decoration: underline;
+		}
+
+
+
+
+		#remote{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 340px;
+			bottom: 5vh;
+			position: fixed;
+			z-index: 9;
+		}
+		
+		.rButton{
+			background-color: #d1d3d9;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			opacity: 66%;
+			z-index: 98;
+		}
+
+		#homeButton{
+			overflow: hidden;
+			display: flex;
+			opacity: 100%;
+			z-index: 0;
+			background-color: #ffffff00;
+
+		}
+
+		.rLay{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		.rText{
+			position: absolute;
+			font-size: 16px;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 700;
+			top:-50px;
+			text-align: center;
+			overflow: hidden;
+			color: #ff6442;
+		}
+
+
+		#minilogo{
+			position: relative;
+			top: -100px;
+			width: 100%;
+			z-index: 101;
+
+		}
+
+		#follower{
+			position: absolute;
+			width: 34px;
+			height: 34px;
+			border-radius: 100%;
+			background-color: #ffbc58;
+			z-index: 99;
+			left: 153px;
+			opacity: 100%;
+		}
+
+		#alsanse-slit{
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			max-height: 150px;
+			width: 40px;
+			transform: translate(0, 0);
+			z-index: 1;
+			bottom: 10vh;
+			background-color: #ffbc58;
+
+		}
+
+
+		#upper-slit{
+			width: 40px;
+			height: 150px;
+			object-fit: fill;
+		}
+
+		#under-slit{
+			width: 40px;
+			height: 0px;
+			object-fit: fill;
+		}
+
+
+		#interact-slit{
+			position: fixed;
+			display: flex;
+			height: 150px;
+			width: 40px;
+			z-index: 20;
+			bottom: 10vh;
+
+		}
+
+
+
+		.slit{
+			height: 100%;
+			width: 100%;
+		}
+
+
+
+		#logo{
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+		}
+
+
+
+		#thumb{
+			position: relative;
+			width: auto;
+			height: 100%;
+			opacity: 0%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow:visible;
+		}
+
+		#thumb img{
+			width: 300px;
+			height: 300px;
+			margin: 5px;
+			border-radius: 25px;
+		}
+
+		#this{
+			width: 300px;
+			height: auto;
+			background-color: #ffffff;
+			opacity: 0%;
+			border-radius: 25px;
+			position: absolute;
+			object-fit: contain;
+		}
+
+		#start{
+			width: 300px;
+			height: 300px;
+			margin: 130px 5px 130px 5px;
+			padding: 120px 0;
+			border-radius: 100%;
+			background-color: #F25510;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			text-align: center;
+			font-size: 42px;
+		}
+
+		.nails{
+			position: absolute;
+			width: 550px;
+			height: 550px;
+			z-index: 2;
+		}
+
+
+
+
+/*
+@keyframes animatedBackground {
+  from {
+    background-position: 0px 0px;
+	background-size: cover;
+  }
+  to {
+    background-position: 1000px 732px;
+	background-size: cover;
+  }
+
+}
+*/
+
+@keyframes animatedBackground {
+
+	100% {
+		transform: translate(0%, 0%) scale(2,2);
+	}
+
+}
+
+#background{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	opacity: 100%;
+}
+
+
+#wallpaper{
+	top: -50%;
+	left: -50%;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-image: url(indeximage/solid\ vertical.svg);
+	animation: animatedBackground 120s ease-in-out infinite alternate;
+	transform: translate(50%, 50%) scale(2,2);
+}
+
+#frontground{
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	position: absolute;
+	background-color: #f1f3f9;
+	opacity: 0%;
+}
+
+#mousePad{
+	width: 0vw;
+	height: 0vh;
+	z-index: 100;
+	position: absolute;
+
+}
+
+
+
+#contacts{
+	
+	max-height: 200px;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-top: 50px;
+}
+
+#contact{
+	height: 142px;
+	width: 340px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	
+}
+#contactopener{
+	border-radius: 21px;
+	height: 42px;
+	width: 140px;
+	position: absolute;
+	display: none;	
+}
+
+#contactext{
+	height: 42px;
+	font-size: 13px;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+	color: #61656c;
+}
+
+#contactitle{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+	position: absolute;
+	top: 72px;
+}
+
+
+.contitle{
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#email{
+	width: 0%;
+	opacity: 0%;
+}
+
+#instagram{
+	width: 0%;
+	opacity: 0%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+
+
+
+
+
+#contactopener{
+	display: block;	
+}
+
+
+#main{
+	top: 55vh;
+
+}
+
+
+#contactitle{
+	display: none;
+}
+
+#alsanse-slit{
+	transform: translate(0, 10vh);
+}
+
+#interact-slit{
+	transform: translate(0, 10vh);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+<div id='main'>
+	<div id="circle">
+
+		<div id="thumb">
+			<div id="start">Ready!</div>
+			<img src="gacha/01.webp">
+			<img src="gacha/02.jpg">
+			<img src="gacha/03.jpg">
+			<img src="gacha/04.jpg">
+			<img src="gacha/05.webp">
+			<img src="gacha/06.png">
+			<img src="gacha/07.webp">
+			<img src="gacha/08.jpg">
+			<img src="gacha/09.png">
+			<img src="gacha/10.jpg">
+			<img src="gacha/11.jpg">
+			<img src="gacha/12.jpg">
+			<img src="gacha/13.jpg">
+			<img src="gacha/14.jpg">
+			<img src="gacha/15.jpg">
+			<img src="gacha/16.jpg">
+			<img src="gacha/17.jpg">
+			<img src="gacha/18.jpg">
+			<img src="gacha/19.png">
+			<img src="gacha/20.webp">
+			<img src="gacha/21.jpg">
+			<img src="gacha/22.webp">
+			<img src="gacha/23.jpg">
+			<img src="gacha/24.jpg">
+			<img src="gacha/25.webp">
+			<img src="gacha/26.jpg">
+			<img src="gacha/27.jpg">
+			<img src="gacha/28.jpg">
+			<img src="gacha/31.jpg">
+			<img src="gacha/30.png">
+			<img src="gacha/29.jpg">
+			<img src="gacha/01.webp">
+			<img src="gacha/02.jpg">
+			<img src="gacha/03.jpg">
+			<img src="gacha/04.jpg">
+			<img src="gacha/05.webp">
+			<img src="gacha/06.png">
+			<img src="gacha/07.webp">
+			<img src="gacha/08.jpg">
+			<img src="gacha/09.png">
+			<img src="gacha/10.jpg">
+			<img src="gacha/11.jpg">
+			<img src="gacha/12.jpg">
+			<img src="gacha/13.jpg">
+			<img src="gacha/14.jpg">
+			<img src="gacha/15.jpg">
+			<img src="gacha/16.jpg">
+			<img src="gacha/17.jpg">
+			<img src="gacha/18.jpg">
+			<img src="gacha/19.png">
+			<img src="gacha/20.webp">
+			<img src="gacha/21.jpg">
+			<img src="gacha/22.webp">
+			<img src="gacha/23.jpg">
+			<img src="gacha/24.jpg">
+			<img src="gacha/25.webp">
+			<img src="gacha/26.jpg">
+			<img src="gacha/27.jpg">
+			<img src="gacha/28.jpg">
+			<img src="gacha/31.jpg">
+			<img src="gacha/30.png">
+			<img src="gacha/29.jpg">
+
+		</div>
+		<img id="this" src="gacha/30.png">
+
+		<img id='logo' src='indeximage/DDSBPP.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+	</div>
+	
+	<div id="contacts">
+		<div id="contact">
+			<h1>슈퍼 가챠</h1>
+			<p>상단의 S를 클릭해서 뽑기 스타트!</p>
+		</div>
+		<div id="contactopener"></div>
+	</div>
+	</div>
+
+
+
+	<!--
+<div class="contents">
+
+	<div class="content" id="a_content">
+		<img class="contentLogo" src="indeximage/sirenlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			사용자가 목표에 도달하려는 과정에서 방해되는 요소를 차단하며 계획에서<br>
+			벗어나는 것을 방지하고 게으른 성격과 나쁜 습관을 고치는 알람 어플
+		</p>
+		<a class="cta" href="SIREN.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="b_content">
+		<img class="contentLogo" src="indeximage/silicontimerlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			세상에서 가장 아날로그적인 타이머인<br>
+			모래시계를 디지털로 재해석한 작품
+		</p>
+		<a class="cta" href="silicontimer.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="c_content">
+		<img class="takitLogo" src="indeximage/takitlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			분리수거에 관심이 없거나 게으른 사람들을 위해<br>
+			분리수거를 쉽고 올바르게 즐길 수 있도록 하는 서비스
+		</p>
+		<a class="cta" href="takit.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="d_content">
+		<img class="contentLogo" src="indeximage/bloodventurelogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
+			고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임
+		</p>
+		<a class="cta" href="BLOODVENTURE.html">자세히보기</a>
+	</div>
+
+</div>
+
+-->
+
+
+	<div id='remote'>
+
+		<div class='rLay'>
+			<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
+
+		</div>
+
+
+	</div>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	
+<script>
+$(document).ready(function(){
+
+
+
+
+
+
+$("#homeButton").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+});
+$("#homeButton").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+});
+
+
+
+
+
+
+
+
+
+
+$("#logo").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutQuart');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$(this).stop().animate({'height':'0px'}, 0);
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px','width':'-120%','height':'-120%'}, 360, 'easeInExpo');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic').delay(1000).animate({'top':'-18220px'}, 20000, 'easeOutCubic');
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$('#this').delay(21300).animate({'opacity':'100%'}, 0).animate({'width':'550px','height':'550px'}, 600, 'easeInOutExpo');
+
+});
+
+
+
+
+
+
+
+$("#homeButton").on('click', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
+	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(120).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(300).animate({'top':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().animate({'width':'0px'}, 210, 'easeInOutCubic');
+	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
+
+});
+
+
+
+});
+
+</script>
+
+</body>
+</html>
