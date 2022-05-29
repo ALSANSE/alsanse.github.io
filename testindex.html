@@ -34,28 +34,12 @@
 
 
 
-		#log {
-	position:fixed;
-	top: 100px;
-	left: 100px;
-	width: 200px;
-	height: 100px;
-	background-color:#512da8;
-	color: #fff;
-    font-size: 36px;
-	text-align: center;
-	line-height: 100px;
-}
-
-
-
 		body{
 			background-color: #f1f3f9;
 			display: flex;
 			justify-content: flex-start;
 			flex-direction: column;
 			align-items: center;
-			height: 900px;
 			padding: 0;
 			margin: 0;
 		}
@@ -70,6 +54,9 @@
 			overflow: hidden;
 			z-index: -399999999;
 			box-shadow:  0px 13px 34px #c1c3c9;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 		}
 
@@ -79,14 +66,14 @@
 			align-items: center;
 			flex-direction: column;
 			position: fixed;
-			top: 40vh;
-			transform: translate(0%, -50%);
+			top: 50vh;
+			transform: translate(0%, -75%);
 
 		}
 
 		.contents{
 			position: fixed;
-			top: 40vh;
+			top: 0vh;
 			margin-left: 210px;
 			width: 0px;
 			height: 550px;
@@ -194,7 +181,8 @@
 		#remote{
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
+			align-items: center;
 			width: 340px;
 			bottom: 5vh;
 			position: fixed;
@@ -203,19 +191,20 @@
 		
 		.rButton{
 			background-color: #d1d3d9;
-			width: 34px;
-			height: 34px;
+			width: 40px;
+			height: 40px;
 			border-radius: 100%;
 			opacity: 66%;
 			z-index: 98;
 		}
 
-		#r3Button{
+		#homeButton{
 			overflow: hidden;
 			display: flex;
 			opacity: 100%;
-			z-index: 100;
+			z-index: 0;
 			background-color: #ffffff00;
+
 		}
 
 		.rLay{
@@ -235,32 +224,13 @@
 			color: #ff6442;
 		}
 
-		#r1Text{
-			height: 0px;
-			top: -40px;
-		}
-
-		#r2Text{
-			height: 0px;
-			top: -40px;
-
-		}
-
-		#r4Text{
-			height: 0px;
-			top: -40px;
-		}
-
-		#r5Text{
-			height: 0px;
-			top: -40px;
-		}
 
 		#minilogo{
 			position: relative;
 			top: -100px;
 			width: 100%;
 			z-index: 101;
+
 		}
 
 		#follower{
@@ -278,38 +248,53 @@
 			position: fixed;
 			display: flex;
 			flex-direction: column;
+			max-height: 150px;
 			width: 40px;
-			height: 150px;
 			transform: translate(0, 0);
 			z-index: 1;
-			bottom: 20vh;
-			box-shadow:  0px 5px 13px #c1c3c9;
-
-		}
-
-		.al{
-			background-color: #216f9b;
-			width: 100%;
-			height: 10px;
-		}
-
-		.se{
-			background-color: #ff6442;
-			width: 100%;
-			height: 10px;
-
-		}
-
-		.lu{
+			bottom: 10vh;
 			background-color: #ffbc58;
-			width: 100%;
-			height: 10px;
 
 		}
+
+
+		#upper-slit{
+			width: 40px;
+			height: 150px;
+			object-fit: fill;
+		}
+
+		#under-slit{
+			width: 40px;
+			height: 0px;
+			object-fit: fill;
+		}
+
+
+		#interact-slit{
+			position: fixed;
+			display: flex;
+			height: 150px;
+			width: 40px;
+			z-index: 20;
+			bottom: 10vh;
+
+		}
+
+
+
+		.slit{
+			height: 100%;
+			width: 100%;
+		}
+
+
 
 		#logo{
 			position: absolute;
 			top: 0px;
+			width: 100%;
+			height: 100%;
 		}
 
 
@@ -331,39 +316,63 @@
 
 
 
-
+/*
 @keyframes animatedBackground {
   from {
     background-position: 0px 0px;
 	background-size: cover;
   }
   to {
-    background-position: 3000px 2196px;
+    background-position: 1000px 732px;
 	background-size: cover;
   }
 
 }
+*/
 
+@keyframes animatedBackground {
+
+	100% {
+		transform: translate(0%, 0%) scale(2,2);
+	}
+
+}
 
 #background{
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 	z-index: -1;
 	position: absolute;
-	opacity: 3%;
-	background-image: url(indeximage/solid\ vertical.svg);
-	animation: animatedBackground 180s ease-in-out infinite alternate;
-
+	opacity: 100%;
 }
 
 
-#mousePad{
+#wallpaper{
+	top: -50%;
+	left: -50%;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-image: url(indeximage/solid_vertical.svg);
+	animation: animatedBackground 120s ease-in-out infinite alternate;
+	transform: translate(50%, 50%) scale(2,2);
+}
+
+#frontground{
 	width: 100vw;
 	height: 100vh;
 	z-index: 0;
 	position: absolute;
 	background-color: #f1f3f9;
 	opacity: 0%;
+}
+
+#mousePad{
+	width: 0vw;
+	height: 0vh;
+	z-index: 100;
+	position: absolute;
 
 }
 
@@ -383,9 +392,9 @@
 
 #contact{
 	border-radius: 21px;
-	background: rgba( 241, 243, 249, 0.6 );
-	backdrop-filter: blur( 6px );
-	-webkit-backdrop-filter: blur( 6px );
+	background: rgba( 241, 243, 249, 0 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
 	box-shadow:  0px 13px 34px #c1c3c9;
 	height: 42px;
 	width: 140px;
@@ -394,6 +403,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	position: absolute;
+	
+}
+#contactopener{
+	border-radius: 21px;
+	height: 42px;
+	width: 140px;
+	position: absolute;
+	display: none;	
 }
 
 #contactext{
@@ -409,6 +427,8 @@
 	justify-content: center;
 	flex-direction: row;
 	align-items: flex-start;
+	position: absolute;
+	top: 72px;
 }
 
 
@@ -446,35 +466,33 @@
 
 @media screen and (max-width: 720px) {
 
-	#main{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			position: fixed;
-			padding-bottom: 240px;
-		}
-
-
-
-	#alsanse-slit{
-			position: fixed;
-			display: flex;
-			flex-direction: column;
-			width: 40px;
-			height: 150px;
-			transform: translate(0, 0);
-			z-index: -99;
-			bottom: 10vh;
-		}
 
 
 
 
-	#remote{
-		display: none;
-	}
 
+#contactopener{
+	display: block;	
+}
+
+
+#main{
+	top: 55vh;
+
+}
+
+
+#contactitle{
+	display: none;
+}
+
+#alsanse-slit{
+	transform: translate(0, 10vh);
+}
+
+#interact-slit{
+	transform: translate(0, 10vh);
+}
 
 
 
@@ -496,14 +514,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 	</style>
 
 
@@ -511,17 +521,22 @@
 </head>
 
 <body>
-<div id='background'></div>
+<div id="background">
+	<div id='wallpaper'></div>
+</div>
+<div id='frontground'></div>
 <div id='mousePad'></div>
 
 <div id='main'>
 	<div id="circle">
+		<!--
 		<div id="thumb">
 			<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		</div>
+	-->
 		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 	</div>
 	
@@ -535,9 +550,13 @@
 			<p class='contitle' id="email">E-mail</p>
 			<p class='contitle' id="instagram">Instagram</p>
 		</div>
+		<div id="contactopener"></div>
 	</div>
 	</div>
 
+
+
+	<!--
 <div class="contents">
 
 	<div class="content" id="a_content">
@@ -582,36 +601,16 @@
 
 </div>
 
-
+-->
 
 
 	<div id='remote'>
-		<div id="follower"></div>
 
 		<div class='rLay'>
-			<p id="r1Text" class='rText'>SIREN</p>
-			<div id='r1Button' class='rButton'></div>
-		</div>
-		
-		<div class='rLay'>
-			<p id="r2Text" class='rText'>SiliconTimer</p>
-			<div id='r2Button' class='rButton'></div>
-		</div>
-
-		<div class='rLay'>
-			<div id='r3Button' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
+			<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 
 		</div>
 
-		<div class='rLay'>
-			<p id="r4Text" class='rText'>takit</p>
-			<div id='r4Button' class='rButton'></div>
-		</div>
-
-		<div class='rLay'>
-			<p id="r5Text" class='rText'>BLOODVENTURE</p>
-			<div id='r5Button' class='rButton'></div>
-		</div>
 
 	</div>
 	
@@ -619,24 +618,52 @@
 	
 
 	<div id='alsanse-slit'>
-		<div class='lu'></div>
-		<div class='se'></div>
-		<div class='lu'></div>
-		<div class='al'></div>
-		<div class='lu'></div>
-		<div class='se'></div>
-		<div class='lu'></div>
-		<div class='al'></div>
-		<div class='lu'></div>
-		<div class='se'></div>
-		<div class='lu'></div>
-		<div class='al'></div>
-		<div class='lu'></div>
-		<div class='se'></div>
-		<div class='lu'></div>
 
+		<img id='upper-slit' src="indeximage/al-slit.jpg">
+		<img id='under-slit' src="indeximage/al-slit.jpg">
 
 	</div>
+
+<div id='interact-slit'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -646,24 +673,6 @@
 	
 <script>
 $(document).ready(function(){
-
-
-	var mouseX = 0, mouseY = 0;
-            var xp = 0, yp = 0;
- 
-            $(document).mousemove(function(e){
-            mouseX = e.pageX - 0;
-            mouseY = e.pageY - 0; 
-            });
-  
-            setInterval(function(){
-            xp += ((mouseX - xp)/6);
-            yp += ((mouseY - yp)/6);
-            $("#mouse").css({left: xp +'px', top: yp +'px'});
-            }, 0);
-
-
-
 
 
 $("#emailS").on('mouseover', function(){
@@ -684,12 +693,10 @@ $("#instagramS").on('mouseleave', function(){
 
 
 
-
 $("#mousePad").on('mouseover', function(){
-	$('#logo').animate({'top':'0px'}, 500, 'easeOutExpo');
-	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$('#logo').delay(600).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$(this).animate({'width':'0vw','height':'0vh'}, 0);
+
 });
 
 
@@ -703,63 +710,62 @@ $("#contact").on('mouseover', function(){
 
 });
 
+$("#contact").on('mouseleave', function(){
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+});
 
-$("#r3Button").on('mouseover', function(){
+
+$("#homeButton").on('mouseover', function(){
 	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
 });
-$("#r3Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
+$("#homeButton").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
 });
 
 
-$("#r2Button").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#r2Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+$("#interact-slit").on('mouseover', function(){
+	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
+	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 600, 'easeInOutExpo');
 
 });
-$("#r2Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-	$("#r2Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-});
+$("#interact-slit").on('mouseleave', function(){
+	$('#under-slit').stop().animate({'height':'0px','width':'40px'}, 150, 'easeOutExpo');
+	$('#upper-slit').stop().animate({'height':'150px','width':'40px'}, 150, 'easeOutExpo');
 
-
-$("#r1Button").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#r1Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
-
-});
-$("#r1Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
-	$("#r1Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
 });
 
 
-$("#r4Button").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#r4Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
-});
-$("#r4Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
-	$("#r4Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-});
 
 
-$("#r5Button").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#r5Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+$("#contactopener").on('click', function(){
+	$(this).animate({'height':'0px'}, 0);
+	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+});
+
+$("#frontground").on('click', function(){
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 
 });
-$("#r5Button").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
-	$("#r5Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
-});
+
 
 
 
 
 
 $("#logo").on('click', function(){
-	$(this).animate({'top':'-1000px'}, 1000, 'easeInExpo', function(){
+	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$(this).animate({'top':'-1000px'}, 1200, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
         });	
 });
@@ -768,12 +774,13 @@ $("#logo").on('click', function(){
 
 
 
-$("#alsanse-slit").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+$("#interact-slit").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutQuart');
 	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$(this).stop().animate({'height':'0px'}, 0);
 	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#logo').stop().animate({'top':'1000px','width':'-120%','height':'-120%'}, 360, 'easeInExpo');
 	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
@@ -784,8 +791,13 @@ $("#alsanse-slit").on('click', function(){
 	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px'}, 600);
+	$('#frontground').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
 });
 
 
@@ -794,110 +806,25 @@ $("#alsanse-slit").on('click', function(){
 
 
 
-$("#r3Button").on('click', function(){
-	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
-	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 300, 'easeInOutCubic');
-	$('#alsanse-slit').stop().delay(100).animate({'height':'150px', 'bottom':'20vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+$("#homeButton").on('click', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
 	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().delay(100).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(150).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$('#minilogo').stop().delay(120).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(300).animate({'top':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('.contents').stop().animate({'width':'0px'}, 200, 'easeInOutCubic');
-	$('#mousePad').stop().delay(1200).animate({'opacity':'0%'}, 2400);
-	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px'}, 600);
+	$('.contents').stop().animate({'width':'0px'}, 210, 'easeInOutCubic');
+	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
 
 });
 
-
-$("#r2Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
-	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
-	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
-	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
-	$('#b_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
-	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-
-
-});
-
-
-$("#r1Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
-	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
-	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'0px', 'opacity':'100%'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
-	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#a').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
-	$('#a_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
-	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-});
-
-
-$("#r4Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
-	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
-	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'229.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
-	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#c').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
-	$('#c_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
-	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-
-});	
-
-$("#r5Button").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
-	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
-	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$('#follower').stop().animate({'left':'306px', 'opacity':'100%'}, 300, 'easeOutExpo');
-	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
-	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#d').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
-	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
-	$('#d_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
-	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
-	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
-
-});	
 
 
 });
