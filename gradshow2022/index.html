@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>X10D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="theme-color" content="#f1f3f9">
+<meta property="og:title" content="디지털디자인과 2022년 졸업전시회">
+<meta property="og:type" content="website">
+<meta property="og:image" content=".jpg">
+<meta property="og:description" content="Portfolio">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+		
+#background{
+	height: 1vh;
+	width: 1vw;
+	z-index: -999999999;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 200vh;
+	height: 200vh;
+    transform: translate(-50%, -50%);
+	z-index: -999999999;
+
+    }
+
+
+body{
+	background-color: #00bbff;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+
+	}
+		
+
+#main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	mix-blend-mode: exclusion;
+
+	}
+
+
+
+#logo{
+	width: 1000px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+
+
+
+
+
+#main{
+	top: 55vh;
+
+}
+
+
+
+
+}
+
+
+	</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<div id='main'>
+
+
+<img id="logo" src="image/index/x10dW.svg">
+
+	</div>
+
+
+
+<div id="background">
+	<img class='circle' src='image/index/x10dgrad.svg'>
+</div>
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	
+<script>
+
+
+const circle = document.querySelector(".circle");
+
+document.addEventListener("mousemove", (e) => {
+	const mouseX = e.clientX;
+	const mouseY = e.clientY;
+	circle.style.left = mouseX + 'px';
+	circle.style.top = mouseY + 'px';
+});
+
+
+
+
+
+$(document).ready(function(){
+
+
+$("#emailS").on('mouseover', function(){
+	$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+});
+$("#emailS").on('mouseleave', function(){
+	$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
+
+
+$("#contactopener").on('click', function(){
+	$(this).animate({'height':'0px'}, 0);
+	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+});
+
+$("#frontground").on('click', function(){
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});
+
+
+
+
+
+
+
+
+
+});
+
+</script>
+
+</body>
+</html>
