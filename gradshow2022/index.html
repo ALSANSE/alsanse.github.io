@@ -14,20 +14,28 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+	/*	*{border: solid red 1px;}   */
 		
 #background{
 	height: 1vh;
 	width: 1vw;
 	z-index: -999999999;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 }
 
-.circle {
+#circle {
     position: absolute;
-    top: 0;
-    left: 0;
+
 	width: 200vh;
 	height: 200vh;
-    transform: translate(-50%, -50%);
+	transform:
+    translateX(calc(var(--mouse-x) * -0.01vw + 62.5vw))
+    translateY(calc(var(--mouse-y) * -0.01vh + -37.5vh));
 	z-index: -999999999;
 
     }
@@ -35,39 +43,105 @@
 
 body{
 	background-color: #00bbff;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	align-items: center;
+
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 
 	}
 		
 
 #main{
+	width: 100vw;
+	height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	position: fixed;
 	mix-blend-mode: exclusion;
+	overflow: hidden;
 
 	}
 
 
 
 #logo{
-	width: 1000px;
+	height: 50vh;
+	transform:
+    translateX(calc(var(--mouse-x) * 0.001vw + -5vw))
+    translateY(calc(var(--mouse-y) * 0.001vh));
+
 }
 
 
+#cn {
+	position: absolute;
+	width: 50vw;
+	height: 50vh;
+	background-color: aliceblue;
+	opacity: 50%;
+}
 
 
+#interactions{
+	width: 330px;
+	position: fixed;
+	top:100px;
+	left: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 
 
+.interaction{
+	width: 100px;
+	height: 100px;
+	background-color: aliceblue;
+	margin: 5px;
+	color: #000;
+	overflow: hidden;
+	
+}
 
+#in2 {
+	transition: 0.3s;
+	transform: perspective(200px) rotateX(0deg);
+}
 
+#in2:hover {
+	transition: 0.3s;
+	transform: perspective(200px) rotateX(45deg);
+}
+
+#in3 {
+	transition: 0.3s;
+	transform: perspective(300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+#in3:hover {
+	transition: 2s;
+	transform: perspective(300px) rotateX(80deg) rotateY(10deg) rotateZ(420deg);
+}
+
+#in4{
+	border-color: #ff6442;
+	border-width: 0px;
+	border-style: solid;
+}
+
+#in5 {
+	transition: 0.3s;
+	background-color: #ffFFFF;
+	margin-right: 50px;
+}
+
+#in5:hover {
+	transition: 0.6s;
+	background-color: #ff6442;
+	margin-right: 50px;
+
+}
 
 @media screen and (max-width: 720px) {
 
@@ -100,34 +174,31 @@ body{
 
 
 <body>
-
+<!--	<div id="cn"></div>  -->
 <div id='main'>
 
 
 <img id="logo" src="image/index/x10dW.svg">
 
 	</div>
-
-
-
-<div id="background">
-	<img class='circle' src='image/index/x10dgrad.svg'>
+<div id="interactions">
+	<div id="in1" class="interaction">마우스 올리면 불투명도 바뀜</div> 
+	<div id="in2" class="interaction">마우스 올리면 좀 기울여짐</div> 
+	<div id="in3" class="interaction">옆에꺼 응용</div> 
+	<div id="in4" class="interaction">마우스 올리면 외곽선 생김</div> 
+	<div id="in5" class="interaction">마우스 올리면 색 변경</div> 
+	<div id="in6" class="interaction">마우스 올리면 다른 애를 조종</div> 
+	<div id="in7" class="interaction">얘한테 영향이 감</div> 
+	<div id="in8" class="interaction">마우스 올리면 동그래짐</div> 
+	<div id="in9" class="interaction">클릭하면 사라짐</div> 
 </div>
-	<script src="jquery-3.5.1.js"></script>
-	<script src="jquery.easing.min.js"></script>
+<div id="background">
+	<img id='circle' src='image/index/x10dgrad.svg'>
+</div>
+	<script src="engine/jquery-3.5.1.js"></script>
+	<script src="engine/jquery.easing.min.js"></script>
 	
 <script>
-
-
-const circle = document.querySelector(".circle");
-
-document.addEventListener("mousemove", (e) => {
-	const mouseX = e.clientX;
-	const mouseY = e.clientY;
-	circle.style.left = mouseX + 'px';
-	circle.style.top = mouseY + 'px';
-});
-
 
 
 
@@ -135,21 +206,38 @@ document.addEventListener("mousemove", (e) => {
 $(document).ready(function(){
 
 
-$("#emailS").on('mouseover', function(){
-	$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+$("#in1").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 });
-$("#emailS").on('mouseleave', function(){
-	$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+$("#in1").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 });
 
 
+$("#in4").on('mouseover', function(){
+	$(this).stop().animate({'border-width':'10px'}, 300, 'easeOutSine');
+});
+$("#in4").on('mouseleave', function(){
+	$(this).stop().animate({'border-width':'0px'}, 300, 'easeOutSine');
+});
+
+$("#in6").on('mouseover', function(){
+	$("#in7").stop().animate({'height':'20px'}, 900, 'easeOutElastic');
+});
+$("#in6").on('mouseleave', function(){
+	$("#in7").stop().animate({'height':'100px'}, 1200, 'easeOutElastic');
+});
+
+$("#in8").on('mouseover', function(){
+	$(this).stop().animate({'border-radius':'100%'}, 600, 'easeInExpo');
+});
+$("#in8").on('mouseleave', function(){
+	$(this).stop().animate({'border-radius':'0%'}, 300, 'easeOutExpo');
+});
 
 
-$("#contactopener").on('click', function(){
-	$(this).animate({'height':'0px'}, 0);
-	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'0%'}, 300);
-	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+$("#in9").on('click', function(){
+	$(this).animate({'opacity':'0%'}, 100).delay(2000).animate({'opacity':'100%'}, 1200);
 });
 
 $("#frontground").on('click', function(){
@@ -162,9 +250,14 @@ $("#frontground").on('click', function(){
 
 
 
+var docStyle = document.documentElement.style;
 
-
-
+// setting CSS variables inside this JS where they 
+// can be declaratively used inside the CSS file.
+document.addEventListener('mousemove', function(e) {
+  docStyle.setProperty('--mouse-x', e.clientX);
+  docStyle.setProperty('--mouse-y', e.clientY);
+});
 
 
 
