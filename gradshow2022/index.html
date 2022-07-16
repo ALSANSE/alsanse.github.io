@@ -375,6 +375,7 @@ body{
 }
 #footer_image {
 	height: 100%;
+	opacity: 66%;
 }			
 			
 #footer_text {
@@ -679,6 +680,12 @@ $("#footers").on('mouseleave', function(){
 	$(this).stop().animate({'opacity':'0%'}, 300);
 });
 
+$("#footer_image").on('mouseover', function(){
+		$(this).stop().animate({'opacity':'100%'}, 90);
+	});
+	$("#footer_image").on('mouseleave', function(){
+		$(this).stop().animate({'opacity':'66%'}, 300);	
+	});
 
 
 
