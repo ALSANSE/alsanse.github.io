@@ -343,6 +343,9 @@ h4{
 	font-size: 1.4rem;
 	margin: 0;
 	padding: 0;
+	letter-spacing: -1px;
+	word-spacing: 2px;
+
 }
 
 
@@ -384,7 +387,7 @@ td{
 	z-index: 99;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	}
 
@@ -418,16 +421,15 @@ td{
 
 #container {
     position:relative;
-	width: calc(100vw - 26px);
+	width: calc(100% - 42px);
 	min-height: 100vh;
-	padding: 13px;
-	margin-bottom: 212px;
+	padding: 21px;
+	margin-bottom: 199px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	z-index: 1;
-	background-color: #313339;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
 
@@ -477,10 +479,10 @@ td{
 
 #footers {
     position: fixed;
-    width: 100vw;
+	width: calc(100% - 42px);
 	max-width: 100vw;
-	padding: 13px;
-    height: 144px;
+	padding: 21px;
+    height: 89px;
 	bottom: 68px;
 	display: flex;
 	flex-direction: column;
@@ -493,7 +495,7 @@ td{
 #footers_image {
 	position: relative;
 	height: 21px;
-	margin: 13px 13px;
+	margin: 13px 13px 13px 5px;
 	opacity: 22%;
 }
 #footer_image {
@@ -507,8 +509,10 @@ td{
 	font-family: 'IBM Plex Sans KR', sans-serif;
 	font-size: 13px;
 	line-height: 15px;
+	letter-spacing: -1px;
+	word-spacing: 2px;
 	position: relative;
-	margin: 0 13px;
+	margin: 0 13px 0 5px;
 	height: 55px;
 	opacity: 22%;
 }
@@ -523,7 +527,7 @@ td{
 </head>
 
 <body>
-	<div style="color:red; position:fixed; top:100px; left:50%; font-size: 2rem; text-align: center; transform: translate(-50%, 0); z-index: 9999999999; 	border: solid red 1px;
+	<div style="color:red; position:fixed; top:100px; left:50%; font-size: 2rem; text-align: center; transform: translate(-50%, 0); z-index: 9999999999; 	border: solid red 1px; opacity:55%;
 	"><b>[PROTOTYPE]</b><br>이 페이지는 실험 단계임.</div>
  
 
