@@ -70,8 +70,50 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
 		}
+
+
+#backspace{
+	background-color: #000000;
+	width: 0px;
+	height: 0px;
+	border-radius: 105px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+
+
+#container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 100vh;
+	gap: 34px;
+	opacity: 0%;
+}
+
+.separator{
+	display: flex;
+	gap: 34px;
+}
+
+.subjects{
+	width: 340px;
+	height: 340px;
+}
+
+
+
+
+
 
 		#main{
 			display: flex;
@@ -84,89 +126,8 @@
 
 		}
 
-		.contents{
-			position: fixed;
-			top: 0vh;
-			margin-left: 210px;
-			width: 0px;
-			height: 550px;
-			transform: translate(50%, -50%);
-			overflow: hidden;
-			display: flex;
-			align-items: center;
-		}
-
-		.content{
-			position: absolute;
-			width: 550px;
-			display: block;
-		}
-
-		#a_content{
-			opacity: 0%;
-		}
-
-		#b_content{
-			opacity: 0%;
-		}
-
-		#c_content{
-			opacity: 0%;
-			transform: translate(0, -0.5rem);
-		}
-
-		#d_content{
-			opacity: 0%;
-		}
-
-		.contentLogo{
-			position: relative;
-			height: 3rem;
-		}
-
-		.takitLogo{
-			position: relative;
-			height: 4rem;
-		}
 
 
-		h1{
-			position: relative;
-			font-size: 2rem;
-			font-family: neue-haas-grotesk-display, sans-serif;
-			font-weight: 500;
-			color: #919399;
-			margin-top: 0;
-			margin-bottom: 3rem;
-		}
-
-		.contentText{
-			position: relative;
-			font-size: 1rem;
-			line-height: 1.5rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 400;
-		}
-
-		.cta{
-			position: relative;
-			font-size: 0.8rem;
-			font-family: 'Noto Sans KR', sans-serif;
-			font-weight: 700;
-			color: #216f9b;
-			text-decoration: none;
-			width: 100px;
-			border: 2px solid #216f9b;
-			border-radius: 100px;
-			padding: 1px 8px 2px 8px;
-			margin-top: 1rem;
-		}
-
-		.cta:hover{
-			color: #ff6442;
-			border: 2px solid #ff6442;
-
-		}
 
 
 
@@ -486,8 +447,6 @@ overflow: visible;
 
 
 
-
-
 @keyframes animatedBackground {
 
 100% {
@@ -560,7 +519,6 @@ overflow: visible;
 	width: 100%;
 	text-decoration: none;
 	transform: translate(0, 0);
-	/*transform: translate(0, -26px);*/
 	white-space: nowrap;
 	text-align: center;
 	opacity: 0%;
@@ -614,14 +572,18 @@ overflow: visible;
 <div id='main'>
 	<div id="circle_guide">
 		<div id="circle">
-		<!--
-			<div id="thumb">
-				<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-				<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-				<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-				<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<div id="backspace">
+				<div id="container">
+					<div class="separator">
+						<div class="subjects" style="background-color: red"></div>
+						<div class="subjects" style="background-color: green"></div>
+					</div>
+					<div class="separator">
+						<div class="subjects" style="background-color: blue"></div>
+						<div class="subjects" style="background-color: white"></div>
+					</div>
+				</div>
 			</div>
-	-->
 			<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		</div>
 	</div>
@@ -638,56 +600,9 @@ overflow: visible;
 		</div>
 		<div id="contactopener"></div>
 	</div>
-	</div>
-
-
-
-	<!--
-<div class="contents">
-
-	<div class="content" id="a_content">
-		<img class="contentLogo" src="indeximage/sirenlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-		<h1>2021</h1>
-		<p class="contentText">
-			사용자가 목표에 도달하려는 과정에서 방해되는 요소를 차단하며 계획에서<br>
-			벗어나는 것을 방지하고 게으른 성격과 나쁜 습관을 고치는 알람 어플
-		</p>
-		<a class="cta" href="SIREN.html">자세히보기</a>
-	</div>
-
-	<div class="content" id="b_content">
-		<img class="contentLogo" src="indeximage/silicontimerlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-		<h1>2021</h1>
-		<p class="contentText">
-			세상에서 가장 아날로그적인 타이머인<br>
-			모래시계를 디지털로 재해석한 작품
-		</p>
-		<a class="cta" href="silicontimer.html">자세히보기</a>
-	</div>
-
-	<div class="content" id="c_content">
-		<img class="takitLogo" src="indeximage/takitlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-		<h1>2021</h1>
-		<p class="contentText">
-			분리수거에 관심이 없거나 게으른 사람들을 위해<br>
-			분리수거를 쉽고 올바르게 즐길 수 있도록 하는 서비스
-		</p>
-		<a class="cta" href="takit.html">자세히보기</a>
-	</div>
-
-	<div class="content" id="d_content">
-		<img class="contentLogo" src="indeximage/bloodventurelogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-		<h1>2021</h1>
-		<p class="contentText">
-			적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
-			고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임
-		</p>
-		<a class="cta" href="BLOODVENTURE.html">자세히보기</a>
-	</div>
-
 </div>
 
--->
+
 
 
 	<div id='remote'>
@@ -887,6 +802,8 @@ $("#interact-slit").on('click', function(){
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 	$('#main').stop().animate({'top':'50vh'}, 600, 'easeInOutQuart');
 	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
+	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
+	$('#container').stop().delay(600).animate({'opacity':'100%'}, 600);
 
 });
 
@@ -914,6 +831,10 @@ $("#homeButton").on('click', function(){
 	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
 	$('#main').stop().delay(300).animate({'top':'40vh'}, 600, 'easeOutQuint');
 	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
+	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 300, 'easeOutExpo');
+	$('#container').stop().animate({'opacity':'0%'}, 300);
+
+
 });
 
 
