@@ -30,9 +30,11 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
-
-
-
+/*
+*{
+	border: 0.1px solid red;
+}
+*/
 
 		body{
 			background-color: #f1f3f9;
@@ -43,16 +45,27 @@
 			padding: 0;
 			margin: 0;
 		}
-		
-		#circle{
+
+		#circle_guide{
 			position: relative;
 			width: 210px;
 			height: 210px;
-			border-radius: 100%;
+			padding: 40px;
 			margin-bottom: 0px;
+			z-index: -399999999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		#circle{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			border-radius: 105px;
 			background-color: #ffffff;
 			overflow: hidden;
-			z-index: -399999999;
 			box-shadow:  0px 13px 34px #c1c3c9;
 			display: flex;
 			justify-content: center;
@@ -66,8 +79,8 @@
 			align-items: center;
 			flex-direction: column;
 			position: fixed;
-			top: 50vh;
-			transform: translate(0%, -75%);
+			top: 40vh;
+			transform: translate(0%, -50%);
 
 		}
 
@@ -155,25 +168,6 @@
 
 		}
 
-		.name_contact{
-			font-size: 1rem;
-			font-family: neue-haas-grotesk-display, sans-serif;
-			font-weight: 500;
-			color: #216f9b;
-			width: 100%;
-			padding-bottom: 7px;
-			text-decoration: none;
-			transform: translate(0, -26px);
-			white-space: nowrap;
-			text-align: center;
-			opacity: 0%;
-
-		}
-
-		.name_contact:hover{
-			color: #ff6442;
-			text-decoration: underline;
-		}
 
 
 
@@ -254,7 +248,7 @@
 			z-index: 1;
 			bottom: 10vh;
 			background-color: #ffbc58;
-
+			box-shadow:  0px 5px 8px #c1c3c9;
 		}
 
 
@@ -278,6 +272,7 @@
 			width: 40px;
 			z-index: 20;
 			bottom: 10vh;
+			cursor: pointer;
 
 		}
 
@@ -292,9 +287,9 @@
 
 		#logo{
 			position: absolute;
-			top: 0px;
-			width: 100%;
-			height: 100%;
+			bottom: 0px;
+			width: 210px;
+			height: 210px;
 		}
 
 
@@ -316,27 +311,8 @@
 
 
 
-/*
-@keyframes animatedBackground {
-  from {
-    background-position: 0px 0px;
-	background-size: cover;
-  }
-  to {
-    background-position: 1000px 732px;
-	background-size: cover;
-  }
 
-}
-*/
 
-@keyframes animatedBackground {
-
-	100% {
-		transform: translate(0%, 0%) scale(2,2);
-	}
-
-}
 
 #background{
 	width: 100vw;
@@ -387,14 +363,14 @@
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 #contact{
 	border-radius: 21px;
 	background: rgba( 241, 243, 249, 0 );
-	backdrop-filter: blur( 4px );
-	-webkit-backdrop-filter: blur( 4px );
+	backdrop-filter: blur( 8px );
+	-webkit-backdrop-filter: blur( 8px );
 	box-shadow:  0px 13px 34px #c1c3c9;
 	height: 42px;
 	width: 140px;
@@ -404,8 +380,51 @@
 	align-items: center;
 	justify-content: flex-start;
 	position: absolute;
-	
+	cursor: none;
+	gap: -10px;
 }
+
+
+
+.name_contact{
+	font-size: 1rem;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	color: #216f9b;
+	width: 100%;
+	text-decoration: none;
+	transform: translate(0, 0);
+	/*transform: translate(0, -26px);*/
+	white-space: nowrap;
+	text-align: center;
+	opacity: 0%;
+	cursor: none;
+	position: relative;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	}
+
+		.name_contact:hover{
+			color: #ff6442;
+			text-decoration: underline;
+			cursor: none;
+
+		}
+
+#emailS{
+	align-items: flex-end;	
+	padding: 5px 0;
+}
+
+#instagramS{
+	align-items: flex-start;
+	padding: 5px 0;
+}
+
+
+
+
 #contactopener{
 	border-radius: 21px;
 	height: 42px;
@@ -415,11 +434,8 @@
 }
 
 #contactext{
-	height: 42px;
-	font-size: 13px;
-	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 700;
-	color: #61656c;
+height: 42px;
+overflow: visible;
 }
 
 #contactitle{
@@ -444,12 +460,12 @@
 #email{
 	width: 0%;
 	opacity: 0%;
+	
 }
 
 #instagram{
 	width: 0%;
 	opacity: 0%;
-
 }
 
 
@@ -460,6 +476,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animatedBackground {
+
+100% {
+	transform: translate(0%, 0%) scale(2,2);
+}
+
+}
 
 
 
@@ -472,12 +507,13 @@
 
 
 #contactopener{
+	padding: 5px 0;
 	display: block;	
 }
 
 
 #main{
-	top: 55vh;
+	top: 40vh;
 
 }
 
@@ -495,10 +531,58 @@
 }
 
 
+#contact{
+	border-radius: 21px;
+	background: rgba( 241, 243, 249, 0 );
+	backdrop-filter: blur( 8px );
+	-webkit-backdrop-filter: blur( 8px );
+	box-shadow:  0px 13px 34px #c1c3c9;
+	height: 42px;
+	width: 140px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	cursor: none;
+	gap: 0px;
+	padding: 5px 0;
+}
+
+
+
+.name_contact{
+	font-size: 1rem;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	color: #216f9b;
+	width: 100%;
+	text-decoration: none;
+	transform: translate(0, 0);
+	/*transform: translate(0, -26px);*/
+	white-space: nowrap;
+	text-align: center;
+	opacity: 0%;
+	cursor: none;
+	position: relative;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	}
 
 
 
 
+#emailS{
+	align-items: center;	
+	padding: 0 0 0 0;
+}
+
+#instagramS{
+	align-items: center;
+	padding: 0 0 0 0;
+}
 
 
 
@@ -528,16 +612,18 @@
 <div id='mousePad'></div>
 
 <div id='main'>
-	<div id="circle">
+	<div id="circle_guide">
+		<div id="circle">
 		<!--
-		<div id="thumb">
-			<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-			<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-			<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-			<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
-		</div>
+			<div id="thumb">
+				<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+				<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+				<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+				<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			</div>
 	-->
-		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		</div>
 	</div>
 	
 	<div id="contacts">
@@ -670,6 +756,8 @@
 
 	<script src="jquery-3.5.1.js"></script>
 	<script src="jquery.easing.min.js"></script>
+	<script src="vanilla-tilt.js"></script>
+
 	
 <script>
 $(document).ready(function(){
@@ -705,15 +793,15 @@ $("#mousePad").on('mouseover', function(){
 
 $("#contact").on('mouseover', function(){
 	$(this).stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'0%'}, 300);
-	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 00);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300);
 
 });
 
 $("#contact").on('mouseleave', function(){
-	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 00);
+	$('.name_contact').stop().animate({'opacity':'0%'}, 0);
 });
 
 
@@ -742,20 +830,20 @@ $("#interact-slit").on('mouseleave', function(){
 $("#contactopener").on('click', function(){
 	$(this).animate({'height':'0px'}, 0);
 	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'0%'}, 300);
-	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'100%'}, 0);
+	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 300);
+
 });
 
 $("#frontground").on('click', function(){
 	$('#contactopener').animate({'height':'42px'}, 0);
 	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
-
+	$('.name_contact').stop().animate({'opacity':'0%'}, 0);
+	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 300);
 });
 
 
-
+ 
 
 
 
@@ -775,12 +863,12 @@ $("#logo").on('click', function(){
 
 
 $("#interact-slit").on('click', function(){
-	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutQuart');
+	$('#circle_guide').stop().animate({'height':'100vh', 'width':'100vw'}, 600, 'easeInOutExpo');
 	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
 	$(this).stop().animate({'height':'0px'}, 0);
 	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px','width':'-120%','height':'-120%'}, 360, 'easeInExpo');
+	$('#logo').stop().animate({'bottom':'-2000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
 	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
@@ -792,11 +880,13 @@ $("#interact-slit").on('click', function(){
 	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
 	$('#frontground').stop().animate({'opacity':'100%'}, 600);
-	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh', 'margin-top':'0px'}, 600, 'easeInOutQuart');
 	$('#contactopener').animate({'height':'42px'}, 0);
 	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$('#main').stop().animate({'top':'50vh'}, 600, 'easeInOutQuart');
+	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
 
 });
 
@@ -808,12 +898,12 @@ $("#interact-slit").on('click', function(){
 
 $("#homeButton").on('click', function(){
 	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
-	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
 	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
 	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
 	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(120).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(300).animate({'top':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+	$('#logo').stop().delay(300).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
@@ -821,8 +911,9 @@ $("#homeButton").on('click', function(){
 	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
 	$('.contents').stop().animate({'width':'0px'}, 210, 'easeInOutCubic');
 	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
-	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
-
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
+	$('#main').stop().delay(300).animate({'top':'40vh'}, 600, 'easeOutQuint');
+	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
 });
 
 
