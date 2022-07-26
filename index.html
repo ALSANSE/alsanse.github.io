@@ -697,7 +697,7 @@ $("#instagramS").on('mouseleave', function(){
 
 
 $("#mousePad").on('mouseover', function(){
-	$('#logo').delay(600).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$('#logo').delay(600).animate({'bottom':'0px'}, 600, 'easeOutExpo');
 	$(this).animate({'width':'0vw','height':'0vh'}, 0);
 
 });
@@ -768,7 +768,7 @@ $("#logo").on('click', function(){
 	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
-	$(this).animate({'top':'-1000px'}, 1200, 'easeInExpo', function(){
+	$(this).animate({'bottom':'1210px'}, 1200, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
         });	
 });
@@ -783,7 +783,7 @@ $("#interact-slit").on('click', function(){
 	$(this).stop().animate({'height':'0px'}, 0);
 	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'bottom':'-2000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
+	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
 	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
