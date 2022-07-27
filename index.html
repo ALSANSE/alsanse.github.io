@@ -79,7 +79,7 @@
 		}
 
 
-#backspace{
+		#backspace{
 	background-color: #000000;
 	width: 0px;
 	height: 0px;
@@ -88,6 +88,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
+	overflow: hidden;
 
 }
 
@@ -95,6 +96,7 @@
 
 
 #container{
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -104,7 +106,7 @@
 	width: 100vw;
 	height: 100vh;
 	gap: 34px;
-	opacity: 0%;
+	top:200vh;
 }
 
 .separator{
@@ -501,6 +503,7 @@ overflow: visible;
 
 
 #container{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -510,8 +513,7 @@ overflow: visible;
 	width: 100vw;
 	height: auto;
 	gap: 34px;
-	opacity: 0%;
-	margin: 28px 0 120px 0;
+	margin: 34px 0 120px 0;
 
 }
 
@@ -819,7 +821,7 @@ $("#logo").on('click', function(){
 	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
 	$('#contactopener').animate({'height':'42px'}, 0);
 	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 300);
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 	$(this).animate({'bottom':'1210px'}, 1200, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
@@ -856,7 +858,7 @@ $("#interact-slit").on('click', function(){
 	$('#main').stop().animate({'top':'50vh'}, 600, 'easeInOutQuart');
 	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
 	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
-	$('#container').stop().delay(900).animate({'opacity':'100%'}, 600);
+	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
 
 });
 
@@ -885,7 +887,7 @@ $("#homeButton").on('click', function(){
 	$('#main').stop().delay(300).animate({'top':'40vh'}, 600, 'easeOutQuint');
 	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
 	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
-	$('#container').stop().animate({'opacity':'0%'}, 0);
+	$('#container').stop().animate({'top':'200vh'}, 0);
 
 
 });
