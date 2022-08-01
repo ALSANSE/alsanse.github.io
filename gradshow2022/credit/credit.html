@@ -164,11 +164,11 @@ td{
 
 
 		 
-#container {
+.container {
     position:relative;
 	width: 100vw;
 	min-height: 100vh;
-	padding: 0 calc(50vw - 960px);
+	padding: 233px calc(50vw - 960px);
 	margin-bottom: 144px;
 	display: flex;
 	flex-direction: row;
@@ -178,14 +178,13 @@ td{
 	background-color: #5533cc;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
-
+	gap: 55px;
 }
 
-#side {
+.side {
     position:relative;
 	width: 309px;
 	min-width: 309px;
-	padding: 233px 89px 144px 89px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -193,22 +192,22 @@ td{
 	gap: 144px;
 	color: #ffbc58;
 	order:2;
-
+	padding: 0 89px;
 }
 
 .sideSec{
 }
 
-#main {
+.main {
     position:relative;
 	width: 809px;
-	padding: 233px 89px 144px 89px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	color: #f1f3f9;
 	order:1;
+	padding: 0 89px 89px 89px;
 }
 
 #mainTextSplit {
@@ -419,9 +418,9 @@ td{
 
 
 
-#container {
+.container {
     position:relative;
-	width: calc(100% - 42px);
+	width: 100%;
 	min-height: 100vh;
 	padding: 21px;
 	margin-bottom: 199px;
@@ -432,38 +431,42 @@ td{
 	z-index: 1;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
+	padding: 0 0 144px 0;
+
 
 }
 
-#side {
+.side {
     position:relative;
 	width: auto;
 	min-width: auto;
-	padding: 0 0 144px 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 144px;
+	gap: 89px;
 	color: #ffbc58;
 	order:2;
+	padding: 0 21px;
 
 }
 
 .sideSec{
 }
 
-#main {
+.main {
     position:relative;
 	width: auto;
 	min-width: auto;
-	padding: 0 0 144px 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	color: #f1f3f9;
 	order:1;
+	padding: 21px 21px 55px 21px;
+
+
 }
 		
 #mainTextSplit {
@@ -562,9 +565,9 @@ td{
 
 
 
-<div id="container">
+<div class="container">
 
-	<div id="side">
+	<div class="side">
 		<div class="sideSec">
 			<h4>지도교수<br><br></h4>
 			<p style="white-space: nowrap;">
@@ -593,9 +596,136 @@ td{
 				<tr><td><b>기자재팀</b></td><td>임관혁</td></tr>
 			</table>
 		</div>
+
+
+
+
+		<div class="sideSec">
+			<h4 >졸업전시도우미<br><br></h4>
+			<div style="display: flex; width: 100%; justify-content: space-between">
+			<p style="position: relative;">
+				<b>3학년</b>
+				<br>16 최현배
+				<br>16 도진재
+				<br>16 임관혁
+				<br>16 최성근
+				<br>16 고왕규
+				<br>16 이근찬
+				<br>17 조희수
+				<br>17 김세진
+				<br>17 황현우
+				<br>17 신종훈
+				<br>17 고한세
+				<br>17 손경준
+				<br>17 남관희
+				<br>18 서정영
+				<br>18 조혜진
+				<br>18 심소희
+				<br>18 장수진
+				<br>18 박소연
+				<br>18 최수진
+				<br>19 한지민
+				<br>19 박은지
+				<br>19 임현
+				<br>19 조송희
+				<br>19 김미현
+				<br>19 신예림
+				<br>19 이지민
+				<br>19 김나희
+				<br>19 이윤주
+				<br>19 최민영
+				<br>19 우민정
+				<br>19 방세훈
+				<br>19 최지원
+				<br>19 유설빈
+				<br>19 강현지
+				<br>19 여수연
+				<br>19 홍예린
+		</p>
+		<p style="position: relative;">
+			<b>2학년</b>
+			<br>16 최현배
+			<br>16 도진재
+			<br>16 임관혁
+			<br>16 최성근
+			<br>16 고왕규
+			<br>16 이근찬
+			<br>17 조희수
+			<br>17 김세진
+			<br>17 황현우
+			<br>17 신종훈
+			<br>17 고한세
+			<br>17 손경준
+			<br>17 남관희
+			<br>18 서정영
+			<br>18 조혜진
+			<br>18 심소희
+			<br>18 장수진
+			<br>18 박소연
+			<br>18 최수진
+			<br>19 한지민
+			<br>19 박은지
+			<br>19 임현
+			<br>19 조송희
+			<br>19 김미현
+			<br>19 신예림
+			<br>19 이지민
+			<br>19 김나희
+			<br>19 이윤주
+			<br>19 최민영
+			<br>19 우민정
+			<br>19 방세훈
+			<br>19 최지원
+			<br>19 유설빈
+			<br>19 강현지
+			<br>19 여수연
+			<br>19 홍예린
+</p>
+	<p style="position: relative;">
+		<b>1학년</b>
+		<br>16 최현배
+		<br>16 도진재
+		<br>16 임관혁
+		<br>16 최성근
+		<br>16 고왕규
+		<br>16 이근찬
+		<br>17 조희수
+		<br>17 김세진
+		<br>17 황현우
+		<br>17 신종훈
+		<br>17 고한세
+		<br>17 손경준
+		<br>17 남관희
+		<br>18 서정영
+		<br>18 조혜진
+		<br>18 심소희
+		<br>18 장수진
+		<br>18 박소연
+		<br>18 최수진
+		<br>19 한지민
+		<br>19 박은지
+		<br>19 임현
+		<br>19 조송희
+		<br>19 김미현
+		<br>19 신예림
+		<br>19 이지민
+		<br>19 김나희
+		<br>19 이윤주
+		<br>19 최민영
+		<br>19 우민정
+		<br>19 방세훈
+		<br>19 최지원
+		<br>19 유설빈
+		<br>19 강현지
+		<br>19 여수연
+		<br>19 홍예린
+</p>
+</div>
+		</div>
+
 	</div>	
 	
-	<div id="main">
+	<div class="main">
 		<h3>대구가톨릭대학교 디지털디자인과는!<br><br></h3>
 		<div id="mainTextSplit">
 		<p>
