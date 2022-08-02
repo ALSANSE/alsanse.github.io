@@ -1,0 +1,76 @@
+#footers {
+    position: fixed;
+    width: 100%;
+	max-width: 1920px;
+    height: 144px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+				
+#footers_image {
+	position: relative;
+	height: 55px;
+	margin: 0 132px 0 89px;
+	opacity: 22%;
+}
+
+#footer_image {
+	height: 100%;
+}			
+			
+#footer_text {
+    text-align: left;
+    font-weight: 300;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 13px;
+	line-height: 19px;
+	position: relative;
+	height: 55px;
+	opacity: 22%;
+}
+			 
+@media screen and (max-width: 720px) {
+			
+#footers {
+    position: fixed;
+	width: calc(100% - 42px);
+	max-width: 100vw;
+	padding: 21px;
+    height: 89px;
+	bottom: 68px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+			
+#footers_image {
+	position: relative;
+	height: 21px;
+	margin: 13px 13px 13px 5px;
+	opacity: 22%;
+}
+
+#footer_image {
+	height: 100%;
+}			
+			
+#footer_text {
+    text-align: left;
+    font-weight: 300;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 13px;
+	line-height: 15px;
+	letter-spacing: -1px;
+	word-spacing: 2px;
+	position: relative;
+	margin: 0 13px 0 5px;
+	height: 55px;
+	opacity: 22%;
+}
+
+}
+

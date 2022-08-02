@@ -1,0 +1,139 @@
+body {
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+   } 
+      
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+.container {
+    position:relative;
+	width: 100vw;
+	min-height: 100vh;
+	padding: 233px calc(50vw - 960px);
+	margin-bottom: 144px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	z-index: 1;
+	border-radius: 0 0 13px 13px;
+	overflow: hidden;
+	gap: 55px;
+}
+
+.main {
+    position:relative;
+	width: 809px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	order:1;
+	padding: 0 89px 89px 89px;
+}
+
+#mainTextSplit {
+	display: flex;
+	flex-direction: row;
+	gap: 55px;
+}
+
+.side {
+    position:relative;
+	width: 309px;
+	min-width: 309px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 144px;
+	order:2;
+	padding: 0 89px;
+}
+
+.sideSec{
+}
+
+@media screen and (max-width: 720px) {
+
+body { 
+    -ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+   } 
+   
+::-webkit-scrollbar { 
+    display: none; 
+    }
+
+.container {
+    position:relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 21px;
+	margin-bottom: 199px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	z-index: 1;
+	border-radius: 0 0 13px 13px;
+	overflow: hidden;
+	padding: 0 0 144px 0;
+	}
+
+.main {
+    position:relative;
+	width: auto;
+	min-width: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	order:1;
+	padding: 21px 21px 55px 21px;
+	}
+		
+#mainTextSplit {
+	display: flex;
+	flex-direction: column;
+	gap: 55px;
+	}
+
+.side {
+    position:relative;
+	width: auto;
+	min-width: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 89px;
+	order:2;
+	padding: 0 21px;
+	}
+
+.sideSec{
+}
+
+}
+
