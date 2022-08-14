@@ -8,12 +8,13 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+	flex-wrap: wrap;
 }
 				
 #footers_image {
 	position: relative;
 	height: 55px;
-	margin: 0 132px 0 89px;
+	margin: 0 0 0 89px;
 	opacity: 22%;
 }
 
@@ -30,7 +31,14 @@
 	position: relative;
 	height: 55px;
 	opacity: 22%;
+	margin: 0 94px 0 89px;
+
 }
+
+.container {
+	margin-bottom: 144px;
+}
+
 			 
 @media screen and (max-width: 720px) {
 			
@@ -45,6 +53,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+	flex-wrap: nowrap;
+
 }
 			
 #footers_image {
@@ -71,6 +81,11 @@
 	height: 55px;
 	opacity: 22%;
 }
+
+.container {
+	margin-bottom: 199px;
+	}
+
 
 }
 
