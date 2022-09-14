@@ -46,10 +46,16 @@ body{
 .pic{
 	height: 100%;
 	position: relative;
+	filter: grayscale(100%);
 }
+
+.pic:hover{
+	filter: grayscale(0%);
+}
+
 .tile{
-	height: 60vh;
-	width: 12.5%;
+	height: 720px;
+	width: 16%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -59,9 +65,9 @@ body{
 	
 }
 .tiles{
-width: 60vw;
+	width: 96vw;
 	display: flex;
-
+	padding: 0 2vw;
 	position: relative;
 	
 }
@@ -110,44 +116,44 @@ width: 60vw;
 
 <body>
 
+	<div class="tiles">
+		<div class="tile"><img class="pic" src="1.png"></div>
+		<div class="tile"><img class="pic" src="2.png"></div>
+		<div class="tile"><img class="pic" src="3.png"></div>
+		<div class="tile"><img class="pic" src="4.png"></div>
+		<div class="tile"><img class="pic" src="5.png"></div>
+		<div class="tile"><img class="pic" src="6.png"></div>
+		<div class="tile"><img class="pic" src="1.png"></div>
+		<div class="tile"><img class="pic" src="2.png"></div>
+		<div class="tile"><img class="pic" src="3.png"></div>
+		<div class="tile"><img class="pic" src="4.png"></div>
+		<div class="tile"><img class="pic" src="5.png"></div>
+		<div class="tile"><img class="pic" src="6.png"></div>
+		<div class="tile"><img class="pic" src="1.png"></div>
+		<div class="tile"><img class="pic" src="2.png"></div>
+		<div class="tile"><img class="pic" src="3.png"></div>
+		<div class="tile"><img class="pic" src="4.png"></div>
+		<div class="tile"><img class="pic" src="5.png"></div>
+		<div class="tile"><img class="pic" src="6.png"></div>
+		<div class="tile"><img class="pic" src="1.png"></div>
+		<div class="tile"><img class="pic" src="2.png"></div>
+		<div class="tile"><img class="pic" src="3.png"></div>
+		<div class="tile"><img class="pic" src="4.png"></div>
+		<div class="tile"><img class="pic" src="5.png"></div>
+		<div class="tile"><img class="pic" src="6.png"></div>
+		<div class="tile"><img class="pic" src="1.png"></div>
+		<div class="tile"><img class="pic" src="2.png"></div>
+		<div class="tile"><img class="pic" src="3.png"></div>
+		<div class="tile"><img class="pic" src="4.png"></div>
+		<div class="tile"><img class="pic" src="5.png"></div>
+		<div class="tile"><img class="pic" src="6.png"></div>
+	</div>
+	
 
 
-<div class="tiles">
-	<div class="tile"><img class="pic" src="1.png"></div>
-	<div class="tile"><img class="pic" src="2.png"></div>
-	<div class="tile"><img class="pic" src="3.png"></div>
-	<div class="tile"><img class="pic" src="4.png"></div>
-	<div class="tile"><img class="pic" src="5.png"></div>
-	<div class="tile"><img class="pic" src="6.png"></div>
-	<div class="tile"><img class="pic" src="7.png"></div>
-	<div class="tile"><img class="pic" src="8.png"></div>
-</div>
-<div class="tiles">
-	<div class="tile"><img class="pic" src="1.png"></div>
-	<div class="tile"><img class="pic" src="2.png"></div>
-	<div class="tile"><img class="pic" src="3.png"></div>
-	<div class="tile"><img class="pic" src="4.png"></div>
-	<div class="tile"><img class="pic" src="5.png"></div>
-	<div class="tile"><img class="pic" src="6.png"></div>
-	<div class="tile"><img class="pic" src="7.png"></div>
-	<div class="tile"><img class="pic" src="8.png"></div>
-</div>
-<div class="tiles">
-	<div class="tile"><img class="pic" src="1.png"></div>
-	<div class="tile"><img class="pic" src="2.png"></div>
-	<div class="tile"><img class="pic" src="3.png"></div>
-	<div class="tile"><img class="pic" src="4.png"></div>
-	<div class="tile"><img class="pic" src="5.png"></div>
-	<div class="tile"><img class="pic" src="6.png"></div>
-	<div class="tile"><img class="pic" src="7.png"></div>
-	<div class="tile"><img class="pic" src="8.png"></div>
-</div>
 
-
-
-
-	<script src="../engine/jquery-3.5.1.js"></script>
-	<script src="../engine/jquery.easing.min.js"></script>
+	<script src="../../engine/jquery-3.5.1.js"></script>
+	<script src="../../engine/jquery.easing.min.js"></script>
 	
 <script>
 
@@ -160,10 +166,10 @@ $(document).ready(function(){
 
 
 $(".tile").on('mouseover', function(){
-	$(this).stop().animate({'width':'44%', 'opacity':'100%'}, 300, 'easeInOutSine');
+	$(this).stop().animate({'width':'100%', 'opacity':'100%'}, 0, 'easeInOutSine');
 });
 $(".tile").on('mouseleave', function(){
-	$(this).stop().animate({'width':'12.5%', 'opacity':'33%'}, 300, 'easeInOutSine');
+	$(this).stop().animate({'width':'16%', 'opacity':'33%'}, 0, 'easeInOutSine');
 });
 
 
