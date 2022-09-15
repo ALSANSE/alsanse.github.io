@@ -1,5 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
-	
+
+
+h3{
+	font-weight: 600;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 1.618rem;
+	margin: 0;
+	padding: 0;
+
+}
+
+h4{
+	font-weight: 200;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 1.618rem;
+	margin: 0;
+	padding: 0;
+}
+
+
+p{
+	font-weight: 300;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 1rem;
+	line-height: 1.618rem;
+	margin: 0;
+	padding: 0;
+
+}
+
+table{
+	font-weight: 300;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 1rem;
+	line-height: 1.618rem;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+
+td{
+	padding-right: 1rem;
+}
+
+
+@media screen and (min-width: 973px) {
+
 
 h3{
 	font-weight: 600;
@@ -44,7 +91,7 @@ td{
 	padding-right: 1rem;
 }
 
-
+}
 
 
 

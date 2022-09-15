@@ -1,4 +1,82 @@
 body {
+	-ms-overflow-style: none;
+	-webkit-touch-callout: none; 
+	user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-webkit-user-select: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+} 
+		  
+::-webkit-scrollbar { 
+		display: none; 
+}
+	
+.container {
+	position:relative;
+	width: 100vw;
+	min-height: 100vh;	
+	padding: 233px calc(50vw - 960px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	z-index: 1;
+	border-radius: 0 0 13px 13px;
+	overflow: hidden;
+	gap: 55px;
+}
+	
+.main {
+	position:relative;
+	width: 809px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	order:1;
+	padding: 0 89px 89px 89px;
+}
+	
+.mainTextSplit {
+	display: flex;
+	flex-direction: column;
+	gap: 55px;
+	}
+
+.mainText2c {
+	width: auto;
+}
+	
+.side {
+	position:relative;
+	width: 309px;
+	min-width: 309px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 144px;
+	order:2;
+	padding: 0 89px;
+}
+	
+.sideSec{
+}
+
+   #devlog{background-color: rgba(0,255,0,0.5);}
+ 
+ 
+ 
+ 
+ 
+ @media screen and (min-width: 973px) {
+
+
+body {
     -ms-overflow-style: none;
 	-webkit-touch-callout: none; 
 	user-select: none; 
@@ -72,8 +150,25 @@ body {
 
 
 
+#devlog{background-color: rgba(255,0,0,0.5);}
+
+
+	}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 720px) {
+
+
+
+	#devlog{background-color: rgba(255, 255, 0,0.5);}
+
 
 body { 
     -ms-overflow-style: none;
@@ -107,6 +202,7 @@ body {
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
 	padding: 0 0 144px 0;
+
 	}
 
 .main {
