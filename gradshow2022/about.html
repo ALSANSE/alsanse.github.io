@@ -15,6 +15,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 
+.main{order:0;}
+.side{order:1;}
+
+
 :root{
 
 --highlight:
@@ -44,7 +48,10 @@ html {background-color: var(--void);}
 .navChip{color: var(--midlight);}
 .X10D_symbol{stroke: var(--midlight);}
 #navCurrent{color: var(--highlight);}
+.container0 {background-color: var(--field);}
+.container1 {background-color: var(--field);}
 .container {background-color: var(--field);}
+.mainTitle {color: var(--midlight);}
 .main {color: var(--midlight);}
 .side {color: var(--highlight);}
 #footers {background-color: var(--void);}
@@ -53,7 +60,8 @@ html {background-color: var(--void);}
 iframe{
 	border: none;
 	width: 100%;
-	height: 3600px;
+	height: 720px;
+	order: 2;
 }
 	
 	</style>
@@ -71,15 +79,15 @@ iframe{
 		<a class="navChip" id="navChip1" href="index.html"> 
 			<svg id="X10D_logo" viewBox="0 0 133.37 41.07"><path class="X10D_symbol" d="M98.44,26.69V4.32h16.21c8.95,0,16.21,7.26,16.21,16.21h0c0,8.95-7.26,16.21-16.21,16.21h-16.21m0-10.06h16.21c3.4,0,6.15-2.75,6.15-6.15h0c0-3.4-2.75-6.15-6.15-6.15h-6.15v12.3"/><path class="X10D_symbol" d="M46.16,4.32h13.42v5.59h.63c.25-.29,.5-.57,.77-.84,2.93-2.94,6.99-4.75,11.46-4.75,8.96,0,16.21,7.26,16.21,16.21,0,4.47-1.81,8.53-4.75,11.46-2.93,2.94-6.99,4.75-11.46,4.75-4.89,0-9.27-2.17-12.23-5.59h-.63v5.59m-13.42-22.36h3.35v6.15h16.81m10.47,4.35c1.11-1.11,1.8-2.65,1.8-4.35,0-3.4-2.75-6.15-6.15-6.15s-6.15,2.75-6.15,6.15c0,1.7,.69,3.24,1.8,4.35s2.65,1.8,4.35,1.8,3.24-.69,4.35-1.8Zm-27.27,11.86V20.54"/><path class="X10D_symbol" d="M10.65,3.54l9.88,9.88L30.42,3.54l7.12,7.12-9.88,9.88,9.88,9.88M3.54,10.65l9.88,9.88L3.54,30.42l7.12,7.12,9.88-9.88,9.88,9.88"/></svg>
 		</a>
-		<a class="navChip" href="work.html">WORK</a>
 		<a class="navChip" id="navCurrent"><b>ABOUT</b></a>
+		<a class="navChip" href="work.html">WORK</a>
 		<a class="navChip" href="credit.html">CREDIT</a>
 	</div>
 </div>
 
-<div class="container">
+<div class="container0">
 	<div class="side">
-		<div class="sideSec">
+		<div class="sideSec"><!--
 			<h4>히스토리<br><br></h4>
 			<p style="white-space: nowrap;">
 				<b>최수환</b>
@@ -90,7 +98,7 @@ iframe{
 				<br>
 				<b>이도희</b>
 				　디지털콘텐츠디자인스튜디오
-			</p>
+			</p>-->
 		</div>
 	</div>	
 	
@@ -98,15 +106,30 @@ iframe{
 		<h3>X10D(Extend)<br><br></h3>
 		<div class="mainTextSplit">
 			<p>
-				X10D는 아바바바바밥 확장이 어쩌구 저쩌구 
+				DVIBE는 ‘느낌’을 의미하는 ‘Vibe’를 디지털디자인(Digital Design)과 혼합하여만든 2021년 제9회 대구가톨릭대학교 디지털디자인과 졸업전시의 주제입니다.
+우리는 ‘디지털디자인의 특별한 바이브’를 여러분께 보여주고자 합니다.
+디지털 큐브의 자유롭고 유동적인 움직임과 다양한 프리즘 면들을 통해 투영되는 다양한 스펙트럼은 우리만의 다채로운 변화의 가능성을 상징합니다.우리 디디인들이 지금까지 각자 채워온 자신만의 바이브를 발산하는 무한의 공간, DVIBE에 여러분을 초대합니다.
+
+우리는 색다른 전시 바이브를 위해 3부분으로 전시를 구성하였습니다.
+1. 전시로의 초대 : Guess what our vibe is?
+2. 관객의 대답 : Good vibe
+3. 아름다운 인사로 : Good byte
+다양한 디지털미디어를 이용한 대구가톨릭대학교 디지털디자인과만의 바이브를 향유하는 기회가 되기를! Good Vibe~
+대구가톨릭대학교 디지털디자인과 제9회 졸업전 DVIBE 일동
 			</p>
 		</div>
-		<iframe src="source/about/profile.html"></iframe>
 	</div>
 
 </div>  
 
+<div class="container1">
+	<div class="mainTitle">
 
+	<h3>Designer</h3>
+</div>
+		<iframe src="source/about/profile.html"></iframe>
+
+</div> 
 
 
 

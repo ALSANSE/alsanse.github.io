@@ -15,6 +15,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 
+
+.main{order:1;}
+.side{order:0;}
+
+
 :root{
 
 --highlight:
@@ -69,6 +74,22 @@ html {background-color: var(--void);}
 	transform: rotateX(-35.26438968deg) rotateY(45deg) rotateZ(0deg) ;
 }
 
+#switch{
+	display: flex;
+	position: relative;
+	background-color: #313339;
+	width: 55px;
+	height: 55px;
+	border: #ffffff 2px solid;
+	border-radius: 55px;
+	z-index: 9999999999999999999;
+}
+#list{width: 0%;overflow: hidden;display: flex;flex-wrap: wrap; flex-direction: row; gap: 10px;}
+.tn{width: 40%;height: auto;}
+#graph{width: 100%;overflow: hidden;}
+img{width: 100%;}
+#listview{width: 100%;height: 100%;display:flex;justify-content: center;align-items: center;align-content: center;overflow: hidden;}
+#graphview{width: 0%;height: 0%;display:flex;justify-content: center;align-items: center;align-content: center;overflow: hidden;}
 	</style>
 </head>
 
@@ -84,16 +105,38 @@ html {background-color: var(--void);}
 		<a class="navChip" id="navChip1" href="index.html"> 
 			<svg id="X10D_logo" viewBox="0 0 133.37 41.07"><path class="X10D_symbol" d="M98.44,26.69V4.32h16.21c8.95,0,16.21,7.26,16.21,16.21h0c0,8.95-7.26,16.21-16.21,16.21h-16.21m0-10.06h16.21c3.4,0,6.15-2.75,6.15-6.15h0c0-3.4-2.75-6.15-6.15-6.15h-6.15v12.3"/><path class="X10D_symbol" d="M46.16,4.32h13.42v5.59h.63c.25-.29,.5-.57,.77-.84,2.93-2.94,6.99-4.75,11.46-4.75,8.96,0,16.21,7.26,16.21,16.21,0,4.47-1.81,8.53-4.75,11.46-2.93,2.94-6.99,4.75-11.46,4.75-4.89,0-9.27-2.17-12.23-5.59h-.63v5.59m-13.42-22.36h3.35v6.15h16.81m10.47,4.35c1.11-1.11,1.8-2.65,1.8-4.35,0-3.4-2.75-6.15-6.15-6.15s-6.15,2.75-6.15,6.15c0,1.7,.69,3.24,1.8,4.35s2.65,1.8,4.35,1.8,3.24-.69,4.35-1.8Zm-27.27,11.86V20.54"/><path class="X10D_symbol" d="M10.65,3.54l9.88,9.88L30.42,3.54l7.12,7.12-9.88,9.88,9.88,9.88M3.54,10.65l9.88,9.88L3.54,30.42l7.12,7.12,9.88-9.88,9.88,9.88"/></svg>
 		</a>
-		<a class="navChip" id="navCurrent"><b>WORK</b></a>
 		<a class="navChip" href="about.html">ABOUT</a>
+		<a class="navChip" id="navCurrent"><b>WORK</b></a>
 		<a class="navChip" href="credit.html">CREDIT</a>
 	</div>
 </div>
 
 <div class="container">
-	<div id="Z">up</div>
-	<div id="Y">up</div>
-	<div id="X">up</div>
+	<div class="side">
+		<div id="switch">
+			<div id='listview'>
+				<img src="source/work/listview.svg">
+			</div>
+			<div id="graphview">
+				<img src="source/work/graphview.svg">
+			</div>
+		</div>
+	</div>	
+	
+	<div class="main" style="flex-direction:row">
+		<div id="graph"><img src="source/work/dimension.svg"></div>
+	<div id="list">
+		<div class="tn"><img src="source/work/w1.jpg"></div>
+		<div class="tn"><img src="source/work/w2.jpg"></div>
+		<div class="tn"><img src="source/work/w3.jpg"></div>
+		<div class="tn"><img src="source/work/w4.jpg"></div>
+		<div class="tn"><img src="source/work/w5.jpg"></div>
+		<div class="tn"><img src="source/work/w6.jpg"></div>
+		<div class="tn"><img src="source/work/w7.jpg"></div>
+		<div class="tn"><img src="source/work/w8.jpg"></div>
+		<div class="tn"><img src="source/work/w9.jpg"></div>
+	</div>
+	</div>
 </div>  
 
 
@@ -128,10 +171,60 @@ html {background-color: var(--void);}
 
 <script src="engine/jquery-3.5.1.js"></script>
 <script src="engine/jquery.easing.min.js"></script>
+<script src="engine/vanilla-tilt.js"></script>
 <script src="engine/navigation.js"></script>
 <script src="engine/footer.js"></script>
+<script>
+	
 
 
+
+
+	$(document).ready(function(){
+
+
+$("#switch").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'30%'}, 600, 'easeOutExpo');
+});
+$("#switch").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+});
+
+$("#listview").on('click', function(){
+	$(this).animate({'width':'0%', 'height':'0%'}, 0);
+	$('#graph').animate({'width':'0%'}, 0);
+	$('#list').animate({'width':'100%'}, 0);
+	$('#graphview').animate({'width':'100%', 'height':'100%'}, 0);
+});
+
+$("#graphview").on('click', function(){
+	$(this).animate({'width':'0%', 'height':'0%'}, 0);
+	$('#list').animate({'width':'0%'}, 0);
+	$('#graph').animate({'width':'100%'}, 0);
+	$('#listview').animate({'width':'100%', 'height':'100%'}, 0);
+});
+
+
+
+/*
+
+var docStyle = document.documentElement.style;
+
+// setting CSS variables inside this JS where they 
+// can be declaratively used inside the CSS file.
+document.addEventListener('mousemove', function(e) {
+  docStyle.setProperty('--mouse-x', e.clientX);
+  docStyle.setProperty('--mouse-y', e.clientY);
+});
+
+*/
+
+});
+
+
+
+
+</script>
 </body>
     
 </html>

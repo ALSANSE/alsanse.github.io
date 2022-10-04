@@ -38,6 +38,15 @@
 	opacity: 22%;
 }
 
+.container0 {
+	margin-bottom: 0px;
+	}
+
+.container1 {
+	margin-bottom: 199px;
+	}
+	
+
 .container {
 	margin-bottom: 199px;
 	}
@@ -82,8 +91,16 @@
 	height: 55px;
 	opacity: 22%;
 	margin: 0 94px 0 89px;
-
 }
+
+.container0 {
+	margin-bottom: 0px;
+	}
+
+.container1 {
+	margin-bottom: 144px;
+}
+	
 
 .container {
 	margin-bottom: 144px;
@@ -134,6 +151,14 @@
 	opacity: 22%;
 }
 
+.container0 {
+	margin-bottom: 0px;
+	}
+
+.container1 {
+	margin-bottom: 199px;
+	}
+	
 .container {
 	margin-bottom: 199px;
 	}
