@@ -1,3 +1,5 @@
+
+
 body {
 	-ms-overflow-style: none;
 	-webkit-touch-callout: none; 
@@ -19,8 +21,8 @@ body {
 .container0 {
 	position:relative;
 	width: 100vw;
-	min-height: 100vh;	
-	padding: 55px calc(50vw - 960px);
+	min-height: auto;	
+	padding: 55px calc(50vw - 960px) 0 calc(50vw - 960px);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -28,13 +30,14 @@ body {
 	z-index: 1;
 	border-radius: 0 0 0px 0px;
 	overflow: hidden;
-	gap: 55px;
+	gap: 0px;
+
 }
 
 .container1 {
 	position:relative;
 	width: 100vw;
-	min-height: 100vh;	
+	min-height: auto;	
 	padding: 55px calc(50vw - 960px);
 	display: flex;
 	flex-direction: row;
@@ -43,7 +46,7 @@ body {
 	z-index: 1;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
-	gap: 55px;
+	gap: 0px;
 }
 
 .container {
@@ -60,7 +63,16 @@ body {
 	overflow: hidden;
 	gap: 55px;
 }
-	
+.mainTitle {
+    position:relative;
+	width: 809px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 0 89px;
+}
+
 .main {
 	position:relative;
 	width: 809px;
@@ -100,8 +112,20 @@ body {
  
  
  
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  @media screen and (min-width: 974px) {
 
 body {
@@ -133,7 +157,7 @@ body {
 	z-index: 1;
 	border-radius: 0 0 0px 0px;
 	overflow: hidden;
-	gap: 55px;
+	gap: 0px;
 }
 .container1 {
     position:relative;
@@ -226,6 +250,20 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 720px) {
 
 
@@ -255,8 +293,8 @@ body {
 .container0 {
 	position:relative;
 	width: 100%;
-	min-height: 100vh;
-	padding: 21px;
+	min-height: auto;
+	padding: 21px 21px 0px 21px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;	
@@ -264,27 +302,29 @@ body {
 	z-index: 1;
 	border-radius: 0 0 0px 0px;
 	overflow: hidden;
-	padding: 0 0 144px 0;
+	gap: 0px;
 	}
 .container1 {
 	position:relative;
 	width: 100%;
 	min-height: 100vh;
-	padding: 21px;
+	padding: 0px 21px 0px 21px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
 	z-index: 1;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
-	padding: 0 0 144px 0;
+	gap: 0px;
 	}
 .container {
     position:relative;
 	width: 100%;
 	min-height: 100vh;
-	padding: 21px;
+	padding: 21px 21px 55px 21px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -292,9 +332,18 @@ body {
 	z-index: 1;
 	border-radius: 0 0 13px 13px;
 	overflow: hidden;
-	padding: 0 0 144px 0;
 	}
 
+.mainTitle {
+	position:relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 0px 21px;
+	}
+	
 .main {
     position:relative;
 	width: auto;
