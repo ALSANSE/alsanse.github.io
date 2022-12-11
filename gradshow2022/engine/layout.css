@@ -13,11 +13,11 @@ body {
 	justify-content: center;
 	flex-direction: column;
 } 
-		  
+  
 ::-webkit-scrollbar { 
 		display: none; 
 }
-	
+
 .container0 {
 	position:relative;
 	width: 100vw;
