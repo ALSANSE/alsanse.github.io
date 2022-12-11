@@ -63,21 +63,30 @@
 	width: 100%;
 	height: auto;
 }
+#frames{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
 
 #frame_x{
-	height: 0%;
-	width: 100%;
-	position: fixed;
+	height: 100%;
+	width: auto;
+	position: relative;
 	}
+
 #frame_10{
-	height: 0%;
-	width: 100%;
-	position: fixed;
+	height: 100%;
+	width: auto;
+	position: relative;
 	}
 #frame_d{
-	height: 0%;
-	width: 100%;
-	position: fixed;
+	height: 100%;
+	width: auto;
+	position: relative;
 	}
 body{
 	background-color: #ffffff;
@@ -106,71 +115,6 @@ body{
 
 
 
-#interactions{
-	width: 330px;
-	position: fixed;
-	top:100px;
-	left: 100px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-
-.interaction{
-	width: 100px;
-	height: 100px;
-	background-color: aliceblue;
-	margin: 5px;
-	color: #000;
-	overflow: hidden;
-	
-}
-
-#in2 {
-	transition: 0.3s;
-	transform: perspective(200px) rotateX(0deg);
-}
-
-#in2:hover {
-	transition: 0.3s;
-	transform: perspective(200px) rotateX(45deg);
-}
-
-#in3 {
-	transition: 0.3s;
-	transform: perspective(300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-
-#in3:hover {
-	transition: 2s;
-	transform: perspective(300px) rotateX(80deg) rotateY(10deg) rotateZ(420deg);
-}
-
-#in4{
-	border-color: #ff6442;
-	border-width: 0px;
-	border-style: solid;
-}
-
-#in5 {
-	transition: 0.3s;
-	background-color: #ffFFFF;
-	margin-right: 50px;
-}
-
-#in5:hover {
-	transition: 0.6s;
-	background-color: #ff6442;
-	margin-right: 50px;
-
-}
-
-
-
-
-
-
 #logo{
 	display: flex;
 	align-items: center;
@@ -183,39 +127,33 @@ body{
 }
 
 
-.sym_X{
-	fill:none;
-	fill-rule:evenodd;
-	stroke:#000000;
-	stroke-linecap:square;
-	stroke-miterlimit:10;
-	stroke-width:2px;
+
+.symbals{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.sym_10{
-	fill:none;
-	fill-rule:evenodd;
-	stroke:#000000;
-	stroke-linecap:square;
-	stroke-miterlimit:10;
-	stroke-width:2px;
+#sym_X_trigger{
+	width: 33%;
 }
-
-.sym_D{
-	fill:none;
-	fill-rule:evenodd;
-	stroke:#000000;
-	stroke-linecap:square;
-	stroke-miterlimit:10;
-	stroke-width:2px;
+#sym_10_trigger{
+	width: 33%;
 }
-
-
+#sym_D_trigger{
+	width: 33%;
+}
 
 
 #X10D{
 	position: relative;
 	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 
@@ -234,86 +172,24 @@ body{
 }
 
 
-#f9{
-	transform: translateZ(-6400px);
-	position: absolute;
-}
-
-#f8{
-	transform: translateZ(-5600px);
-	position: absolute;
-
-}
-
-#f7{
-	transform: translateZ(-4800px);
-	position: absolute;
-
-}
-
-#f6{
-	transform: translateZ(-4000px);
-	position: absolute;
-
-}
-
-#f5{
-	transform: translateZ(-3200px);
-	position: absolute;
-
-}
-
-#f4{
-	transform: translateZ(-2400px);
-	position: absolute;
-
-}
-
-#f3{
-	transform: translateZ(-1600px);
-	position: absolute;
-
-}
-
-#f2{
-	transform: translateZ(-800px);
-	position: absolute;
-
-}
-
-#f1{
-	transform: translateZ(0px);
-	position: absolute;
-
-}
-
-
-
 #about{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(-30vh);
+	position: relative;
 	opacity: 0%;
+	height: 0px;
 }
 
 #work{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(0vh);
+	position: relative;
 	opacity: 0%;
+	height: 0px;
+
 }
 
 #credit{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(30vh);
+	position: relative;
 	opacity: 0%;
+	height: 0px;
+
 }
 
 
@@ -383,25 +259,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 973px) {
 	#background{
 	height: 100%;
@@ -445,21 +302,7 @@ body{
 	height: auto;
 }
 
-#frame_x{
-	height: 0%;
-	width: 100%;
-	position: fixed;
-	}
-#frame_10{
-	height: 0%;
-	width: 100%;
-	position: fixed;
-	}
-#frame_d{
-	height: 0%;
-	width: 100%;
-	position: fixed;
-	}
+
 body{
 	background-color: #ffffff;
 	padding: 0;
@@ -484,74 +327,6 @@ body{
 
 
 
-
-
-
-#interactions{
-	width: 330px;
-	position: fixed;
-	top:100px;
-	left: 100px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-
-.interaction{
-	width: 100px;
-	height: 100px;
-	background-color: aliceblue;
-	margin: 5px;
-	color: #000;
-	overflow: hidden;
-	
-}
-
-#in2 {
-	transition: 0.3s;
-	transform: perspective(200px) rotateX(0deg);
-}
-
-#in2:hover {
-	transition: 0.3s;
-	transform: perspective(200px) rotateX(45deg);
-}
-
-#in3 {
-	transition: 0.3s;
-	transform: perspective(300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-
-#in3:hover {
-	transition: 2s;
-	transform: perspective(300px) rotateX(80deg) rotateY(10deg) rotateZ(420deg);
-}
-
-#in4{
-	border-color: #ff6442;
-	border-width: 0px;
-	border-style: solid;
-}
-
-#in5 {
-	transition: 0.3s;
-	background-color: #ffFFFF;
-	margin-right: 50px;
-}
-
-#in5:hover {
-	transition: 0.6s;
-	background-color: #ff6442;
-	margin-right: 50px;
-
-}
-
-
-
-
-
-
 #logo{
 	display: flex;
 	align-items: center;
@@ -564,16 +339,6 @@ body{
 }
 
 
-#X10D{
-	position: relative;
-	height: 30%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-direction: row;
-	flex-wrap: nowrap;
-}
 
 
 
@@ -590,88 +355,6 @@ body{
 
 }
 
-
-#f9{
-	transform: translateZ(-6400px);
-	position: absolute;
-}
-
-#f8{
-	transform: translateZ(-5600px);
-	position: absolute;
-
-}
-
-#f7{
-	transform: translateZ(-4800px);
-	position: absolute;
-
-}
-
-#f6{
-	transform: translateZ(-4000px);
-	position: absolute;
-
-}
-
-#f5{
-	transform: translateZ(-3200px);
-	position: absolute;
-
-}
-
-#f4{
-	transform: translateZ(-2400px);
-	position: absolute;
-
-}
-
-#f3{
-	transform: translateZ(-1600px);
-	position: absolute;
-
-}
-
-#f2{
-	transform: translateZ(-800px);
-	position: absolute;
-
-}
-
-#f1{
-	transform: translateZ(0px);
-	position: absolute;
-
-}
-
-
-
-#about{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(-30vh);
-	opacity: 0%;
-}
-
-#work{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(0vh);
-	opacity: 0%;
-}
-
-#credit{
-	font-weight: 100;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-	font-size: 6rem;
-	position: absolute;
-	transform: translateZ(300px) translateY(20vh) translateX(30vh);
-	opacity: 0%;
-}
 
 
 
@@ -730,40 +413,12 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 720px) {
 
 
-
-
+body{
+	background-color: #66F897;
+}
 
 
 #main{
@@ -785,9 +440,26 @@ body{
 	position: relative;
 	height: 100vh;
 	width: 100vw;
+
+}
+
+#menu{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding-bottom: 89px;
+}
+.list{
+	height: 55px;
+	margin: 21px;
 }
 
 video{
+	width: 100vw;
+	height: auto;
+}
+#poster{
 	width: 100vw;
 	height: auto;
 }
@@ -806,7 +478,7 @@ video{
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: nowrap;
-
+	opacity: 100%;
 }
 			
 #footers_image {
@@ -854,22 +526,22 @@ video{
 
 <div class="field">
 
-	<div id="about">ABOUT</div>
-	<div id="work">WORK</div>
-	<div id="credit">CREDIT</div>
 
 		<div id='logo'>
 
 
 		<div id="X10D">
-			<div class="sym_X_trigger">
+			<div class="symbals" id="sym_X_trigger">
 				<img src="source/index/symX.png">
+				<div id="about"><img src="source/index/about.svg"></div>
 			</div>
-			<div class="sym_10_trigger">
+			<div class="symbals" id="sym_10_trigger">
 				<img src="source/index/sym10.png">
+				<div id="work"><img src="source/index/work.svg"></div>
 			</div>
-			<div class="sym_D_trigger">
+			<div class="symbals" id="sym_D_trigger">
 				<img src="source/index/symD.png">
+				<div id="credit"><img src="source/index/credit.svg"></div>
 			</div>
 
 		</div>
@@ -882,23 +554,29 @@ video{
 
 	</div>
 <div id="background">
-	<div id="X10Dtext">
-		<img class="textsvg" src="source/index/text_title.svg">
-		<img class="textsvg" src="source/index/text_opening.svg">	
+	<div id="X10Dtext"><img class="textsvg" src="source/index/text_title.svg"></div>
+	<div id="frames">
+		<div id="frame_x"><img src="source/index/background_frame_x.jpg"></div>
+		<div id="frame_10"><img src="source/index/background_frame_10.jpg"></div>
+		<div id="frame_d"><img src="source/index/background_frame_d.jpg"></div>
 	</div>
-	<div id="frame_x"><img src="source/index/background_frame_x.jpg"></div>
-	<div id="frame_10"><img src="source/index/background_frame_10.jpg"></div>
-	<div id="frame_d"><img src="source/index/background_frame_d.jpg"></div>
 </div>
 
+
+
+
+
 <div id="mobileMain">
+	<img id="poster" src="source/index/movingposter.webp">
+	<!--
 	<video autoplay loop muted playsinline id="video">
 		<source src="source/index/movingposter.mp4" type="video/mp4">
 	 </video>
+	-->
 	 <div id="menu">
-		<a href="about.html"><h3>About</h3></a>
-		<a href="work.html"><h3>Work</h3></a>
-		<a href="credit.html"><h3>Credit</h3></a>
+		<a class="list" href="about.html"><img src="source/index/about.svg"></a>
+		<a class="list" href="work.html"><img src="source/index/work.svg"></a>
+		<a class="list" href="credit.html"><img src="source/index/credit.svg"></a>
 	</div>
 </div>
 
@@ -925,57 +603,71 @@ $(document).ready(function(){
 
 
 $("#sym_X_trigger").on('mouseover', function(){
+	$(this).stop().animate({'width':'44%'}, 90);
 	$("#X10Dtext").dequeue().stop().animate({'margin-top':'100vh'}, 300, 'easeInOutExpo').animate({'margin-top':'-100vh','opacity':'0%'}, 0);
-	$("#about").stop().animate({'opacity':'100%'}, 300);
-	$("#frame_x").stop(true, false).animate({'height':'100%'}, 300, 'easeOutExpo');
-	$("#frame_10").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
-	$("#frame_d").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
+	$("#about").stop().animate({'opacity':'100%', 'height':'89px'}, 90);
+	$("#frame_x").stop(true, false).animate({'width':'100%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
 	$("#background").css('background-color','#FFB192');
 
 });
 $("#sym_X_trigger").on('mouseleave', function(){
-	$("#about").stop().animate({'opacity':'0%'}, 300);
+	$(this).stop().animate({'width':'33%'}, 300);
+	$("#about").stop().animate({'opacity':'0%', 'height':'0px'}, 600, 'easeInOutExpo');
+	$("#frame_x").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
 });
 
 
 
 $("#sym_10_trigger").on('mouseover', function(){
+	$(this).stop().animate({'width':'44%'}, 90);
 	$("#X10Dtext").dequeue().stop().animate({'margin-top':'100vh'}, 300, 'easeInOutExpo').animate({'margin-top':'-100vh','opacity':'0%'}, 0);
-	$("#work").stop().animate({'opacity':'100%'}, 300);
-	$("#frame_10").stop(true, false).animate({'height':'100%'}, 300, 'easeOutExpo');
-	$("#frame_x").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
-	$("#frame_d").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
+	$("#work").stop().animate({'opacity':'100%', 'height':'89px'}, 90);
+	$("#frame_x").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'100%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
 	$("#background").css('background-color','#559AFF');
 });
 $("#sym_10_trigger").on('mouseleave', function(){
-	$("#work").stop().animate({'opacity':'0%'}, 300);
+	$(this).stop().animate({'width':'33%'}, 300);
+	$("#work").stop().animate({'opacity':'0%', 'height':'0px'}, 600, 'easeInOutExpo');
+	$("#frame_x").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+
 });
 
 
 
 $("#sym_D_trigger").on('mouseover', function(){
+	$(this).stop().animate({'width':'44%'}, 90);
 	$("#X10Dtext").dequeue().stop().animate({'margin-top':'100vh'}, 300, 'easeInOutExpo').animate({'margin-top':'-100vh','opacity':'0%'}, 0);
-	$("#credit").stop().animate({'opacity':'100%'}, 300);
-	$("#frame_d").stop(true, false).animate({'height':'100%'}, 300, 'easeOutExpo');
-	$("#frame_x").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
-	$("#frame_10").animate({'height':'0%','margin-top':'100vh'}, 00, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
+	$("#credit").stop().animate({'opacity':'100%', 'height':'89px'}, 90);
+	$("#frame_x").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'0%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'100%'}, 300, 'easeOutExpo');
 	$("#background").css('background-color','#5AE592');
 });
 $("#sym_D_trigger").on('mouseleave', function(){
-	$("#credit").stop().animate({'opacity':'0%'}, 300);
+	$(this).stop().animate({'width':'33%'}, 300);
+	$("#credit").stop().animate({'opacity':'0%', 'height':'0px'}, 600, 'easeInOutExpo');
+	$("#frame_x").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
 });
-
 
 
 $("#X10D").on('mouseleave', function(){
 	$("#X10Dtext").dequeue().stop().animate({'margin-top':'0vh','opacity':'100%'}, 300, 'easeOutExpo');
-	$("#frame_x").animate({'height':'0%','margin-top':'100vh'}, 300, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
-	$("#frame_10").animate({'height':'0%','margin-top':'100vh'}, 300, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
-	$("#frame_d").animate({'height':'0%','margin-top':'100vh'}, 300, 'easeOutExpo').animate({'height':'0%','margin-top':'0vh'}, 0);
+	$("#frame_x").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_10").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
+	$("#frame_d").stop(true, false).animate({'width':'33.333%'}, 300, 'easeOutExpo');
 	$("#background").css('background-color','#ffffff');
 
 });
-
 
 
 
