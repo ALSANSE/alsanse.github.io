@@ -1,0 +1,709 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>슈퍼 가챠</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="indeximage/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="indeximage/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="indeximage/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="indeximage/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="indeximage/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="indeximage/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="indeximage/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="indeximage/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="indeximage/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="indeximage/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="indeximage/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="indeximage/favicon/favicon-16x16.png">
+<link rel="manifest" href="indeximage/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#135ACE">
+<meta property="og:title" content="슈퍼 가챠">
+<meta property="og:type" content="website">
+<meta property="og:image" content="indeximage/Thumbnail.png">
+<meta property="og:description" content="무료 뽑기">
+<link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+
+
+		body{
+			background-color: #135ACE;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#circle{
+			position: relative;
+			width: 210px;
+			height: 210px;
+			border-radius: 100%;
+			margin-bottom: 0px;
+			background-color: #000000;
+			overflow: hidden;
+			z-index: -399999999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		#main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: fixed;
+			top: 50vh;
+			transform: translate(0%, -75%);
+
+		}
+
+
+		h1{
+			position: relative;
+			font-size: 2rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			color: #000000;
+			margin-top: 0;
+		}
+
+		p{
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+			color: #f1f3f9;
+		}
+
+		.name_contact{
+			font-size: 1rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+			color: #216f9b;
+			width: 100%;
+			padding-bottom: 7px;
+			text-decoration: none;
+			transform: translate(0, -26px);
+			white-space: nowrap;
+			text-align: center;
+			opacity: 0%;
+
+		}
+
+		.name_contact:hover{
+			color: #ff6442;
+			text-decoration: underline;
+		}
+
+
+
+
+		#remote{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 340px;
+			bottom: 5vh;
+			position: fixed;
+			z-index: 9;
+		}
+		
+		.rButton{
+			background-color: #d1d3d9;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			opacity: 66%;
+			z-index: 98;
+		}
+
+		#homeButton{
+			overflow: hidden;
+			display: flex;
+			opacity: 100%;
+			z-index: 0;
+			background-color: #ffffff00;
+
+		}
+
+
+
+		#logo{
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+		}
+
+
+
+		#thumb{
+			position: relative;
+			width: auto;
+			height: 100%;
+			opacity: 0%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow:visible;
+		}
+
+		#thumb img{
+			width: 300px;
+			height: 300px;
+			margin: 5px;
+			border-radius: 25px;
+		}
+
+		#this{
+			width: 300px;
+			height: auto;
+			background-color: #ffffff;
+			opacity: 0%;
+			border-radius: 25px;
+			position: absolute;
+			object-fit: contain;
+		}
+
+		#mess{
+			width: 460px;
+			height: 550px;
+			top:550px;
+			padding-left: 90px;
+			opacity: 100%;
+			border-radius: 100%;
+			position: absolute;
+			object-fit: contain;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			overflow: scroll;
+			background: rgba( 241, 243, 249, 0.5 );
+	backdrop-filter: blur( 32px );
+	-webkit-backdrop-filter: blur( 32px );
+	-ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+		}
+
+		#mess::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+		#m00{
+			font-weight: 700;
+			font-size: 25px;
+		margin-top: 230px;
+		color: #F25510;
+		-webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;	
+	}
+
+
+		#m01{
+		margin-top: 90px;
+		margin-bottom: 0px;
+		color: #135ACE;	
+	}
+		
+	#m02{
+		color: #000000;
+		font-size: 0.8rem;
+
+	}
+
+#m03{
+		margin-bottom: 100px;
+}
+
+
+span{
+	font-weight: 700;
+}
+
+
+
+		#start{
+			width: 300px;
+			height: 300px;
+			margin: 130px 5px 130px 5px;
+			padding: 120px 0;
+			border-radius: 100%;
+			background-color: #F25510;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			text-align: center;
+			font-size: 42px;
+		}
+
+		.nails{
+			position: absolute;
+			width: 550px;
+			height: 550px;
+			z-index: 2;
+		}
+
+
+
+
+/*
+@keyframes animatedBackground {
+  from {
+    background-position: 0px 0px;
+	background-size: cover;
+  }
+  to {
+    background-position: 1000px 732px;
+	background-size: cover;
+  }
+
+}
+*/
+
+@keyframes animatedBackground {
+
+	100% {
+		transform: translate(0%, 0%) scale(2,2);
+	}
+
+}
+
+#background{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	opacity: 100%;
+}
+
+
+#wallpaper{
+	top: -50%;
+	left: -50%;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-image: url(indeximage/solid\ vertical.svg);
+	animation: animatedBackground 120s ease-in-out infinite alternate;
+	transform: translate(50%, 50%) scale(2,2);
+}
+
+#frontground{
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	position: absolute;
+	background-color: #f1f3f9;
+	opacity: 0%;
+}
+
+#mousePad{
+	width: 0vw;
+	height: 0vh;
+	z-index: 100;
+	position: absolute;
+
+}
+
+
+
+#contacts{
+	
+	max-height: 200px;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-top: 50px;
+}
+
+#contact{
+	height: 142px;
+	width: 340px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	
+}
+#contactopener{
+	border-radius: 21px;
+	height: 42px;
+	width: 140px;
+	position: absolute;
+	display: none;	
+}
+
+#contactext{
+	height: 42px;
+	font-size: 13px;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+	color: #61656c;
+}
+
+#contactitle{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+	position: absolute;
+	top: 72px;
+}
+
+
+.contitle{
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+
+
+
+
+
+#contactopener{
+	display: block;	
+}
+
+
+#main{
+	top: 55vh;
+
+}
+
+
+#contactitle{
+	display: none;
+}
+
+#alsanse-slit{
+	transform: translate(0, 10vh);
+}
+
+#interact-slit{
+	transform: translate(0, 10vh);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+<div id='main'>
+	<div id="circle">
+
+		<div id="thumb">
+			<div id="start">Ready!</div>
+			<img src="gacha/01.webp">
+			<img src="gacha/02.jpg">
+			<img src="gacha/03.jpg">
+			<img src="gacha/04.jpg">
+			<img src="gacha/05.webp">
+			<img src="gacha/06.png">
+			<img src="gacha/07.webp">
+			<img src="gacha/08.jpg">
+			<img src="gacha/09.png">
+			<img src="gacha/10.jpg">
+			<img src="gacha/11.jpg">
+			<img src="gacha/12.jpg">
+			<img src="gacha/13.jpg">
+			<img src="gacha/14.jpg">
+			<img src="gacha/15.jpg">
+			<img src="gacha/16.jpg">
+			<img src="gacha/17.jpg">
+			<img src="gacha/18.jpg">
+			<img src="gacha/19.png">
+			<img src="gacha/20.webp">
+			<img src="gacha/21.jpg">
+			<img src="gacha/22.webp">
+			<img src="gacha/23.jpg">
+			<img src="gacha/24.jpg">
+			<img src="gacha/25.webp">
+			<img src="gacha/26.jpg">
+			<img src="gacha/27.jpg">
+			<img src="gacha/28.jpg">
+			<img src="gacha/31.jpg">
+			<img src="gacha/30.png">
+			<img src="gacha/29.jpg">
+			<img src="gacha/01.webp">
+			<img src="gacha/02.jpg">
+			<img src="gacha/03.jpg">
+			<img src="gacha/04.jpg">
+			<img src="gacha/05.webp">
+			<img src="gacha/06.png">
+			<img src="gacha/07.webp">
+			<img src="gacha/08.jpg">
+			<img src="gacha/09.png">
+			<img src="gacha/10.jpg">
+			<img src="gacha/11.jpg">
+			<img src="gacha/12.jpg">
+			<img src="gacha/13.jpg">
+			<img src="gacha/14.jpg">
+			<img src="gacha/15.jpg">
+			<img src="gacha/16.jpg">
+			<img src="gacha/17.jpg">
+			<img src="gacha/18.jpg">
+			<img src="gacha/19.png">
+			<img src="gacha/20.webp">
+			<img src="gacha/21.jpg">
+			<img src="gacha/22.webp">
+			<img src="gacha/23.jpg">
+			<img src="gacha/24.jpg">
+			<img src="gacha/25.webp">
+			<img src="gacha/26.jpg">
+			<img src="gacha/27.jpg">
+			<img src="gacha/28.jpg">
+			<img src="gacha/31.jpg">
+			<img src="gacha/30.png">
+			<img src="gacha/29.jpg">
+
+		</div>
+		<img id="this" src="gacha/30.png">
+		<div id="mess">
+
+
+			<h1 id="m00">SEATTLE RAINIERS 1939<br>COTTON CAP ORANGE 당첨!</h1>
+			<p id="m02">아래로 스크롤하여 상품 수령하기</p>
+			<h1 id="m01">신종훈 고객님,<br>생일 축하합니다!</h1>
+			<br>
+			<p id="m02">당첨된 상품은 <b>월요일 오후</b>에 배송됩니다.<br><br><br>당신의 친한 지인분들께서<br>생일 축하 메시지를 남겨 주셨습니다.</p>
+			<br>
+			<p id="m02"><span>황현우:</span> 캧섘</p>
+			<br>
+			<p id="m02"><span>김세진:</span> ㅇㅇㅊㅋ</p>
+			<br>
+			<p id="m02"><span>김병삼 과장(GS25):</span> 종훈 씨, 생일 축하해요.<br>혹시 평일 아침에 일 좀 해줄 수 있어요?</p>
+			<br>
+			<p id="m02"><span>최현배:</span> 혹시...ㅎ 그림 그리시는 분인가...?ㅋㅋ</p>
+			<br>
+			<p id="m02"><span>고한세:</span> 특별히 애니메이션2 보조 작화 제의 드립니다.</p>
+			<br>
+			<p id="m02"><span>이지민:</span> 음.. 저는 괜찮은  것 같아요!</p>
+			<br>
+			<p id="m02"><span>라부진:</span> Поздравляю вас с днем рождения. <br>Было бы хорошо, если бы акции выросли</p>
+			<br>
+			<p id="m02"><span>5사단 최전선에서 함께 싸운 전우들:</span><br>
+				아름다운 내 조국의 완전 통일 위하여<br>
+				물불을 가림없이 한데 뭉쳐 싸운다<br>
+				가평 춘천 탈환전 피의 능선 가칠봉<br>
+				청사에 아로새긴 전공 세운 5사단</p>
+				<br>
+			<p id="m02"><span>카마도 네즈코:</span> 음음!</p>
+			<br>
+			<p id="m02"><span>춘전이:</span> 신종훈 시키깡! 생일 축하드려요<br>당신이 돌아오길 우리는 기다리고 있어요!!</p>
+			<br>
+			<p id="m02"><span>김승흥(김세진이 일하던 PX 관리관):<br></span> 야아.. 쩌기뭐야아.. 쫑훈이.. 생일을 축하한다잉~~~^^</p>
+			<br>
+			<p id="m02"><span>최현배:</span> ㅋㅋ 저랑 같이 졸전 하실래요? ...라나?</p>
+			<br>
+			<p id="m02"><span>고왕규:</span> 스팀 아이디 뭐야?</p>
+			<br>
+			<p id="m02"><span>도진재(a.k.a. 히메):</span> 레식 같이할래요?</p>
+			<br>
+			<p id="m02"><span>최현배:</span> 옼ㅋㅋㅋ 종훈씨 게임도 하시는구나..ㅎㅎ <br>...랄까 좋아하는 게임이라도 있으신지...?</p>
+			<br>
+			<p id="m02"><span>고한세:</span> 컴포지션1_1_2의 작화팀에 들어와주길 제안합니다.</p>
+			<br>
+			<p id="m02"><span>손경준:</span> 나도 너희 팀에 끼워줘ㅋㅋㅋㅋㅋㅋ</p>
+				<br>
+			<p id="m02"><span>최성근:</span> 저번에 유니클로 가자했는데 전화 끊긴줄 알고<br>"옷보러다니기 귀찮은데" 라고 한거 들렸어 <br>쫑훈 하지만 난 널 사랑해 생일축하해</p>
+			<br>
+			<p id="m02"><span>남관희:</span> 종훈아 생일축하한다 같이 팀 과제해서 좋았고 <br>졸업작품도 잘해보자</p>
+			<br>
+			<p id="m02"><span>조희수:</span> 미래의 일러스트레이터 미스터신 생신 축하드립니다~<br>올해의 시작이지만 학생생활 마지막이니 <br>스트레스 덜 받고 잘 끝내자~</p>
+			<br>
+			<p id="m02"><span>김지혜:</span> <img src="indeximage/canon.jpeg" width="150px"><br>종훈아 생일 축하한다!
+				졸전 기대하고있을께~~~화이팅</p>
+			<br>
+			<p id="m02"><span>손성미:</span> 종후니 25번째 생일 축하한다!! <br>오늘 하루 맛있는 거 많이 먹고 행복해라 ~</p>
+			<br>
+			<p id="m02"><span>박지현:</span> 종훈아 생일축하한다^^<br>내가 1학년 생일때 사줬던 바나나 우유 생각나니? <br>그때 참 재밌었는데 벌써 4학년이 되고 졸전만 남겨놓고 있구나. <br>이제 시작인 졸전 끝까지 마무리 잘하고, <br>앞으로 재미있고 행복한 일만 가득하길 바란당!-!!!!!.👼</p>
+			<br>
+			<p id="m02"><span>우준규:</span> 종훈아 저번에 졸전 도와줘서 너무 고맙다 생일축하행</p>
+			<br>
+			<p id="m02"><span>임관혁:</span> 종훈아 진짜 키!</p>
+			<br>
+			<p id="m02"><span>김광신(소녀전선):</span> 생일 축하해. 벌써 24번째 생일이구나. <br>이제 이 숫자도 커지면 커질수록 즐겁지 않겠지. <br>한숨도 늘고 우울할거야. 내가 2주 전에 느꼈거든. <br>모쪼록 맛난거 많이먹고 건강해라.</p>
+			<br>
+			<p id="m02"><span>김세진:</span> <img src="indeximage/sowhat.gif" width="150px"> </p>
+			<br>
+			<p id="m02"><span>황현우:</span>
+				
+				<br>이제 우리가 만난지 벌써 6년을 바라보고 있구나<br>
+				재차 말하지만, 너가 내 룸메이트인게 난 너무 기쁘다 우리과 남동기 몇<br>
+				명이 군대에 간다 했을 때 너와 비슷하게 간 것이 축복이였다 생각해<br>
+				조심스럽게 내 마음을 고백할게 종훈아! <br>
+				아침부터 저녁 밥까지 오늘은 니가 쏴라~ 
+				
+			</p>
+			<p id="m03"></p>
+
+
+		</div>
+
+		<img id='logo' src='indeximage/DDSBPP.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+	</div>
+	
+	<div id="contacts">
+		<div id="contact">
+			<h1>슈퍼 가챠</h1>
+			<p>상단의 S를 클릭해서 뽑기 스타트!</p>
+		</div>
+		<div id="contactopener"></div>
+	</div>
+	</div>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	
+<script>
+$(document).ready(function(){
+
+
+
+
+
+
+$("#homeButton").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+});
+$("#homeButton").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+});
+
+
+
+
+
+
+
+
+
+
+$("#logo").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutQuart');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$(this).stop().animate({'height':'0px'}, 0);
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px','width':'-120%','height':'-120%'}, 360, 'easeInExpo');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic').delay(1000).animate({'top':'-18215px'}, 13000, 'easeOutCubic');
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$('#this').delay(14200).animate({'opacity':'100%'}, 0).animate({'width':'550px','height':'550px'}, 400, 'easeInOutCirc');
+	$('#mess').delay(15100).animate({'top':'0px'}, 900, 'easeOutCirc');
+
+});
+
+
+
+
+
+
+
+$("#homeButton").on('click', function(){
+	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
+	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(120).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(300).animate({'top':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().animate({'width':'0px'}, 210, 'easeInOutCubic');
+	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
+
+});
+
+
+
+});
+
+</script>
+
+</body>
+</html>

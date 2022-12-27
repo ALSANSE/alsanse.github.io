@@ -21,7 +21,7 @@
 <link rel="manifest" href="indeximage/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#f1f3f9">
+<meta name="theme-color" content="#000000">
 <meta property="og:title" content="Sejin Kim">
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
@@ -30,56 +30,95 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 /*
-*{
-	border: 0.1px solid red;
-}
+*{border: 0.1px solid red;}
 */
-		body{
-			-ms-overflow-style: none; /* IE and Edge */
-		    scrollbar-width: none; /* Firefox */
 
-			background-color: #f1f3f9;
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: column;
-			align-items: center;
-			padding: 0;
-			margin: 0;
-		}
+body{
+	-ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+	background-color: #000000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
 
-		::-webkit-scrollbar{
-			display: none; /* Chrome, Safari, Opera*/
-		}
-
-
-		#circle_guide{
-			position: relative;
-			width: 210px;
-			height: 210px;
-			padding: 40px;
-			margin-bottom: 0px;
-			z-index: -399999999;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-		}
-
-		#circle{
-			position: relative;
-			width: 100%;
-			height: 100%;
-			border-radius: 105px;
-			background-color: #ffffff;
-			overflow: hidden;
-			box-shadow:  0px 13px 34px #c1c3c9;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+}
 
 
-		#backspace{
+#main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #f1f3f9;
+	border-radius: calc(34px / 2);
+	width: calc(100vw - 21px);
+	height: calc(100vh - 76px);
+}
+
+
+#navigation{
+	width: calc(100vw - 21px);
+	height: 55px;
+	background-color: #000000;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu{
+	color:#f1f3f9;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 100;
+	font-size: 21px;
+	overflow: hidden;
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+
+#circle_guide{
+	position: relative;
+	width: 233px;
+	height: 233px;
+	min-height: 233px;
+	padding: 40px;
+	margin-bottom: 0px;
+	z-index: 399999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#circle{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: calc(233px / 2);
+	background-color: #ffffff;
+	overflow: hidden;
+	box-shadow:  0px 13px 34px #c1c3c9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#backspace{
 	background-color: #000000;
 	width: 0px;
 	height: 0px;
@@ -93,8 +132,6 @@
 }
 
 
-
-
 #container{
 	position: relative;
 	display: flex;
@@ -106,13 +143,15 @@
 	width: 100vw;
 	height: 100vh;
 	gap: 34px;
-	top:200vh;
+	top: 200vh;
 }
+
 
 .separator{
 	display: flex;
 	gap: 34px;
 }
+
 
 .subjects{
 	width: 340px;
@@ -131,175 +170,141 @@
 }
 
 
+#remote{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 340px;
+	bottom: 46px;
+	position: fixed;
+	z-index: 9;
+}
 
 
+#homeButton{
+	overflow: hidden;
+	display: flex;
+	background-color: #00000000;
+	width: 0px;
+	height: 40px;
+	border-radius: 100%;
+	opacity: 100%;
+	z-index: 98;
+}
 
 
-		#main{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			position: fixed;
-			top: 40vh;
-			transform: translate(0%, -50%);
-
-		}
+.rLay{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
 
 
+.rText{
+	position: absolute;
+	font-size: 16px;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+	top:-50px;
+	text-align: center;
+	overflow: hidden;
+	color: #ff6442;
+}
 
 
+#minilogo{
+	position: relative;
+	top: -100px;
+	width: 100%;
+	z-index: 101;
+}
 
-
-
-
-		#remote{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			width: 340px;
-			bottom: 5vh;
-			position: fixed;
-			z-index: 9;
-		}
 		
-		.rButton{
-			background-color: #d1d3d9;
-			width: 40px;
-			height: 40px;
-			border-radius: 100%;
-			opacity: 66%;
-			z-index: 98;
-		}
+#follower{
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	border-radius: 100%;
+	background-color: #ffbc58;
+	z-index: 99;
+	left: 153px;
+	opacity: 100%;
+}
 
-		#homeButton{
-			overflow: hidden;
-			display: flex;
-			opacity: 100%;
-			z-index: 0;
-			background-color: #ffffff00;
-
-		}
-
-		.rLay{
-			align-items: center;
-			display: flex;
-			justify-content: center;
-		}
-
-		.rText{
-			position: absolute;
-			font-size: 16px;
-			font-family: neue-haas-grotesk-display, sans-serif;
-			font-weight: 700;
-			top:-50px;
-			text-align: center;
-			overflow: hidden;
-			color: #ff6442;
-		}
+#alsanse-slit{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	max-height: 150px;
+	width: 40px;
+	transform: translate(0, 0);
+	z-index: 1;
+	bottom: 10vh;
+	background-color: #ffbc58;
+	box-shadow:  0px 5px 8px #c1c3c9;
+}
 
 
-		#minilogo{
-			position: relative;
-			top: -100px;
-			width: 100%;
-			z-index: 101;
-
-		}
-
-		#follower{
-			position: absolute;
-			width: 34px;
-			height: 34px;
-			border-radius: 100%;
-			background-color: #ffbc58;
-			z-index: 99;
-			left: 153px;
-			opacity: 100%;
-		}
-
-		#alsanse-slit{
-			position: fixed;
-			display: flex;
-			flex-direction: column;
-			max-height: 150px;
-			width: 40px;
-			transform: translate(0, 0);
-			z-index: 1;
-			bottom: 10vh;
-			background-color: #ffbc58;
-			box-shadow:  0px 5px 8px #c1c3c9;
-		}
+#upper-slit{
+	width: 40px;
+	height: 150px;
+	object-fit: fill;
+}
 
 
-		#upper-slit{
-			width: 40px;
-			height: 150px;
-			object-fit: fill;
-		}
-
-		#under-slit{
-			width: 40px;
-			height: 0px;
-			object-fit: fill;
-		}
+#under-slit{
+	width: 40px;	
+	height: 0px;
+	object-fit: fill;
+}
 
 
-		#interact-slit{
-			position: fixed;
-			display: flex;
-			height: 150px;
-			width: 40px;
-			z-index: 20;
-			bottom: 10vh;
-			cursor: pointer;
-
-		}
-
+#interact-slit{
+	position: fixed;
+	display: flex;
+	height: 150px;
+	width: 40px;
+	z-index: 20;
+	bottom: 10vh;
+	cursor: pointer;
+}
 
 
-		.slit{
-			height: 100%;
-			width: 100%;
-		}
+.slit{
+	height: 100%;
+	width: 100%;
+}
 
 
-
-		#logo{
-			position: absolute;
-			bottom: 0px;
-			width: 210px;
-			height: 210px;
-		}
-
+#logo{
+	position: absolute;
+	bottom: 0px;
+	width: 233px;
+	height: 233px;
+}
 
 
-		#thumb{
-			position: relative;
-			width: auto;
-			height: auto;
-			opacity: 0%;
-		}
-
-		.nails{
-			position: absolute;
-			width: 550px;
-			height: 550px;
-			z-index: 2;
-		}
+#thumb{
+	position: relative;
+	width: auto;
+	height: auto;
+	opacity: 0%;
+}
 
 
-
-
-
+.nails{
+	position: absolute;
+	width: 550px;
+	height: 550px;
+	z-index: 2;
+}
 
 
 #background{
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	z-index: -1;
 	position: absolute;
 	opacity: 100%;
 }
@@ -316,6 +321,7 @@
 	transform: translate(50%, 50%) scale(2,2);
 }
 
+
 #frontground{
 	width: 100vw;
 	height: 100vh;
@@ -324,6 +330,7 @@
 	background-color: #f1f3f9;
 	opacity: 0%;
 }
+
 
 #mousePad{
 	width: 0vw;
@@ -334,9 +341,7 @@
 }
 
 
-
-#contacts{
-	
+#contacts{	
 	max-height: 200px;
 	min-height: 100px;
 	display: flex;
@@ -345,26 +350,28 @@
 	justify-content: flex-start;
 	position: relative;
 	margin-top: 10px;
+	margin-bottom: 144px;
 }
 
+
 #contact{
-	border-radius: 21px;
 	background: rgba( 241, 243, 249, 0 );
 	backdrop-filter: blur( 8px );
 	-webkit-backdrop-filter: blur( 8px );
-	box-shadow:  0px 13px 34px #c1c3c9;
-	height: 42px;
-	width: 140px;
+	box-shadow: 0px 13px 34px #c1c3c9;
+	height: 55px;
+	width: 144px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-start;
-	position: absolute;
+	justify-content: center;
+	align-content: center;
+	position: relative;
 	cursor: none;
-	gap: -10px;
-}
+	border-radius: calc(55px / 2);
 
+}
 
 
 .name_contact{
@@ -372,52 +379,53 @@
 	font-family: neue-haas-grotesk-display, sans-serif;
 	font-weight: 500;
 	color: #216f9b;
+	height: 40px;
 	width: 100%;
 	text-decoration: none;
-	transform: translate(0, 0);
-	/*transform: translate(0, -26px);*/
 	white-space: nowrap;
 	text-align: center;
-	opacity: 0%;
-	cursor: none;
+	opacity: 100%;
 	position: relative;
-	height: 100px;
 	display: flex;
 	justify-content: center;
-	}
+	overflow: hidden;
+	padding: 0px 0;
+	cursor: none;
+}
 
-		.name_contact:hover{
-			color: #ff6442;
-			text-decoration: underline;
-			cursor: none;
 
-		}
+.name_contact:hover{
+	color: #ff6442;
+	text-decoration: underline;
+	cursor: none;
+}
+
 
 #emailS{
-	align-items: flex-end;	
-	padding: 5px 0;
+	align-items: flex-end;
 }
+
 
 #instagramS{
 	align-items: flex-start;
-	padding: 5px 0;
 }
-
-
 
 
 #contactopener{
-	border-radius: 21px;
-	height: 42px;
-	width: 140px;
+	border-radius: calc(55px / 2);
+	height: 55px;
+	width: 144px;
 	position: absolute;
-	display: none;	
+	display: none;
 }
 
+
 #contactext{
-height: 42px;
-overflow: visible;
+	height: 55px;
+	overflow: visible;
+	position: relative;
 }
+
 
 #contactitle{
 	display: flex;
@@ -425,7 +433,9 @@ overflow: visible;
 	flex-direction: row;
 	align-items: flex-start;
 	position: absolute;
-	top: 72px;
+	height: 0px;
+	top: 89px;
+	background-color: #ff6442;
 }
 
 
@@ -438,33 +448,17 @@ overflow: visible;
 	white-space: nowrap;
 }
 
+
 #email{
 	width: 0%;
-	opacity: 0%;
-	
+	opacity: 0%;	
 }
+
 
 #instagram{
 	width: 0%;
 	opacity: 0%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @keyframes animatedBackground {
@@ -477,7 +471,7 @@ overflow: visible;
 
 
 
-
+/*
 @media screen and (max-width: 720px) {
 
 
@@ -609,7 +603,7 @@ overflow: visible;
 
 
 }
-
+*/
 
 	</style>
 
@@ -618,59 +612,62 @@ overflow: visible;
 </head>
 
 <body>
-<div id="background">
-	<div id='wallpaper'></div>
-</div>
+<div id='main'>
+
+<div id="background"><div id='wallpaper'></div></div>
+
 <div id='frontground'></div>
+
 <div id='mousePad'></div>
 
-<div id='main'>
-	<div id="circle_guide">
-		<div id="circle">
-			<div id="backspace">
-				<div id="container">
-					<div class="separator">
-						<a class="subjects" href="old/design.html">디자인</a>
-						<a class="subjects" href="old/photography.html" >사진들</a>
-					</div>
-					<div class="separator">
-						<a class="subjects" href="index2.html">곱셈머신</a>
-						<a class="subjects" href="old/quotes.html">한마디</a>
-					</div>
+<div id="circle_guide">
+	<div id="circle">
+		<div id="backspace">
+			<div id="container">
+				<div class="separator">
+					<a class="subjects" href="old/design.html">디자인</a>
+					<a class="subjects" href="old/photography.html">사진들</a>
+				</div>
+				<div class="separator">	
+					<a class="subjects" href="index2.html">곱셈머신</a>
+					<a class="subjects" href="old/quotes.html">한마디</a>
 				</div>
 			</div>
-			<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 		</div>
-	</div>
-	
-	<div id="contacts">
-		<div id="contact">
-			<img id="contactext" src="indeximage/contact.svg">
-			<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
-			<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
-		</div>
-		<div id="contactitle">
-			<p class='contitle' id="email">E-mail</p>
-			<p class='contitle' id="instagram">Instagram</p>
-		</div>
-		<div id="contactopener"></div>
+		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 	</div>
 </div>
 
+<div id="contacts">
+	<div id="contact">
+		<img id="contactext" src="indeximage/contact.svg">
+		<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+	</div>
+	<div id="contactitle">
+		<p class='contitle' id="email">E-mail</p>
+		<p class='contitle' id="instagram">Instagram</p>
+	</div>
+	<div id="contactopener"></div>
+</div>
 
+</div>
+
+<div id="navigation">
+	<div class="menu">MENU</div>
+</div>
 
 
 	<div id='remote'>
 
 		<div class='rLay'>
 			<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
-
 		</div>
 
 
 	</div>
 	
-
+<!--
 	
 
 	<div id='alsanse-slit'>
@@ -682,46 +679,7 @@ overflow: visible;
 
 <div id='interact-slit'></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-->
 
 
 	<script src="jquery-3.5.1.js"></script>
@@ -762,16 +720,15 @@ $("#mousePad").on('mouseover', function(){
 
 
 $("#contact").on('mouseover', function(){
-	$(this).stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 00);
-	$('.name_contact').stop().animate({'opacity':'100%'}, 300);
-
+	$('.name_contact').stop().animate({'opacity':'100%', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
 });
 
 $("#contact").on('mouseleave', function(){
-	$(this).stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 00);
-	$('.name_contact').stop().animate({'opacity':'0%'}, 0);
+	$(this).stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 00);
+	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 0, 'easeOutExpo');
 });
 
 
@@ -799,17 +756,17 @@ $("#interact-slit").on('mouseleave', function(){
 
 $("#contactopener").on('click', function(){
 	$(this).animate({'height':'0px'}, 0);
-	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contact').stop().animate({'width':'233px','height':'89px'}, 300, 'easeOutExpo');
 	$('.name_contact').stop().animate({'opacity':'100%'}, 0);
 	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 300);
 
 });
 
 $("#frontground").on('click', function(){
-	$('#contactopener').animate({'height':'42px'}, 0);
-	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactopener').animate({'height':'55px'}, 0);
+	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
 	$('.name_contact').stop().animate({'opacity':'0%'}, 0);
-	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 300);
+	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
 });
 
 
@@ -819,9 +776,9 @@ $("#frontground").on('click', function(){
 
 $("#logo").on('click', function(){
 	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
-	$('#contactopener').animate({'height':'42px'}, 0);
-	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'height':'42px'}, 0).animate({'opacity':'100%'}, 300);
+	$('#contactopener').animate({'height':'55px'}, 0);
+	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
 	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
 	$(this).animate({'bottom':'1210px'}, 1200, 'easeInExpo', function(){
             $(location).attr('href','logo.html');
@@ -832,23 +789,25 @@ $("#logo").on('click', function(){
 
 
 
-$("#interact-slit").on('click', function(){
-	$('#circle_guide').stop().animate({'height':'100vh', 'width':'100vw'}, 600, 'easeInOutExpo');
-	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+$(".menu").on('click', function(){
+//	$('#circle_guide').stop().animate({'height':'100vh', 'width':'100vw'}, 600, 'easeInOutExpo');
+//	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
 	$(this).stop().animate({'height':'0px'}, 0);
+	$('#homeButton').stop().animate({'width':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
-	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
-	$('#frontground').stop().delay(600).animate({'opacity':'100%'}, 0);
-	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh', 'margin-top':'0px'}, 600, 'easeInOutQuart');
-	$('#contactopener').animate({'height':'42px'}, 0);
-	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
-	$('#main').stop().animate({'top':'50vh'}, 600, 'easeInOutQuart');
-	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
-	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
-	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
+	$('#main').stop().delay(150).animate({'margin-right':'200vw'}, 600, 'easeInOutExpo');
+//	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+//	$('#frontground').stop().delay(600).animate({'opacity':'100%'}, 0);
+//	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh', 'margin-top':'0px'}, 600, 'easeInOutQuart');
+//	$('#contactopener').animate({'height':'42px'}, 0);
+//	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+//	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+//	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+//	$('#main').stop().animate({'top':'50vh'}, 600, 'easeInOutQuart');
+//	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
+//	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
+//	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
 
 });
 
@@ -860,17 +819,18 @@ $("#interact-slit").on('click', function(){
 
 $("#homeButton").on('click', function(){
 	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
-	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
-	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
-	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
-	$('#minilogo').stop().delay(120).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(300).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
-	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
-	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
-	$('#main').stop().delay(300).animate({'top':'40vh'}, 600, 'easeOutQuint');
-	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
-	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
-	$('#container').stop().animate({'top':'200vh'}, 0);
+//	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+//	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+//	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
+	$('#minilogo').stop().delay(600).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(600).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+//	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+//	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
+	$('#main').stop().delay(300).animate({'margin-right':'0vw'}, 600, 'easeInOutExpo');
+	$('.menu').stop().animate({'height':'34px'}, 0);
+//	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
+//	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
+//	$('#container').stop().animate({'top':'200vh'}, 0);
 
 
 });

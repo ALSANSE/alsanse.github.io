@@ -1,0 +1,925 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sejin Kim</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="indeximage/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="indeximage/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="indeximage/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="indeximage/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="indeximage/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="indeximage/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="indeximage/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="indeximage/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="indeximage/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="indeximage/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="indeximage/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="indeximage/favicon/favicon-16x16.png">
+<link rel="manifest" href="indeximage/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#f1f3f9">
+<meta property="og:title" content="Sejin Kim">
+<meta property="og:type" content="website">
+<meta property="og:image" content="indeximage/Thumbnail.jpg">
+<meta property="og:description" content="Portfolio">
+<link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+
+
+
+		body{
+			background-color: #f1f3f9;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			height: 900px;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#circle{
+			position: relative;
+			width: 210px;
+			height: 210px;
+			border-radius: 100%;
+			margin-bottom: 0px;
+			background-color: #ffffff;
+			overflow: hidden;
+			z-index: -399999999;
+			box-shadow:  0px 13px 34px #c1c3c9;
+
+		}
+
+		#main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: fixed;
+			top: 50vh;
+			transform: translate(0%, -75%);
+
+		}
+
+		.contents{
+			position: fixed;
+			top: 40vh;
+			margin-left: 210px;
+			width: 0px;
+			height: 550px;
+			transform: translate(50%, -50%);
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		.content{
+			position: absolute;
+			width: 550px;
+			display: block;
+		}
+
+		#a_content{
+			opacity: 0%;
+		}
+
+		#b_content{
+			opacity: 0%;
+		}
+
+		#c_content{
+			opacity: 0%;
+			transform: translate(0, -0.5rem);
+		}
+
+		#d_content{
+			opacity: 0%;
+		}
+
+		.contentLogo{
+			position: relative;
+			height: 3rem;
+		}
+
+		.takitLogo{
+			position: relative;
+			height: 4rem;
+		}
+
+
+		h1{
+			position: relative;
+			font-size: 2rem;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 500;
+			color: #919399;
+			margin-top: 0;
+			margin-bottom: 3rem;
+		}
+
+		.contentText{
+			position: relative;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 400;
+		}
+
+		.cta{
+			position: relative;
+			font-size: 0.8rem;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-weight: 700;
+			color: #216f9b;
+			text-decoration: none;
+			width: 100px;
+			border: 2px solid #216f9b;
+			border-radius: 100px;
+			padding: 1px 8px 2px 8px;
+			margin-top: 1rem;
+		}
+
+		.cta:hover{
+			color: #ff6442;
+			border: 2px solid #ff6442;
+
+		}
+
+		.name_contact{
+			font-size: 1rem;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 500;
+			color: #216f9b;
+			width: 100%;
+			padding-bottom: 7px;
+			text-decoration: none;
+			transform: translate(0, -26px);
+			white-space: nowrap;
+			text-align: center;
+			opacity: 0%;
+
+		}
+
+		.name_contact:hover{
+			color: #ff6442;
+			text-decoration: underline;
+		}
+
+
+
+
+		#remote{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 340px;
+			bottom: 5vh;
+			position: fixed;
+			z-index: 9;
+		}
+		
+		.rButton{
+			background-color: #d1d3d9;
+			width: 34px;
+			height: 34px;
+			border-radius: 100%;
+			opacity: 66%;
+			z-index: 98;
+		}
+
+		#r3Button{
+			overflow: hidden;
+			display: flex;
+			opacity: 100%;
+			z-index: 100;
+			background-color: #ffffff00;
+		}
+
+		.rLay{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		.rText{
+			position: absolute;
+			font-size: 16px;
+			font-family: neue-haas-grotesk-display, sans-serif;
+			font-weight: 700;
+			top:-50px;
+			text-align: center;
+			overflow: hidden;
+			color: #ff6442;
+		}
+
+		#r1Text{
+			height: 0px;
+			top: -40px;
+		}
+
+		#r2Text{
+			height: 0px;
+			top: -40px;
+
+		}
+
+		#r4Text{
+			height: 0px;
+			top: -40px;
+		}
+
+		#r5Text{
+			height: 0px;
+			top: -40px;
+		}
+
+		#minilogo{
+			position: relative;
+			top: -100px;
+			width: 100%;
+			z-index: 101;
+		}
+
+		#follower{
+			position: absolute;
+			width: 34px;
+			height: 34px;
+			border-radius: 100%;
+			background-color: #ffbc58;
+			z-index: 99;
+			left: 153px;
+			opacity: 100%;
+		}
+
+		#alsanse-slit{
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			width: 40px;
+			height: 150px;
+			transform: translate(0, 0);
+			z-index: 1;
+			bottom: 20vh;
+			box-shadow:  0px 5px 13px #c1c3c9;
+
+		}
+
+		.al{
+			background-color: #216f9b;
+			width: 100%;
+			height: 10px;
+		}
+
+		.se{
+			background-color: #ff6442;
+			width: 100%;
+			height: 10px;
+
+		}
+
+		.lu{
+			background-color: #ffbc58;
+			width: 100%;
+			height: 10px;
+
+		}
+
+		#logo{
+			position: absolute;
+			top: 0px;
+		}
+
+
+
+		#thumb{
+			position: relative;
+			width: auto;
+			height: auto;
+			opacity: 0%;
+		}
+
+		.nails{
+			position: absolute;
+			width: 550px;
+			height: 550px;
+			z-index: 2;
+		}
+
+
+
+
+
+		@keyframes animatedBackground {
+
+100% {
+	transform: translate(0%, 0%) scale(2,2);
+}
+
+}
+
+#background{
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+z-index: -1;
+position: absolute;
+opacity: 100%;
+}
+
+
+#wallpaper{
+top: -50%;
+left: -50%;
+width: 100vw;
+height: 100vh;
+position: absolute;
+background-image: url(indeximage/solid_vertical.svg);
+animation: animatedBackground 120s ease-in-out infinite alternate;
+transform: translate(50%, 50%) scale(2,2);
+}
+
+#frontground{
+width: 100vw;
+height: 100vh;
+z-index: 0;
+position: absolute;
+background-color: #f1f3f9;
+opacity: 0%;
+}
+
+
+#mousePad{
+	width: 0vw;
+	height: 0vh;
+	z-index: 100;
+	position: absolute;
+
+}
+
+
+
+
+#contacts{
+	
+	max-height: 200px;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-top: 50px;
+}
+
+#contact{
+	border-radius: 21px;
+	background: rgba( 241, 243, 249, 0.6 );
+	backdrop-filter: blur( 6px );
+	-webkit-backdrop-filter: blur( 6px );
+	box-shadow:  0px 13px 34px #c1c3c9;
+	height: 42px;
+	width: 140px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+#contactopener{
+	border-radius: 21px;
+	height: 42px;
+	width: 140px;
+	position: absolute;
+	display: none;	
+}
+#contactext{
+	height: 42px;
+	font-size: 13px;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+	color: #61656c;
+}
+
+#contactitle{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+
+.contitle{
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#email{
+	width: 0%;
+	opacity: 0%;
+}
+
+#instagram{
+	width: 0%;
+	opacity: 0%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+	#contactopener{
+	display: block;	
+}
+
+
+#main{
+	top: 55vh;
+
+}
+
+
+#contactitle{
+	display: none;
+}
+
+
+
+
+	#remote{
+		display: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+
+
+</head>
+
+<body>
+<div id='background'>
+	<div id='wallpaper'></div>
+</div>
+<div id='frontground'></div>
+<div id='mousePad'></div>
+
+<div id='main'>
+	<div id="circle">
+		<div id="thumb">
+			<img class="nails" id="a" src='indeximage/a.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="b" src='indeximage/b.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="c" src='indeximage/c.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+			<img class="nails" id="d" src='indeximage/d.png' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		</div>
+		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+	</div>
+	
+	<div id="contacts">
+		<div id="contact">
+			<img id="contactext" src="indeximage/contact.svg">
+			<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+			<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+		</div>
+		<div id="contactitle">
+			<p class='contitle' id="email">E-mail</p>
+			<p class='contitle' id="instagram">Instagram</p>
+		</div>
+		<div id="contactopener"></div>
+	</div>
+	</div>
+
+<div class="contents">
+
+	<div class="content" id="a_content">
+		<img class="contentLogo" src="indeximage/sirenlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			사용자가 목표에 도달하려는 과정에서 방해되는 요소를 차단하며 계획에서<br>
+			벗어나는 것을 방지하고 게으른 성격과 나쁜 습관을 고치는 알람 어플
+		</p>
+		<a class="cta" href="SIREN.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="b_content">
+		<img class="contentLogo" src="indeximage/silicontimerlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			세상에서 가장 아날로그적인 타이머인<br>
+			모래시계를 디지털로 재해석한 작품
+		</p>
+		<a class="cta" href="silicontimer.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="c_content">
+		<img class="takitLogo" src="indeximage/takitlogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			분리수거에 관심이 없거나 게으른 사람들을 위해<br>
+			분리수거를 쉽고 올바르게 즐길 수 있도록 하는 서비스
+		</p>
+		<a class="cta" href="takit.html">자세히보기</a>
+	</div>
+
+	<div class="content" id="d_content">
+		<img class="contentLogo" src="indeximage/bloodventurelogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<h1>2021</h1>
+		<p class="contentText">
+			적혈구가 비만, 음주, 흡연 등으로 인해 발생하는<br>
+			고지혈증을 해쳐나가며 오래오래 생존해야 하는 게임
+		</p>
+		<a class="cta" href="BLOODVENTURE.html">자세히보기</a>
+	</div>
+
+</div>
+
+
+
+
+	<div id='remote'>
+		<div id="follower"></div>
+
+		<div class='rLay'>
+			<p id="r1Text" class='rText'>SIREN</p>
+			<div id='r1Button' class='rButton'></div>
+		</div>
+		
+		<div class='rLay'>
+			<p id="r2Text" class='rText'>SiliconTimer</p>
+			<div id='r2Button' class='rButton'></div>
+		</div>
+
+		<div class='rLay'>
+			<div id='r3Button' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
+
+		</div>
+
+		<div class='rLay'>
+			<p id="r4Text" class='rText'>takit</p>
+			<div id='r4Button' class='rButton'></div>
+		</div>
+
+		<div class='rLay'>
+			<p id="r5Text" class='rText'>BLOODVENTURE</p>
+			<div id='r5Button' class='rButton'></div>
+		</div>
+
+	</div>
+	
+
+	
+
+
+
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	
+<script>
+$(document).ready(function(){
+
+
+
+$("#emailS").on('mouseover', function(){
+	$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+});
+$("#emailS").on('mouseleave', function(){
+	$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
+
+$("#instagramS").on('mouseover', function(){
+	$('#instagram').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+});
+$("#instagramS").on('mouseleave', function(){
+	$('#instagram').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
+
+
+$("#mousePad").on('mouseover', function(){
+	$('#logo').delay(600).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$(this).animate({'width':'0vw','height':'0vh'}, 0);
+});
+
+
+
+
+$("#contact").on('mouseover', function(){
+	$(this).stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+
+});
+
+$("#contact").on('mouseleave', function(){
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+});
+
+
+
+$("#r3Button").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
+});
+$("#r3Button").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
+});
+
+
+$("#r2Button").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r2Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+
+});
+$("#r2Button").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$("#r2Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+});
+
+
+$("#r1Button").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r1Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+
+});
+$("#r1Button").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
+	$("#r1Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+});
+
+
+$("#r4Button").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r4Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+});
+$("#r4Button").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');	
+	$("#r4Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+});
+
+
+$("#r5Button").on('mouseover', function(){
+	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$("#r5Text").stop().animate({'height':'30px', 'top':'-50px'}, 300, 'easeOutExpo');
+
+});
+$("#r5Button").on('mouseleave', function(){
+	$(this).stop().animate({'opacity':'66%'}, 100, 'easeInSine');
+	$("#r5Text").stop().animate({'height':'0px', 'top':'-40px'}, 300, 'easeOutExpo');
+});
+
+$("#contactopener").on('click', function(){
+	$(this).animate({'height':'0px'}, 0);
+	$('#contact').stop().animate({'width':'240px','height':'80px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'0%'}, 300);
+	$('.name_contact').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+});
+
+$("#frontground").on('click', function(){
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});
+
+
+
+
+
+$("#logo").on('click', function(){
+	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+	$(this).animate({'top':'-1000px'}, 1200, 'easeInExpo', function(){
+            $(location).attr('href','logo.html');
+        });	
+});
+
+
+
+
+
+$("#alsanse-slit").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#b_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#mousePad').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px'}, 600);
+});
+
+
+
+
+
+
+
+$("#r3Button").on('click', function(){
+	$(this).stop().animate({'opacity':'100%'}, 100, 'easeInSine');	
+	$('#circle').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 300, 'easeInOutCubic');
+	$('#alsanse-slit').stop().delay(100).animate({'height':'150px', 'bottom':'20vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#follower').stop().animate({'left':'153px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(100).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(150).animate({'top':'0px'}, 600, 'easeOutExpo');
+	$('#thumb').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().animate({'width':'0px'}, 200, 'easeInOutCubic');
+	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh'}, 600, 'easeOutQuad');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});
+
+
+$("#r2Button").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'76.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#b_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#frontground').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+
+});
+
+
+$("#r1Button").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'0px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#a_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#frontground').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});
+
+
+$("#r4Button").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'229.5px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#c_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#d_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#frontground').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});	
+
+$("#r5Button").on('click', function(){
+	$('#circle').stop().animate({'height':'550px', 'width':'550px', 'margin-bottom':'0px'}, 600, 'easeInOutCubic').animate({'left':'-210px'}, 600, 'easeInOutCubic');
+	$('#me').stop().animate({'height':'0px'}, 600, 'easeOutCubic');
+	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
+	$('#follower').stop().animate({'left':'306px', 'opacity':'100%'}, 300, 'easeOutExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1000px'}, 300, 'easeInCubic');
+	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#d').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
+	$('#a').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#b').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('#c').stop().animate({'opacity':'0%'}, 300, 'easeInCubic');
+	$('.contents').stop().delay(600).animate({'width':'550px'}, 600, 'easeInOutCubic');
+	$('#d_content').show().stop().animate({'opacity':'100%'}, 600, 'easeInOutCubic');
+	$('#a_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#b_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#c_content').stop().animate({'opacity':'0%'}, 600, 'easeInOutCubic').hide();
+	$('#frontground').stop().animate({'opacity':'100%'}, 600);
+	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh'}, 600, 'easeInOutQuart');
+	$('#contactopener').animate({'height':'42px'}, 0);
+	$('#contact').stop().animate({'height':'42px','width':'140px'}, 300, 'easeOutExpo');
+	$('#contactext').stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%'}, 300, 'easeOutExpo');
+
+});	
+
+
+});
+
+</script>
+
+</body>
+</html>
