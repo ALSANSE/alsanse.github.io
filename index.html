@@ -29,9 +29,10 @@
 <link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-/*
-*{border: 0.1px solid red;}
-*/
+
+html{
+	background-color: #000000;
+}
 
 body{
 	-ms-overflow-style: none; /* IE and Edge */
@@ -39,16 +40,26 @@ body{
 	background-color: #000000;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	align-content: center;
 	width: 100vw;
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-
 }
 
+#container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #f1f3f9;
+	border-radius: calc(34px / 2);
+	width: calc(100vw - 26px);
+	height: calc(100vh - 68px);
+	margin: 13px 13px 0 13px;}
 
 #main{
 	display: flex;
@@ -58,15 +69,27 @@ body{
 	position: relative;
 	background-color: #f1f3f9;
 	border-radius: calc(34px / 2);
-	width: calc(100vw - 21px);
-	height: calc(100vh - 76px);
+	width: calc(100vw - 26px);
+	height: calc(100vh - 68px);
+	margin: 13px 13px 0 13px;
 }
 
+#p3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #f1f3f9;
+	border-radius: calc(34px / 2);
+	width: calc(100vw - 26px);
+	height: calc(100vh - 68px);
+	margin: 13px 13px 0 13px;
+}
 
 #navigation{
 	width: calc(100vw - 21px);
 	height: 55px;
-	background-color: #000000;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -76,14 +99,61 @@ body{
 .menu{
 	color:#f1f3f9;
 	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 100;
-	font-size: 21px;
-	overflow: hidden;
-	cursor: pointer;
+	font-weight: 400;
+	font-size: 13px;
+	overflow:visible;
+	cursor: none;
 	height: 100%;
+	width: 123px;
+	text-align: center;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
+
+
+
+.listH{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	overflow: hidden;
+	padding: 0;
+	color: #ffbc58;
+	transition: 0.06s;
+}
+
+.list{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	overflow: hidden;
+	padding: 0;
+	transition: 0.06s;
+}
+
+.menu:hover{
+	text-decoration:underline;
+	font-size: 21px;
+	transition: 0.06s;
+}
+
+#l1H{height: 0px;}
+#l1{height: 21px;}
+#l2H{height: 0px;}
+#l2{height: 21px;}
+#l3H{height: 0px;}
+#l3{height: 21px;}
+#l4H{height: 0px;}
+#l4{height: 21px;}
+#l5H{height: 0px;}
+#l5{height: 21px;}
 
 ::-webkit-scrollbar{
 	display: none;
@@ -175,8 +245,9 @@ body{
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	width: 340px;
-	bottom: 46px;
+	width: 55px;
+	height: 55px;
+	bottom: 68px;
 	position: fixed;
 	z-index: 9;
 }
@@ -187,10 +258,11 @@ body{
 	display: flex;
 	background-color: #00000000;
 	width: 0px;
-	height: 40px;
+	height: 55px;
 	border-radius: 100%;
 	opacity: 100%;
 	z-index: 98;
+	cursor: pointer;
 }
 
 
@@ -329,6 +401,7 @@ body{
 	position: absolute;
 	background-color: #f1f3f9;
 	opacity: 0%;
+	
 }
 
 
@@ -379,7 +452,7 @@ body{
 	font-family: neue-haas-grotesk-display, sans-serif;
 	font-weight: 500;
 	color: #216f9b;
-	height: 40px;
+	height: 0px;
 	width: 100%;
 	text-decoration: none;
 	white-space: nowrap;
@@ -391,6 +464,7 @@ body{
 	overflow: hidden;
 	padding: 0px 0;
 	cursor: none;
+
 }
 
 
@@ -435,7 +509,6 @@ body{
 	position: absolute;
 	height: 0px;
 	top: 89px;
-	background-color: #ff6442;
 }
 
 
@@ -472,6 +545,7 @@ body{
 
 
 /*
+
 @media screen and (max-width: 720px) {
 
 
@@ -612,6 +686,9 @@ body{
 </head>
 
 <body>
+<!--
+<div id="container">
+-->
 <div id='main'>
 
 <div id="background"><div id='wallpaper'></div></div>
@@ -645,7 +722,7 @@ body{
 		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 	</div>
 	<div id="contactitle">
-		<p class='contitle' id="email">E-mail</p>
+		<p class='contitle' id="email">Mail</p>
 		<p class='contitle' id="instagram">Instagram</p>
 	</div>
 	<div id="contactopener"></div>
@@ -653,8 +730,37 @@ body{
 
 </div>
 
+
+<!--
+
+<div id='p3'>
+
+</div>
+	
+</div>
+-->
+
 <div id="navigation">
-	<div class="menu">MENU</div>
+	<div class="menu" id="m1">
+		<div class="listH" id="l1H">DESIGN</div>
+		<div class="list" id="l1">DESIGN</div>
+	</div>
+	<div class="menu" id="m2">
+		<div class="listH" id="l2H">VIDEO</div>
+		<div class="list" id="l2">VIDEO</div>
+	</div>
+	<div class="menu" id="m3">
+		<div class="listH" id="l3H">PHOTO</div>
+		<div class="list" id="l3">PHOTO</div>
+	</div>
+	<div class="menu" id="m4">
+		<div class="listH" id="l4H">GAME</div>
+		<div class="list" id="l4">GAME</div>
+	</div>
+	<div class="menu" id="m5">
+		<div class="listH" id="l5H">TOYBOX</div>
+		<div class="list" id="l5">TOYBOX</div>
+	</div>
 </div>
 
 
@@ -722,34 +828,27 @@ $("#mousePad").on('mouseover', function(){
 $("#contact").on('mouseover', function(){
 	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 00);
-	$('.name_contact').stop().animate({'opacity':'100%', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'100%', 'height':'40px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
 });
 
 $("#contact").on('mouseleave', function(){
 	$(this).stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
 	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 00);
-	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 0, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
 });
 
 
-$("#homeButton").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'66%'}, 300, 'easeOutExpo');
-});
-$("#homeButton").on('mouseleave', function(){
-	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
-});
 
 
-$("#interact-slit").on('mouseover', function(){
-	$('#under-slit').stop().animate({'height':'150px','width':'40px'}, 600, 'easeInOutExpo');
-	$('#upper-slit').stop().animate({'height':'0px','width':'40px'}, 600, 'easeInOutExpo');
 
-});
-$("#interact-slit").on('mouseleave', function(){
-	$('#under-slit').stop().animate({'height':'0px','width':'40px'}, 150, 'easeOutExpo');
-	$('#upper-slit').stop().animate({'height':'150px','width':'40px'}, 150, 'easeOutExpo');
 
+$(".menu").on('mouseover', function(){
+	$(this).stop().animate({'cursor':'none'}, 300, 'easeOutExpo');
 });
+$(".menu").on('mouseleave', function(){
+	$(this).stop().animate({'cursor':'default'}, 300, 'easeOutExpo');
+});
+
 
 
 
@@ -765,7 +864,7 @@ $("#contactopener").on('click', function(){
 $("#frontground").on('click', function(){
 	$('#contactopener').animate({'height':'55px'}, 0);
 	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%'}, 0);
+	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 0);
 	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
 });
 
@@ -792,7 +891,6 @@ $("#logo").on('click', function(){
 $(".menu").on('click', function(){
 //	$('#circle_guide').stop().animate({'height':'100vh', 'width':'100vw'}, 600, 'easeInOutExpo');
 //	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$(this).stop().animate({'height':'0px'}, 0);
 	$('#homeButton').stop().animate({'width':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
@@ -808,17 +906,85 @@ $(".menu").on('click', function(){
 //	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
 //	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
 //	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
-
 });
 
 
+$("#m1").on('click', function(){
+	$("#l1").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l1H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+});
 
 
+$("#m2").on('click', function(){
+	$("#l2").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+});
 
 
+$("#m3").on('click', function(){
+	$("#l3").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+});
+
+
+$("#m4").on('click', function(){
+	$("#l4").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+});
+
+
+$("#m5").on('click', function(){
+	$("#l5").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+});
 
 $("#homeButton").on('click', function(){
-	$(this).stop().animate({'opacity':'100%'}, 120, 'easeInSine');	
+	$(this).stop().delay(900).animate({'width':'0px'}, 0);	
 //	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
 //	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
 //	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
@@ -826,11 +992,20 @@ $("#homeButton").on('click', function(){
 	$('#logo').stop().delay(600).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 //	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
 //	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
-	$('#main').stop().delay(300).animate({'margin-right':'0vw'}, 600, 'easeInOutExpo');
-	$('.menu').stop().animate({'height':'34px'}, 0);
+	$('#main').stop().delay(300).animate({'margin-right':'13px'}, 600, 'easeInOutExpo');
 //	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
 //	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
 //	$('#container').stop().animate({'top':'200vh'}, 0);
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
 
 
 });
