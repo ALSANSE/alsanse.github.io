@@ -26,9 +26,25 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
 <meta property="og:description" content="Portfolio">
-<link rel="stylesheet" href="https://use.typekit.net/vnc0uxq.css">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+<script>(function(d) {var config = {kitId: 'jds8jip',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+	
+	
+<style>
+
+.typo{
+	font-family: eurostile-extended, sans-serif;
+	font-weight: 400;
+	font-weight: 900;
+
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
+
+	font-family: pretendard, sans-serif;
+	font-weight: 100;
+	font-weight: 400;
+	font-weight: 700;
+	font-weight: 900;
+}
 
 html{
 	background-color: #000000;
@@ -98,7 +114,7 @@ body{
 
 .menu{
 	color:#f1f3f9;
-	font-family: neue-haas-grotesk-display, sans-serif;
+	font-family: eurostile-extended, sans-serif;
 	font-weight: 400;
 	font-size: 13px;
 	overflow:visible;
@@ -217,28 +233,6 @@ body{
 }
 
 
-.separator{
-	display: flex;
-	gap: 34px;
-}
-
-
-.subjects{
-	width: 340px;
-	height: 340px;
-	background-color: #f1f3f9;
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Noto Sans KR', sans-serif;
-	text-decoration: none;
-	color: #000000;
-	font-weight: 100;
-	font-size: 3rem;
-
-}
-
 
 #remote{
 	display: flex;
@@ -303,51 +297,6 @@ body{
 	left: 153px;
 	opacity: 100%;
 }
-
-#alsanse-slit{
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	max-height: 150px;
-	width: 40px;
-	transform: translate(0, 0);
-	z-index: 1;
-	bottom: 10vh;
-	background-color: #ffbc58;
-	box-shadow:  0px 5px 8px #c1c3c9;
-}
-
-
-#upper-slit{
-	width: 40px;
-	height: 150px;
-	object-fit: fill;
-}
-
-
-#under-slit{
-	width: 40px;	
-	height: 0px;
-	object-fit: fill;
-}
-
-
-#interact-slit{
-	position: fixed;
-	display: flex;
-	height: 150px;
-	width: 40px;
-	z-index: 20;
-	bottom: 10vh;
-	cursor: pointer;
-}
-
-
-.slit{
-	height: 100%;
-	width: 100%;
-}
-
 
 #logo{
 	position: absolute;
@@ -449,8 +398,8 @@ body{
 
 .name_contact{
 	font-size: 1rem;
-	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 500;
+	font-family: pretendard, sans-serif;
+	font-weight: 400;
 	color: #216f9b;
 	height: 0px;
 	width: 100%;
@@ -513,8 +462,8 @@ body{
 
 
 .contitle{
-	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 500;
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
 	font-size: 21px;
 	overflow: hidden;
 	text-align: center;
@@ -722,7 +671,7 @@ body{
 		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 	</div>
 	<div id="contactitle">
-		<p class='contitle' id="email">Mail</p>
+		<p class='contitle' id="email">E-mail</p>
 		<p class='contitle' id="instagram">Instagram</p>
 	</div>
 	<div id="contactopener"></div>
