@@ -31,6 +31,12 @@
 	
 <style>
 
+/*
+*{
+	border: 1px solid red;
+}
+*/
+
 .typo{
 	font-family: eurostile-extended, sans-serif;
 	font-weight: 400;
@@ -56,7 +62,7 @@ body{
 	background-color: #000000;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
 	width: 100vw;
@@ -69,13 +75,13 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	position: relative;
-	background-color: #f1f3f9;
-	border-radius: calc(34px / 2);
 	width: calc(100vw - 26px);
 	height: calc(100vh - 68px);
-	margin: 13px 13px 0 13px;}
+	margin: 13px 13px 0 13px;
+	overflow: hidden;
+}
 
 #main{
 	display: flex;
@@ -85,26 +91,74 @@ body{
 	position: relative;
 	background-color: #f1f3f9;
 	border-radius: calc(34px / 2);
-	width: calc(100vw - 26px);
-	height: calc(100vh - 68px);
-	margin: 13px 13px 0 13px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
+#p1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #ff6442;
+	border-radius: calc(34px / 2);
+	width: 0%;
+	height: 100%;
+	overflow: hidden;
+}
+#p2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #ffbc58;
+	border-radius: calc(34px / 2);
+	width: 0%;
+	height: 100%;
+	overflow: hidden;
+}
 #p3{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	background-color: #f1f3f9;
+	background-color: #216f9b;
 	border-radius: calc(34px / 2);
-	width: calc(100vw - 26px);
-	height: calc(100vh - 68px);
-	margin: 13px 13px 0 13px;
+	width: 0%;
+	height: 100%;
+	overflow: hidden;
+}
+#p4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #447744;
+	border-radius: calc(34px / 2);
+	width: 0%;
+	height: 100%;
+	overflow: hidden;
+}
+#p5{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #ff2185;
+	border-radius: calc(34px / 2);
+	width: 0%;
+	height: 100%;
+	overflow: hidden;
 }
 
 #navigation{
-	width: calc(100vw - 21px);
+	width: 100vw;
 	height: 55px;
 	position: relative;
 	display: flex;
@@ -155,7 +209,7 @@ body{
 }
 
 .menu:hover{
-	text-decoration:underline;
+	transform: translate(0, -1px);
 	font-size: 21px;
 	transition: 0.06s;
 }
@@ -218,19 +272,7 @@ body{
 }
 
 
-#container{
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-wrap: wrap;
-	width: 100vw;
-	height: 100vh;
-	gap: 34px;
-	top: 200vh;
-}
+
 
 
 
@@ -635,111 +677,100 @@ body{
 </head>
 
 <body>
-<!--
+
 <div id="container">
--->
-<div id='main'>
 
-<div id="background"><div id='wallpaper'></div></div>
-
-<div id='frontground'></div>
-
-<div id='mousePad'></div>
-
-<div id="circle_guide">
-	<div id="circle">
-		<div id="backspace">
-			<div id="container">
-				<div class="separator">
-					<a class="subjects" href="old/design.html">디자인</a>
-					<a class="subjects" href="old/photography.html">사진들</a>
+	<div id='main'>
+		<div id="background"><div id='wallpaper'></div></div>
+		<div id='frontground'></div>
+		<div id='mousePad'></div>
+		<div id="circle_guide">
+			<div id="circle">
+				<div id="backspace">
+					<div id="container">
+						<div class="separator">
+							<a class="subjects" href="old/design.html">디자인</a>
+							<a class="subjects" href="old/photography.html">사진들</a>
+						</div>
+						<div class="separator">	
+							<a class="subjects" href="index2.html">곱셈머신</a>
+							<a class="subjects" href="old/quotes.html">한마디</a>
+						</div>
+					</div>
 				</div>
-				<div class="separator">	
-					<a class="subjects" href="index2.html">곱셈머신</a>
-					<a class="subjects" href="old/quotes.html">한마디</a>
-				</div>
+				<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			</div>
 		</div>
-		<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+		<div id="contacts">
+			<div id="contact">
+				<img id="contactext" src="indeximage/contact.svg">
+				<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
+				<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+			</div>
+			<div id="contactitle">
+				<p class='contitle' id="email">E-mail</p>
+				<p class='contitle' id="instagram">Instagram</p>
+			</div>
+			<div id="contactopener"></div>
+		</div>
 	</div>
-</div>
 
-<div id="contacts">
-	<div id="contact">
-		<img id="contactext" src="indeximage/contact.svg">
-		<a class='name_contact' id="emailS" href="mailto:alessandro.sejini@gmail.com">alessandro.sejini@gmail.com</a>
-		<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+	<div id='p1'>
+		design
 	</div>
-	<div id="contactitle">
-		<p class='contitle' id="email">E-mail</p>
-		<p class='contitle' id="instagram">Instagram</p>
+
+	<div id='p2'>
+		video
 	</div>
-	<div id="contactopener"></div>
-</div>
+
+	<div id='p3'>
+		photo
+	</div>
+
+	<div id='p4'>
+		game
+	</div>
+
+	<div id='p5'>
+		toybox
+	</div>
 
 </div>
-
-
-<!--
-
-<div id='p3'>
-
-</div>
-	
-</div>
--->
 
 <div id="navigation">
 	<div class="menu" id="m1">
-		<div class="listH" id="l1H">DESIGN</div>
-		<div class="list" id="l1">DESIGN</div>
+		<div class="listH" id="l1H"> DESIGN </div>
+		<div class="list" id="l1"> DESIGN </div>
 	</div>
 	<div class="menu" id="m2">
-		<div class="listH" id="l2H">VIDEO</div>
-		<div class="list" id="l2">VIDEO</div>
+		<div class="listH" id="l2H"> VIDEO </div>
+		<div class="list" id="l2"> VIDEO </div>
 	</div>
 	<div class="menu" id="m3">
-		<div class="listH" id="l3H">PHOTO</div>
-		<div class="list" id="l3">PHOTO</div>
+		<div class="listH" id="l3H"> PHOTO </div>
+		<div class="list" id="l3"> PHOTO </div>
 	</div>
 	<div class="menu" id="m4">
-		<div class="listH" id="l4H">GAME</div>
-		<div class="list" id="l4">GAME</div>
+		<div class="listH" id="l4H"> GAME </div>
+		<div class="list" id="l4"> GAME </div>
 	</div>
 	<div class="menu" id="m5">
-		<div class="listH" id="l5H">TOYBOX</div>
-		<div class="list" id="l5">TOYBOX</div>
+		<div class="listH" id="l5H"> TOYBOX </div>
+		<div class="list" id="l5"> TOYBOX </div>
 	</div>
 </div>
 
 
-	<div id='remote'>
-
-		<div class='rLay'>
-			<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
-		</div>
-
-
+<div id='remote'>
+	<div class='rLay'>
+		<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 	</div>
-	
-<!--
-	
-
-	<div id='alsanse-slit'>
-
-		<img id='upper-slit' src="indeximage/al-slit.jpg">
-		<img id='under-slit' src="indeximage/al-slit.jpg">
-
-	</div>
-
-<div id='interact-slit'></div>
-
--->
+</div>
 
 
-	<script src="jquery-3.5.1.js"></script>
-	<script src="jquery.easing.min.js"></script>
-	<script src="vanilla-tilt.js"></script>
+<script src="jquery-3.5.1.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="vanilla-tilt.js"></script>
 
 	
 <script>
@@ -843,7 +874,7 @@ $(".menu").on('click', function(){
 	$('#homeButton').stop().animate({'width':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
-	$('#main').stop().delay(150).animate({'margin-right':'200vw'}, 600, 'easeInOutExpo');
+	$('#main').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
 //	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 //	$('#frontground').stop().delay(600).animate({'opacity':'100%'}, 0);
 //	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh', 'margin-top':'0px'}, 600, 'easeInOutQuart');
@@ -870,6 +901,14 @@ $("#m1").on('click', function(){
 	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+
+	$("#p1").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+
+	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+
 });
 
 
@@ -885,8 +924,14 @@ $("#m2").on('click', function(){
 	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-});
 
+	$("#p2").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+	
+	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+});
 
 $("#m3").on('click', function(){
 	$("#l3").stop().animate({'height':'0px'}, 300, 'easeInCirc');
@@ -900,6 +945,14 @@ $("#m3").on('click', function(){
 	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+
+	$("#p3").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+		
+	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+
 });
 
 
@@ -915,6 +968,15 @@ $("#m4").on('click', function(){
 	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+
+	$("#p4").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');	
+
+	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+
+
 });
 
 
@@ -930,6 +992,15 @@ $("#m5").on('click', function(){
 	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+
+	$("#p5").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+		
+	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+
+
 });
 
 $("#homeButton").on('click', function(){
@@ -941,7 +1012,7 @@ $("#homeButton").on('click', function(){
 	$('#logo').stop().delay(600).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 //	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
 //	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
-	$('#main').stop().delay(300).animate({'margin-right':'13px'}, 600, 'easeInOutExpo');
+	$('#main').stop().delay(300).animate({'margin-right':'0px'}, 600, 'easeInOutExpo');
 //	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
 //	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
 //	$('#container').stop().animate({'top':'200vh'}, 0);
@@ -956,6 +1027,12 @@ $("#homeButton").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
 
+	$("#main").stop().animate({'width':'100%'}, 600, 'easeOutCubic');
+	$('#p1').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+	$('#p2').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+	$('#p3').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+	$('#p4').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+	$('#p5').stop().animate({'width':'0%'}, 600, 'easeInCubic');
 
 });
 
