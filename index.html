@@ -535,6 +535,16 @@ body{
 
 
 
+#aniGuard{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
+
+
+
 /*
 
 @media screen and (max-width: 720px) {
@@ -678,6 +688,8 @@ body{
 
 <body>
 
+<div id="aniGuard"></div>
+
 <div id="container">
 
 	<div id='main'>
@@ -806,13 +818,13 @@ $("#mousePad").on('mouseover', function(){
 
 
 $("#contact").on('mouseover', function(){
-	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutCirc');
 	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 00);
 	$('.name_contact').stop().animate({'opacity':'100%', 'height':'40px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
 });
 
 $("#contact").on('mouseleave', function(){
-	$(this).stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutCirc');
 	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 00);
 	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
 });
@@ -886,6 +898,7 @@ $(".menu").on('click', function(){
 //	$('#circle').stop().delay(300).animate({'border-radius':'0px'}, 900, 'easeOutSine');
 //	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
 //	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
+	$('#aniGuard').css('display','block').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
 });
 
 
@@ -1033,6 +1046,8 @@ $("#homeButton").on('click', function(){
 	$('#p3').stop().animate({'width':'0%'}, 600, 'easeInCubic');
 	$('#p4').stop().animate({'width':'0%'}, 600, 'easeInCubic');
 	$('#p5').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+
+	$('#aniGuard').css('display','block').delay(900).queue(function (next) {$(this).css('display', 'none');next();});
 
 });
 
