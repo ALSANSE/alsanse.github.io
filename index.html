@@ -77,9 +77,8 @@ body{
 	align-items: center;
 	flex-direction: row;
 	position: relative;
-	width: calc(100vw - 26px);
-	height: calc(100vh - 68px);
-	margin: 13px 13px 0 13px;
+	width: calc(100vw);
+	height: calc(100vh - 89px);
 	overflow: hidden;
 }
 
@@ -90,7 +89,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #f1f3f9;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -103,7 +102,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #ff6442;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
@@ -115,7 +114,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #ffbc58;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
@@ -127,7 +126,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #216f9b;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
@@ -139,7 +138,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #447744;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
@@ -151,7 +150,7 @@ body{
 	flex-direction: column;
 	position: relative;
 	background-color: #ff2185;
-	border-radius: calc(34px / 2);
+	border-radius: 0;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
@@ -159,11 +158,14 @@ body{
 
 #navigation{
 	width: 100vw;
-	height: 55px;
-	position: relative;
+	height: 89px;
+	position: fixed;
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #000000;
+	z-index: 1;
 }
 
 .menu{
@@ -283,7 +285,7 @@ body{
 	align-items: center;
 	width: 55px;
 	height: 55px;
-	bottom: 68px;
+	bottom: 63px;
 	position: fixed;
 	z-index: 9;
 }
@@ -543,7 +545,21 @@ body{
 	z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
+#rounders{
+	display: flex;
+	justify-content: space-between;
+	border: #ffbc58 solid 1px;
+	width: 100vw;
+}
 
+.rounder{
+	height: 17px;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	border: #ff6442 solid 1px;
+	position: relative;
+}
 
 /*
 
@@ -691,7 +707,6 @@ body{
 <div id="aniGuard"></div>
 
 <div id="container">
-
 	<div id='main'>
 		<div id="background"><div id='wallpaper'></div></div>
 		<div id='frontground'></div>
@@ -748,7 +763,6 @@ body{
 	</div>
 
 </div>
-
 <div id="navigation">
 	<div class="menu" id="m1">
 		<div class="listH" id="l1H"> DESIGN </div>
@@ -885,7 +899,7 @@ $(".menu").on('click', function(){
 	$('#homeButton').stop().animate({'width':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
-	$('#main').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#main').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 //	$('#thumb').stop().animate({'opacity':'100%'}, 300, 'easeInCubic');
 //	$('#frontground').stop().delay(600).animate({'opacity':'100%'}, 0);
 //	$('#contacts').stop().animate({'max-height':'0px','min-height':'0px','opacity':'0%','top':'36vh', 'margin-top':'0px'}, 600, 'easeInOutQuart');
@@ -914,12 +928,12 @@ $("#m1").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 
-	$("#p1").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+	$("#p1").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 
-	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 
 });
 
@@ -937,12 +951,12 @@ $("#m2").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 
-	$("#p2").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+	$("#p2").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 	
-	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p1').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 });
 
 $("#m3").on('click', function(){
@@ -958,12 +972,12 @@ $("#m3").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 
-	$("#p3").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+	$("#p3").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 		
-	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p1').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 
 });
 
@@ -981,12 +995,12 @@ $("#m4").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 
-	$("#p4").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');	
+	$("#p4").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');	
 
-	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p5').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p1').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p5').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 
 
 });
@@ -1005,12 +1019,12 @@ $("#m5").on('click', function(){
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
 
-	$("#p5").stop().delay(450).animate({'width':'100%'}, 300, 'easeOutCubic');
+	$("#p5").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 		
-	$('#p1').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p2').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p3').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
-	$('#p4').stop().delay(150).animate({'width':'0%'}, 300, 'easeInCubic');
+	$('#p1').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p2').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p3').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
+	$('#p4').stop().delay(150).animate({'width':'0%','border-radius':'100px'}, 300, 'easeInCubic');
 
 
 });
@@ -1039,12 +1053,12 @@ $("#homeButton").on('click', function(){
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 	$("#l5H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
 
-	$("#main").stop().animate({'width':'100%'}, 600, 'easeOutCubic');
-	$('#p1').stop().animate({'width':'0%'}, 600, 'easeInCubic');
-	$('#p2').stop().animate({'width':'0%'}, 600, 'easeInCubic');
-	$('#p3').stop().animate({'width':'0%'}, 600, 'easeInCubic');
-	$('#p4').stop().animate({'width':'0%'}, 600, 'easeInCubic');
-	$('#p5').stop().animate({'width':'0%'}, 600, 'easeInCubic');
+	$("#main").stop().animate({'width':'100%','border-radius':'0px'}, 600, 'easeOutCubic');
+	$('#p1').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p2').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p3').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p4').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p5').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
 
 	$('#aniGuard').css('display','block').delay(900).queue(function (next) {$(this).css('display', 'none');next();});
 
