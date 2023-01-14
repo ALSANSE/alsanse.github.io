@@ -363,6 +363,7 @@ body{
 	overflow: hidden;
 	position: absolute;
 	opacity: 100%;
+	display: block;
 }
 
 
@@ -595,18 +596,6 @@ body{
 		<div id='mousePad'></div>
 		<div id="circle_guide">
 			<div id="circle">
-				<div id="backspace">
-					<div id="container">
-						<div class="separator">
-							<a class="subjects" href="old/design.html">디자인</a>
-							<a class="subjects" href="old/photography.html">사진들</a>
-						</div>
-						<div class="separator">	
-							<a class="subjects" href="index2.html">곱셈머신</a>
-							<a class="subjects" href="old/quotes.html">한마디</a>
-						</div>
-					</div>
-				</div>
 				<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			</div>
 		</div>
@@ -629,19 +618,19 @@ body{
 	</div>
 
 	<div id='p2'>	<!--CINEMA-->
-		<img class="titles" src="indeximage/titles/CINEMA.svg">
+		<iframe class="contents" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p3'>	<!--FRAMES-->
-		<img class="titles" src="indeximage/titles/FRAMES.svg">
+		<iframe class="contents" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p4'>	<!--ARCADE-->
-		<img class="titles" src="indeximage/titles/ARCADE.svg">
+		<iframe class="contents" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p5'>	<!--TOYBOX-->
-		<img class="titles" src="indeximage/titles/TOYBOX.svg">
+		<iframe class="contents" src="menu/design.html"></iframe>
 	</div>
 
 </div>
@@ -794,7 +783,62 @@ $(".menu").on('click', function(){
 //	$('#backspace').stop().animate({'height':'100.1vh', 'width':'100.1vw', 'border-radius':'0px'}, 900, 'easeInOutExpo');
 //	$('#container').stop().delay(300).animate({'top':'0vh'}, 900, 'easeOutExpo');
 	$('#aniGuard').css('display','block').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#background').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#contacts').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#circle_guide').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
+
 });
+
+
+
+
+
+$("#homeButton").on('click', function(){
+	$(this).stop().delay(900).animate({'width':'0px'}, 0);	
+//	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
+//	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
+//	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
+	$('#minilogo').stop().delay(600).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(600).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+//	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
+//	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
+	$('#main').stop().delay(300).animate({'margin-right':'0px'}, 600, 'easeInOutExpo');
+//	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
+//	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
+//	$('#container').stop().animate({'top':'200vh'}, 0);
+	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
+
+	$("#main").stop().animate({'width':'100%','border-radius':'0px'}, 600, 'easeOutCubic');
+	$('#p1').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p2').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p3').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p4').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+	$('#p5').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
+
+	$('#aniGuard').css('display','block').delay(900).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#background').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
+	$('#contacts').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
+	$('#circle_guide').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
+
+});
+
+
+
+
+
+
+
+
+
 
 
 $("#m1").on('click', function(){
@@ -911,40 +955,7 @@ $("#m5").on('click', function(){
 
 });
 
-$("#homeButton").on('click', function(){
-	$(this).stop().delay(900).animate({'width':'0px'}, 0);	
-//	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
-//	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
-//	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
-	$('#minilogo').stop().delay(600).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(600).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
-//	$('#frontground').stop().delay(1200).animate({'opacity':'0%'}, 1200);
-//	$('#contacts').stop().animate({'max-height':'200px','min-height':'100px','opacity':'100%','top':'0vh', 'margin-top':'10px'}, 600, 'easeOutQuad');
-	$('#main').stop().delay(300).animate({'margin-right':'0px'}, 600, 'easeInOutExpo');
-//	$('#circle').stop().animate({'border-radius':'105px'}, 600, 'easeOutExpo');
-//	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
-//	$('#container').stop().animate({'top':'200vh'}, 0);
-	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
-	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
-	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
-	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
-	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0px'}, 450, 'easeInCirc');
 
-	$("#main").stop().animate({'width':'100%','border-radius':'0px'}, 600, 'easeOutCubic');
-	$('#p1').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
-	$('#p2').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
-	$('#p3').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
-	$('#p4').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
-	$('#p5').stop().animate({'width':'0%','border-radius':'100px'}, 600, 'easeInCubic');
-
-	$('#aniGuard').css('display','block').delay(900).queue(function (next) {$(this).css('display', 'none');next();});
-
-});
 
 
 
