@@ -203,6 +203,7 @@ body{
 	padding: 0;
 	color: #ffbc58;
 	transition: 0.06s;
+	text-decoration: none;
 }
 
 .list{
@@ -617,45 +618,45 @@ body{
 	</div>
 
 	<div id='p1'>	<!--DESIGN-->
-		<iframe class="contents" src="menu/design.html"></iframe>
+		<iframe class="contents" name="design" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p2'>	<!--CINEMA-->
-		<iframe class="contents" src="menu/design.html"></iframe>
+		<iframe class="contents" name="design" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p3'>	<!--FRAMES-->
-		<iframe class="contents" src="menu/design.html"></iframe>
+		<iframe class="contents" name="design" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p4'>	<!--ARCADE-->
-		<iframe class="contents" src="menu/design.html"></iframe>
+		<iframe class="contents" name="design" src="menu/design.html"></iframe>
 	</div>
 
 	<div id='p5'>	<!--TOYBOX-->
-		<iframe class="contents" src="menu/toybox.html"></iframe>
+		<iframe class="contents" name="toybox" src="menu/toybox.html"></iframe>
 	</div>
 
 </div>
 <div id="navigation">
 	<div class="menu" id="m1">
-		<div class="listH" id="l1H"> DESIGN </div>
+		<a class="listH" id="l1H" href="menu/design.html" target="design"> DESIGN </a>
 		<div class="list" id="l1"> DESIGN </div>
 	</div>
 	<div class="menu" id="m2">
-		<div class="listH" id="l2H"> CINEMA </div>
+		<a class="listH" id="l2H" href="menu/design.html" target="design"> CINEMA </a>
 		<div class="list" id="l2"> CINEMA </div>
 	</div>
 	<div class="menu" id="m3">
-		<div class="listH" id="l3H"> FRAMES </div>
+		<a class="listH" id="l3H" href="menu/design.html" target="design"> FRAMES </a>
 		<div class="list" id="l3"> FRAMES </div>
 	</div>
 	<div class="menu" id="m4">
-		<div class="listH" id="l4H"> ARCADE </div>
+		<a class="listH" id="l4H" href="menu/design.html" target="design"> ARCADE </a>
 		<div class="list" id="l4"> ARCADE </div>
 	</div>
 	<div class="menu" id="m5">
-		<div class="listH" id="l5H"> TOYBOX </div>
+		<a class="listH" id="l5H" href="menu/toybox.html" target="toybox"> TOYBOX </a>
 		<div class="list" id="l5"> TOYBOX </div>
 	</div>
 </div>
@@ -847,17 +848,17 @@ $("#homeButton").on('click', function(){
 
 
 $("#m1").on('click', function(){
-	$("#l1").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-	$("#l1H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l1").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
 
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 
 	$("#p1").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 
@@ -870,17 +871,17 @@ $("#m1").on('click', function(){
 
 
 $("#m2").on('click', function(){
-	$("#l2").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-	$("#l2H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l2").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 
 	$("#p2").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 	
@@ -891,17 +892,17 @@ $("#m2").on('click', function(){
 });
 
 $("#m3").on('click', function(){
-	$("#l3").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-	$("#l3H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l3").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 
 	$("#p3").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 		
@@ -914,17 +915,17 @@ $("#m3").on('click', function(){
 
 
 $("#m4").on('click', function(){
-	$("#l4").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-	$("#l4H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l4").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 
 	$("#p4").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');	
 
@@ -938,17 +939,17 @@ $("#m4").on('click', function(){
 
 
 $("#m5").on('click', function(){
-	$("#l5").stop().animate({'height':'0px'}, 300, 'easeInCirc');
-	$("#l5H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
+	$("#l5").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeInCirc');
+	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
 
 	$("#p5").stop().delay(450).animate({'width':'100%','border-radius':'0px'}, 300, 'easeOutCubic');
 		
