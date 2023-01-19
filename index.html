@@ -471,11 +471,14 @@ body{
 
 
 #contactopener{
-	border-radius: calc(55px / 2);
+	border-radius: calc(63px / 2);
 	height: 55px;
 	width: 144px;
+	padding: 4px;
+	transform: translate(0, -4px);
 	position: absolute;
 	display: none;
+	cursor: pointer;
 }
 
 
@@ -562,7 +565,7 @@ body{
 
 
 
-	.menu:hover{
+.menu:hover{
 	transform: translate(0, 0px);
 	font-size: 13px;
 	transition: 0s;
@@ -571,9 +574,11 @@ body{
 
 
 
-
-
-
+#contactopener{
+	display: block;
+	background-color: #ff6442;
+	opacity: 50%;
+}
 
 
 }
@@ -729,19 +734,21 @@ $(".menu").on('mouseleave', function(){
 
 
 
-$("#contactopener").on('click', function(){
-	$(this).animate({'height':'0px'}, 0);
-	$('#contact').stop().animate({'width':'233px','height':'89px'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'100%'}, 0);
-	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 300);
-
+$("#contactopener").on('mouseover', function(){
+	$(this).animate({'height':'0px','padding':'0px'}, 0);
+	$('#contact').stop().animate({'height':'89px','width':'233px'}, 150, 'easeInSine');
+	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 00);
+	$('.name_contact').stop().animate({'opacity':'100%', 'height':'40px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
+	$('#contitle').stop().animate({'opacity':'0%'}, 0);
 });
 
 $("#frontground").on('click', function(){
-	$('#contactopener').animate({'height':'55px'}, 0);
-	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
-	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 0);
-	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
+	$('#contactopener').animate({'height':'55px','padding':'4px'}, 0);
+	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeInOutSine');
+	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 00);
+	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
+	$('#contitle').stop().animate({'opacity':'100%'}, 0);
+
 });
 
 
