@@ -38,9 +38,8 @@
 */
 
 .typo{
-	font-family: eurostile-extended, sans-serif;
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
 	font-weight: 400;
-	font-weight: 900;
 
 	font-family: source-code-pro, monospace;
 	font-weight: 400;
@@ -176,7 +175,7 @@ body{
 
 .menu{
 	color:#f1f3f9;
-	font-family: eurostile-extended, sans-serif;
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
 	font-weight: 400;
 	font-size: 13px;
 	overflow:visible;
@@ -204,6 +203,7 @@ body{
 	color: #ffbc58;
 	transition: 0.06s;
 	text-decoration: none;
+	cursor: none;
 }
 
 .list{
@@ -287,12 +287,13 @@ body{
 
 #remote{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column-reverse;
 	justify-content: center;
 	align-items: center;
 	width: 55px;
-	height: 55px;
-	bottom: 63px;
+	height: 0px;
+	bottom: 24px;
+	transform: translate(0, -63px);
 	position: fixed;
 	z-index: 9;
 }
@@ -302,8 +303,8 @@ body{
 	overflow: hidden;
 	display: flex;
 	background-color: #00000000;
-	width: 0px;
-	height: 55px;
+	width: 55px;
+	height: 0px;
 	border-radius: 100%;
 	opacity: 100%;
 	z-index: 98;
@@ -321,7 +322,7 @@ body{
 .rText{
 	position: absolute;
 	font-size: 16px;
-	font-family: neue-haas-grotesk-display, sans-serif;
+	font-family: pretendard, sans-serif;
 	font-weight: 700;
 	top:-50px;
 	text-align: center;
@@ -600,7 +601,7 @@ body{
 		<div id='mousePad'></div>
 		<div id="circle_guide">
 			<div id="circle">
-				<img id='logo' src='indeximage/alsanse.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+				<img id='logo' src='indeximage/alsanse3d.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 			</div>
 		</div>
 		<div id="contacts">
@@ -640,31 +641,31 @@ body{
 </div>
 <div id="navigation">
 	<div class="menu" id="m1">
-		<a class="listH" id="l1H" href="menu/design.html" target="design"> DESIGN </a>
-		<div class="list" id="l1"> DESIGN </div>
+		<a class="listH" id="l1H" href="menu/design.html" target="design"> D E S I G N </a>
+		<div class="list" id="l1"> D E S I G N </div>
 	</div>
 	<div class="menu" id="m2">
-		<a class="listH" id="l2H" href="menu/design.html" target="design"> CINEMA </a>
-		<div class="list" id="l2"> CINEMA </div>
+		<a class="listH" id="l2H" href="menu/design.html" target="design"> C I N E M A </a>
+		<div class="list" id="l2"> C I N E M A </div>
 	</div>
 	<div class="menu" id="m3">
-		<a class="listH" id="l3H" href="menu/design.html" target="design"> FRAMES </a>
-		<div class="list" id="l3"> FRAMES </div>
+		<a class="listH" id="l3H" href="menu/design.html" target="design"> F R A M E S </a>
+		<div class="list" id="l3"> F R A M E S </div>
 	</div>
 	<div class="menu" id="m4">
-		<a class="listH" id="l4H" href="menu/design.html" target="design"> ARCADE </a>
-		<div class="list" id="l4"> ARCADE </div>
+		<a class="listH" id="l4H" href="menu/design.html" target="design"> A R C A D E </a>
+		<div class="list" id="l4"> A R C A D E </div>
 	</div>
 	<div class="menu" id="m5">
-		<a class="listH" id="l5H" href="menu/toybox.html" target="toybox"> TOYBOX </a>
-		<div class="list" id="l5"> TOYBOX </div>
+		<a class="listH" id="l5H" href="menu/toybox.html" target="toybox"> T O Y B O X </a>
+		<div class="list" id="l5"> T O Y B O X </div>
 	</div>
 </div>
 
 
-<div id='remote'>
-	<div class='rLay'>
-		<div id='homeButton' class='rButton'><img id='minilogo' src='indeximage/minilogo.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
+<div id="remote">
+	<div class="rLay">
+		<div id="homeButton" class="rButton"><img id="minilogo" src="indeximage/minilogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 	</div>
 </div>
 
@@ -773,7 +774,7 @@ $("#logo").on('click', function(){
 $(".menu").on('click', function(){
 //	$('#circle_guide').stop().animate({'height':'100vh', 'width':'100vw'}, 600, 'easeInOutExpo');
 //	$('#alsanse-slit').stop().animate({'height':'0px', 'bottom':'5vh', 'opacity':'0%'}, 300, 'easeInCubic');
-	$('#homeButton').stop().animate({'width':'40px'}, 0);
+	$('#homeButton').stop().animate({'height':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
 	$('#main').stop().delay(150).animate({'width':'0%','border-radius':'100%'}, 300, 'easeInCubic');
@@ -792,6 +793,7 @@ $(".menu").on('click', function(){
 	$('#background').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#contacts').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').delay(450).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#remote').stop().animate({'height':'55px', 'bottom':'0px'}, 0);
 
 });
 
@@ -800,7 +802,7 @@ $(".menu").on('click', function(){
 
 
 $("#homeButton").on('click', function(){
-	$(this).stop().delay(900).animate({'width':'0px'}, 0);	
+	$(this).stop().delay(900).animate({'height':'0px'}, 0);	
 //	$('#circle_guide').stop().animate({'height':'210px', 'width':'210px', 'left':'0px'}, 600, 'easeInOutExpo');
 //	$('#alsanse-slit').stop().delay(120).animate({'height':'150px', 'bottom':'10vh', 'opacity':'100%'}, 600, 'easeInOutCubic');
 //	$('#interact-slit').stop().delay(600).animate({'height':'150px'}, 0);
@@ -813,15 +815,15 @@ $("#homeButton").on('click', function(){
 //	$('#backspace').stop().animate({'height':'0px', 'width':'0px', 'border-radius':'105px'}, 600, 'easeOutExpo');
 //	$('#container').stop().animate({'top':'200vh'}, 0);
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 
 	$("#main").stop().animate({'width':'100%','border-radius':'0%'}, 600, 'easeOutCubic');
 	$('#p1').stop().animate({'width':'0%','border-radius':'100%'}, 600, 'easeInCubic');
@@ -834,6 +836,9 @@ $("#homeButton").on('click', function(){
 	$('#background').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
 	$('#contacts').delay(450).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#circle_guide').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
+	$('.rLay').stop().delay(900).animate({'height':'0px'}, 0);
+	$('#remote').stop().delay(900).animate({'height':'0px', 'bottom':'24px'}, 0);
+
 });
 
 
@@ -848,16 +853,17 @@ $("#homeButton").on('click', function(){
 
 $("#m1").on('click', function(){
 	$("#l1").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
+
 
 	$("#p1").stop().delay(450).animate({'width':'100%','border-radius':'0%'}, 300, 'easeOutCubic');
 
@@ -870,16 +876,16 @@ $("#m1").on('click', function(){
 
 $("#m2").on('click', function(){
 	$("#l2").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 
 	$("#p2").stop().delay(450).animate({'width':'100%','border-radius':'0%'}, 300, 'easeOutCubic');
 	
@@ -892,16 +898,16 @@ $("#m2").on('click', function(){
 
 $("#m3").on('click', function(){
 	$("#l3").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 
 	$("#p3").stop().delay(450).animate({'width':'100%','border-radius':'0%'}, 300, 'easeOutCubic');
 		
@@ -914,16 +920,16 @@ $("#m3").on('click', function(){
 
 $("#m4").on('click', function(){
 	$("#l4").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l5").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 
 	$("#p4").stop().delay(450).animate({'width':'100%','border-radius':'0%'}, 300, 'easeOutCubic');	
 
@@ -936,16 +942,16 @@ $("#m4").on('click', function(){
 
 $("#m5").on('click', function(){
 	$("#l5").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
-	$("#l5H").stop().animate({'height':'100%'}, 300, 'easeOutCirc');
+	$("#l5H").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
 
 	$("#l1").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l1H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l1H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l2").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l2H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l2H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l3").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l3H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l3H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 	$("#l4").stop().animate({'height':'21px'}, 300, 'easeOutCirc');
-	$("#l4H").stop().animate({'height':'0%'}, 300, 'easeOutCirc');
+	$("#l4H").stop().animate({'height':'0px'}, 300, 'easeOutCirc');
 
 	$("#p5").stop().delay(450).animate({'width':'100%','border-radius':'0%'}, 300, 'easeOutCubic');
 		
