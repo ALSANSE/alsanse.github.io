@@ -21,7 +21,7 @@
 <link rel="manifest" href="indeximage/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#f1f3f9">
 <meta property="og:title" content="Sejin Kim">
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
@@ -76,8 +76,8 @@ body{
 	align-items: stretch;
 	flex-direction: column;
 	position: relative;
-	width: calc(100vw);
-	height: calc(100vh - 00px);
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -116,12 +116,10 @@ body{
 	align-content: center;
 	justify-content: center;
 	position: fixed;
-	max-width: 720px;
-	min-width: 340px;
-	height: 210px;	
+
+
 	flex-wrap: wrap;
 	cursor: none;
-	padding: 0 27.5px;
 	bottom: 0;
 	}
 
@@ -140,7 +138,8 @@ body{
 	width: 144px;
 	height: 89px;
 	overflow: hidden;
-	padding: 27.5px 0;
+	padding-bottom: 89px;
+
 
 
 	}
@@ -584,7 +583,17 @@ body{
 	display: block;
 }
 	
-
+#intro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 340px);
+	flex-wrap: nowrap;
+	}
 	
 	
 	
@@ -595,14 +604,10 @@ body{
 	align-content: center;
 	justify-content: center;
 	position: fixed;
-	width: 340px;
-	height: 340px;	
 	flex-wrap: wrap;
 	cursor: none;
-	padding: 0 27.5px;
 	bottom: 0;
-	background-color: gray;
-
+	margin-bottom: 89px;
 	}
 
 	
@@ -641,7 +646,7 @@ body{
 
 	#intro{
 		flex-direction: row;
-		height: calc(100vh - 210px);
+		height: calc(100vh - 155px);
 		gap: 34px;
 
 	}
@@ -651,17 +656,11 @@ body{
 	}
 
 	
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	.tile{
+		padding-bottom: 34px;
+	}
 	
 	
 	
@@ -765,7 +764,7 @@ body{
 		<div id="intro">
 			<div id="circle_guide">
 				<div id="circle">
-					<img id='logo' src='indeximage/alsanse3d.svg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+					<img id='logo' src='indeximage/alsanse3d.jpeg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 				</div>
 			</div>
 		
@@ -986,36 +985,36 @@ $(document).ready(function(){
 
 
 $("#t1").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#t2").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t3").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t4").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'opacity':'100%'}, 90);
+	$("#t2").stop().animate({'opacity':'33%'}, 90);
+	$("#t3").stop().animate({'opacity':'33%'}, 90);
+	$("#t4").stop().animate({'opacity':'33%'}, 90);
 });
 	
 $("#t2").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#t1").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t3").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t4").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'opacity':'100%'}, 90);
+	$("#t1").stop().animate({'opacity':'33%'}, 90);
+	$("#t3").stop().animate({'opacity':'33%'}, 90);
+	$("#t4").stop().animate({'opacity':'33%'}, 90);
 });
 
 $("#t3").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#t4").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t1").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t2").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'opacity':'100%'}, 90);
+	$("#t4").stop().animate({'opacity':'33%'}, 90);
+	$("#t1").stop().animate({'opacity':'33%'}, 90);
+	$("#t2").stop().animate({'opacity':'33%'}, 90);
 });	
 
 $("#t4").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
-	$("#t3").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t2").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
-	$("#t1").stop().animate({'opacity':'55%'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'opacity':'100%'}, 90);
+	$("#t3").stop().animate({'opacity':'33%'}, 90);
+	$("#t2").stop().animate({'opacity':'33%'}, 90);
+	$("#t1").stop().animate({'opacity':'33%'}, 90);
 });
 	
 
 $("#tiles").on('mouseleave', function(){
-	$(".tile").stop().animate({'opacity':'100%'}, 300, 'easeOutExpo');
+	$(".tile").stop().animate({'opacity':'100%'}, 600);
 });
 
 
