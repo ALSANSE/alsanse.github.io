@@ -1062,7 +1062,7 @@ $("#homeButton").on('click', function(){
 	$('#tt1').stop().animate({'left':'-145.5px','height':'68px','width':'68px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
 		.queue(function (next) {$(this).css('left', '-145.5px').css('height', '81px').css('width', '81px');next();})
-	$('#t1').stop().delay(600).animate({'opacity':'1'}, 0);
+	$('#t1').stop().animate({'height':'68px'}, 90, 'easeInSine').delay(510).animate({'opacity':'1'}, 0);
 	
 	$('#tt2s').stop()
 		.delay(300)
@@ -1075,7 +1075,7 @@ $("#homeButton").on('click', function(){
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
 		.queue(function (next) {$(this).css('left', '-48.5px').css('height', '81px').css('width', '81px');next();})
 
-	$('#t2').stop().delay(600).animate({'opacity':'1'}, 0);
+	$('#t2').stop().animate({'height':'68px'}, 90, 'easeInSine').delay(510).animate({'opacity':'1'}, 0);
 	
 	$('#tt3s').stop()
 		.delay(300)
@@ -1088,7 +1088,7 @@ $("#homeButton").on('click', function(){
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
 			.queue(function (next) {$(this).css('left', '48.5px').css('height', '81px').css('width', '81px');next();})
 
-	$('#t3').stop().delay(600).animate({'opacity':'1'}, 0);
+	$('#t3').stop().animate({'height':'68px'}, 90, 'easeInSine').delay(510).animate({'opacity':'1'}, 0);
 	
 	$('#tt4s').stop()
 		.delay(300)
@@ -1101,7 +1101,7 @@ $("#homeButton").on('click', function(){
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
 		.queue(function (next) {$(this).css('left', '145.5px').css('height', '81px').css('width', '81px');next();})
 
-	$('#t4').stop().delay(600).animate({'opacity':'1'}, 0);	
+	$('#t4').stop().animate({'height':'68px'}, 90, 'easeInSine').delay(510).animate({'opacity':'1'}, 0);	
 });
 
 
