@@ -115,9 +115,7 @@ body{
 	align-content: flex-end;
 	justify-content: center;
 	position: fixed;
-	height: 0px;
 	flex-wrap: nowrap;
-	cursor: pointer;
 	bottom: 0;
 	}
 
@@ -130,16 +128,18 @@ body{
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	width: 102px;
+	width: 97px;
 	height: 68px;
 	overflow: hidden;
 	margin-bottom: 89px;
+		cursor: pointer;
+
 	}
 
 	#tt1s{
 		position: fixed;
 		z-index: 2;
-		bottom: 137.5px;
+		bottom: 129.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -150,9 +150,9 @@ body{
 	#tt1{
 		background-color: #0085bc;
 		border-radius: 100%;
-		width: 97px;
-		height: 97px;	
-		left: -184.5px;
+		width: 81px;
+		height: 81px;	
+		left: -145.5px;
 		transform: translate(0%,50%);
 		position: relative;
 
@@ -162,7 +162,7 @@ body{
 		#tt2s{
 		position: fixed;
 		z-index: 2;
-		bottom: 137.5px;
+		bottom: 129.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -173,9 +173,9 @@ body{
 	#tt2{
 		background-color: #ffbc58;
 		border-radius: 100%;
-		width: 97px;
-		height: 97px;	
-		left: -61.5px;
+		width: 81px;
+		height: 81px;	
+		left: -48.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -186,7 +186,7 @@ body{
 	#tt3s{
 		position: fixed;
 		z-index: 2;
-		bottom: 137.5px;
+		bottom: 129.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -197,9 +197,9 @@ body{
 	#tt3{
 		background-color: #ff6442;
 		border-radius: 100%;
-		width: 97px;
-		height: 97px;	
-		left: 61.5px;
+		width: 81px;
+		height: 81px;	
+		left: 48.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -210,7 +210,7 @@ body{
 		#tt4s{
 		position: fixed;
 		z-index: 2;
-		bottom: 137.5px;
+		bottom: 129.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -221,9 +221,9 @@ body{
 	#tt4{
 		background-color: #000000;
 		border-radius: 100%;
-		width: 97px;
-		height: 97px;	
-		left: 184.5px;
+		width: 81px;
+		height: 81px;	
+		left: 145.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -890,35 +890,35 @@ $(document).ready(function(){
 
 
 $("#t1").on('mouseover', function(){
-	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$(this).stop().animate({'height':'81px'}, 90, 'easeOutSine');
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
 });
 	
 $("#t2").on('mouseover', function(){
-	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$(this).stop().animate({'height':'81px'}, 90, 'easeOutSine');
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
 });
 
 $("#t3").on('mouseover', function(){
-	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$(this).stop().animate({'height':'81px'}, 90, 'easeOutSine');
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
 });	
 
 $("#t4").on('mouseover', function(){
-	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$(this).stop().animate({'height':'81px'}, 90, 'easeOutSine');
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
 });
 	
 
-$("#tiles").on('mouseleave', function(){
+$(".tile").on('mouseleave', function(){
 	$(".tile").stop().animate({'height':'68px'}, 300, 'easeOutCirc');
 });
 
@@ -1054,52 +1054,52 @@ $("#homeButton").on('click', function(){
 	
 	$('#tt1s').stop()
 		.delay(300)
-		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
 
-	$('#tt1').stop().animate({'left':'-184.5px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+	$('#tt1').stop().animate({'left':'-145.5px','height':'68px','width':'68px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-		.queue(function (next) {$(this).css('left', '-184.5px').css('height', '97px').css('width', '97px');next();})
+		.queue(function (next) {$(this).css('left', '-145.5px').css('height', '81px').css('width', '81px');next();})
 	$('#t1').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt2s').stop()
 		.delay(300)
-		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
 
-	$('#tt2').stop().animate({'left':'-62px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+	$('#tt2').stop().animate({'left':'-48.5px','height':'68px','width':'68px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-		.queue(function (next) {$(this).css('left', '-61.5px').css('height', '97px').css('width', '97px');next();})
+		.queue(function (next) {$(this).css('left', '-48.5px').css('height', '81px').css('width', '81px');next();})
 
 	$('#t2').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt3s').stop()
 		.delay(300)
-		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
 
-	$('#tt3').stop().animate({'left':'62px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+	$('#tt3').stop().animate({'left':'48px','height':'68px','width':'68px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-			.queue(function (next) {$(this).css('left', '61.5').css('height', '97px').css('width', '97px');next();})
+			.queue(function (next) {$(this).css('left', '48.5px').css('height', '81px').css('width', '81px');next();})
 
 	$('#t3').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt4s').stop()
 		.delay(300)
-		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
 
-	$('#tt4').stop().animate({'left':'185px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+	$('#tt4').stop().animate({'left':'145.5px','height':'68px','width':'68px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-		.queue(function (next) {$(this).css('left', '184.5px').css('height', '97px').css('width', '97px');next();})
+		.queue(function (next) {$(this).css('left', '145.5px').css('height', '81px').css('width', '81px');next();})
 
 	$('#t4').stop().delay(600).animate({'opacity':'1'}, 0);	
 });
