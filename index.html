@@ -111,8 +111,8 @@ body{
 #tiles{
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	align-content: center;
+	align-items: flex-end;
+	align-content: flex-end;
 	justify-content: center;
 	position: fixed;
 
@@ -123,10 +123,7 @@ body{
 	}
 
 	
-.cement{
-	display: flex;
 
-	}
 	
 .tile{
 	display: flex;
@@ -134,17 +131,16 @@ body{
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	width: 144px;
+	width: 123px;
 	height: 89px;
 	overflow: hidden;
 	padding-bottom: 89px;
-
 	}
 
 	#tt1s{
 		position: fixed;
 		z-index: 2;
-		bottom: 133.5px;
+		bottom: 137.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -155,10 +151,9 @@ body{
 	#tt1{
 		background-color: #0085bc;
 		border-radius: 100%;
-		width: 89px;
-		height: 89px;	
-		left: -216px;
-		border-radius: 100%;
+		width: 97px;
+		height: 97px;	
+		left: -184.5px;
 		transform: translate(0%,50%);
 		position: relative;
 
@@ -168,7 +163,7 @@ body{
 		#tt2s{
 		position: fixed;
 		z-index: 2;
-		bottom: 133.5px;
+		bottom: 137.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -179,9 +174,9 @@ body{
 	#tt2{
 		background-color: #ffbc58;
 		border-radius: 100%;
-		width: 89px;
-		height: 89px;	
-		left: -72px;
+		width: 97px;
+		height: 97px;	
+		left: -61.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -192,7 +187,7 @@ body{
 	#tt3s{
 		position: fixed;
 		z-index: 2;
-		bottom: 133.5px;
+		bottom: 137.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -203,9 +198,9 @@ body{
 	#tt3{
 		background-color: #ff6442;
 		border-radius: 100%;
-		width: 89px;
-		height: 89px;	
-		left: 72px;
+		width: 97px;
+		height: 97px;	
+		left: 61.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -216,7 +211,7 @@ body{
 		#tt4s{
 		position: fixed;
 		z-index: 2;
-		bottom: 133.5px;
+		bottom: 137.5px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -227,9 +222,9 @@ body{
 	#tt4{
 		background-color: #000000;
 		border-radius: 100%;
-		width: 89px;
-		height: 89px;	
-		left: 216px;
+		width: 97px;
+		height: 97px;	
+		left: 184.5px;
 		border-radius: 100%;
 		transform: translate(0%,50%);
 		position: relative;
@@ -324,7 +319,7 @@ body{
 	height: 0px;
 	bottom: 0px;
 	left: 50vw;
-	transform: translate(-28px, -106px);
+	transform: translate(-28px, -122px);
 	position: fixed;
 	z-index: 9;
 }
@@ -628,7 +623,7 @@ body{
 #contactopener{
 	display: block;
 }
-	
+		/*
 #intro{
 	display: flex;
 	flex-direction: column;
@@ -661,13 +656,9 @@ body{
 	display: flex;
 	position: relative;
 	}
-	
+
 .tile{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
-	position: relative;
 	width: 123px;
 	height: 89px;
 	overflow: hidden;
@@ -675,11 +666,9 @@ body{
 
 
 	}
+	*/
 	
-	
-	#remote{
-	transform: translate(-28px, -122px);
-}
+
 	
 	
 	
@@ -707,10 +696,7 @@ body{
 
 	
 
-	
-	.tile{
-		padding-bottom: 34px;
-	}
+
 	
 	
 	
@@ -720,7 +706,6 @@ body{
 	width: 144px;
 	height: 144px;
 	padding: 0px;
-	z-index: 399999999;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -763,9 +748,7 @@ body{
 }
 	
 	
-#remote{
-	transform: translate(-28px, -50px);
-}
+
 	
 }
 	
@@ -836,15 +819,10 @@ body{
 		
 
 	<div id="tiles">
-		<div class="cement">
 		<img class="tile" id="t1" src="indeximage/design_icon.svg"></img>
 		<img class="tile" id="t2" src="indeximage/frames_icon.svg"></img>
-
-		</div>
-		<div class="cement">
 		<img class="tile" id="t3" src="indeximage/cinema_icon.svg"></img>
 		<img class="tile" id="t4" src="indeximage/toybox_icon.svg"></img>
-		</div>
 	</div>
 
 
@@ -859,27 +837,7 @@ body{
 	
 	
 	
-<!--
-	
-<div id="navigation">
-	<div class="menu" id="m1">
-		<a class="listH" id="l1H" href="menu/design.html" target="design"> DESIGN </a>
-		<div class="list" id="l1"> DESIGN </div>
-	</div>
-	<div class="menu" id="m2">
-		<a class="listH" id="l2H" href="menu/design.html" target="design"> CINEMA </a>
-		<div class="list" id="l2"> CINEMA </div>
-	</div>
-	<div class="menu" id="m3">
-		<a class="listH" id="l3H" href="menu/design.html" target="design"> FRAMES </a>
-		<div class="list" id="l3"> FRAMES </div>
-	</div>
-	<div class="menu" id="m4">
-		<a class="listH" id="l4H" href="menu/toybox.html" target="toybox"> TOYBOX </a>
-		<div class="list" id="l4"> TOYBOX </div>
-	</div>
-</div>
--->
+
 
 <div id="remote">
 	<div class="rLay">
@@ -933,40 +891,43 @@ $(document).ready(function(){
 
 
 $("#t1").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 90);
-	$("#t2").stop().animate({'opacity':'33%'}, 90);
-	$("#t3").stop().animate({'opacity':'33%'}, 90);
-	$("#t4").stop().animate({'opacity':'33%'}, 90);
+	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$("#t2").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t3").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t4").stop().animate({'height':'89px'}, 90, 'easeInSine');
 });
 	
 $("#t2").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 90);
-	$("#t1").stop().animate({'opacity':'33%'}, 90);
-	$("#t3").stop().animate({'opacity':'33%'}, 90);
-	$("#t4").stop().animate({'opacity':'33%'}, 90);
+	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$("#t1").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t3").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t4").stop().animate({'height':'89px'}, 90, 'easeInSine');
 });
 
 $("#t3").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 90);
-	$("#t4").stop().animate({'opacity':'33%'}, 90);
-	$("#t1").stop().animate({'opacity':'33%'}, 90);
-	$("#t2").stop().animate({'opacity':'33%'}, 90);
+	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$("#t4").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t1").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t2").stop().animate({'height':'89px'}, 90, 'easeInSine');
 });	
 
 $("#t4").on('mouseover', function(){
-	$(this).stop().animate({'opacity':'100%'}, 90);
-	$("#t3").stop().animate({'opacity':'33%'}, 90);
-	$("#t2").stop().animate({'opacity':'33%'}, 90);
-	$("#t1").stop().animate({'opacity':'33%'}, 90);
+	$(this).stop().animate({'height':'97px'}, 90, 'easeInSine');
+	$("#t3").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t2").stop().animate({'height':'89px'}, 90, 'easeInSine');
+	$("#t1").stop().animate({'height':'89px'}, 90, 'easeInSine');
 });
 	
 
 $("#tiles").on('mouseleave', function(){
-	$(".tile").stop().animate({'opacity':'100%'}, 600);
+	$(".tile").stop().animate({'height':'89px'}, 300, 'easeOutCirc');
 });
 
 
-	
+$("#intro").on('mouseover', function(){
+	$(".tile").stop().animate({'height':'89px'}, 300, 'easeOutCirc');
+
+});
 	
 	
 $("#emailS").on('mouseover', function(){
@@ -1070,7 +1031,7 @@ $(".tile").on('click', function(){
 	$('#background').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#contacts').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
-	$('#remote').stop().animate({'height':'0px'}, 0);
+	$('#remote').stop().animate({'height':'15px'}, 0);
 
 });
 
@@ -1086,47 +1047,62 @@ $("#homeButton").on('click', function(){
 
 
 	$('#aniGuard').css('display','block').delay(1200).queue(function (next) {$(this).css('display', 'none');next();});
-	$('#background').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
-	$('#contacts').delay(450).queue(function (next) {$(this).css('display', 'flex');next();});
-	$('#circle_guide').delay(450).queue(function (next) {$(this).css('display', 'block');next();});
+	$('#background').queue(function (next) {$(this).css('display', 'block');next();});
+	$('#contacts').queue(function (next) {$(this).css('display', 'flex');next();});
+	$('#circle_guide').queue(function (next) {$(this).css('display', 'block');next();});
 	$('.rLay').stop().delay(900).animate({'height':'0px'}, 0);
-	$('#remote').stop().delay(600).animate({'height':'0px'}, 0);
+	$('#remote').stop().delay(600).animate({'height':'15px'}, 0);
 	
 	$('#tt1s').stop()
 		.delay(300)
 		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-	$('#tt1').stop().animate({'left':'-216px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+
+	$('#tt1').stop().animate({'left':'-184.5px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-	$('#t1').stop().delay(600).animate({'height':'89px'}, 0);
+		.queue(function (next) {$(this).css('left', '-184.5px').css('height', '97px').css('width', '97px');next();})
+	$('#t1').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt2s').stop()
 		.delay(300)
 		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-	$('#tt2').stop().animate({'left':'-72px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+
+	$('#tt2').stop().animate({'left':'-62px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-	$('#t2').stop().delay(600).animate({'height':'89px'}, 0);
+		.queue(function (next) {$(this).css('left', '-61.5px').css('height', '97px').css('width', '97px');next();})
+
+	$('#t2').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt3s').stop()
 		.delay(300)
 		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-	$('#tt3').stop().animate({'left':'72px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+
+	$('#tt3').stop().animate({'left':'62px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-	$('#t3').stop().delay(600).animate({'height':'89px'}, 0);
+			.queue(function (next) {$(this).css('left', '61.5').css('height', '97px').css('width', '97px');next();})
+
+	$('#t3').stop().delay(600).animate({'opacity':'1'}, 0);
 	
 	$('#tt4s').stop()
 		.delay(300)
 		.animate({'bottom':'133.5px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-	$('#tt4').stop().animate({'left':'216px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
+		.queue(function (next) {$(this).css('bottom', '137.5px');next();})
+
+	$('#tt4').stop().animate({'left':'185px','height':'89px','width':'89px'}, 600, 'easeInOutCubic')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-	$('#t4').stop().delay(600).animate({'height':'89px'}, 0);	
+		.queue(function (next) {$(this).css('left', '184.5px').css('height', '97px').css('width', '97px');next();})
+
+	$('#t4').stop().delay(600).animate({'opacity':'1'}, 0);	
 });
 
 
@@ -1147,7 +1123,7 @@ $("#t1").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
-	$('#t1').stop().delay(300).animate({'height':'0'}, 0);
+	$('#t1').stop().delay(300).animate({'opacity':'0'}, 0);
 });
 
 $("#t2").on('click', function(){
@@ -1158,7 +1134,7 @@ $("#t2").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
-	$('#t2').stop().delay(300).animate({'height':'0'}, 0);
+	$('#t2').stop().delay(300).animate({'opacity':'0'}, 0);
 });
 	
 $("#t3").on('click', function(){
@@ -1169,7 +1145,7 @@ $("#t3").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
-	$('#t3').stop().delay(300).animate({'height':'0'}, 0);
+	$('#t3').stop().delay(300).animate({'opacity':'0'}, 0);
 });
 	
 $("#t4").on('click', function(){
@@ -1180,7 +1156,7 @@ $("#t4").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
-	$('#t4').stop().delay(300).animate({'height':'0'}, 0);
+	$('#t4').stop().delay(300).animate({'opacity':'0'}, 0);
 });
 	
 	
