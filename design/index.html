@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sejin Kim</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="indeximage/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="indeximage/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="indeximage/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="indeximage/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="indeximage/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="indeximage/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="indeximage/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="indeximage/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="indeximage/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="indeximage/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="indeximage/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="indeximage/favicon/favicon-16x16.png">
+<link rel="manifest" href="indeximage/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Sejin Kim">
+<meta property="og:type" content="website">
+<meta property="og:image" content="indeximage/Thumbnail.jpg">
+<meta property="og:description" content="Portfolio">
+<style>
+    
+
+body{
+    background-color: #f1f3f9;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 1px;
+    padding: 0;
+    width: calc(100vw - 2px);
+    height: 100vh;
+}
+
+
+
+#wallpaper{
+	top: -50%;
+	left: -50%;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-image: url(../indeximage/solid_vertical.svg);
+	animation: animatedBackground 120s ease-in-out infinite alternate;
+	transform: translate(50%, 50%) scale(2,2);
+}
+
+
+#container{
+	display: none;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: column;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#main{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #f1f3f9;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+}
+
+#intro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 210px);
+	flex-wrap: nowrap;
+	}
+	
+#tiles{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	align-content: flex-end;
+	justify-content: center;
+	position: fixed;
+	flex-wrap: nowrap;
+	bottom: 0;
+	}
+
+.tile{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	width: 97px;
+	height: 68px;
+	overflow: hidden;
+	margin-bottom: 89px;
+	cursor: pointer;
+	}
+
+#t1{
+    opacity: 0;
+}
+
+#titles{
+		position: fixed;
+		z-index: 2;
+		bottom: 50vh;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+        opacity: 0;
+	}
+		
+#title{
+		background-color: #0085bc;
+		border-radius: 0%;
+		width: 100vw;
+		height: 100vh;	
+		left: 0px;
+		transform: translate(0%,50%);
+		position: relative;
+	}
+
+#circle_guide{
+	position: relative;
+	width: 233px;
+	height: 233px;
+	padding: 40px;
+	margin-bottom: 0px;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#circle{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: calc(233px / 2);
+	background-color: #ffffff;
+	overflow: hidden;
+	box-shadow:  0px 13px 34px #c1c3c9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#remote{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	width: 55px;
+	height: 15px;
+	bottom: 0px;
+	left: 50vw;
+	transform: translate(-27.5px, -34px);
+	position: fixed;
+	z-index: 98;
+}
+
+
+#homeButton{
+	overflow: hidden;
+	display: flex;
+	background-color: #00000000;
+	width: 55px;
+	height: 40px;
+	border-radius: 100%;
+	opacity: 100%;
+	z-index: 98;
+	cursor: pointer;
+}
+
+
+.rLay{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#minilogo{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	z-index: 101;
+}
+
+#logo{
+	position: absolute;
+	bottom: -1000px;
+	width: 233px;
+	height: 233px;
+}
+
+
+#contacts{	
+	max-height: 200px;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+
+#contact{
+	background: rgba( 241, 243, 249, 0 );
+	backdrop-filter: blur( 8px );
+	-webkit-backdrop-filter: blur( 8px );
+	box-shadow: 0px 13px 34px #c1c3c9;
+	height: 55px;
+	width: 144px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	border-radius: calc(55px / 2);
+
+}
+
+#titleStart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0085bc;
+    position: fixed;
+    z-index: 97;
+}
+
+
+#box{
+    max-width: 810px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:55px;
+    padding:144px 89px 89px 89px;
+}
+
+.contents{
+    width: 377px;
+    height: 377px;
+    background-color: #ffbc58;
+    border-radius: 10px;
+    overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+<img id="titleStart" src="../indeximage/design_icon.svg">
+<div id="box">
+    <a class="contents" href="../takit.html"><img src="thumbnails/tmbtakit.jpg"></a>
+    <a class="contents" href="../SIREN.html"><img src="thumbnails/tmbsiren.jpg"></a>
+    <a class="contents" href="../silicontimer.html"><img src="thumbnails/tmbsilicontimer.jpg"></a>
+    <a class="contents" href="../DUMPDUMB/index.html"><img src="thumbnails/tmbdumpdumb.jpg"></a>
+</div>
+
+
+
+
+
+<div id="container">
+	<div id='main'>
+		<div id="background"><div id='wallpaper'></div></div>
+		<div id="intro">
+			<div id="circle_guide">
+				<div id="circle">
+					<img id='logo' src='../indeximage/alsanse3d.jpeg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+				</div>
+			</div>
+			<div id="contacts">
+				<div id="contact">
+					<img id="contactext" src="../indeximage/contact.svg">
+				</div>
+			</div>
+		</div>
+		<div id="tiles">
+			<img class="tile" id="t1" src="../indeximage/design_icon.svg"></img>
+			<img class="tile" id="t2" src="../indeximage/frames_icon.svg"></img>
+			<img class="tile" id="t3" src="../indeximage/cinema_icon.svg"></img>
+			<img class="tile" id="t4" src="../indeximage/toybox_icon.svg"></img>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div id="remote">
+	<div class="rLay">
+		<div id="homeButton" class="rButton"><img id="minilogo" src="../indeximage/minilogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
+	</div>
+</div>
+
+
+<div id="titles">	
+    <img id="title" src="../indeximage/design_icon.svg"></img>
+</div>
+	
+
+<script src="../engine/jquery-3.5.1.js"></script>
+<script src="../engine/jquery.easing.min.js"></script>
+<script src="../engine/pilot.js"></script>
+
+
+<script>
+
+
+
+$(document).ready(function(){
+ 
+ 
+    $(document).ready(function(){
+        $('#titleStart').stop().delay(900).animate({'height':'89px','width':'810px','margin':'21px','border-radius':'10px'}, 600, 'easeOutExpo');
+    });
+
+
+
+ 
+ $("#homeButton").on('click', function(){
+    $('#titleStart').stop().animate({'height':'100vh','width':'100vw','margin':'0px','border-radius':'0px'}, 600, 'easeOutExpo').delay(10).queue(function (next) {$(this).css('display', 'none');next();});
+    $(this).stop().delay(1200).animate({'height':'0px'}, 0);	
+	$('#minilogo').stop().delay(900).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(900).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
+
+    $('#titles').stop()
+        .delay(590)
+        .delay(0, function (next) {$(this).css('display', 'flex');next();})
+        .animate({'opacity':'1'}, 0)
+		.delay(300)
+		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
+		.delay(600)
+		.queue(function (next) {$(this).css('display', 'none');next();})
+		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
+        .delay(0, function(){$(location).attr('href','../index.html');});
+	$('#title').stop().delay(300).animate({'left':'-145.5px','height':'68px','width':'68px'}, 1200, 'easeInOutExpo')
+		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
+		.queue(function (next) {$(this).css('left', '-145.5px').css('height', '81px').css('width', '81px');next();})
+	$('#t1').stop().delay(1190).animate({'opacity':'1'}, 0);
+	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
+ });
+ 
+
+     
+ });
+ 
+
+ 
+
+
+</script>
+
+</body>
+</html>
