@@ -150,7 +150,7 @@ body{
 	
 	
 	#tt1{
-		background-color: #0085bc;
+		background-color: #000000;
 		border-radius: 100%;
 		width: 81px;
 		height: 81px;	
@@ -173,7 +173,7 @@ body{
 	
 	
 	#tt2{
-		background-color: #ffbc58;
+		background-color: #000000;
 		border-radius: 100%;
 		width: 81px;
 		height: 81px;	
@@ -197,7 +197,7 @@ body{
 	
 	
 	#tt3{
-		background-color: #ff6442;
+		background-color: #000000;
 		border-radius: 100%;
 		width: 81px;
 		height: 81px;	
@@ -435,7 +435,6 @@ body{
 	overflow: hidden;
 	padding: 0px 0;
 	cursor: none;
-
 }
 
 
@@ -508,6 +507,51 @@ body{
 }
 
 
+
+
+#titleTitles{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+	position: absolute;
+	height: 0px;
+	top: -68px;
+}
+
+.titleTitle{
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#tDesign{
+	width: 0%;
+	opacity: 0%;
+}
+
+#tFrames{
+	width: 0%;
+	opacity: 0%;
+}
+
+#tCinema{
+	width: 0%;
+	opacity: 0%;
+}
+
+#tToybox{
+	width: 0%;
+	opacity: 0%;
+}
+
+
+
+
+
 @keyframes animatedBackground {
 
 100% {
@@ -567,50 +611,7 @@ body{
 #contactopener{
 	display: block;
 }
-		/*
-#intro{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	position: relative;
-	width: 100%;
-	height: calc(100vh - 340px);
-	flex-wrap: nowrap;
-	}
-	
-	
-	
-	#tiles{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	position: fixed;
-	flex-wrap: wrap;
-	cursor: none;
-	bottom: 0;
-	margin-bottom: 89px;
-	}
 
-	
-.cement{
-	display: flex;
-	position: relative;
-	}
-
-.tile{
-	flex-direction: column;
-	width: 123px;
-	height: 89px;
-	overflow: hidden;
-	padding: 17px 0;
-
-
-	}
-	*/
 	
 
 	
@@ -761,8 +762,14 @@ body{
 		
 		
 		
-
 		<div id="tiles">
+			<div id="titleTitles">
+				<p class='titleTitle' id="tDesign">Designed by ALSANSE</p>
+				<p class='titleTitle' id="tFrames">AL—BUM</p>
+				<p class='titleTitle' id="tCinema">ceramic_plastic</p>
+				<p class='titleTitle' id="tToybox">ToyBox</p>
+			</div>
+	
 			<img class="tile" id="t1" src="indeximage/design_icon.svg"></img>
 			<img class="tile" id="t2" src="indeximage/frames_icon.svg"></img>
 			<img class="tile" id="t3" src="indeximage/cinema_icon.svg"></img>
@@ -839,6 +846,10 @@ $("#t1").on('mouseover', function(){
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
+	$('#tDesign').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 });
 	
 $("#t2").on('mouseover', function(){
@@ -846,6 +857,10 @@ $("#t2").on('mouseover', function(){
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
+	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 });
 
 $("#t3").on('mouseover', function(){
@@ -853,6 +868,10 @@ $("#t3").on('mouseover', function(){
 	$("#t4").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
+	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 });	
 
 $("#t4").on('mouseover', function(){
@@ -860,10 +879,19 @@ $("#t4").on('mouseover', function(){
 	$("#t3").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t2").stop().animate({'height':'68px'}, 90, 'easeInSine');
 	$("#t1").stop().animate({'height':'68px'}, 90, 'easeInSine');
+	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 });
 	
 $(".tile").on('mouseleave', function(){
 	$(".tile").stop().animate({'height':'68px'}, 300, 'easeOutCirc');
+	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+
 });
 
 $("#intro").on('mouseover', function(){
@@ -957,6 +985,10 @@ $(".tile").on('click', function(){
 	$('#contacts').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#remote').stop().animate({'height':'15px'}, 0);
+	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#tToybox').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 
 });
 
