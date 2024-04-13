@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sejin Kim</title>
+<title>7.1.5a03</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
@@ -281,7 +281,21 @@ body{
     overflow: hidden;
 }
 
+@media screen and (max-width: 720px) {
 
+	#box{
+    max-width: 810px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:55px;
+    padding:157px 0px 89px 0px;
+}
+
+}
 
 
 
@@ -289,13 +303,13 @@ body{
 </head>
 
 <body>
-<!--
+
 
 
 <img id="titleStart" src="../indeximage/design_icon.svg">
 
 
--->
+
 
 <div id="box">
     <a class="contents" href="../takit.html"><img src="thumbnails/tmbtakit.jpg"></a>
@@ -370,11 +384,11 @@ body{
 
 $(document).ready(function(){
  
- /*
+
     $(document).ready(function(){
         $('#titleStart').stop().delay(900).animate({'height':'89px','width':'400px','margin':'34px','border-radius':'44.5px'}, 600, 'easeOutExpo');
     });
-*/
+
 
 
  
