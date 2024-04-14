@@ -570,7 +570,7 @@ body{
 	height: 100vh;
 	position: fixed;
 	display: none;
-	z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+	z-index: 999999999999999999999999999999999999999;
 }
 
 
@@ -982,7 +982,7 @@ $(".tile").on('click', function(){
 	$('#homeButton').stop().animate({'height':'40px'}, 0);
 	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
 	$('#logo').stop().animate({'bottom':'-1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
-	$('#aniGuard').css('display','block').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#aniGuard').css('display','block').delay(1200).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#background').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#contacts').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
