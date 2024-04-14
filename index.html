@@ -21,7 +21,7 @@
 <link rel="manifest" href="indeximage/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#f1f3f9">
 <meta property="og:title" content="Sejin Kim">
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
@@ -1095,6 +1095,9 @@ $("#t2").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
+		.delay(0)
+		.delay(0, function(){$(location).attr('href','frames/index.html');});
+
 	$('#t2').stop().animate({'height':'81px'}, 90, 'easeOutSine').delay(210).animate({'opacity':'0'}, 0);
 });
 	
@@ -1110,6 +1113,9 @@ $("#t3").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
+		.delay(0)
+		.delay(0, function(){$(location).attr('href','cinema/index.html');});
+
 	$('#t3').stop().animate({'height':'81px'}, 90, 'easeOutSine').delay(210).animate({'opacity':'0'}, 0);
 });
 	
@@ -1125,6 +1131,9 @@ $("#t4").on('click', function(){
 		.animate({'border-radius':'0%'}, 300, 'easeOutCirc')
 		.delay(90)
 		.animate({'left':'0px','height':'100vh','width':'100vw'}, 600, 'easeInOutCubic')
+		.delay(0)
+		.delay(0, function(){$(location).attr('href','toybox/index.html');});
+
 	$('#t4').stop().animate({'height':'81px'}, 90, 'easeOutSine').delay(210).animate({'opacity':'0'}, 0);
 });
 	

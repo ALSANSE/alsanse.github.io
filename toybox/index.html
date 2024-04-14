@@ -121,7 +121,7 @@ body{
 	cursor: pointer;
 	}
 
-#t1{
+#t4{
     opacity: 0;
 }
 
@@ -436,7 +436,7 @@ top: -34px;
 
 
 
-<img id="titleStart" src="../indeximage/design_icon.svg">
+<img id="titleStart" src="../indeximage/toybox_icon.svg">
 <div id="titleBack"></div>
 
 
@@ -479,10 +479,10 @@ top: -34px;
 		</div>
 
 		<div id="tiles">
-			<a href="index.html"><img class="tile" id="t1" src="../indeximage/design_icon.svg"></img></a>
+			<img class="tile" id="t1" src="../indeximage/design_icon.svg"></img>
 			<img class="tile" id="t2" src="../indeximage/frames_icon.svg"></img>
 			<img class="tile" id="t3" src="../indeximage/cinema_icon.svg"></img>
-			<img class="tile" id="t4" src="../indeximage/toybox_icon.svg"></img>
+			<a href="index.html"><img class="tile" id="t4" src="../indeximage/toybox_icon.svg"></img></a>
 		</div>
 	</div>
 </div>
@@ -501,7 +501,7 @@ top: -34px;
 
 
 <div id="titles">	
-    <img id="title" src="../indeximage/design_icon.svg"></img>
+    <img id="title" src="../indeximage/toybox_icon.svg"></img>
 </div>
 
 
@@ -556,10 +556,10 @@ $(document).ready(function(){
 		.queue(function (next) {$(this).css('display', 'none');next();})
 		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
         .delay(0, function(){$(location).attr('href','../index.html');});
-	$('#title').stop().delay(900).animate({'left':'-145.5px','height':'68px','width':'68px'}, 1200, 'easeInOutExpo')
+	$('#title').stop().delay(900).animate({'left':'145.5px','height':'68px','width':'68px'}, 1200, 'easeInOutExpo')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
-		.queue(function (next) {$(this).css('left', '-145.5px').css('height', '81px').css('width', '81px');next();})
-	$('#t1').stop().delay(2190).animate({'opacity':'1'}, 0);
+		.queue(function (next) {$(this).css('left', '145.5px').css('height', '81px').css('width', '81px');next();})
+	$('#t4').stop().delay(2190).animate({'opacity':'1'}, 0);
 	$('#container').delay(990).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
 
