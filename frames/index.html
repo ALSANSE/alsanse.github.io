@@ -490,7 +490,7 @@ top: -34px;
 
 		<div id="tiles">
 			<img class="tile" id="t1" src="../indeximage/design_icon.svg"></img>
-			<a href="index.html"></a><img class="tile" id="t2" src="../indeximage/frames_icon.svg"></img></a>
+			<a href="index.html"><img class="tile" id="t2" src="../indeximage/frames_icon.svg"></img></a>
 			<img class="tile" id="t3" src="../indeximage/cinema_icon.svg"></img>
 			<img class="tile" id="t4" src="../indeximage/toybox_icon.svg"></img>
 		</div>
@@ -522,7 +522,15 @@ top: -34px;
 
 <script>
 
-
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
 
 $(document).ready(function(){
  
