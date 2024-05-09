@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #content {
+            width: 11000px;
+            height: calc(100vh - 55px);
+            background: linear-gradient(to bottom, #f9f6f1 , #c3c1c9);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0px 0px 34px 0px rgba(255,255,255,0.3);
+
+        }
+        body {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            height: 100vh;
+			margin: 0;
+			padding: 0;
+            background-color: #775544;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar {
+  display: none;
+}
+
+        .pics{
+            height: 100%;
+
+        }
+
+.frames{
+    background-color: #313339;
+    margin: 0 188.5px;
+    border-radius: 2px;
+    padding: 21px;
+    box-shadow:  0px 18px 13px -8px rgba(0,0,0,0.3);
+
+
+}
+
+.frames div{
+    position: relative;
+    height: 521px;
+    padding: 55px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0px 3px 5px 1px rgba(0,0,0,0.5);
+}
+
+    </style>
+</head>
+<body>
+    <div id="content">
+
+		<div class="frames"><div><img class="pics" src="gallery/img1.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img2.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img3.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img4.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img5.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img6.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img7.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img8.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img9.jpeg"></div></div>
+		<div class="frames"><div><img class="pics" src="gallery/img10.jpeg"></div></div>
+
+	</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+            $(window).on("mousewheel", function(e) {
+                e.preventDefault();
+                var delta = e.originalEvent.wheelDelta;
+                $(window).scrollLeft($(window).scrollLeft() - delta);
+            });
+        });
+    </script>
+</body>
+</html>
