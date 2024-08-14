@@ -100,12 +100,13 @@ body{
 #tiles{
 	display: flex;
 	flex-direction: row;
-	align-items: flex-end;
-	align-content: flex-end;
+	align-items: center;
+	align-content: center;
 	justify-content: center;
 	position: fixed;
 	flex-wrap: nowrap;
 	bottom: 0;
+	height: 165px;
 	}
 
 .tile{
@@ -559,10 +560,10 @@ $(document).ready(function(){
         .delay(0, function (next) {$(this).css('display', 'flex');next();})
         .animate({'opacity':'1'}, 0)
 		.delay(300)
-		.animate({'bottom':'123px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'127px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '129.5px');next();})
+		.queue(function (next) {$(this).css('bottom', '127px');next();})
         .delay(0, function(){$(location).attr('href','../index.html');});
 	$('#title').stop().delay(900).animate({'left':'145.5px','height':'68px','width':'68px'}, 1200, 'easeInOutExpo')
 		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')

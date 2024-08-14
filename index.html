@@ -116,12 +116,13 @@ body{
 #tiles{
 	display: flex;
 	flex-direction: row;
-	align-items: flex-end;
-	align-content: flex-end;
+	align-items: center;
+	align-content: center;
 	justify-content: center;
 	position: fixed;
 	flex-wrap: nowrap;
 	bottom: 0;
+	height: 165px;
 	}
 
 	
@@ -144,7 +145,7 @@ body{
 	#tt1s{
 		position: fixed;
 		z-index: 2;
-		bottom: 129.5px;
+		bottom: 127px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -167,7 +168,7 @@ body{
 		#tt2s{
 		position: fixed;
 		z-index: 2;
-		bottom: 129.5px;
+		bottom: 127px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -191,7 +192,7 @@ body{
 	#tt3s{
 		position: fixed;
 		z-index: 2;
-		bottom: 129.5px;
+		bottom: 127px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -215,7 +216,7 @@ body{
 		#tt4s{
 		position: fixed;
 		z-index: 2;
-		bottom: 129.5px;
+		bottom: 127px;
 		display: none;
 		justify-content: center;
 		align-items: center;
@@ -779,11 +780,6 @@ body{
 		</div>
 
 
-	
-	
-	
-
-
 	</div>
 </div>
 	
@@ -971,16 +967,16 @@ $("#frontground").on('click', function(){
 
 
 
-$("#logo").on('click', function(){
-	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
-	$('#contactopener').animate({'height':'55px'}, 0);
-	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
-	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
-	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 300, 'easeOutExpo');
-	$(this).animate({'bottom':'1210px'}, 1200, 'easeInExpo', function(){
-            $(location).attr('href','logo.html');
-        });	
-});
+// $("#logo").on('click', function(){
+// 	$('#mousePad').delay(1230).animate({'width':'100vw','height':'100vh'}, 0);
+// 	$('#contactopener').animate({'height':'55px'}, 0);
+// 	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutExpo');
+// 	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 300);
+// 	$('.name_contact').stop().animate({'opacity':'0%', 'padding':'0px 0'}, 300, 'easeOutExpo');
+// 	$(this).animate({'bottom':'1210px'}, 1200, 'easeInExpo', function(){
+//             $(location).attr('href','logo.html');
+//         });	
+// });
 
 
 
