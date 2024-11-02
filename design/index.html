@@ -239,8 +239,102 @@ body{
 
 
 .conticon{
-	height: 21px;
+	height: 50px;
+	width: 21px;
+	padding: 0 20px;
+	cursor: pointer;
 }
+
+#contTitles{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
+	position: absolute;
+	height: 0px;
+	top: -74px;
+	width: 233px;
+}
+
+.contTitle{
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
+	font-size: 21px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+	color: #f1f3f9;
+	cursor: default;
+}
+
+#ct1{
+	width: 0%;
+	opacity: 0%;
+}
+
+#ct2{
+	width: 0%;
+	opacity: 0%;
+}
+
+#ct3{
+	width: 0%;
+	opacity: 0%;
+}
+
+
+
+
+#cateTitles{
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: flex-start;
+	position: absolute;
+	height: 0;
+	bottom: 40px;
+	width: auto;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	opacity: 0;
+}
+
+.cateTitle{
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
+	font-size: 18px;
+	overflow: visible;
+	text-align: center;
+	white-space: nowrap;
+	color: #f1f3f9;
+	line-height: 36px;
+	text-decoration: none;
+
+}
+
+#cat1{
+	color: #ffbc58;
+	cursor:default
+}
+
+#cat2:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#cat3:hover{
+	cursor: pointer;
+	text-decoration: underline;
+
+}
+
+#cat4:hover{
+	cursor: pointer;
+	text-decoration: underline;
+
+}
+
+
 
 #logo{
 	position: absolute;
@@ -538,8 +632,19 @@ top: -34px;
 		<div id="homeButton" class="rButton"><img id="minilogo" src="../indeximage/minilogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 	</div>
 	<div id="controller">
-		<img class="conticon" src="../indeximage/genres.svg">
-		<img class="conticon" src="../indeximage/search.svg">
+		<img class="conticon" id="genres" src="../indeximage/genres.svg">
+		<img class="conticon" id="search" src="../indeximage/search.svg">
+	</div>
+	<div id="contTitles">
+		<p class='contTitle' id="ct1">Go to</p>
+		<p class='contTitle' id="ct2">Home</p>
+		<p class='contTitle' id="ct3">Look for</p>
+	</div>
+	<div id="cateTitles">
+		<span class='cateTitle' id="cat1">Designed by ALSANSE</span>
+		<a class='cateTitle' id="cat2" href="../frames/index.html">AL—BUM</a>
+		<a class='cateTitle' id="cat3" href="../cinema/index.html">ceramic_plastic</a>
+		<a class='cateTitle' id="cat4" href="../toybox/index.html">ToyBox</a>
 	</div>
 </div>
 
@@ -581,7 +686,7 @@ $(document).ready(function(){
 		.animate({'opacity':'0'}, 600)
 		.queue(function (next) {$(this).css('display', 'none');next();});
 		$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#aniGuard').delay(1800).queue(function (next) {$(this).css('display', 'none');next();});
+		$('#aniGuard').delay(2700).queue(function (next) {$(this).css('display', 'none');next();});
 		$('#controller').delay(1500).animate({'width':'144px','height':'59px'}, 600, 'easeInExpo').animate({'width':'233px','height':'54px'}, 300, 'easeOutBack');
     });
 
@@ -599,7 +704,7 @@ $(document).ready(function(){
 	$('#minilogo').stop().delay(900).animate({'top':'-100px'}, 300, 'easeInExpo');
 	$('#logo').stop().delay(1200).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 	$('#t1').stop().delay(1150).animate({'opacity':'100%'}, 0);
-	$('#controller').animate({'width':'89px','height':'54px'}, 300, 'easeInCirc').animate({'width':'39px','height':'39px'}, 300, 'easeOutExpo').queue(function (next) {$(this).css('display', 'none');next();});
+	$('#controller').animate({'padding-top':'0px','margin-bottom':'0px'}, 150, 'easeOutExpo').animate({'width':'89px','height':'54px'}, 150, 'easeInCirc').animate({'width':'39px','height':'39px'}, 300, 'easeOutCirc').queue(function (next) {$(this).css('display', 'none');next();});
 
 
 	$('#titles').stop()
@@ -611,12 +716,16 @@ $(document).ready(function(){
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
 		.queue(function (next) {$(this).css('bottom', '110px');next();})
-    //    .delay(100)
 		.delay(0, function(){$(location).attr('href','../index.html');});
 	$('#title').stop().delay(300).animate({'left':'-133.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')
 		.animate({'border-radius':'47%'}, 600, 'easeOutCirc');
 	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
+
+	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+
 
  });
  
@@ -624,6 +733,63 @@ $(document).ready(function(){
 
 
 
+
+
+
+ $("#genres").on('click', function(){
+	$("#controller").stop().animate({'padding-top':'177px','margin-bottom':'177px'}, 300, 'easeOutExpo');
+	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'height':'152px','opacity':'1'}, 300, 'easeOutExpo');
+
+ });
+
+
+
+
+
+
+
+
+
+ $(".rButton").on('mouseover', function(){
+	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+
+});
+
+$(".conticon").on('mouseover', function(){
+	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
+});
+
+$("#genres").on('mouseover', function(){
+	$('#ct1').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+
+});
+$("#search").on('mouseover', function(){
+	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
+
+});
+
+$("#remote").on('mouseleave', function(){
+	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
+	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+
+
+});
 
 
 
