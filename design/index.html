@@ -115,10 +115,10 @@ body{
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	width: 97px;
+	width: 89px;
 	height: 68px;
 	overflow: hidden;
-	margin-bottom: 89px;
+	margin-bottom: 55px;
 	cursor: pointer;
 	}
 
@@ -323,6 +323,12 @@ body{
 
 
 
+.cls-1 {
+	fill: red;
+	position: absolute;
+	border-radius: #000 solid 1px;
+	left: 900px;
+}
 
 
 
@@ -446,6 +452,14 @@ top: -34px;
     <a class="contents" href="../SIREN.html"><img src="thumbnails/tmbsiren.jpg"></a>
     <a class="contents" href="../silicontimer.html"><img src="thumbnails/tmbsilicontimer.jpg"></a>
     <a class="contents" href="../DUMPDUMB/index.html"><img src="thumbnails/tmbdumpdumb.jpg"></a>
+    <a class="contents" href="../takit.html"><img src="thumbnails/tmbtakit.jpg"></a>
+    <a class="contents" href="../SIREN.html"><img src="thumbnails/tmbsiren.jpg"></a>
+    <a class="contents" href="../silicontimer.html"><img src="thumbnails/tmbsilicontimer.jpg"></a>
+    <a class="contents" href="../DUMPDUMB/index.html"><img src="thumbnails/tmbdumpdumb.jpg"></a>
+    <a class="contents" href="../takit.html"><img src="thumbnails/tmbtakit.jpg"></a>
+    <a class="contents" href="../SIREN.html"><img src="thumbnails/tmbsiren.jpg"></a>
+    <a class="contents" href="../silicontimer.html"><img src="thumbnails/tmbsilicontimer.jpg"></a>
+    <a class="contents" href="../DUMPDUMB/index.html"><img src="thumbnails/tmbdumpdumb.jpg"></a>
 </div>
 
 
@@ -554,20 +568,20 @@ $(document).ready(function(){
     $(this).stop().delay(1200).animate({'height':'0px'}, 0);	
 	$('#minilogo').stop().delay(900).animate({'top':'-100px'}, 300, 'easeInExpo');
 	$('#logo').stop().delay(1200).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
-	$('#t1').stop().delay(1050).animate({'opacity':'100%'}, 0);
+	$('#t1').stop().delay(1150).animate({'opacity':'100%'}, 0);
 
     $('#titles').stop()
         .delay(590)
         .delay(0, function (next) {$(this).css('display', 'flex');next();})
         .animate({'opacity':'1'}, 0)
 		.delay(200)
-		.animate({'bottom':'127px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'110px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '127px');next();})
+		.queue(function (next) {$(this).css('bottom', '110px');next();})
         .delay(100)
 		.delay(0, function(){$(location).attr('href','../index.html');});
-	$('#title').stop().delay(300).animate({'left':'-145.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')
+	$('#title').stop().delay(300).animate({'left':'-133.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')
 		.animate({'border-radius':'47%'}, 600, 'easeOutCirc');
 	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
