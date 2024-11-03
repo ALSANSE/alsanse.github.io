@@ -31,11 +31,9 @@
 	
 <style>
 
-/*
-*{
-	border: 1px solid red;
-}
-*/
+
+/* *{border: 1px solid red;} */
+
 
 
 
@@ -255,6 +253,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.3s;
 
 }
 
@@ -270,6 +269,8 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.3s;
+
 }
 
 
@@ -343,6 +344,8 @@ body{
 	bottom: 0px;
 	width: 233px;
 	height: 233px;
+	transition: 0.3s;
+
 }
 
 
@@ -384,9 +387,32 @@ body{
 	width: 0vw;
 	height: 0vh;
 	z-index: 100;
-	position: absolute;
+	position: fixed;
 
 }
+
+
+
+
+
+#resume{
+	position: fixed;
+	width: 60vw;
+	height: calc(100vh - 68px);
+	background-color: #ffffff;
+	z-index: 101;
+	border-radius: 89px;
+	box-shadow:  0px 13px 34px #c1c3c9;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top:150%;
+}
+
+
+
+
+
+
 
 
 #contacts{	
@@ -425,8 +451,8 @@ body{
 .name_contact{
 	font-size: 1rem;
 	font-family: pretendard, sans-serif;
-	font-weight: 400;
-	color: #216f9b;
+	font-weight: 700;
+	color: #0085bc;
 	height: 0px;
 	width: 100%;
 	text-decoration: none;
@@ -436,27 +462,14 @@ body{
 	position: relative;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 	padding: 0px 0;
-	cursor: none;
-}
-
-
-.name_contact:hover{
-	color: #ff6442;
+	cursor: pointer;
 	text-decoration: underline;
-	cursor: none;
 }
 
 
-#emailS{
-	align-items: flex-end;
-}
-
-
-#instagramS{
-	align-items: flex-start;
-}
 
 
 #contactopener{
@@ -499,7 +512,7 @@ body{
 }
 
 
-#email{
+/* #email{
 	width: 0%;
 	opacity: 0%;	
 }
@@ -508,7 +521,7 @@ body{
 #instagram{
 	width: 0%;
 	opacity: 0%;
-}
+} */
 
 
 
@@ -627,6 +640,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.3s;
 }
 	
 	
@@ -641,6 +655,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.3s;
 
 }
 	
@@ -649,6 +664,8 @@ body{
 	bottom: 0px;
 	width: 165px;
 	height: 165px;
+	transition: 0.3s;
+
 }	
 	
 	
@@ -765,6 +782,33 @@ body{
 <div id="aniGuard"></div>
 
 <div id="container">
+	<div id="resume">
+		<div>
+			<h1>김세진 Sejin Kim</h1>
+			<a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br>
+			<a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+		</div>
+		<div>
+			<h1>Educations</h1>
+			<p>2023 ~ 고려대학교 디자인조형학과 조형문화예술전공 석사과정 재학</p>
+			<p>2017 ~ 2023 대구가톨릭대학교 디자인대학 디지털디자인과 학사 졸업</p>
+		</div>
+		<div>
+			<h1>Activities & Awards</h1>
+			<p>2023.09 ~ 2024.02 고려대학교 디자인조형학과 조형문화예술전공 TA 근로</p>
+			<p>2023.02.02 한국HCI학회 HCI KOREA 2023 Creative Award 최우수상 ⟨미디어헤드 : 콜라주 아트 기반 어드벤처 게임과 전용 컨트롤러 ‘헤드’⟩</p>
+			<p>2022 12. 19 ~ 2023 02 17 주식회사 소통파이브 UX/UI 팀 디자인 인턴 활동</p>
+			<p>2022 11. 30 제10회 대구가톨릭대학교 디지털디자인과 졸업전시회 ⟨Extend: X10D⟩ 웹사이트 제작</p>
+			<p>2022 01. 05 대구가톨릭대학교 디지털디자인과 2021년 2학기 온라인 과제전 웹사이트 제작</p>
+			<p>2022 01. 05 대구가톨릭대학교 디지털디자인과 Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상1 노력상 1</p>
+			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 2021년 1학기 온라인 과제전 웹사이트 제작</p>
+			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 Honorable DXDesigner of the Year (올해의 디디人) 후보자</p>
+			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상4 노력상 1</p>
+			<p>2021 03. 02 ~ 2021 05. 18 대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</p>
+			<p>2021 09. 09 ~ 2021 11. 26 대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</p>
+		</div>
+	</div>
+
 	<div id='main'>
 		<div id="background"><div id='wallpaper'></div></div>
 		<div id='frontground'></div>
@@ -780,13 +824,15 @@ body{
 			<div id="contacts">
 				<div id="contact">
 					<img id="contactext" src="indeximage/contact.svg">
-					<a class='name_contact' id="emailS" href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a>
-					<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+					<span class='name_contact' id="resumeS">View Résumé</span>
+					<!-- <a class='name_contact' id="emailS" href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a>
+					<a class='name_contact' id="instagramS" href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a> -->
 				</div>
-				<div id="contactitle">
+				<!-- <div id="contactitle">
+					<p class='contitle' id="resume">View Résumé</p>
 					<p class='contitle' id="email">E-mail</p>
 					<p class='contitle' id="instagram">Instagram</p>
-				</div>
+				</div> -->
 				<div id="contactopener"></div>
 			</div>
 		</div>
@@ -931,23 +977,24 @@ $("#intro").on('mouseover', function(){
 	$(".tile").stop().animate({'height':'68px'}, 300, 'easeOutCirc');
 });
 	
-$("#emailS").on('mouseover', function(){$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');});
-$("#emailS").on('mouseleave', function(){$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');});
-$("#instagramS").on('mouseover', function(){$('#instagram').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');});
-$("#instagramS").on('mouseleave', function(){$('#instagram').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');});
+// $("#emailS").on('mouseover', function(){$('#email').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');});
+// $("#emailS").on('mouseleave', function(){$('#email').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');});
+// $("#instagramS").on('mouseover', function(){$('#instagram').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');});
+// $("#instagramS").on('mouseleave', function(){$('#instagram').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');});
+// $("#resumeS").on('mouseover', function(){$('#resume').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');});
+// $("#resumeS").on('mouseleave', function(){$('#resume').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');});
 
 
-
-$("#mousePad").on('mouseover', function(){
-	$('#logo').delay(600).animate({'bottom':'0px'}, 600, 'easeOutExpo');
-	$(this).animate({'width':'0vw','height':'0vh'}, 0);
-});
+// $("#mousePad").on('mouseover', function(){
+// 	$('#logo').delay(600).animate({'bottom':'0px'}, 600, 'easeOutExpo');
+// 	$(this).animate({'width':'0vw','height':'0vh'}, 0);
+// });
 
 
 $("#contact").on('mouseover', function(){
 	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutCirc');
 	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 0);
-	$('.name_contact').stop().animate({'opacity':'100%', 'height':'40px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
+	$('.name_contact').stop().animate({'opacity':'100%', 'height':'89px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
 });
 
 $("#contact").on('mouseleave', function(){
@@ -1006,7 +1053,18 @@ $("#frontground").on('click', function(){
 // });
 
 
+$("#resumeS").on('click', function(){
+	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutCirc');
+	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 0);
+	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
+	$('#resume').stop().animate({'top':'50%'}, 600, 'easeOutCirc');
+	$('#mousePad').animate({'width':'100vw','height':'100vh'}, 0);
+});
 
+$("#mousePad").on('click', function(){
+	$(this).animate({'width':'0vw','height':'0vh'}, 0);
+	$('#resume').stop().animate({'top':'150%'}, 600, 'easeInOutSine');
+});
 
 
 $(".tile").on('click', function(){
