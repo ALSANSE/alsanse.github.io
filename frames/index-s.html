@@ -21,23 +21,21 @@
 <link rel="manifest" href="indeximage/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#000000">
-<meta property="og:title" content="Design">
+<meta name="theme-color" content="#f1f3f9">
+<meta property="og:title" content="AL-BUM">
 <meta property="og:type" content="website">
 <meta property="og:image" content="indeximage/Thumbnail.jpg">
-<meta property="og:description" content="Portfolio">
+<meta property="og:description" content="ALSANSE Gallery">
 <script>(function(d) {var config = {kitId: 'jds8jip',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
 
 
 <style>
-
-
     html{
-		background-color: #000000;
+		background-color: #f1f3f9;
 	}
 
 body{
-    background-color: #000000;
+    background-color: #f1f3f9;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -117,17 +115,15 @@ body{
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	width: 89px;
+	width: 97px;
 	height: 68px;
 	overflow: hidden;
-	margin-bottom: 55px;
+	margin-bottom: 89px;
 	cursor: pointer;
 	}
 
 #t2{
     opacity: 0;
-	border-radius: 100%;
-	overflow: hidden;
 }
 
 #titles{
@@ -186,7 +182,6 @@ body{
 	bottom: 0px;
 	left: 50vw;
 	transform: translate(-27.5px, -34px);
-	overflow: visible;
 	position: fixed;
 	z-index: 98;
 }
@@ -217,145 +212,6 @@ body{
 	width: 100%;
 	z-index: 101;
 }
-
-
-#controller{
-	width: 39px;
-	height: 39px;
-	background: rgba( 41, 47, 55, 0.5 );
-	backdrop-filter: blur( 16px );
-	border: #414349 0.5px solid;
-	-webkit-backdrop-filter: blur( 16px );
-	box-shadow: 0px 13px 34px rgba( 0, 0, 0, 0.5 );
-	position: absolute;
-	border-radius: calc(55px / 2 - 3px);
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	gap: 46px;
-	overflow: hidden;
-
-}
-
-
-.conticon{
-	height: 50px;
-	width: 21px;
-	padding: 0 20px;
-	cursor: pointer;
-	opacity: 0;
-}
-
-#contTitles{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	align-items: flex-start;
-	position: absolute;
-	height: 0px;
-	top: -74px;
-	width: 233px;
-}
-
-.contTitle{
-	font-family: source-code-pro, monospace;
-	font-weight: 400;
-	font-size: 21px;
-	overflow: hidden;
-	text-align: center;
-	white-space: nowrap;
-	color: #f1f3f9;
-	cursor: default;
-}
-
-#ct1{
-	width: 0%;
-	opacity: 0%;
-}
-
-#ct2{
-	width: 0%;
-	opacity: 0%;
-}
-
-#ct3{
-	width: 0%;
-	opacity: 0%;
-}
-
-
-
-
-#cateTitles{
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-items: flex-start;
-	position: absolute;
-	height: 0;
-	bottom: 40px;
-	width: auto;
-	overflow: hidden;
-	flex-wrap: nowrap;
-	opacity: 0;
-}
-
-.cateTitle{
-	font-family: source-code-pro, monospace;
-	font-weight: 400;
-	font-size: 18px;
-	overflow: visible;
-	text-align: center;
-	white-space: nowrap;
-	color: #f1f3f9;
-	line-height: 36px;
-	text-decoration: none;
-
-}
-
-#cat2{
-	color: #ffbc58;
-	cursor:default
-}
-
-#cat1:hover{
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-#cat3:hover{
-	cursor: pointer;
-	text-decoration: underline;
-
-}
-
-#cat4:hover{
-	cursor: pointer;
-	text-decoration: underline;
-
-}
-
-
-
-
-
-
-
-#mousePad{
-	width: 0vw;
-	height: 0vh;
-	z-index: 97;
-	position: fixed;
-
-}
-
-
-
-
-
-
-
-
 
 #logo{
 	position: absolute;
@@ -409,7 +265,7 @@ body{
     justify-content: center;
     height: 100vh;
     width: 100vw;
-	background-color: #000000;
+    background-color: #000000;
     position: fixed;
     z-index: 97;
 	bottom:0;
@@ -419,11 +275,14 @@ body{
     position: fixed;
     z-index: 96;
 	top:0;
-    height: 100vh;
-    width: 100vw;
-	background: rgba( 0, 0, 0, 0 );
+	height: 232px;
+	width: 404px;
+	border-radius: 34px;
+	background: rgba( 241, 243, 249, 0.2 );
 	backdrop-filter: blur( 21px );
 	-webkit-backdrop-filter: blur( 21px );
+	filter: blur( 21px );
+	transform: translate(0, -50%);
 }
 
 #box{
@@ -434,13 +293,6 @@ body{
 }
 
 
-.contents{
-    width: 377px;
-    height: 377px;
-    background-color: #ffbc58;
-    border-radius: 21px;
-    overflow: hidden;
-}
 
 
 
@@ -465,8 +317,12 @@ body{
 
 
 
-@media screen and (max-width: 720px) {
 
+
+
+
+
+@media screen and (max-width: 720px) {
 
 
 }
@@ -564,9 +420,6 @@ top: -34px;
 
 
 
-
-
-
 <iframe id="box" src="scrollex.html">
 
 </iframe>
@@ -619,24 +472,8 @@ top: -34px;
 	<div class="rLay">
 		<div id="homeButton" class="rButton"><img id="minilogo" src="../indeximage/minilogo.svg" style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"></div>
 	</div>
-	<div id="controller">
-		<img class="conticon" id="genres" src="../indeximage/genres.svg">
-		<img class="conticon" id="search" src="../indeximage/search.svg">
-	</div>
-	<div id="contTitles">
-		<p class='contTitle' id="ct1">Go to</p>
-		<p class='contTitle' id="ct2">Home</p>
-		<p class='contTitle' id="ct3">Look for</p>
-	</div>
-	<div id="cateTitles">
-		<a class='cateTitle' id="cat1" href="../design/index.html">Designed by ALSANSE</a>
-		<span class='cateTitle' id="cat2">AL—BUM</span>
-		<a class='cateTitle' id="cat3" href="../cinema/index.html">ceramic_plastic</a>
-		<a class='cateTitle' id="cat4" href="../toybox/index.html">ToyBox</a>
-	</div>
 </div>
 
-<div id='mousePad'></div>
 
 
 <div id="titles">	
@@ -646,16 +483,12 @@ top: -34px;
 
 <script src="../engine/jquery-3.5.1.js"></script>
 <script src="../engine/jquery.easing.min.js"></script>
+<script src="../engine/pilot.js"></script>
 
 
 <script>
 
-
-
-$(document).ready(function(){
- 
-
-	window.addEventListener( "pageshow", function ( event ) {
+window.addEventListener( "pageshow", function ( event ) {
   var historyTraversal = event.persisted || 
                          ( typeof window.performance != "undefined" && 
                               window.performance.navigation.type === 2 );
@@ -665,19 +498,19 @@ $(document).ready(function(){
   }
 });
 
-
-
+$(document).ready(function(){
+ 
 
     $(document).ready(function(){
         $('#titleStart')
 		.stop()
 		.delay(900)
-		.animate({'opacity':'0'}, 600)
-		.queue(function (next) {$(this).css('display', 'none');next();});
-		$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#aniGuard').delay(2700).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#controller').delay(1500).animate({'width':'144px','height':'59px'}, 600, 'easeInExpo').animate({'width':'233px','height':'54px'}, 300, 'easeOutBack');
-		$('.conticon').delay(2100).animate({'opacity':'1'}, 300);
+		.animate({'height':'89px','width':'377px','margin':'105vh','border-radius':'21px'}, 600, 'easeOutExpo')
+		.queue(function (next) {$(this).css('bottom', 'auto').css('top', '-89px').css('margin', '0');next();})
+		.animate({'margin':'102px'}, 600, 'easeOutExpo');
+		$('#aniGuard').delay(1800).queue(function (next) {$(this).css('display', 'none');next();});
+
+		
     });
 
 
@@ -686,36 +519,35 @@ $(document).ready(function(){
  $("#homeButton").on('click', function(){
     $('#titleStart')
 	.stop()
-	.queue(function (next) {$(this).css('display', 'flex');next();})
-	.animate({'opacity':'1'}, 600, 'easeOutExpo')
+	.animate({'margin':'0px'}, 300, 'easeInCirc')
+	.delay(300)
+	.queue(function (next) {$(this).css('bottom', '0').css('top', 'auto').css('margin','105vh');next();})
+	.animate({'height':'100vh','width':'105vw','margin':'0px','border-radius':'0px','bottom':'0px'}, 600, 'easeOutExpo')
+	.delay(10)
 	.queue(function (next) {$(this).css('display', 'none');next();});
-	$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
-    $(this).stop().delay(1200).animate({'height':'0px'}, 0);	
-	$('#minilogo').stop().delay(900).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(1200).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
-	$('#t2').stop().delay(1150).animate({'opacity':'100%'}, 0);
-	$('#controller').animate({'padding-top':'0px','margin-bottom':'0px'}, 150, 'easeOutExpo').animate({'width':'89px','height':'54px','padding-top':'0px','margin-bottom':'0px'}, 150, 'easeInCirc').animate({'width':'39px','height':'39px'}, 300, 'easeOutCirc').queue(function (next) {$(this).css('display', 'none');next();});
-	$('.conticon').animate({'opacity':'0'}, 300);
+    $('#titleBack').stop().animate({'top':'-233px'}, 300, 'easeInCirc')
+    $(this).stop().delay(2100).animate({'height':'0px'}, 0);	
+	$('#minilogo').stop().delay(1800).animate({'top':'-100px'}, 300, 'easeInExpo');
+	$('#logo').stop().delay(1800).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
 
-	$('#titles').stop()
-        .delay(590)
+    $('#titles').stop()
+        .delay(1190)
         .delay(0, function (next) {$(this).css('display', 'flex');next();})
         .animate({'opacity':'1'}, 0)
-		.delay(200)
-		.animate({'bottom':'110px'}, 300, 'easeInOutSine')
+		.delay(300)
+		.animate({'bottom':'127px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '110px');next();})
-		.delay(0, function(){$(location).attr('href','../index.html');});
-	$('#title').stop().delay(300).animate({'left':'-44.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')
-		.animate({'border-radius':'47%'}, 600, 'easeOutCirc');
-	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
+		.queue(function (next) {$(this).css('bottom', '127px');next();})
+        .delay(0, function(){$(location).attr('href','../index.html');});
+
+	$('#title').stop().delay(900).animate({'left':'-48.5px','height':'68px','width':'68px'}, 1200, 'easeInOutExpo')
+		.animate({'border-radius':'100%'}, 900, 'easeOutCirc')
+		.queue(function (next) {$(this).css('left', '-48.5px').css('height', '81px').css('width', '81px');next();});
+
+	$('#t2').stop().delay(2190).animate({'opacity':'1'}, 0);
+	$('#container').delay(990).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
-
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-
 
  });
  
@@ -723,79 +555,6 @@ $(document).ready(function(){
 
 
 
-
-
-
- $("#genres").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'177px','margin-bottom':'177px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'height':'152px','opacity':'1'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
- });
-
-
- $("#search").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'377px','margin-bottom':'377px'}, 450, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
- });
-
-
- $("#mousePad").on('mouseover', function(){
-	$(this).stop().animate({'height':'100vh','width':'100vw'}, 0);
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-
-
-
-
- $(".rButton").on('mouseover', function(){
-	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-$(".conticon").on('mouseover', function(){
-	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
-});
-
-$("#genres").on('mouseover', function(){
-	$('#ct1').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-$("#search").on('mouseover', function(){
-	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-$("#remote").on('mouseleave', function(){
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-
-});
 
 
 
