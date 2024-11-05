@@ -70,6 +70,20 @@ body{
 	margin: 0;
 }
 
+
+a{
+	color: #0085bc;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #ff6442;
+	text-decoration: underline;
+}
+
+
+
+
 #container{
 	display: flex;
 	justify-content: space-between;
@@ -398,18 +412,64 @@ body{
 #resume{
 	position: fixed;
 	width: 60vw;
+	padding: 0 100px;
 	height: calc(100vh - 68px);
-	background-color: #ffffff;
+	background-color: #f1f3f9;
 	z-index: 101;
 	border-radius: 89px;
 	box-shadow:  0px 13px 34px #c1c3c9;
 	transform: translate(-50%, -50%);
 	left: 50%;
 	top:150%;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	gap: 89px;
+	font-family: pretendard, sans-serif;
+
+}
+
+#resumeContact{
+text-align: center;
+margin-top: 89px;
+background-color: #fafcff;
+width: 100%;
+position: relative;
+border-radius: 34px;
+padding-bottom: 29px;
+
+}
+
+table{
+	border-collapse: collapse;
+	background-color: #fafcff;
+	border-radius: 34px;
+	margin-bottom: 89px;
 }
 
 
+tr{
+	border:none;
+	border-radius: 34px;
+}
 
+
+td{
+	padding: 13px 13px;
+
+	font-family: pretendard, sans-serif;
+	font-weight: 400;
+}
+
+
+.resumeDate{
+	font-weight: 900;
+	text-align: right;
+	width: 233px;
+	color: #216f9b;
+}
+	
 
 
 
@@ -590,8 +650,7 @@ body{
 
 
 
-	
-	
+
 	
 	
 	
@@ -669,6 +728,17 @@ body{
 }	
 	
 	
+
+
+
+
+#resume{
+	padding: 0 13px;
+	width: 90vw;
+
+
+}
+
 
 }
 
@@ -783,30 +853,79 @@ body{
 
 <div id="container">
 	<div id="resume">
-		<div>
+		<div id="resumeContact">
 			<h1>김세진 Sejin Kim</h1>
-			<a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br>
-			<a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+			<span>E-Mail </span><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br>
+			<span>Instagram </span><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 		</div>
-		<div>
-			<h1>Educations</h1>
-			<p>2023 ~ 고려대학교 디자인조형학과 조형문화예술전공 석사과정 재학</p>
-			<p>2017 ~ 2023 대구가톨릭대학교 디자인대학 디지털디자인과 학사 졸업</p>
-		</div>
-		<div>
-			<h1>Activities & Awards</h1>
-			<p>2023.09 ~ 2024.02 고려대학교 디자인조형학과 조형문화예술전공 TA 근로</p>
-			<p>2023.02.02 한국HCI학회 HCI KOREA 2023 Creative Award 최우수상 ⟨미디어헤드 : 콜라주 아트 기반 어드벤처 게임과 전용 컨트롤러 ‘헤드’⟩</p>
-			<p>2022 12. 19 ~ 2023 02 17 주식회사 소통파이브 UX/UI 팀 디자인 인턴 활동</p>
-			<p>2022 11. 30 제10회 대구가톨릭대학교 디지털디자인과 졸업전시회 ⟨Extend: X10D⟩ 웹사이트 제작</p>
-			<p>2022 01. 05 대구가톨릭대학교 디지털디자인과 2021년 2학기 온라인 과제전 웹사이트 제작</p>
-			<p>2022 01. 05 대구가톨릭대학교 디지털디자인과 Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상1 노력상 1</p>
-			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 2021년 1학기 온라인 과제전 웹사이트 제작</p>
-			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 Honorable DXDesigner of the Year (올해의 디디人) 후보자</p>
-			<p>2021 06. 28 대구가톨릭대학교 디지털디자인과 Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상4 노력상 1</p>
-			<p>2021 03. 02 ~ 2021 05. 18 대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</p>
-			<p>2021 09. 09 ~ 2021 11. 26 대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</p>
-		</div>
+		<table>
+			<caption>
+				<h1>EDUCATION</h1>
+			</caption>
+			<tbody>
+				<tr>
+					<td class="resumeDate">2023.09 ~ 현재</td>
+					<td>고려대학교 디자인조형학과 조형문화예술전공 석사과정 재학</td>
+				</tr>
+				<tr>
+					<td class="resumeDate">2017.03 ~ 2023.02</td>
+					<td>대구가톨릭대학교 디자인대학 디지털디자인과 학사 졸업</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+				<caption>
+					<h1>ACTIVITIES &amp; AWARDS</h1>
+				</caption>
+
+			<tbody>
+				<tr>
+					<td class="resumeDate">2023.09 ~ 2024.02</td>
+					<td>고려대학교 디자인조형학과 조형문화예술전공 TA 근로</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2023.02.02</td>
+						<td>한국HCI학회 HCI KOREA 2023 Creative Award 최우수상<br>⟨미디어헤드 : 콜라주 아트 기반 어드벤처 게임과 전용 컨트롤러 ‘헤드’⟩</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2022.12.19 ~ 2023.02.17</td>
+						<td>주식회사 소통파이브 UX/UI 팀 디자인 인턴 활동</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2022.11.30</td>
+						<td>제10회 대구가톨릭대학교 디지털디자인과 졸업전시회 ⟨Extend: X10D⟩ 웹사이트 제작</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2022.01.05</td>
+						<td>대구가톨릭대학교 디지털디자인과 2021년 2학기 온라인 과제전 웹사이트 제작</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2022.01.05</td>
+						<td>대구가톨릭대학교 디지털디자인과<br>Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상1 노력상 1</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2021.06.28</td>
+						<td>대구가톨릭대학교 디지털디자인과 2021년 1학기 온라인 과제전 웹사이트 제작</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2021.06.28</td>
+						<td>대구가톨릭대학교 디지털디자인과 Honorable DXDesigner of the Year (올해의 디디人) 후보자</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2021.06.28</td>
+						<td>대구가톨릭대학교 디지털디자인과<br>Amazing DXDesign Works of the Semester (학기별 DXDesign 작품상) 우수상4 노력상 1</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2021.03.02 ~ 2021.05.18</td>
+						<td>대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</td>
+					</tr>
+					<tr>
+						<td class="resumeDate">2021.09.09 ~ 2021.11.26</td>
+						<td>대구가톨릭대학교 디지털디자인과 TA/RA 연구근로</td>
+					</tr>
+				</tbody>
+			</table>
 	</div>
 
 	<div id='main'>
