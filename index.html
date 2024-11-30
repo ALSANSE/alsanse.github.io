@@ -68,6 +68,7 @@ body{
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	
 }
 
 
@@ -82,6 +83,14 @@ a:hover{
 }
 
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 
 
 #container{
@@ -93,6 +102,8 @@ a:hover{
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	background-color: #f1f3f9;
+
 }
 
 #main{
@@ -101,7 +112,6 @@ a:hover{
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	background-color: #f1f3f9;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -279,9 +289,11 @@ a:hover{
 	width: 100%;
 	height: 100%;
 	border-radius: calc(233px / 2);
-	background-color: #ffffff;
+	background: rgba(11,15,66,0.03);
+	backdrop-filter: blur( 16px );
+	-webkit-backdrop-filter: blur( 16pxpx );
 	overflow: hidden;
-	box-shadow:  34px 34px 21px -8px rgba(0,11,55,0.1);
+	box-shadow:  21px 21px 21px rgba(0,11,55,0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -366,9 +378,15 @@ a:hover{
 	height: 233px;
 	transition: 0.6s;
 	transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
-
+	border-radius: 100%;
+	overflow: hidden;
 }
 
+#logo img{
+	width: 233px;
+	height: 233px;
+
+}
 
 
 #background{
@@ -422,10 +440,10 @@ a:hover{
 	display: none;
 	flex-direction: column;
 	align-content: center;
-	gap: 89px;
+	gap: 55px;
 	font-family: pretendard, sans-serif;
 	top: 199px;
-	padding-bottom: 55px;
+	padding:0 55px 55px 55px;
 	
 
 }
@@ -442,10 +460,9 @@ padding-bottom: 29px;
 
 table{
 	border-collapse: collapse;
-	background-color: #fafbfc;
-	box-shadow: 0px 8px 34px #e1e3e9;
+	background-color: #f1f3f9;
+	box-shadow: 13px 13px 34px rgba(0,11,55,0.05);
 	border-radius: 34px;
-	padding: 34px;
 }
 
 
@@ -475,6 +492,18 @@ caption{
 	font-weight: 400;
 }
 
+footer{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+footer img{
+	margin-top: 21px;
+	width: 144px;
+}
 
 
 
@@ -679,6 +708,10 @@ caption{
 
 @media screen and (max-width: 720px) {
 
+#main{
+	height: 80%;
+}
+
 
 .menu:hover{
 	transform: translate(0, 0px);
@@ -859,11 +892,11 @@ caption{
 <div id="aniGuard"></div>
 
 <div id="container">
-
+	<div id="background"><div id='wallpaper'></div></div>
+	<div id='frontground'></div>
+	<div id='mousePad'></div>
 	<div id='main'>
-		<div id="background"><div id='wallpaper'></div></div>
-		<div id='frontground'></div>
-		<div id='mousePad'></div>
+
 		
 		<div id="intro">
 			<div id="circle_guide">
@@ -872,8 +905,8 @@ caption{
 					<div id="resume">
 						<div id="resumeContact">
 							<h1>김세진 Sejin Kim</h1>
-							<span>E-Mail </span><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br>
-							<span>Instagram </span><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+							<span><b>E-Mail</b> </span><br><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br><br>
+							<span><b>Instagram</b> </span><br><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 						</div>
 						<table>
 							<caption>
@@ -943,6 +976,10 @@ caption{
 									</tr>
 								</tbody>
 							</table>
+							<footer>
+								©2025 Sejin Kim. All Rights Reserved.
+								<img src="indeximage/al-slit.svg">
+							</footer>
 					</div>
 	
 				</div>
@@ -1168,7 +1205,7 @@ $("#resumeS").on('click', function(){
 	$('#resume').queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#mousePad').animate({'width':'100vw','height':'100vh'}, 0);
 	$('#circle_guide').animate({'width':'70vw','height':'90vh'}, 0);
-	$('#logo').animate({'padding-top':'55px'}, 0);	
+	$('#logo').animate({'margin-top':'55px'}, 0);	
 	$('#intro').animate({'padding-top':'0px'}, 600, 'easeInOutCubic');
 	$('#tiles').animate({'bottom':'-200px'}, 300, 'easeInCubic');
 	$('#contact').animate({'opacity':'0%'}, 300);
@@ -1179,7 +1216,7 @@ $("#mousePad").on('click', function(){
 	$(this).animate({'width':'0vw','height':'0vh'}, 0);
 	$('#resume').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').animate({'width':'233px','height':'233px'}, 0);
-	$('#logo').animate({'padding-top':'0px'}, 0);	
+	$('#logo').animate({'margin-top':'0px'}, 0);	
 	$('#intro').animate({'padding-top':'210px'}, 600, 'easeInOutCubic');
 	$('#tiles').delay(300).animate({'bottom':'00px'}, 900, 'easeOutExpo');
 	$('#contact').animate({'opacity':'100%'}, 300);
@@ -1189,8 +1226,8 @@ $("#mousePad").on('click', function(){
 
 $(".tile").on('click', function(){
 	$('#homeButton').stop().animate({'height':'40px'}, 0);
-	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1000px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
+	$('#minilogo').stop().delay(600).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1233px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
 	$('#aniGuard').css('display','block').delay(1200).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#background').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#contacts').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
