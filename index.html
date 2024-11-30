@@ -289,9 +289,9 @@ img {
 	width: 100%;
 	height: 100%;
 	border-radius: calc(233px / 2);
-	background: rgba(11,15,66,0.03);
-	backdrop-filter: blur( 16px );
-	-webkit-backdrop-filter: blur( 16pxpx );
+	background: rgba(44,44,99,0.03);
+	backdrop-filter: blur( 8px );
+	-webkit-backdrop-filter: blur( 8px );
 	overflow: hidden;
 	box-shadow:  21px 21px 21px rgba(0,11,55,0.1);
 	display: flex;
@@ -442,7 +442,7 @@ img {
 	align-content: center;
 	gap: 55px;
 	font-family: pretendard, sans-serif;
-	top: 199px;
+	top: 212px;
 	padding:0 55px 55px 55px;
 	
 
@@ -460,7 +460,7 @@ padding-bottom: 29px;
 
 table{
 	border-collapse: collapse;
-	background-color: #f1f3f9;
+	background-color: #fafaff;
 	box-shadow: 13px 13px 34px rgba(0,11,55,0.05);
 	border-radius: 34px;
 }
@@ -537,6 +537,11 @@ footer img{
 	position: relative;
 	cursor: pointer;
 	border-radius: calc(55px / 2 - 3px);
+}
+
+#contact :hover{
+	background: rgba( 255, 188, 88, 1 );
+	transition: 300ms;
 
 }
 
@@ -545,7 +550,7 @@ footer img{
 	font-size: 1rem;
 	font-family: pretendard, sans-serif;
 	font-weight: 700;
-	color: #0085bc;
+	color: #000000;
 	height: 0px;
 	width: 100%;
 	text-decoration: none;
@@ -581,6 +586,7 @@ footer img{
 	height: 55px;
 	overflow: visible;
 	position: relative;
+	display: block;
 }
 
 
@@ -707,10 +713,6 @@ footer img{
 	
 
 @media screen and (max-width: 720px) {
-
-#main{
-	height: 80%;
-}
 
 
 .menu:hover{
@@ -904,7 +906,7 @@ footer img{
 					<img id='logo' src='indeximage/alsanse3d.jpeg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 					<div id="resume">
 						<div id="resumeContact">
-							<h1>김세진 Sejin Kim</h1>
+							<h1>Sejin Kim</h1><br>
 							<span><b>E-Mail</b> </span><br><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br><br>
 							<span><b>Instagram</b> </span><br><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 						</div>
@@ -1152,13 +1154,13 @@ $("#intro").on('mouseover', function(){
 
 $("#contact").on('mouseover', function(){
 	$(this).stop().animate({'height':'89px','width':'233px'}, 300, 'easeOutCirc');
-	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 0);
-	$('.name_contact').stop().animate({'opacity':'100%', 'height':'89px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
+	$('#contactext').queue(function (next) {$(this).css('display', 'none');next();});
+	$('.name_contact').stop().animate({'opacity':'100%', 'height':'89px', 'padding':'4.5px 0'}, 0, 'easeOutExpo');
 });
 
 $("#contact").on('mouseleave', function(){
 	$(this).stop().animate({'height':'55px','width':'144px'}, 300, 'easeOutCirc');
-	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 0);
+	$('#contactext').queue(function (next) {$(this).css('display', 'block');next();});
 	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
 });
 
