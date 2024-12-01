@@ -127,7 +127,7 @@ img {
 	align-content: center;
 	justify-content: flex-start;
 	position: relative;
-	padding-top: 210px;
+	padding-top: 20vh;
 	width: 100%;
 	height: calc(100vh - 210px);
 	flex-wrap: nowrap;
@@ -186,6 +186,7 @@ img {
 		position: relative;
 
 	}
+
 
 	
 		#tt2s{
@@ -293,7 +294,7 @@ img {
 	backdrop-filter: blur( 8px );
 	-webkit-backdrop-filter: blur( 8px );
 	overflow: hidden;
-	box-shadow:  21px 21px 21px rgba(0,11,55,0.1);
+	box-shadow:  13px 13px 21px 5px rgba(0,11,55,0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -305,19 +306,6 @@ img {
 
 }
 
-
-#backspace{
-	background-color: #000000;
-	width: 0px;
-	height: 0px;
-	border-radius: 105px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-start;
-	overflow: hidden;
-
-}
 
 
 
@@ -443,7 +431,7 @@ img {
 	gap: 55px;
 	font-family: pretendard, sans-serif;
 	top: 212px;
-	padding:0 55px 55px 55px;
+	padding:0 13px 55px 13px;
 	
 
 }
@@ -505,6 +493,31 @@ footer img{
 	width: 144px;
 }
 
+#resumeClose{
+	width: 55px;
+	height: 55px;
+	position: fixed;
+background-color: #ff6442;
+	box-shadow: 8px 8px 13px 3px rgba(0,11,55,0.2);
+	border-radius: 34px;
+	bottom: -100px;
+	right: 0;
+	z-index: 4;
+	transform: translate(-50%, -50%);
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#resumeClose img{
+	width: 21px;
+	height: 21px;
+
+}
 
 
 
@@ -518,14 +531,16 @@ footer img{
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 0px;
+	z-index: 3;
+
 }
 
 
 #contact{
-	background: rgba( 241, 243, 249, 0 );
+	background: rgba( 241, 243, 249, 0.3 );
 	backdrop-filter: blur( 8px );
 	-webkit-backdrop-filter: blur( 8px );
-	box-shadow: 13px 13px 34px rgba(0,11,55,0.2);
+	box-shadow: 8px 8px 21px 3px rgba(0,11,55,0.2);
 	height: 55px;
 	width: 144px;
 	overflow: hidden;
@@ -774,11 +789,13 @@ footer img{
 
 
 
-#resume{
-	padding: 0 13px;
-	width: 90vw;
 
 
+.resumeDate{
+	font-weight: 900;
+	text-align: right;
+	width: 89px;
+	color: #216f9b;
 }
 
 
@@ -793,6 +810,10 @@ footer img{
 		flex-direction: row;
 		height: calc(100vh - 155px);
 		gap: 34px;
+		justify-content: center;
+		align-items: flex-start;
+		display: none;
+
 	}
 	
 	#main{
@@ -808,8 +829,6 @@ footer img{
 	
 #circle_guide{
 	position: relative;
-	width: 144px;
-	height: 144px;
 	padding: 0px;
 	display: flex;
 	justify-content: center;
@@ -821,9 +840,9 @@ footer img{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	border-radius: 100%;
+	border-radius: 233px;
 	background-color: #ffffff;
-	overflow: hidden;
+	overflow: scroll;
 	box-shadow:  0px 13px 34px #c1c3c9;
 	display: flex;
 	justify-content: center;
@@ -833,9 +852,7 @@ footer img{
 	
 #logo{
 	position: absolute;
-	bottom: 0px;
-	width: 144px;
-	height: 144px;
+	top: 0px;
 }
 	
 #contact{
@@ -897,6 +914,7 @@ footer img{
 	<div id="background"><div id='wallpaper'></div></div>
 	<div id='frontground'></div>
 	<div id='mousePad'></div>
+
 	<div id='main'>
 
 		
@@ -982,10 +1000,12 @@ footer img{
 								©2025 Sejin Kim. All Rights Reserved.
 								<img src="indeximage/al-slit.svg">
 							</footer>
+
+
 					</div>
 	
 				</div>
-
+				<div id="resumeClose"><img src="indeximage/x.svg"></div>
 			</div>
 		
 			<div id="contacts">
@@ -1183,7 +1203,7 @@ $(".menu").on('mouseleave', function(){
 $("#contactopener").on('mouseover', function(){
 	$(this).animate({'height':'0px','padding':'0px'}, 0);
 	$('#contact').stop().animate({'height':'89px','width':'233px'}, 150, 'easeInSine');
-	$('#contactext').stop().animate({'height':'0px'}, 0).animate({'opacity':'0%'}, 0);
+	$('#contactext').queue(function (next) {$(this).css('display', 'none');next();});
 	$('.name_contact').stop().animate({'opacity':'100%', 'height':'40px', 'padding':'4.5px 0'}, 300, 'easeOutExpo');
 	$('#contitle').stop().animate({'opacity':'0%'}, 0);
 });
@@ -1191,7 +1211,7 @@ $("#contactopener").on('mouseover', function(){
 $("#frontground").on('click', function(){
 	$('#contactopener').animate({'height':'55px','padding':'4px'}, 0);
 	$('#contact').stop().animate({'height':'55px','width':'144px'}, 300, 'easeInOutSine');
-	$('#contactext').stop().animate({'height':'55px'}, 0).animate({'opacity':'100%'}, 0);
+	$('#contactext').queue(function (next) {$(this).css('display', 'block');next();});
 	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
 	$('#contitle').stop().animate({'opacity':'100%'}, 0);
 
@@ -1206,11 +1226,13 @@ $("#resumeS").on('click', function(){
 //	$('.name_contact').stop().animate({'opacity':'0%', 'height':'0px', 'padding':'0px 0'}, 0, 'easeOutExpo');
 	$('#resume').queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#mousePad').animate({'width':'100vw','height':'100vh'}, 0);
-	$('#circle_guide').animate({'width':'70vw','height':'90vh'}, 0);
+	$('#circle_guide').animate({'width':'90vw','height':'90vh'}, 0);
 	$('#logo').animate({'margin-top':'55px'}, 0);	
 	$('#intro').animate({'padding-top':'0px'}, 600, 'easeInOutCubic');
 	$('#tiles').animate({'bottom':'-200px'}, 300, 'easeInCubic');
 	$('#contact').animate({'opacity':'0%'}, 300);
+	$('#resumeClose').delay(300).animate({'bottom':'0px'}, 600, 'easeInOutCubic');
+
 	
 });
 
@@ -1219,17 +1241,29 @@ $("#mousePad").on('click', function(){
 	$('#resume').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').animate({'width':'233px','height':'233px'}, 0);
 	$('#logo').animate({'margin-top':'0px'}, 0);	
-	$('#intro').animate({'padding-top':'210px'}, 600, 'easeInOutCubic');
+	$('#intro').animate({'padding-top':'20vh'}, 600, 'easeInOutCubic');
+	$('#tiles').delay(300).animate({'bottom':'00px'}, 900, 'easeOutExpo');
+	$('#contact').animate({'opacity':'100%'}, 300);
+	$('#circle').animate( { scrollTop : 0 }, 300, 'easeInOutCubic');
+	$('#resumeClose').animate({'bottom':'-100px'}, 600, 'easeInOutCubic');
+
+});
+
+$("#resumeClose").on('click', function(){
+	$(this).animate({'bottom':'-100px'}, 600, 'easeInOutCubic');
+	$('#resume').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
+	$('#circle_guide').animate({'width':'233px','height':'233px'}, 0);
+	$('#logo').animate({'margin-top':'0px'}, 0);	
+	$('#intro').animate({'padding-top':'20vh'}, 600, 'easeInOutCubic');
 	$('#tiles').delay(300).animate({'bottom':'00px'}, 900, 'easeOutExpo');
 	$('#contact').animate({'opacity':'100%'}, 300);
 	$('#circle').animate( { scrollTop : 0 }, 300, 'easeInOutCubic');
 });
 
-
 $(".tile").on('click', function(){
 	$('#homeButton').stop().animate({'height':'40px'}, 0);
-	$('#minilogo').stop().delay(600).animate({'top':'0px'}, 300, 'easeOutExpo');
-	$('#logo').stop().animate({'top':'1233px','width':'-252px','height':'-252px'}, 360, 'easeInExpo');
+	$('#minilogo').stop().delay(300).animate({'top':'0px'}, 300, 'easeOutExpo');
+	$('#logo').stop().animate({'top':'1233px','width':'-252px','height':'-252px'}, 0);
 	$('#aniGuard').css('display','block').delay(1200).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#background').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#contacts').delay(1500).queue(function (next) {$(this).css('display', 'none');next();});
