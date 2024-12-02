@@ -5,426 +5,35 @@
 <title>ToyBox</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" sizes="57x57" href="indeximage/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="indeximage/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="indeximage/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="indeximage/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="indeximage/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="indeximage/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="indeximage/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="indeximage/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="indeximage/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="indeximage/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="indeximage/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="indeximage/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="indeximage/favicon/favicon-16x16.png">
-<link rel="manifest" href="indeximage/favicon/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="../indeximage/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../indeximage/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../indeximage/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../indeximage/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../indeximage/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../indeximage/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../indeximage/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../indeximage/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../indeximage/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../indeximage/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../indeximage/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../indeximage/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../indeximage/favicon/favicon-16x16.png">
+<link rel="manifest" href="../indeximage/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="indeximage/favicon/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="../indeximage/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#000000">
-<meta property="og:title" content="Design">
+<meta property="og:title" content="ToyBox">
 <meta property="og:type" content="website">
-<meta property="og:image" content="indeximage/Thumbnail.jpg">
+<meta property="og:image" content="../indeximage/Thumbnail.jpg">
 <meta property="og:description" content="Portfolio">
 <script>(function(d) {var config = {kitId: 'jds8jip',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
 
+<link rel="stylesheet" href="../engine/mediumSpaceStyle.css">
 
 <style>
 
+#t4{opacity: 0;border-radius: 100%;overflow: hidden;}
 
-    html{
-		background-color: #000000;
-	}
-
-body{
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 1px;
-    padding: 0;
-    width: calc(100vw - 2px);
-    height: 100vh;
-}
-
-
-
-#wallpaper{
-	top: -50%;
-	left: -50%;
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	background-image: url(../indeximage/solid_vertical.svg);
-	animation: animatedBackground 120s ease-in-out infinite alternate;
-	transform: translate(50%, 50%) scale(2,2);
-}
-
-
-#container{
-	display: none;
-	justify-content: space-between;
-	align-items: stretch;
-	flex-direction: column;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-}
-
-#main{
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	background-color: #f1f3f9;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;	
-
-}
-
-#intro{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	position: relative;
-	width: 100%;
-	height: calc(100vh - 210px);
-	flex-wrap: nowrap;
-	}
-	
-#tiles{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	position: fixed;
-	flex-wrap: nowrap;
-	bottom: 0;
-	height: 165px;
-	}
-
-.tile{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	width: 89px;
-	height: 68px;
-	overflow: hidden;
-	margin-bottom: 55px;
-	cursor: pointer;
-	}
-
-#t4{
-    opacity: 0;
-	border-radius: 100%;
-	overflow: hidden;
-}
-
-#titles{
-		position: fixed;
-		z-index: 2;
-		bottom: 50vh;
-		display: none;
-		justify-content: center;
-		align-items: center;
-		width: 105vw;
-        opacity: 0;
-	}
-		
-#title{
-		background-color: #000000;
-		border-radius: 0%;
-		width: 105vw;
-		height: 100vh;	
-		left: 0px;
-		transform: translate(0%,50%);
-		position: relative;
-	}
-
-#circle_guide{
-	position: relative;
-	width: 233px;
-	height: 233px;
-	padding: 40px;
-	margin-bottom: 0px;
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#circle{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: calc(233px / 2);
-	background-color: #ffffff;
-	overflow: hidden;
-	box-shadow:  0px 13px 34px #c1c3c9;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#remote{
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: center;
-	align-items: center;
-	width: 55px;
-	height: 15px;
-	bottom: 0px;
-	left: 50vw;
-	transform: translate(-27.5px, -34px);
-	overflow: visible;
-	position: fixed;
-	z-index: 98;
-}
-
-
-#homeButton{
-	overflow: hidden;
-	display: flex;
-	background-color: #00000000;
-	width: 55px;
-	height: 40px;
-	border-radius: 100%;
-	opacity: 100%;
-	z-index: 98;
-	cursor: pointer;
-}
-
-
-.rLay{
-	align-items: center;
-	display: flex;
-	justify-content: center;
-}
-
-#minilogo{
-	position: relative;
-	top: 0px;
-	width: 100%;
-	z-index: 101;
-}
-
-
-#controller{
-	width: 39px;
-	height: 39px;
-	background: rgba( 41, 47, 55, 0.5 );
-	backdrop-filter: blur( 16px );
-	border: #414349 0.5px solid;
-	-webkit-backdrop-filter: blur( 16px );
-	box-shadow: 0px 13px 34px rgba( 0, 0, 0, 0.5 );
-	position: absolute;
-	border-radius: calc(55px / 2 - 3px);
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	gap: 46px;
-	overflow: hidden;
-
-}
-
-
-.conticon{
-	height: 50px;
-	width: 21px;
-	padding: 0 20px;
-	cursor: pointer;
-	opacity: 0;
-}
-
-#contTitles{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	align-items: flex-start;
-	position: absolute;
-	height: 0px;
-	top: -74px;
-	width: 233px;
-}
-
-.contTitle{
-	font-family: source-code-pro, monospace;
-	font-weight: 400;
-	font-size: 21px;
-	overflow: hidden;
-	text-align: center;
-	white-space: nowrap;
-	color: #f1f3f9;
-	cursor: default;
-}
-
-#ct1{
-	width: 0%;
-	opacity: 0%;
-}
-
-#ct2{
-	width: 0%;
-	opacity: 0%;
-}
-
-#ct3{
-	width: 0%;
-	opacity: 0%;
-}
-
-
-
-
-#cateTitles{
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-items: flex-start;
-	position: absolute;
-	height: 0;
-	bottom: 40px;
-	width: auto;
-	overflow: hidden;
-	flex-wrap: nowrap;
-	opacity: 0;
-}
-
-.cateTitle{
-	font-family: source-code-pro, monospace;
-	font-weight: 400;
-	font-size: 18px;
-	overflow: visible;
-	text-align: center;
-	white-space: nowrap;
-	color: #f1f3f9;
-	line-height: 36px;
-	text-decoration: none;
-
-}
-
-#cat4{
-	color: #ffbc58;
-	cursor:default
-}
-
-#cat2:hover{
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-#cat3:hover{
-	cursor: pointer;
-	text-decoration: underline;
-
-}
-
-#cat1:hover{
-	cursor: pointer;
-	text-decoration: underline;
-
-}
-
-
-
-
-
-
-
-#mousePad{
-	width: 0vw;
-	height: 0vh;
-	z-index: 97;
-	position: fixed;
-
-}
-
-
-
-
-
-
-
-
-
-#logo{
-	position: absolute;
-	bottom: -1000px;
-	width: 233px;
-	height: 233px;
-}
-
-
-#contacts{	
-	max-height: 200px;
-	min-height: 100px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	position: relative;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
-
-#contact{
-	background: rgba( 241, 243, 249, 0 );
-	backdrop-filter: blur( 8px );
-	-webkit-backdrop-filter: blur( 8px );
-	box-shadow: 0px 13px 34px #c1c3c9;
-	height: 55px;
-	width: 144px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	position: relative;
-	border-radius: calc(55px / 2);
-
-}
-
-#contactext{
-	height: 55px;
-	overflow: visible;
-	position: relative;
-}
-
-
-#titleStart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-	background-color: #000000;
-    position: fixed;
-    z-index: 97;
-	bottom:0;
-}
-
-#titleBack{
-    position: fixed;
-    z-index: 96;
-	top:0;
-    height: 100vh;
-    width: 100vw;
-	background: rgba( 0, 0, 0, 0 );
-	backdrop-filter: blur( 21px );
-	-webkit-backdrop-filter: blur( 21px );
-}
 
 #box{
     max-width: 810px;
@@ -452,17 +61,6 @@ body{
 
 
 
-#aniGuard{
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	display: block;
-	z-index: 999999999999999999999999999999999999999;
-}
-
-
-
-
 
 
 
@@ -486,40 +84,6 @@ body{
 
 
 
-#circle_guide{
-	position: relative;
-	width: 165px;
-	height: 165px;
-	padding: 0px;
-	margin-bottom: 21px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-	
-	
-#circle{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: 100%;
-	background-color: #ffffff;
-	overflow: hidden;
-	box-shadow:  0px 13px 34px #c1c3c9;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-}
-	
-#logo{
-	position: absolute;
-	bottom: -1000px;
-	width: 165px;
-	height: 165px;
-
-}	
-
 
 }
 
@@ -532,72 +96,6 @@ body{
 
 
 @media screen and (max-height: 500px) {
-
-
-#intro{
-	flex-direction: row;
-	height: calc(100vh - 155px);
-	gap: 34px;
-}
-
-#main{
-	justify-content: space-between;
-	top: 0;
-	bottom: auto;
-	flex-direction: column;
-	justify-content: flex-start;
-
-}
-
-
-
-
-
-
-
-
-#circle_guide{
-position: relative;
-width: 144px;
-height: 144px;
-padding: 0px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-
-#circle{
-position: relative;
-width: 100%;
-height: 100%;
-border-radius: 100%;
-background-color: #ffffff;
-overflow: hidden;
-box-shadow:  0px 13px 34px #c1c3c9;
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-#logo{
-position: absolute;
-bottom: -1000px;
-width: 144px;
-height: 144px;
-}
-
-#contact{
-transform: translate(0, 25%)
-}
-
-#contactitle{
-top: -34px;
-}
-
-
-
 
 
 
@@ -669,6 +167,7 @@ top: -34px;
 			<img class="tile" id="t2" src="../indeximage/frames_icon.svg"></img>
 			<img class="tile" id="t3" src="../indeximage/cinema_icon.svg"></img>
 			<a href="index.html"><img class="tile" id="t4" src="../indeximage/toybox_icon.svg"></img></a>
+
 		</div>
 	</div>
 </div>
@@ -695,7 +194,8 @@ top: -34px;
 		<a class='cateTitle' id="cat1" href="../design/index.html">Designed by ALSANSE</a>
 		<a class='cateTitle' id="cat2" href="../frames/index.html">AL—BUM</a>
 		<a class='cateTitle' id="cat3" href="../cinema/index.html">ceramic_plastic</a>
-		<span class='cateTitle' id="cat4">ToyBox</span>
+		<span class='cateTitle' id="catHere">ToyBox</span>
+
 	</div>
 </div>
 
@@ -703,184 +203,14 @@ top: -34px;
 
 
 <div id="titles">	
-    <img id="title" src="../indeximage/toybox_icon.svg"></img>
+    <img id="title4" src="../indeximage/toybox_icon.svg"></img>
 </div>
 
 
 <script src="../engine/jquery-3.5.1.js"></script>
 <script src="../engine/jquery.easing.min.js"></script>
+<script src="../engine/mediumSpaceEngine.js"></script>
 
-
-<script>
-
-
-
-$(document).ready(function(){
- 
-
-	window.addEventListener( "pageshow", function ( event ) {
-  var historyTraversal = event.persisted || 
-                         ( typeof window.performance != "undefined" && 
-                              window.performance.navigation.type === 2 );
-  if ( historyTraversal ) {
-    // Handle page restore.
-    window.location.reload();
-  }
-});
-
-
-
-
-    $(document).ready(function(){
-        $('#titleStart')
-		.stop()
-		.delay(900)
-		.animate({'opacity':'0'}, 600)
-		.queue(function (next) {$(this).css('display', 'none');next();});
-		$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#aniGuard').delay(2700).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#controller').delay(1500).animate({'width':'144px','height':'59px'}, 600, 'easeInExpo').animate({'width':'233px','height':'54px'}, 300, 'easeOutBack');
-		$('.conticon').delay(2100).animate({'opacity':'1'}, 300);
-    });
-
-
-
- 
- $("#homeButton").on('click', function(){
-    $('#titleStart')
-	.stop()
-	.queue(function (next) {$(this).css('display', 'flex');next();})
-	.animate({'opacity':'1'}, 600, 'easeOutExpo')
-	.queue(function (next) {$(this).css('display', 'none');next();});
-	$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
-    $(this).stop().delay(1200).animate({'height':'0px'}, 0);	
-	$('#minilogo').stop().delay(900).animate({'top':'-100px'}, 300, 'easeInExpo');
-	$('#logo').stop().delay(1200).animate({'bottom':'0px','width':'100%','height':'100%'}, 600, 'easeOutExpo');
-	$('#t4').stop().delay(1150).animate({'opacity':'100%'}, 0);
-	$('#controller').animate({'padding-top':'0px','margin-bottom':'0px'}, 150, 'easeOutExpo').animate({'width':'89px','height':'54px','padding-top':'0px','margin-bottom':'0px'}, 150, 'easeInCirc').animate({'width':'39px','height':'39px'}, 300, 'easeOutCirc').queue(function (next) {$(this).css('display', 'none');next();});
-	$('.conticon').animate({'opacity':'0'}, 300);
-
-	$('#titles').stop()
-        .delay(590)
-        .delay(0, function (next) {$(this).css('display', 'flex');next();})
-        .animate({'opacity':'1'}, 0)
-		.delay(200)
-		.animate({'bottom':'110px'}, 300, 'easeInOutSine')
-		.delay(600)
-		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '110px');next();})
-		.delay(0, function(){$(location).attr('href','../index.html');});
-	$('#title').stop().delay(300).animate({'left':'133.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')
-		.animate({'border-radius':'47%'}, 600, 'easeOutCirc');
-	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
-	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
-
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-
-
- });
- 
-
-
-
-
-
-
-
- $("#genres").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'177px','margin-bottom':'177px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'height':'152px','opacity':'1'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
- });
-
-
- $("#search").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'377px','margin-bottom':'377px'}, 450, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
- });
-
-
- $("#mousePad").on('mouseover', function(){
-	$(this).stop().animate({'height':'100vh','width':'100vw'}, 0);
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-
-
-
-
- $(".rButton").on('mouseover', function(){
-	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-$(".conticon").on('mouseover', function(){
-	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
-});
-
-$("#genres").on('mouseover', function(){
-	$('#ct1').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-$("#search").on('mouseover', function(){
-	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
-
-});
-
-$("#remote").on('mouseleave', function(){
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
- });
- 
-
- 
-
-
-</script>
 
 </body>
 </html>
