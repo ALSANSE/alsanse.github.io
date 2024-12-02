@@ -57,7 +57,8 @@ $(document).ready(function(){
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
 		.queue(function (next) {$(this).css('bottom', '110px');next();})
-		.delay(100, function(){$(location).attr('href','../index.html');});
+		.delay(300)
+		.delay(0, function(){$(location).attr('href','../index.html');});
 	$('#title1').stop()
 		.delay(300)
 		.animate({'left':'-133.5px','height':'68px','width':'68px','border-radius':'35%'}, 900, 'easeInOutExpo')

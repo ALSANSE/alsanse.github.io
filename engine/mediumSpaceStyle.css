@@ -77,6 +77,8 @@ body{
 	flex-wrap: nowrap;
 	bottom: 0;
 	height: 165px;
+	width: 100vw;
+
 	}
 
 .tile{
@@ -103,6 +105,7 @@ body{
 		align-items: center;
 		width: 105vw;
         opacity: 0;
+
 	}
 		
 	#title1{

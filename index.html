@@ -441,6 +441,13 @@ padding-bottom: 29px;
 
 }
 
+.resumeContactLink{
+	font-size: 13px;
+	font-weight: 700;
+}
+
+
+
 table{
 	border-collapse: collapse;
 	background-color: #fafaff;
@@ -464,9 +471,10 @@ td{
 
 
 .resumeDate{
-	font-weight: 900;
+	font-weight: 700;
 	text-align: right;
-	width: 233px;
+	font-size: 13px;
+	width: 144px;
 	transition: 300ms;
 	color: #216f9b;
 }
@@ -482,6 +490,7 @@ footer{
 	align-content: center;
 	align-items: center;
 	text-align: center;
+	font-size: 13px;
 }
 
 footer img{
@@ -788,9 +797,8 @@ background-color: #ff6442;
 
 
 .resumeDate{
-	font-weight: 900;
 	text-align: right;
-	width: 89px;
+	width: 75px;
 	color: #216f9b;
 }
 
@@ -921,8 +929,8 @@ background-color: #ff6442;
 					<div id="resume">
 						<div id="resumeContact">
 							<h1>Sejin Kim</h1><br>
-							<span><b>E-Mail</b> </span><br><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br><br>
-							<span><b>Instagram</b> </span><br><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+							<span class="resumeContactLink">E-Mail</span><br><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br><br>
+							<span class="resumeContactLink">Instagram</span><br><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
 						</div>
 						<table>
 							<caption>
@@ -1247,6 +1255,7 @@ $("#mousePad").on('click', function(){
 
 $("#resumeClose").on('click', function(){
 	$(this).animate({'bottom':'-1000px'}, 900, 'easeInOutExpo');
+	$('#mousePad').animate({'width':'0vw','height':'0vh'}, 0);
 	$('#resume').delay(600).queue(function (next) {$(this).css('display', 'none');next();});
 	$('#circle_guide').animate({'width':'233px','height':'233px'}, 900, 'easeInOutExpo');
 	$('#logo').animate({'margin-top':'0px'}, 600, 'easeInOutCubic');	
