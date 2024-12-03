@@ -82,6 +82,9 @@ a:hover{
 	text-decoration: underline;
 }
 
+h1, p{
+	line-height: 21px;
+}
 
 img {
   -webkit-user-drag: none;
@@ -438,6 +441,12 @@ width: 100%;
 position: relative;
 border-radius: 34px;
 padding-bottom: 29px;
+align-items: center;
+align-content: center;
+justify-content: center;
+flex-direction: column;
+display: flex;
+
 
 }
 
@@ -446,7 +455,36 @@ padding-bottom: 29px;
 	font-weight: 700;
 }
 
+#resumeLinks{
+	display: flex;
+	justify-content: center;
+	gap:8px;
+	width: 76px;
+}
 
+.resumeLink{
+	width: 34px;
+	height: 34px;
+	background-color: #ffffff;
+	box-shadow: 5px 5px 13px rgba(0,11,55,0.1);
+	border-radius: calc(21px / 2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.resumeLink a{
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.resumeLink img{
+	width: 21px;
+	height: 21px;
+}
 
 table{
 	border-collapse: collapse;
@@ -480,8 +518,9 @@ td{
 }
 	
 caption{
-	font-family: source-code-pro, monospace;
-	font-weight: 400;
+	font-family: pretendard, sans-serif;
+	font-weight: 100;
+	font-size: 34px;
 }
 
 footer{
@@ -928,13 +967,19 @@ background-color: #ff6442;
 					<img id='logo' src='indeximage/alsanse3d.jpeg' style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
 					<div id="resume">
 						<div id="resumeContact">
-							<h1>Sejin Kim</h1><br>
-							<span class="resumeContactLink">E-Mail</span><br><a href="mailto:alsanse.design@gmail.com">alsanse.design@gmail.com</a><br><br>
-							<span class="resumeContactLink">Instagram</span><br><a href="https://www.instagram.com/alsan.se/" target="_blank">@alsan.se</a>
+							<h1>Sejin Kim</h1>
+							<div id="resumeLinks">
+								<div class="resumeLink"><a href="mailto:alsanse.design@gmail.com"><img src="indeximage/email-logo.svg"></a></div>
+								<div class="resumeLink"><a href="https://www.instagram.com/alsan.se/" target="_blank"><img src="indeximage/instagram-seeklogo.svg"></a></div>
+							</div>
+							<div id="resumeLinkPannels">
+								<div class="resumeLinkPannel" id="resumeLinkEmail"></div>
+								<div class="resumeLinkPannel" id="resumeLinkInstagram"></div>
+							</div>
 						</div>
 						<table>
 							<caption>
-								<h1>EDUCATION</h1>
+								<p>EDUCATION</p>
 							</caption>
 							<tbody>
 								<tr>
@@ -950,7 +995,7 @@ background-color: #ff6442;
 				
 						<table>
 								<caption>
-									<h1>ACTIVITIES &amp; AWARDS</h1>
+									<p>ACTIVITIES &amp; AWARDS</p>
 								</caption>
 				
 							<tbody>
