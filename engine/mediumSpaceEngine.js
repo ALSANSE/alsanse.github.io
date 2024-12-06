@@ -24,7 +24,7 @@ $(document).ready(function(){
 		.queue(function (next) {$(this).css('display', 'none');next();});
 		$('#titleBack').delay(1100).animate({'opacity':'0'}, 600).queue(function (next) {$(this).css('display', 'none');next();});
 		$('#aniGuard').delay(2700).queue(function (next) {$(this).css('display', 'none');next();});
-		$('#controller').delay(1500).animate({'width':'144px','height':'59px'}, 600, 'easeInExpo').animate({'width':'233px','height':'54px'}, 300, 'easeOutBack');
+		$('#controller').delay(1500).animate({'width':'144px','height':'59px'}, 600, 'easeInExpo').animate({'width':'244px','height':'50px'}, 150, 'easeOutCirc').animate({'width':'232px','height':'54px'}, 300, 'easeOutBack');
 		$('.conticon').delay(2100).animate({'opacity':'1'}, 300);
     });
 
@@ -87,6 +87,8 @@ $(document).ready(function(){
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 
 
+
+
  });
  
 
@@ -116,8 +118,8 @@ $(document).ready(function(){
 
 
  $("#mousePad").on('mouseover', function(){
-	$(this).stop().animate({'height':'100vh','width':'100vw'}, 0);
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
+	$(this).stop().animate({'height':'0vh','width':'0vw'}, 0);
+	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
@@ -158,7 +160,8 @@ $("#search").on('mouseover', function(){
 });
 
 $("#remote").on('mouseleave', function(){
-	$("#controller").stop().animate({'padding-top':'0px','margin-bottom':'0px'}, 300, 'easeOutExpo');
+	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
+	$(this).stop().animate({'bottom':'-3px'}, 250, 'easeInOutCirc').animate({'bottom':'0px'}, 300, 'easeOutBack');	
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');

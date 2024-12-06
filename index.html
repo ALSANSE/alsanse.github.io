@@ -521,6 +521,7 @@ caption{
 	font-family: pretendard, sans-serif;
 	font-weight: 100;
 	font-size: 34px;
+	color: #337399;
 }
 
 footer{
@@ -1196,7 +1197,7 @@ $("#t4").on('mouseover', function(){
 });
 	
 $(".tile").on('mouseleave', function(){
-	$(".tile").stop().animate({'height':'68px'}, 300, 'easeOutCirc');
+	$(".tile").stop().animate({'height':'68px'}, 600, 'easeOutBounce');
 	$('#tDesign').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#tFrames').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#tCinema').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');

@@ -230,6 +230,7 @@ body{
 	backdrop-filter: blur( 16px );
 	border: #414349 0.5px solid;
 	-webkit-backdrop-filter: blur( 16px );
+
 	box-shadow: 0px 13px 34px rgba( 0, 0, 0, 0.5 );
 	position: absolute;
 	border-radius: calc(55px / 2 - 3px);
@@ -355,7 +356,7 @@ body{
 	height: 0vh;
 	z-index: 97;
 	position: fixed;
-
+	display: none;
 }
 
 
@@ -459,6 +460,7 @@ body{
 
 
 @media screen and (max-width: 720px) {
+	#mousePad{display: block;}
 
 }
 
@@ -471,8 +473,7 @@ body{
 
 
 @media screen and (max-height: 500px) {
-	#intro{
-		display: none;
+	#intro{display: none;}
+	
 
-	}
 }
