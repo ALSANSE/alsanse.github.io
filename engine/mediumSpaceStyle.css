@@ -298,7 +298,7 @@ body{
 	align-items: flex-start;
 	position: absolute;
 	height: 0;
-	bottom: 40px;
+	bottom: 50px;
 	width: auto;
 	overflow: hidden;
 	flex-wrap: nowrap;
