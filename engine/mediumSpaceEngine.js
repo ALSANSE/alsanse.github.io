@@ -118,7 +118,7 @@ $(document).ready(function(){
 
 
  $("#mousePad").on('mouseover', function(){
-	$(this).stop().animate({'height':'0vh','width':'0vw'}, 0);
+	$(this).stop().delay(100).animate({'height':'0vh','width':'0vw'}, 0);
 	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
@@ -152,14 +152,14 @@ $("#genres").on('mouseover', function(){
 	$('#ct1').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+//	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
 
 });
 $("#search").on('mouseover', function(){
 	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
+//	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
 
 });
 
