@@ -460,6 +460,10 @@ body{
 
 @media screen and (max-width: 720px) {
 
+	#cateTitles{
+		display: none;
+	}
+
 }
 
 
