@@ -159,7 +159,7 @@ $("#search").on('mouseover', function(){
 	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-//	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
 
 });
 
