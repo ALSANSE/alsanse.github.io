@@ -81,7 +81,7 @@ $(document).ready(function(){
 		
 	$('#container').delay(300).queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#aniGuard').css('display','block').delay(2200).queue(function (next) {$(this).css('display', 'none');next();});
-
+	$('#mousePad').css('display','none');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
@@ -104,7 +104,7 @@ $(document).ready(function(){
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#cateTitles').stop().animate({'height':'152px','opacity':'1'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
+//	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
  });
 
 
@@ -113,7 +113,7 @@ $(document).ready(function(){
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
+//	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
  });
 
 
@@ -124,6 +124,7 @@ $(document).ready(function(){
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+ 	$('#remote').stop().animate({'bottom':'-3px'}, 250, 'easeInOutCirc').animate({'bottom':'0px'}, 300, 'easeOutBack');	
 
 });
 
@@ -137,11 +138,14 @@ $(document).ready(function(){
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
 
 });
 
 $(".conticon").on('mouseover', function(){
 	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
+	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
+
 });
 
 $("#genres").on('mouseover', function(){
@@ -159,16 +163,16 @@ $("#search").on('mouseover', function(){
 
 });
 
-$("#remote").on('mouseleave', function(){
-	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
-	$(this).stop().animate({'bottom':'-3px'}, 250, 'easeInOutCirc').animate({'bottom':'0px'}, 300, 'easeOutBack');	
-	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+// $("#remote").on('mouseleave', function(){
+// 	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
+// 	$(this).stop().animate({'bottom':'-3px'}, 250, 'easeInOutCirc').animate({'bottom':'0px'}, 300, 'easeOutBack');	
+// 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+// 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+// 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+// 	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
 
 
-});
+// });
 
 
 

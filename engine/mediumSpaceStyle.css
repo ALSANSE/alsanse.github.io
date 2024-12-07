@@ -356,7 +356,6 @@ body{
 	height: 0vh;
 	z-index: 97;
 	position: fixed;
-	display: none;
 }
 
 
@@ -460,7 +459,6 @@ body{
 
 
 @media screen and (max-width: 720px) {
-	#mousePad{display: block;}
 
 }
 
