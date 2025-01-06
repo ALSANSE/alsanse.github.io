@@ -298,11 +298,17 @@ body{
 	align-items: flex-start;
 	position: absolute;
 	height: 0;
-	bottom: 40px;
+	bottom: 35px;
 	width: auto;
 	overflow: hidden;
 	flex-wrap: nowrap;
 	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 5px;
+	gap: 0px;
+
 }
 
 .cateTitle{
@@ -313,7 +319,7 @@ body{
 	text-align: center;
 	white-space: nowrap;
 	color: #f1f3f9;
-	line-height: 38px;
+	line-height: 18px;
 	text-decoration: none;
 
 }

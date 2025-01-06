@@ -99,17 +99,17 @@ $(document).ready(function(){
 
 
  $("#genres").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'177px','margin-bottom':'177px'}, 300, 'easeOutExpo');
+	$("#controller").stop().animate({'padding-top':'187px','margin-bottom':'187px','width':'230px'}, 300, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'padding-top':'177px','margin-bottom':'177px','width':'232px'}, 300, 'easeOutBack');next();});
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'height':'152px','opacity':'1'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'height':'152px','opacity':'1','gap':'25px','padding-bottom':'7px'}, 300, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'gap':'23px','padding-bottom':'5px'}, 300, 'easeOutBack');next();});
 //	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
  });
 
 
  $("#search").on('click', function(){
-	$("#controller").stop().animate({'padding-top':'377px','margin-bottom':'377px'}, 450, 'easeOutExpo');
+	$("#controller").stop().animate({'padding-top':'387px','margin-bottom':'387px','width':'230px'}, 390, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'padding-top':'377px','margin-bottom':'377px','width':'232px'}, 300, 'easeOutBack');next();});
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
@@ -123,7 +123,7 @@ $(document).ready(function(){
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
 $('#remote').stop().delay(100).animate({'bottom':'-3px'}, 250, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'bottom':'0px'}, 600, 'easeOutBack');next();});	
 
 });
@@ -136,7 +136,7 @@ $('#remote').stop().delay(100).animate({'bottom':'-3px'}, 250, 'easeInOutCirc').
 	$('#ct2').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
 	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
 
 });
@@ -151,14 +151,14 @@ $("#genres").on('mouseover', function(){
 	$('#ct1').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
 
 });
 $("#search").on('mouseover', function(){
 	$('#ct3').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-	$('#cateTitles').animate({'opacity':'0'}, 0).stop().animate({'height':'0px'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
 
 });
 
