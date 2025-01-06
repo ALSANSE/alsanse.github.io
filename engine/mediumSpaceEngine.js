@@ -119,12 +119,12 @@ $(document).ready(function(){
 
  $("#mousePad").on('mouseover', function(){
 	$(this).stop().delay(100).animate({'height':'0vh','width':'0vw'}, 0);
-	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 300, 'easeOutBack');
+	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'width':'232px','height':'54px'}, 600, 'easeOutBack');next();});
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
- 	$('#remote').stop().delay(100).animate({'bottom':'-3px'}, 250, 'easeInOutCirc').stop().animate({'bottom':'0px'}, 300, 'easeOutBack');	
+$('#remote').stop().delay(100).animate({'bottom':'-3px'}, 250, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'bottom':'0px'}, 600, 'easeOutBack');next();});	
 
 });
 

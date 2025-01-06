@@ -452,6 +452,26 @@ body{
 
 
 
+footer{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 13px;
+	color: #616369;
+	font-family: source-code-pro, monospace;
+	font-weight: 400;
+	padding-bottom: 144px;
+	bottom: 0;
+
+}
+
+footer img{
+	margin-top: 21px;
+	width: 144px;
+}
+
 
 
 
