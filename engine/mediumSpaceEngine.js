@@ -133,6 +133,7 @@ $('#remote').stop().delay(100).animate({'bottom':'-3px'}, 250, 'easeInOutCirc').
 
  $(".rButton").on('mouseover', function(){
 	$("#controller").stop().animate({'padding-top':'46px','margin-bottom':'46px'}, 300, 'easeOutExpo');
+	
 	$('#ct2').stop().animate({'width':'100%','opacity':'100%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
