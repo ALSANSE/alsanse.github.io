@@ -163,16 +163,6 @@ $("#search").on('mouseover', function(){
 
 });
 
-// $("#remote").on('mouseleave', function(){
-// 	$("#controller").stop().animate({'width':'244px','height':'50px','padding-top':'0px','margin-bottom':'0px'}, 300, 'easeInOutCirc').animate({'width':'232px','height':'54px'}, 450, 'easeOutBack');
-// 	$(this).stop().animate({'bottom':'-3px'}, 250, 'easeInOutCirc').animate({'bottom':'0px'}, 300, 'easeOutBack');	
-// 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-// 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-// 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-// 	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px'}, 300, 'easeOutExpo');
-
-
-// });
 
 
 
