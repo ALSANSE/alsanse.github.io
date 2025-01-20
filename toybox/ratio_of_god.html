@@ -27,6 +27,7 @@
 <meta property="og:image" content="thumbnails/ratioOfGod.jpg">
 <meta property="og:description" content="1 : 1.618">
 <script>(function(d) {var config = {kitId: 'jds8jip',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
 
@@ -48,7 +49,7 @@ input::-webkit-outer-spin-button {
 }
 
 body{
-	background-color: #000000;
+	background-color: #808080;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -220,47 +221,10 @@ font-size: 6765px;
 
 <div id="information">
 
-	<div class="goldenCard" style="width:610px; height:377px; ">
-		<div class="goldenCard" style="width:377px; height:377px;">
-			<p class="typeA">"만물의 근원은 수이며,<br><span style="padding-right: 7px;"></span>그 수는 신의 섭리를 담고 있다."</p>
-		</div>
-		<div class="goldenCard" style="width:233px; height:377px;">
-			<div class="goldenCard" style="width:233px; height:233px;"></div>
-			<div class="goldenCard" style="width:233px; height:144px;">
-				<div class="goldenCard" style="width:89px; height:144px;">
-					<div class="goldenCard" style="width:89px; height:55px;">
-						<div class="goldenCard" style="width:55px; height:55px;"></div>
-						<div class="goldenCard" style="width:34px; height:55px;">
-							<div class="goldenCard" style="width:34px; height:34px;"></div>
-							<div class="goldenCard" style="width:34px; height:21px;">
-								<div class="goldenCard" style="width:13px; height:21px;">
-									<div class="goldenCard" style="width:13px; height:8px;">
-										<div class="goldenCard" style="width:8px; height:8px;"></div>
-										<div class="goldenCard" style="width:5px; height:8px;">
-											<div class="goldenCard" style="width:5px; height:5px;"></div>
-											<div class="goldenCard" style="width:5px; height:3px;">
-												<div class="goldenCard" style="width:2px; height:3px;"></div>
-												<div class="goldenCard" style="width:3px; height:3px;"></div>
 
-											</div>
-
-										</div>
-
-									</div>
-									<div class="goldenCard" style="width:13px; height:13px;"></div>
-								</div>
-								<div class="goldenCard" style="width:21px; height:21px;"></div>
-
-							</div>
-						</div>
-					</div>
-					<div class="goldenCard" style="width:89px; height:89px;"></div>
-				</div>
-				<div class="goldenCard" style="width:144px; height:144px;"></div>
-			</div>
-		</div>
-		
-	</div>
+  <div id="lottieWrapper" class="lottie-wrapper"></div>
+<img src="toyboximage/ratio_of_god_logo.webp">
+  <p class="typeA">"만물의 근원은 수이며,<br><span style="padding-right: 7px;"></span>그 수는 신의 섭리를 담고 있다."</p>
 
 
 </div>
@@ -268,6 +232,16 @@ font-size: 6765px;
 
 
 <script>
+
+const lottieWrapper = document.querySelector('#lottieWrapper');
+            const lottieAnimation = bodymovin.loadAnimation({
+                container: lottieWrapper, // 애니메이션 들어가는 div 
+                path: './toyboximage/ratio_of_god_logo.json', // hello.json 경로
+                renderer: 'svg',
+                loop: true, // 반복재생
+                autoplay: true // 자동재생
+                });
+
 
 function calculate(el, maxlength) {
   if(el.value.length > maxlength)  {
