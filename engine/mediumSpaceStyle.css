@@ -559,16 +559,18 @@ footer img{
 	font-weight: 700;
 	margin-bottom: 1.6rem;
 	color: #000000;
+	line-height: 0;
 }
 
 .describe p{
 	font-size: 1rem;	
 	line-height: 1.6rem;
+	margin-top: 1rem;
 }
 
 .describe b{
 	font-size: 1rem;	
-	line-height: 0rem;
+	line-height: 0.6rem;
 	word-spacing: 0.4rem;
 	color: #0085bc;
 }
