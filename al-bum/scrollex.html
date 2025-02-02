@@ -1,15 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+<script>(function(d) {var config = {kitId: 'jds8jip',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+
+
+<style>
+
+#entrance{
+    position: relative;
+    min-width: 100vw;
+}
+
+#exit{
+    position: relative;
+    min-width: 188.5px;
+}
+
+
+#headline{
+    width: 100%;
+
+	font-family: pretendard, sans-serif;
+	color: #313339;
+	text-align: center;
+}
+
+#headline h1{
+	font-weight: 100;
+	font-size: 2.6rem;
+}
+#headline p{
+	font-weight: 400;
+	line-height: 161.8%;
+	font-size: 1rem;
+}
+
+
+
+
         #content {
-            width: 11000px;
             height: 100vh;
-            background: linear-gradient(to bottom, #f9f6f1 , #c3c1c9);
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            box-shadow: 0px 0px 34px 0px rgba(255,255,255,0.3);
 
         }
         body {
@@ -18,7 +55,7 @@
             height: 100vh;
 			margin: 0;
 			padding: 0;
-            background-color: #775544;
+            background: linear-gradient(to bottom, #f9f6f1 , #c3c1c9);
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
@@ -35,7 +72,7 @@
 .frames{
     background-color: #313339;
     margin: 0 188.5px;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 21px;
     box-shadow:  0px 18px 13px -8px rgba(0,0,0,0.3);
     transition: 300ms;
@@ -79,6 +116,12 @@
 </head>
 <body>
     <div id="content">
+        <div id="entrance">
+            <div id="headline">
+                <h1>AL-BUM</h1>
+                <p>일상의 찰나를 포착하여 재해석한 포토그래피 작품을 전시하는 디지털 공간입니다.<br>스크롤하여 관람을 시작하세요.</p>
+            </div>
+        </div>
 
 		<div class="frames"><div><img class="pics" src="gallery/img1.jpeg"></div></div>
 		<div class="frames"><div><img class="pics" src="gallery/img2.jpeg"></div></div>
@@ -91,6 +134,7 @@
 		<div class="frames"><div><img class="pics" src="gallery/img9.jpeg"></div></div>
 		<div class="frames"><div><img class="pics" src="gallery/img10.jpeg"></div></div>
 
+        <div id="exit"><br></div>
 	</div>
 
 
