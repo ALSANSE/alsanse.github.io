@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 377 610">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1f3f9;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M72,0C15.75,0,0,15.75,0,72v466c0,56.25,15.75,72,72,72h233c56.25,0,72-15.75,72-72V72C377,15.75,361.25,0,305,0H72Z"/>
+</svg>
