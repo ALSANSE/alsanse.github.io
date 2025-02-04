@@ -544,6 +544,7 @@ footer img{
 
 .contents{
 	background-image: url(../engine/card.svg);
+	background-repeat: no-repeat;
     width: 377px;
     height: 610px;
     overflow: hidden;
@@ -629,6 +630,7 @@ footer img{
 	.contents{
 		width: 100%;
 		max-width: 377px;
+		aspect-ratio: 377/610;
 		}
 	
 	.contents img{
@@ -637,6 +639,10 @@ footer img{
 	
 	}
 	
+	.thumbnail{
+		width: 100%;
+		aspect-ratio: 1;
+	}
 
 
 
