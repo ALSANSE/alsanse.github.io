@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 
  
- $("#remoteHover").on('click', function(){
+ $("#homeButtonHover").on('click', function(){
     $('#titleStart')
 	.stop()
 	.queue(function (next) {$(this).css('display', 'flex');next();})
