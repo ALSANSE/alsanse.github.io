@@ -148,6 +148,7 @@ $(document).ready(function(){
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
 
 
 
@@ -160,7 +161,7 @@ $(document).ready(function(){
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#cateTitles').stop().animate({'height':'152px','opacity':'1','gap':'25px','padding-bottom':'7px'}, 300, 'easeInOutCirc').queue(function (next) {$(this).stop().animate({'gap':'23px','padding-bottom':'5px'}, 300, 'easeOutBack');next();});
-//	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
+	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
  });
 
  $("#searchHover").on('click', function(){
@@ -168,7 +169,8 @@ $(document).ready(function(){
 	$('#ct1').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct2').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
 	$('#ct3').stop().animate({'width':'0%','opacity':'0%'}, 300, 'easeOutExpo');
-//	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
+	$('#cateTitles').stop().animate({'opacity':'0'}, 0).animate({'height':'0px', 'gap':'0px'}, 300, 'easeInOutCirc');
+	$('#mousePad').stop().animate({'height':'100vh','width':'100vw'}, 0);
  });
 
 

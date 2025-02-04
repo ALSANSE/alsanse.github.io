@@ -200,7 +200,6 @@ body{
 	position: fixed;
 	width: 210px;
 	height: 40px;
-	background-color: #ffbc58;	
 	display: none;
 	justify-content: space-around;
 	z-index: 99;
@@ -212,7 +211,6 @@ body{
 .hoverButton{
 	width: 55px;
 	height: 40px;
-	background-color: #0085bc;
 }
 
 #homeButton{
