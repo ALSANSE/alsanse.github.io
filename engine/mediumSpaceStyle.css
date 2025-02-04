@@ -579,7 +579,7 @@ footer img{
 	font-family: pretendard, sans-serif;
 	color: #515359;
 	line-height: 0;
-	padding: 1rem 21px 21px 21px;
+	padding: 0.6rem 21px 21px 21px;
 }
 
 .describe h1, a{
@@ -589,9 +589,19 @@ footer img{
 .describe h1{
 	font-size: 1.6rem;
 	font-weight: 700;
-	margin-bottom: 1.6rem;
+	margin-bottom: 0.8rem;
 	color: #000000;
-	line-height: 0;
+	line-height: 1.6rem;
+	height: 1.8rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.describe b{
+	font-size: 1rem;
+	word-spacing: 0.4rem;
+	color: #0085bc;
 }
 
 .describe p{
@@ -600,12 +610,6 @@ footer img{
 	margin-top: 1.4rem;
 }
 
-.describe b{
-	font-size: 1rem;
-	line-height: 0.6rem;
-	word-spacing: 0.4rem;
-	color: #0085bc;
-}
 
 
 
@@ -663,7 +667,8 @@ footer img{
 
 
 	.contents{
-		}
+		height: calc(100vw * 1.618);
+	}
 
 		.thumbnail{
 			width: 100%;
@@ -683,7 +688,7 @@ footer img{
 	}
 
 	.describe p{
-		height: calc((100vw * 0.618) - 90px);
+		height: calc((100vw * 0.618) - 110px);
 		overflow: scroll;
 		}
 	
