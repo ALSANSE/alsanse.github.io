@@ -98,7 +98,7 @@ body{
 #titles{
 		position: fixed;
 		z-index: 2;
-		bottom: 50vh;
+		bottom: 50dvh;
 		display: none;
 		justify-content: center;
 		align-items: center;
