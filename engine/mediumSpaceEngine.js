@@ -53,10 +53,10 @@ $(document).ready(function(){
         .delay(0, function (next) {$(this).css('display', 'flex');next();})
         .animate({'opacity':'1'}, 0)
 		.delay(200)
-		.animate({'bottom':'110px'}, 300, 'easeInOutSine')
+		.animate({'bottom':'55px'}, 300, 'easeInOutSine')
 		.delay(600)
 		.queue(function (next) {$(this).css('display', 'none');next();})
-		.queue(function (next) {$(this).css('bottom', '110px');next();})
+		.queue(function (next) {$(this).css('bottom', '55px');next();})
 		.delay(300)
 		.delay(0, function(){$(location).attr('href','../index.html');});
 	$('#title1').stop()

@@ -75,7 +75,7 @@ body{
 	position: fixed;
 	flex-wrap: nowrap;
 	bottom: 0;
-	height: 165px;
+	height: 110px;
 	width: 100vw;
 
 	}
@@ -89,7 +89,7 @@ body{
 	width: 89px;
 	height: 68px;
 	overflow: hidden;
-	margin-bottom: 55px;
+	margin-bottom: 0px;
 	cursor: pointer;
 	}
 
@@ -443,7 +443,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
 	background-color: #000000;
     position: fixed;
@@ -455,7 +455,7 @@ body{
     position: fixed;
     z-index: 96;
 	top:0;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
 	background: rgba( 0, 0, 0, 0 );
 	backdrop-filter: blur( 21px );
