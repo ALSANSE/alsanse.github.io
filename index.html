@@ -381,7 +381,7 @@ img {
 
 #background{
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	position: absolute;
 	opacity: 100%;
@@ -393,12 +393,13 @@ img {
 	top: -50%;
 	left: -50%;
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: absolute;
 	background-image: url(indeximage/solid_vertical.svg);
 	animation: animatedBackground 120s ease-in-out infinite alternate;
 	transform: translate(50%, 50%) scale(2,2);
 }
+@keyframes animatedBackground {100% {transform: translate(0%, 0%) scale(2,2);}}
 
 
 #frontground{
@@ -742,13 +743,7 @@ background-color: #ff6442;
 
 
 
-@keyframes animatedBackground {
 
-100% {
-	transform: translate(0%, 0%) scale(2,2);
-}
-
-}
 
 
 
@@ -1247,7 +1242,7 @@ $("#mousePad").on('click', function(){
 	$('#logo').animate({'margin-top':'0px'}, 600, 'easeInOutCubic');	
 	//$('#intro').delay(120).animate({'padding-top':'20vh'}, 600, 'easeInOutCubic');
 	$('#tiles').delay(600).animate({'bottom':'0px'}, 900, 'easeOutExpo');
-	$('#contact').delay(300).animate({'opacity':'100%', 'top':'0px'}, 600, 'easeInOutCubic');
+	$('#contact').animate({'opacity':'100%', 'top':'0px'}, 900, 'easeOutExpo');
 	$('#circle').animate( { scrollTop : 0 }, 600, 'easeInOutCubic');
 	$('#resumeClose').animate({'bottom':'-1000px'}, 900, 'easeInOutExpo');
 
@@ -1261,7 +1256,7 @@ $("#resumeClose").on('click', function(){
 	$('#logo').animate({'margin-top':'0px'}, 600, 'easeInOutCubic');	
 	//$('#intro').delay(120).animate({'padding-top':'20vh'}, 600, 'easeInOutCubic');
 	$('#tiles').delay(600).animate({'bottom':'0px'}, 900, 'easeOutExpo');
-	$('#contact').delay(300).animate({'opacity':'100%', 'top':'0px'}, 600, 'easeInOutCubic');
+	$('#contact').animate({'opacity':'100%', 'top':'0px'}, 900, 'easeOutExpo');
 	$('#circle').animate( { scrollTop : 0 }, 600, 'easeInOutCubic');
 });
 

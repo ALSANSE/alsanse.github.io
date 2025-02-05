@@ -17,12 +17,20 @@ body{
 }
 
 
+#background{
+	width: 100vw;
+	height: 100dvh;
+	overflow: hidden;
+	position: absolute;
+	opacity: 100%;
+	display: block;
+}
 
 #wallpaper{
 	top: -50%;
 	left: -50%;
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: absolute;
 	background-image: url(../indeximage/solid_vertical.svg);
 	animation: animatedBackground 120s ease-in-out infinite alternate;
