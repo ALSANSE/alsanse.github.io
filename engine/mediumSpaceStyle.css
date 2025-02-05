@@ -25,7 +25,7 @@ body{
 	height: 100vh;
 	position: absolute;
 	background-image: url(../indeximage/solid_vertical.svg);
-	/* animation: animatedBackground 120s ease-in-out infinite alternate; */
+	animation: animatedBackground 120s ease-in-out infinite alternate;
 	transform: translate(50%, 50%) scale(2,2);
 }
 
@@ -74,7 +74,7 @@ body{
 	justify-content: center;
 	position: fixed;
 	flex-wrap: nowrap;
-	bottom: 0;
+	bottom: 0px;
 	height: 110px;
 	width: 100vw;
 
