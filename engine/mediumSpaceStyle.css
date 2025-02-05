@@ -13,8 +13,7 @@ body{
     margin: 0 1px;
     padding: 0;
     width: calc(100vw - 2px);
-    height: 100dvh;
-	overflow-y: scroll;
+    height: 100svh;
 }
 
 
