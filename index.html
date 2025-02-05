@@ -65,7 +65,7 @@ body{
 	align-items: center;
 	align-content: center;
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	padding: 0;
 	margin: 0;
 	
@@ -1220,7 +1220,7 @@ $("#frontground").on('click', function(){
 $("#resumeS").on('click', function(){
 	$('#resume').queue(function (next) {$(this).css('display', 'flex');next();});
 	$('#mousePad').animate({'width':'100vw','height':'100vh'}, 0);
-	$('#circle_guide').animate({'width':'90vw','height':'90vh'}, 900, 'easeInOutExpo');
+	$('#circle_guide').animate({'width':'90vw','height':'90dvh'}, 900, 'easeInOutExpo');
 	$('#logo').delay(120).animate({'margin-top':'55px'}, 600, 'easeInOutCubic');	
 	$('#intro').animate({'padding-top':'0px'}, 600, 'easeInOutCubic');
 	$('#tiles').animate({'bottom':'-200px'}, 300, 'easeInCubic');
