@@ -13,7 +13,7 @@ body{
     margin: 0 1px;
     padding: 0;
     width: calc(100vw - 2px);
-    height: 100vh;
+    height: 100dvh;
 }
 
 
@@ -61,7 +61,7 @@ body{
 	align-content: center;
 	justify-content: flex-start;
 	position: relative;
-	padding-top: 20vh;
+	padding-top: 0;
 	width: 100%;
 	flex-wrap: nowrap;
 	}
@@ -155,6 +155,7 @@ body{
 	width: 233px;
 	height: 233px;
 	padding: 40px;
+	margin-top: 20dvh;
 	margin-bottom: 0px;
 	z-index: 3;
 	display: flex;
