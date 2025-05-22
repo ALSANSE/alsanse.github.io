@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Name Generator</title>
+</head>
+<body>
+  <button onclick="generateRandomName()">Generate</button>
+  <div id="output">
+    <span id="result"></span>
+  </div>
+
+  <script>
+    function generateRandomName() {
+      const consonants1 = ['W', 'R', 'T', 'Y', 'P', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'CH', 'V', 'B', 'N', 'M', 'SH', ''];
+      const consonants2 = ['W', 'R', 'T', 'Y', 'P', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'CH', 'V', 'B', 'N', 'M', 'SH', 'X', ''];
+      const vowels = ['A', 'E', 'I', 'O', 'U'];
+
+      let randomName = '';
+      randomName += consonants1[Math.floor(Math.random() * consonants1.length)];
+      randomName += vowels[Math.floor(Math.random() * vowels.length)];
+      randomName += consonants2[Math.floor(Math.random() * consonants2.length)];
+      randomName += vowels[Math.floor(Math.random() * vowels.length)];
+
+      document.getElementById('result').textContent = randomName;
+    }
+  </script>
+</body>
+</html>
