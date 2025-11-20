@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논문 구조 설계기</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        // lucide 객체에서 직접 구조분해 할당하지 않고 data-lucide 속성을 사용합니다.
+
+        const ResearchTypeSelector = ({ selected, onSelect }) => {
+            const types = [
+                { id: 'experimental', name: '실험 연구 (Experimental)', desc: '실험을 통해 데이터를 얻고 검증하는 연구' },
+                { id: 'review', name: '리뷰 논문 (Review)', desc: '기존 연구들을 종합하고 분석하는 연구' },
+                { id: 'theoretical', name: '이론 연구 (Theoretical)', desc: '새로운 이론이나 모델을 제시하는 연구' },
+                { id: 'case_study', name: '사례 연구 (Case Study)', desc: '특정 사례를 깊이 있게 분석하는 연구' },
+            ];
+
+            return (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    {types.map((type) => (
+                        <button
+                            key={type.id}
+                            onClick={() => onSelect(type.id)}
+                            className={`p-4 rounded-lg border-2 text-left transition-all ${
+                                selected === type.id
+                                    ? 'border-blue-500 bg-blue-50 text-blue-700 shadow-md'
+                                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                            }`}
+                        >
+                            <div className="font-bold text-lg mb-1">{type.name}</div>
+                            <div className="text-sm text-gray-600">{type.desc}</div>
+                        </button>
+                    ))}
+                </div>
+            );
+        };
+
+        const ProTips = () => {
+            return (
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl shadow-sm mb-8">
+                    <h3 className="text-lg font-bold text-amber-800 flex items-center mb-4">
+                        <i data-lucide="lightbulb" className="w-6 h-6 mr-2 text-amber-600"></i>
+                        논문 작성 꿀팁 (이거 알면 반은 먹고 드간다)
+                    </h3>
+                    <ul className="space-y-4 text-amber-900">
+                        <li className="flex items-start">
+                            <span className="flex-shrink-0 bg-amber-200 text-amber-800 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">1</span>
+                            <div>
+                                <span className="font-bold block mb-1 text-amber-950">순서대로 쓸라 하지 마라</span>
+                                <p className="text-sm leading-relaxed">
+                                    논문은 1번부터 쓰는 게 아이다. <span className="font-semibold underline decoration-amber-500/50">결과(Results)랑 방법(Methods)</span>부터 먼저 써라. 이게 팩트니까 제일 쓰기 쉽고 안 변한다. 그 담에 서론이랑 토의 쓰고, 초록은 맨 마지막에 요약하는 기다.
+                                </p>
+                            </div>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="flex-shrink-0 bg-amber-200 text-amber-800 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">2</span>
+                            <div>
+                                <span className="font-bold block mb-1 text-amber-950">문단마다 '두괄식'으로 써라</span>
+                                <p className="text-sm leading-relaxed">
+                                    교수님들 바빠서 다 안 읽는다. 각 문단의 <span className="font-semibold underline decoration-amber-500/50">첫 문장만 읽어도 전체 흐름이 파악되게</span> 핵심을 무조건 앞에 박아라.
+                                </p>
+                            </div>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="flex-shrink-0 bg-amber-200 text-amber-800 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">3</span>
+                            <div>
+                                <span className="font-bold block mb-1 text-amber-950">모르는 건 모른다고 적어라</span>
+                                <p className="text-sm leading-relaxed">
+                                    토의(Discussion)에서 <span className="font-semibold underline decoration-amber-500/50">'연구의 한계점'</span>을 솔직하게 적어라. 니가 먼저 "이건 부족했다"고 선수 치면 방어가 되는데, 숨기다가 걸리면 개까인다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            );
+        };
+
+        const SectionGuide = ({ section, contents, onUpdate }) => {
+            return (
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-8">
+                    <div className="flex items-center justify-between mb-6">
+                        <h3 className="text-xl font-bold text-gray-800 flex items-center">
+                            <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3 text-sm">
+                                {section.order}
+                            </span>
+                            {section.title}
+                        </h3>
+                        <span className="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-600 rounded">
+                            {section.type}
+                        </span>
+                    </div>
+
+                    <div className="space-y-6">
+                        {section.guidelines.map((guide, idx) => (
+                            <div key={idx} className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                <label className="block text-sm font-bold text-blue-800 mb-2 flex items-start">
+                                    <i data-lucide="check-circle" className="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i>
+                                    {guide}
+                                </label>
+                                <textarea
+                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[80px] text-sm"
+                                    placeholder={`여기에 대한 내용을 적어라...`}
+                                    value={contents[idx] || ''}
+                                    onChange={(e) => onUpdate(idx, e.target.value)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    
+                    <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-500 text-right flex justify-end items-center">
+                        <i data-lucide="info" className="w-3 h-3 mr-1"></i>
+                        근거: {section.rationale}
+                    </div>
+                </div>
+            );
+        };
+
+        const TEMPLATES = {
+            experimental: [
+                {
+                id: 'abstract',
+                order: 1,
+                title: '초록 (Abstract)',
+                type: '요약',
+                guidelines: [
+                    '연구 배경 (1-2문장): 왜 이 연구가 필요한가?',
+                    '연구 목적 (1문장): 무엇을 해결하려고 하는가?',
+                    '연구 방법 (1-2문장): 어떻게 실험했는가?',
+                    '주요 결과 (2-3문장): 가장 중요한 데이터가 뭔가?',
+                    '결론 및 의의 (1문장): 이 결과가 세상에 미치는 영향은?'
+                ],
+                rationale: '독자는 초록만 보고 읽을지 말지 결정하기 때문에 핵심이 다 있어야 함.'
+                },
+                {
+                id: 'intro',
+                order: 2,
+                title: '서론 (Introduction)',
+                type: '배경',
+                guidelines: [
+                    '광범위한 주제 소개 (Broad context)',
+                    '기존 연구의 흐름과 한계점 (Problem statement)',
+                    '연구의 필요성 및 틈새 (Research Gap)',
+                    '연구 질문 및 가설 (Hypothesis)',
+                    '본 논문의 구성 안내'
+                ],
+                rationale: '서론은 역삼각형 구조로, 넓은 이야기에서 내 구체적인 연구로 좁혀 들어가야 논리적임.'
+                },
+                {
+                id: 'methods',
+                order: 3,
+                title: '연구 방법 (Methods)',
+                type: '실험 설계',
+                guidelines: [
+                    '실험 대상 및 재료 설명',
+                    '데이터 수집 절차 (상세하게 기술)',
+                    '사용한 통계 기법이나 분석 툴',
+                    '윤리적 고려사항 (필요시)'
+                ],
+                rationale: '다른 연구자가 재현할 수 있을 정도로 상세해야 과학적 타당성을 인정받음.'
+                },
+                {
+                id: 'results',
+                order: 4,
+                title: '연구 결과 (Results)',
+                type: '데이터',
+                guidelines: [
+                    '핵심 발견 사항 제시 (감정 섞지 말고 팩트만)',
+                    '표와 그래프에 대한 설명',
+                    '통계적 유의성 언급',
+                    '가설 검증 결과 (채택/기각)'
+                ],
+                rationale: '해석은 토의에서 하고, 여기선 객관적인 팩트만 보여줘야 신뢰도가 올라감.'
+                },
+                {
+                id: 'discussion',
+                order: 5,
+                title: '토의 (Discussion)',
+                type: '해석',
+                guidelines: [
+                    '주요 결과 요약 및 해석',
+                    '기존 연구와의 비교 (내 결과가 기존과 같나 다르나?)',
+                    '결과의 시사점 (이게 왜 중요한가?)',
+                    '연구의 한계점 (솔직하게 기술)',
+                    '향후 연구 제언'
+                ],
+                rationale: '한계점을 스스로 밝혀야 방어 논리가 완성되고 학술적 정직성을 인정받음.'
+                }
+            ],
+            review: [
+                {
+                id: 'abstract',
+                order: 1,
+                title: '초록 (Abstract)',
+                type: '요약',
+                guidelines: ['주제 선정 이유', '분석한 문헌의 범위', '주요 트렌드 발견', '결론'],
+                rationale: '리뷰 논문은 새로운 발견보다는 정리가 목적임.'
+                },
+                {
+                id: 'intro',
+                order: 2,
+                title: '서론 (Introduction)',
+                type: '배경',
+                guidelines: ['주제의 중요성', '기존 리뷰들과의 차별점', '리뷰의 구성 방식'],
+                rationale: '왜 또 다른 리뷰가 필요한지 정당성을 부여해야 함.'
+                },
+                {
+                id: 'body',
+                order: 3,
+                title: '본론 (Body)',
+                type: '주제별 분석',
+                guidelines: ['주제별/연대별/방법론별 분류 및 비교', '각 연구들의 공통점과 차이점', '단순 나열이 아닌 비판적 분석'],
+                rationale: '단순 요약(Summary)이 아니라 종합(Synthesis)이 되어야 좋은 리뷰임.'
+                },
+                {
+                id: 'conclusion',
+                order: 4,
+                title: '결론 (Conclusion)',
+                type: '종합',
+                guidelines: ['전체적인 흐름 요약', '현재 지식의 공백(Gap)', '미래 연구 방향'],
+                rationale: '독자에게 이 분야의 미래 지도를 그려줘야 함.'
+                }
+            ],
+            theoretical: [
+                { id: 'abstract', order: 1, title: '초록', type: '요약', guidelines: ['이론적 배경', '제안하는 모델', '예상되는 함의'], rationale: '' },
+                { id: 'intro', order: 2, title: '서론', type: '배경', guidelines: ['기존 이론의 한계', '새로운 관점의 필요성'], rationale: '' },
+                { id: 'concept', order: 3, title: '개념적 틀 (Conceptual Framework)', type: '이론', guidelines: ['주요 개념 정의', '변수 간의 관계 설정', '명제 도출'], rationale: '' },
+                { id: 'proposition', order: 4, title: '명제 및 논증 (Propositions)', type: '논리', guidelines: ['논리적 증명', '수식이나 모델 전개'], rationale: '' },
+                { id: 'implication', order: 5, title: '이론적 함의', type: '결론', guidelines: ['학문적 기여도', '실무적 시사점'], rationale: '' }
+            ],
+            case_study: [
+                { id: 'abstract', order: 1, title: '초록', type: '요약', guidelines: ['사례 선정 이유', '분석 방법', '교훈'], rationale: '' },
+                { id: 'intro', order: 2, title: '서론', type: '배경', guidelines: ['연구 문제', '왜 이 사례인가?'], rationale: '' },
+                { id: 'method', order: 3, title: '연구 방법', type: '절차', guidelines: ['자료 수집 경로(인터뷰, 문서)', '분석 프레임워크'], rationale: '' },
+                { id: 'case_desc', order: 4, title: '사례 설명', type: '기술', guidelines: ['사례의 배경', '사건의 전개 과정'], rationale: '' },
+                { id: 'analysis', order: 5, title: '분석 및 토의', type: '해석', guidelines: ['이론에 비추어 본 해석', '성공/실패 요인'], rationale: '' },
+                { id: 'conclusion', order: 6, title: '결론', type: '종합', guidelines: ['일반화 가능성', '제언'], rationale: '' }
+            ]
+        };
+
+        const App = () => {
+            const [activeTab, setActiveTab] = useState('experimental');
+            const [contents, setContents] = useState({});
+
+            useEffect(() => {
+                // 렌더링 후 아이콘 생성
+                lucide.createIcons();
+            }, [activeTab, contents]); // 탭이나 컨텐츠가 바뀔 때마다 아이콘 갱신
+
+            const handleContentUpdate = (sectionId, guideIndex, value) => {
+                setContents(prev => ({
+                ...prev,
+                [`${activeTab}-${sectionId}-${guideIndex}`]: value
+                }));
+            };
+
+            const currentTemplate = TEMPLATES[activeTab];
+
+            const getSectionText = (section) => {
+                return section.guidelines.map((_, idx) => {
+                const content = contents[`${activeTab}-${section.id}-${idx}`];
+                return content ? content : '';
+                }).filter(Boolean).join('\n\n');
+            };
+
+            const copyToClipboard = () => {
+                const text = currentTemplate.map(section => {
+                const sectionContent = getSectionText(section);
+                return `[${section.title}]\n${sectionContent || '(내용 없음)'}\n\n`;
+                }).join('');
+                
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('복사됐다! 메모장에 갖다 붙이바라.');
+            };
+
+            return (
+                <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
+                <div className="max-w-6xl mx-auto p-4 md:p-8">
+                    <header className="mb-8 text-center">
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex items-center justify-center gap-3">
+                        <i data-lucide="book-open" className="w-10 h-10 text-blue-600"></i>
+                        논문 구조 설계기
+                    </h1>
+                    <p className="text-lg text-gray-600">
+                        가이드라인 따라 한 문장씩 채우다 보면 논문 뚝딱이다.
+                    </p>
+                    </header>
+
+                    <main>
+                    <section className="mb-8">
+                        <h2 className="text-xl font-bold mb-4 flex items-center">
+                        <i data-lucide="layout" className="w-5 h-5 mr-2 text-blue-600"></i>
+                        1. 연구 종류가 뭐고?
+                        </h2>
+                        <ResearchTypeSelector selected={activeTab} onSelect={setActiveTab} />
+                    </section>
+
+                    <div className="flex flex-col lg:flex-row gap-8">
+                        <div className="flex-1">
+                        <ProTips />
+
+                        <h2 className="text-xl font-bold mb-4 flex items-center justify-between">
+                            <div className="flex items-center">
+                            <i data-lucide="pen-tool" className="w-5 h-5 mr-2 text-blue-600"></i>
+                            2. 내용 채워보자 (가이드라인 별로 적어라)
+                            </div>
+                            <button 
+                            onClick={() => setContents({})}
+                            className="text-sm text-gray-500 hover:text-red-500 flex items-center"
+                            >
+                            <i data-lucide="rotate-ccw" className="w-3 h-3 mr-1"></i> 초기화
+                            </button>
+                        </h2>
+                        
+                        <div className="space-y-4">
+                            {currentTemplate.map((section) => (
+                            <SectionGuide
+                                key={section.id}
+                                section={section}
+                                contents={
+                                Object.keys(contents)
+                                    .filter(key => key.startsWith(`${activeTab}-${section.id}-`))
+                                    .reduce((acc, key) => {
+                                    const idx = key.split('-').pop();
+                                    acc[idx] = contents[key];
+                                    return acc;
+                                    }, {})
+                                }
+                                onUpdate={(guideIndex, val) => handleContentUpdate(section.id, guideIndex, val)}
+                            />
+                            ))}
+                        </div>
+                        </div>
+
+                        <div className="lg:w-1/3">
+                        <div className="sticky top-8">
+                            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                            <div className="bg-gray-800 text-white p-4 flex justify-between items-center">
+                                <h3 className="font-bold flex items-center">
+                                <i data-lucide="file-text" className="w-5 h-5 mr-2"></i>
+                                전체 구조 미리보기
+                                </h3>
+                                <button 
+                                onClick={copyToClipboard}
+                                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center transition-colors"
+                                >
+                                <i data-lucide="save" className="w-4 h-4 mr-1"></i>
+                                전체 복사
+                                </button>
+                            </div>
+                            <div className="p-6 bg-gray-50 min-h-[300px] max-h-[calc(100vh-200px)] overflow-y-auto">
+                                {currentTemplate.map((section) => {
+                                const sectionText = getSectionText(section);
+                                return (
+                                    <div key={section.id} className="mb-8 last:mb-0">
+                                    <h4 className="font-bold text-gray-800 text-sm mb-2 border-b pb-1 border-gray-200">
+                                        {section.order}. {section.title}
+                                    </h4>
+                                    <div className="text-sm text-gray-600 whitespace-pre-wrap leading-relaxed pl-3 border-l-2 border-blue-200">
+                                        {sectionText ? (
+                                        sectionText
+                                        ) : (
+                                        <span className="text-gray-400 italic text-xs">
+                                            왼쪽에서 내용을 입력하모 여기 뜬다...
+                                        </span>
+                                        )}
+                                    </div>
+                                    </div>
+                                );
+                                })}
+                            </div>
+                            <div className="p-4 bg-yellow-50 border-t border-yellow-100 text-xs text-yellow-800">
+                                <p className="flex items-start">
+                                <i data-lucide="check-circle" className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5"></i>
+                                팁: 왼쪽에서 쪼개서 쓴 글들이 여기서는 하나로 합쳐져서 보인다. 문맥이 자연스러운지 함 읽어봐라.
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </main>
+                </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

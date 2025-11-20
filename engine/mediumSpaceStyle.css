@@ -380,7 +380,168 @@ body{
 
 
 
+#alsanseNewFeaturesContainer {
+    display: none; /* 기본 숨김 */
+    position: fixed; /* 화면에 고정 또는 absolute로 리모컨에 상대적 위치 */
+    bottom: 75px; /* #remote 와 #controller 높이를 고려한 위치 예시 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px; /* 너비 */
+    background-color: rgba(30, 30, 35, 0.95); /* 반투명 배경 */
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 1050; /* 다른 리모컨 요소들보다 위에 오도록 */
+    font-family: 'pretendard', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-backdrop-filter: blur(8px); /* 배경 블러 (지원 브라우저) */
+    backdrop-filter: blur(8px);
+}
 
+#alsanseNewFeaturesContainer .features-content-wrapper {
+    /* 내부 스크롤이 필요할 경우 대비 */
+}
+
+#alsanseNewFeaturesContainer h4 {
+    font-size: 1em;
+    color: #ffbc58;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#alsanseNewFeaturesContainer hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 12px 0;
+}
+
+#newTagsList {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+#newTagsList .new-tag-btn {
+    background-color: #4a4a50;
+    color: #f0f0f0;
+    border: 1px solid #5a5a60;
+    padding: 4px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#newTagsList .new-tag-btn:hover {
+    background-color: #5a5a60;
+    border-color: #6a6a70;
+}
+#newTagsList .new-tag-btn.active { /* JavaScript에서 .active 클래스 추가 시 적용 */
+    background-color: #ff6442;
+    color: white;
+    border-color: #ff6442;
+    font-weight: bold;
+}
+
+
+#newSearchInput {
+    width: calc(100% - 85px); /* 버튼 너비와 간격 고려 */
+    padding: 8px 10px;
+    margin-right: 5px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #25252a;
+    color: #e0e0e0;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+#newSearchSubmit {
+    padding: 8px 12px;
+    background-color: #ffbc58;
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+#newSearchSubmit:hover {
+    background-color: #e0a84c;
+}
+
+#newFilteredWorks {
+    margin-top: 15px;
+    max-height: 200px; /* 내용 많으면 스크롤 */
+    overflow-y: auto;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+#newFilteredWorks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#newFilteredWorks li {
+    margin-bottom: 5px;
+}
+
+#newFilteredWorks li a {
+    color: #c0c0c0;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    font-size: 0.9em;
+}
+
+#newFilteredWorks li a:hover {
+    color: #ffbc58;
+    text-decoration: underline;
+}
+#newFilteredWorks li a span {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#closeNewFeaturesBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.4em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+#closeNewFeaturesBtn:hover {
+    color: #fff;
+}
+
+/* 스크롤바 스타일 (선택적) */
+#newFilteredWorks::-webkit-scrollbar {
+    width: 6px;
+}
+#newFilteredWorks::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+#newFilteredWorks::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+#newFilteredWorks::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
 
 
 

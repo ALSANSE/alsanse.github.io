@@ -1,0 +1,72 @@
+[
+  {
+    "id": "design_takit",
+    "category": "design",
+    "categoryKo": "Designed by ALSANSE",
+    "title": "takit: 즐겁고 유쾌한 분리수거",
+    "description": "takit은 사람들이 올바른 분리수거 습관을 가지도록 하며 버려지는 쓰레기에 관한 인식을 개선하는 것이 목표입니다.",
+    "link": "design/takit/index.html",
+    "thumbnail": "design/thumbnails/tmbtakit.jpg",
+    "tags": ["브랜딩", "UI", "UX", "BI"]
+  },
+  {
+    "id": "design_siren",
+    "category": "design",
+    "categoryKo": "Designed by ALSANSE",
+    "title": "SIREN: 나태한 일상의 교도관",
+    "description": "SIREN은 강력한 알람시계 앱으로 나태한 죄를 지어서 오게 된 교도소처럼 나태함에 대한 죄책감을 유발하여 더이상 나태해지지 않도록 합니다.",
+    "link": "design/siren/index.html",
+    "thumbnail": "design/thumbnails/tmbsiren.jpg",
+    "tags": ["브랜딩", "UI", "UX", "인터랙션"]
+  },
+  {
+    "id": "design_dumpdumb",
+    "category": "design",
+    "categoryKo": "Designed by ALSANSE",
+    "title": "DUMPDUMB",
+    "description": "DUMBDUMP(덤덤)은 길거리에 쓰레기를 대범하게 버리고 그 행동을 보고도 묵인, 방관하는 사람들에게 경고의 메시지를 보내는 디지털 아카이빙 프로젝트입니다.",
+    "link": "design/dumpdumb/index.html",
+    "thumbnail": "design/thumbnails/tmbdumpdumb.jpg",
+    "tags": ["브랜딩", "인포메이션"]
+  },
+  {
+    "id": "design_snobby",
+    "category": "design",
+    "categoryKo": "Designed by ALSANSE",
+    "title": "Snobby®",
+    "description": "",
+    "link": "#",
+    "thumbnail": "design/thumbnails/snobby.jpg",
+    "tags": ["브랜딩", "BI"]
+  },
+  {
+    "id": "ceramic_ratio_of_god",
+    "category": "ceramic_plastic",
+    "categoryKo": "ceramic_plastic",
+    "title": "Ratio of God",
+    "description": "Ratio of God은 우주 만물의 근저에 흐르는 신성한 질서, 즉 황금비와 피보나치 수열을 숭배합니다.",
+    "link": "ceramic_plastic/ratio_of_god/index.html",
+    "thumbnail": "ceramic_plastic/thumbnails/ratio_of_god.jpg",
+    "tags": ["브랜딩", "신성한비율", "웹"]
+  },
+  {
+    "id": "toybox_bloodventure",
+    "category": "toybox",
+    "categoryKo": "ToyBox",
+    "title": "BLOODVENTURE",
+    "description": "블러드벤쳐는 적혈구가 비만, 음주, 흡연 등으로 인해 발생하는 고지혈증을 해쳐나가며 오래오래 생존해야하는 게임입니다.",
+    "link": "toybox/bloodventure/index.html",
+    "thumbnail": "toybox/thumbnails/bloodventure.jpg",
+    "tags": ["게임", "인터랙션"]
+  },
+  {
+    "id": "toybox_silicontimer",
+    "category": "toybox",
+    "categoryKo": "ToyBox",
+    "title": "SiliconTimer",
+    "description": "모래시계를 디지털로 재해석한 작품입니다.",
+    "link": "toybox/silicontimer/index.html",
+    "thumbnail": "toybox/thumbnails/silicontimer.jpg",
+    "tags": ["Arduino", "인터랙션", "하드웨어"]
+  }
+]
