@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifePie</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #216f9b; /* 파란색 계열 (주요 버튼, 텍스트) */
+            --accent-color: #ff6442; /* 붉은색 계열 (강조, 차트) */
+            --focus-color: #ffbc58; /* 노란색 계열 (포커스, 보조) */
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --secondary-text-color: #666;
+            --input-border: #e9ecef;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* 모바일 탭 하이라이트 제거 */
+        }
+
+        .card {
+            background-color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px; /* 모바일 너비 최적화 */
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 2rem 0;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 1rem; /* 터치 영역 확보 */
+            border: 2px solid var(--input-border);
+            border-radius: 0.8rem;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: all 0.3s ease;
+            -webkit-appearance: none; /* 모바일 기본 스타일 제거 */
+        }
+
+        input:focus {
+            border-color: var(--focus-color);
+            box-shadow: 0 0 0 3px rgba(255, 188, 88, 0.2);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            cursor: pointer;
+            accent-color: var(--primary-color); /* 체크박스 색상 */
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1.2rem; /* 버튼 높이 증가 */
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(33, 111, 155, 0.2);
+        }
+
+        button:hover, button:active {
+            background-color: #1a5a80;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(33, 111, 155, 0.3);
+        }
+
+        .result-area {
+            margin-top: 2.5rem;
+            border-top: 2px solid var(--input-border);
+            padding-top: 2rem;
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 280px; /* 차트 높이 증가 */
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background-color: #f1f5f9;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 900;
+            font-size: 2rem; /* 결과 폰트 키움 */
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .error-msg {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: rgba(255, 100, 66, 0.1);
+            border-radius: 0.5rem;
+            display: none;
+        }
+
+        #eventNameText {
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>LifePie<br>인생 비율 계산기</h1>
+        
+        <div class="input-group">
+            <label for="birthYear">🎂 태어난 연도</label>
+            <input type="number" id="birthYear" placeholder="예: 1997" min="1900" max="2100" inputmode="numeric">
+        </div>
+
+        <div class="input-group">
+            <label for="startYear">📅 사건 시작 연도</label>
+            <input type="number" id="startYear" placeholder="예: 2013" min="1900" max="2100" inputmode="numeric">
+        </div>
+
+        <div class="input-group">
+            <div class="checkbox-group">
+                <input type="checkbox" id="isOngoing" checked onchange="toggleEndYear()">
+                <label for="isOngoing">지금도 진행 중인가요?</label>
+            </div>
+            
+            <div id="endYearContainer" style="display: none; margin-top: 1rem; animation: fadeIn 0.3s ease-out;">
+                <label for="endYear">🏁 사건 종료 연도</label>
+                <input type="number" id="endYear" placeholder="예: 2023" min="1900" max="2100" inputmode="numeric">
+            </div>
+        </div>
+
+        <div class="input-group" style="margin-bottom: 2rem;">
+            <label for="eventName">🏷️ 사건 이름 (선택)</label>
+            <input type="text" id="eventName" placeholder="예: 친구, 직장, 취미" value="그 기간">
+        </div>
+
+        <button onclick="calculateRatio()">비율 확인하기</button>
+        <div id="errorMsg" class="error-msg"></div>
+
+        <div id="resultArea" class="result-area">
+            <div class="chart-container">
+                <canvas id="lifeChart"></canvas>
+            </div>
+            <div class="stat-box">
+                <div class="stat-text">
+                    지금까지 내 인생의
+                    <span id="percentText" class="highlight">0%</span>를
+                    <span id="eventNameText"></span>(와)과 함께 했습니다.
+                </div>
+                <p style="font-size: 0.9rem; color: var(--secondary-text-color); margin-top: 15px;">
+                    (총 생존 기간: 약 <span id="ageText"></span>년 / 사건 기간: 약 <span id="durationText"></span>년)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let myChart = null;
+
+        function toggleEndYear() {
+            const isOngoing = document.getElementById('isOngoing').checked;
+            const endYearContainer = document.getElementById('endYearContainer');
+            const endYearInput = document.getElementById('endYear');
+            
+            if (isOngoing) {
+                endYearContainer.style.display = 'none';
+                endYearInput.value = '';
+            } else {
+                endYearContainer.style.display = 'block';
+                endYearInput.focus(); // 종료 연도 입력창으로 포커스 이동
+            }
+        }
+
+        function calculateRatio() {
+            const birthYearStr = document.getElementById('birthYear').value;
+            const startYearStr = document.getElementById('startYear').value;
+            const isOngoing = document.getElementById('isOngoing').checked;
+            const endYearStr = document.getElementById('endYear').value;
+            let eventNameVal = document.getElementById('eventName').value;
+            const errorMsg = document.getElementById('errorMsg');
+            const resultArea = document.getElementById('resultArea');
+            const button = document.querySelector('button');
+
+            // 초기화
+            errorMsg.style.display = 'none';
+            resultArea.style.display = 'none';
+            if (!eventNameVal.trim()) { eventNameVal = '그 기간'; } // 빈 값 처리
+
+            if (!birthYearStr || !startYearStr) {
+                showError("태어난 연도와 시작 연도를 모두 입력해주세요.");
+                return;
+            }
+
+            if (!isOngoing && !endYearStr) {
+                showError("진행 중이 아니라면 종료 연도를 입력해주세요.");
+                return;
+            }
+
+            const birthYear = parseInt(birthYearStr);
+            const startYear = parseInt(startYearStr);
+            const currentYear = new Date().getFullYear();
+            let endYear;
+
+            if (isOngoing) {
+                endYear = new Date(); 
+            } else {
+                endYear = parseInt(endYearStr);
+            }
+
+            if (birthYear > currentYear || birthYear < 1900) {
+                showError("올바른 태어난 연도를 입력해주세요.");
+                return;
+            }
+            if (startYear < birthYear || startYear > currentYear) {
+                showError("사건 시작 연도가 올바르지 않습니다.");
+                return;
+            }
+            
+            const birthDate = new Date(birthYear, 0, 1);
+            const startDate = new Date(startYear, 0, 1);
+            
+            let endDate;
+            if (isOngoing) {
+                endDate = new Date();
+            } else {
+                if (endYear < startYear || endYear > currentYear) {
+                    showError("종료 연도가 올바르지 않습니다.");
+                    return;
+                }
+                endDate = new Date(endYear, 0, 1);
+            }
+
+            const today = new Date();
+            const totalLifeMs = today - birthDate;
+            const eventDurationMs = endDate - startDate;
+
+            if (eventDurationMs > totalLifeMs) {
+                 showError("입력한 기간이 총 생존 기간보다 깁니다. 다시 확인해주세요.");
+                 return;
+            }
+
+            if (eventDurationMs < 0) {
+                showError("시작 연도가 종료 연도보다 늦습니다.");
+                return;
+            }
+
+            // 계산 및 결과 표시 (버튼 인터랙션 추가)
+            button.disabled = true;
+            button.innerText = '계산 중...';
+
+            setTimeout(() => {
+                const ratio = (eventDurationMs / totalLifeMs) * 100;
+                const displayRatio = ratio.toFixed(1); // 소수점 1자리로 간소화
+
+                const lifeYears = (totalLifeMs / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
+                const eventYears = (eventDurationMs / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
+
+                resultArea.style.display = 'block';
+                document.getElementById('percentText').innerText = displayRatio + '%';
+                document.getElementById('eventNameText').innerText = eventNameVal;
+                document.getElementById('ageText').innerText = lifeYears;
+                document.getElementById('durationText').innerText = eventYears;
+
+                updateChart(eventNameVal, eventDurationMs, totalLifeMs - eventDurationMs);
+                
+                // 결과 영역으로 부드럽게 스크롤 이동
+                resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                button.disabled = false;
+                button.innerText = '비율 확인하기';
+            }, 300); // 약간의 딜레이로 계산 효과 부여
+        }
+
+        function showError(msg) {
+            const el = document.getElementById('errorMsg');
+            el.innerText = '⚠️ ' + msg;
+            el.style.display = 'block';
+            // 에러 메시지로 스크롤 이동
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function updateChart(labelName, eventMs, otherMs) {
+            const ctx = document.getElementById('lifeChart').getContext('2d');
+
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            // CSS 변수값 가져오기
+            const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+
+            myChart = new Chart(ctx, {
+                type: 'doughnut', // 파이 차트보다 도넛 차트가 모바일에서 더 세련됨
+                data: {
+                    labels: [labelName, '나머지 인생'],
+                    datasets: [{
+                        data: [eventMs, otherMs],
+                        backgroundColor: [
+                            accentColor, // 사건 기간 (강조색 - 주황/붉은 계열)
+                            primaryColor // 나머지 인생 (주요색 - 파란 계열)
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#ffffff',
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%', // 도넛 두께 조절
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 25,
+                                font: { size: 14, family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' },
+                                usePointStyle: true,
+                                color: '#333'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)',
+                            titleFont: { size: 16 },
+                            bodyFont: { size: 14 },
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    let value = context.parsed;
+                                    let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    let percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return ' ' + percentage;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
