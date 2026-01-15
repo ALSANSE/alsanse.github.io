@@ -1,133 +1,114 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | WebAR Test</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebAR Test</div>
-      </div>
-    </div>
-    <script>
-      var canvas = document.querySelector("#unity-canvas");
+<html>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        var warningBanner = document.querySelector("#unity-warning");
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- [라이브러리 로드] -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+
+  <!-- [오프라인용] -->
+  <!-- <script src="./engines/aframe.min.js"></script> -->
+  <!-- <script src="./engines/mindar-image-aframe.prod.js"></script> -->
+  <!-- <script src="./engines/aframe-extras.min.js"></script> -->
+
+  <script>
+    // [장독대 애니메이션 및 사운드 제어 컴포넌트]
+    AFRAME.registerComponent('play-jangdok-anim', {
+      init: function () {
+        const el = this.el;
+
+        // 1. 모델이 로딩되면 애니메이션 이름이 뭔지 콘솔에 다 찍어본다 (디버깅용)
+        el.addEventListener('model-loaded', function (evt) {
+          const model = el.getObject3D('mesh');
+          if (model && model.animations && model.animations.length > 0) {
+            console.log("=== 모델 애니메이션 목록 ===");
+            model.animations.forEach((anim, index) => {
+              console.log(`${index}: ${anim.name}`);
+            });
+            console.log("==========================");
+          } else {
+            console.warn("이 모델에는 애니메이션이 없습니다.");
+          }
+        });
+
+        // 2. 클릭(터치) 이벤트 리스너
+        el.addEventListener('click', function (evt) {
+          console.log("장독대 터치됨! 애니메이션 및 사운드 시작.");
+
+          // [사운드 재생 로직 개선]
+          if (el.components.sound) {
+            // [추가] 오디오 컨텍스트가 잠겨있으면 풀어준다 (브라우저 정책 대응)
+            // 사용자가 클릭한 시점이라서 풀릴 확률이 높음
+            if (AFRAME.scenes[0].audioListener && AFRAME.scenes[0].audioListener.context.state === 'suspended') {
+              AFRAME.scenes[0].audioListener.context.resume();
+              console.log("오디오 컨텍스트 강제 실행됨");
+            }
+
+            console.log("사운드 재생 명령 보냄");
+            el.components.sound.stopSound();
+            el.components.sound.playSound();
+          } else {
+            console.error("사운드 컴포넌트가 없습니다! HTML 태그 확인 바람.");
+          }
+
+          // [애니메이션 재생]
+          const modelEl = el.querySelector('a-gltf-model');
+
+          if (modelEl) {
+            console.log("애니메이션 믹서 부착 중...");
+
+            modelEl.setAttribute('animation-mixer', {
+              clip: 'chun_jangdok_coverAction',
+              loop: 'once',
+              clampWhenFinished: true
+            });
+          } else {
+            console.error("a-gltf-model 태그를 못 찾았습니다.");
+          }
+        });
       }
+    });
+  </script>
+</head>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/webartest.loader.js";
-      var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/webartest.data.br",
-        frameworkUrl: buildUrl + "/webartest.framework.js.br",
-        codeUrl: buildUrl + "/webartest.wasm.br",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "WebAR Test",
-        productVersion: "1.0.0",
-        showBanner: unityShowBanner,
-        // errorHandler: function(err, url, line) {
-        //    alert("error " + err + " occurred at line " + line);
-        //    // Return 'true' if you handled this error and don't want Unity
-        //    // to process it further, 'false' otherwise.
-        //    return true;
-        // },
-      };
+<body>
+  <!-- 설정 값 유지 -->
+  <a-scene
+    mindar-image="imageTargetSrc: ./targets/kuSymbol_111.mind; filterMinCF:0.01; filterBeta: 0.1; missTolerance: 5; warmupTolerance: 5;"
+    color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
 
-      // By default, Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
+    <a-assets>
+      <a-asset-item id="jangdokModel" src="./models/chun_jangdok_opening_v002.glb"></a-asset-item>
+      <!-- [사운드 파일] -->
+      <!-- 파일명 대소문자, 경로 정확한지 다시 확인해라. (sounds 폴더 안에 jangdok_open.mp3) -->
+      <audio id="jangdokSound" src="./sounds/Cuckoo.mp3" preload="auto"></audio>
+    </a-assets>
 
-      // If you would like all file writes inside Unity Application.persistentDataPath
-      // directory to automatically persist so that the contents are remembered when
-      // the user revisits the site the next time, uncomment the following line:
-      // config.autoSyncPersistentDataPath = true;
-      // This autosyncing is currently not the default behavior to avoid regressing
-      // existing user projects that might rely on the earlier manual
-      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
-      // expected to change.
+    <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;"
+      raycaster="far: 10000; objects: .clickable"></a-camera>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+    <a-entity mindar-image-target="targetIndex: 0">
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
+      <!-- [장독대 그룹] -->
+      <!-- [수정됨] positional: false (2D 사운드로 변경), volume: 2 (소리 증폭) -->
+      <a-entity play-jangdok-anim sound="src: #jangdokSound; poolSize: 5; positional: false; volume: 2;"
+        position="0 -0.25 0" rotation="0 0 0" scale="1 1 1">
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+        <!-- 실제 모델 -->
+        <a-gltf-model class="clickable" src="#jangdokModel">
+        </a-gltf-model>
 
+        <!-- 투명 히트 박스 -->
+        <a-box class="clickable" material="opacity: 0; transparent: true" position="0 5 0" scale="10 10 10">
+        </a-box>
+      </a-entity>
 
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
+    </a-entity>
+  </a-scene>
+</body>
 
-      document.querySelector("#unity-loading-bar").style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
-              }).then((unityInstance) => {
-                document.querySelector("#unity-loading-bar").style.display = "none";
-                document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
-
-              }).catch((message) => {
-                alert(message);
-              });
-            };
-
-      document.body.appendChild(script);
-
-    </script>
-  </body>
 </html>
