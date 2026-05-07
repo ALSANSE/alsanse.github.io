@@ -55,8 +55,9 @@
         }
 
         .circle {
-            width: 8px;
-            height: 8px;
+            /* 기초 크기를 13px로 키웠데이 */
+            width: 13px;
+            height: 13px;
             background-color: #ff6442;
             border-radius: 50%;
             position: absolute;
@@ -109,6 +110,7 @@
     </div>
 
     <script>
+        // 니가 준 경로로 특수 사운드 파일 위치를 바꿨데이
         const SPECIAL_SOUND_FILE = './notisounds/50-1.mp3';
 
         const AUDIO_FILES = [
@@ -158,7 +160,8 @@
         let initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
         let activeIndices = [initialIndex]; 
 
-        let circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 8, level: 1 }));
+        // 기초 크기 상태값도 13으로 다 고쳐놨데이
+        let circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 13, level: 1 }));
         
         let timers = new Array(TOTAL_ITEMS).fill(null);
 
@@ -217,13 +220,11 @@
             let visibleCount = Array.from(circles).filter(c => c.style.display === 'block').length;
             
             if (visibleCount >= 6) {
-                // 6으로 나눠서 6개일 때 딱 1이 되고 많아질수록 비례해서 커지구로 계산했데이
                 let targetVolume = visibleCount / 6;
 
                 specialGainNode.gain.cancelScheduledValues(audioCtx.currentTime);
                 specialGainNode.gain.setValueAtTime(specialGainNode.gain.value, audioCtx.currentTime);
                 
-                // 볼륨을 목표치까지 서서히 키워주는 기다
                 specialGainNode.gain.linearRampToValueAtTime(targetVolume, audioCtx.currentTime + 0.5);
                 isSpecialPlaying = true;
             } else {
@@ -296,7 +297,8 @@
 
             playSound(index, state.level);
 
-            state.size *= 1.5;
+            // 커지는 배율을 1.5에서 1.618로 바꿨데이
+            state.size *= 1.618;
             state.level++;
 
             updateSpecialSoundState();
@@ -312,7 +314,8 @@
             });
             activeSources[index] = [];
 
-            circleStates[index] = { size: 8, level: 1 };
+            // 다시 켤 때도 13부터 시작하구로 고쳤다
+            circleStates[index] = { size: 13, level: 1 };
             circles[index].style.display = 'none';
             
             updateSpecialSoundState();
@@ -348,7 +351,8 @@
             initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
             activeIndices = [initialIndex]; 
             
-            circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 8, level: 1 }));
+            // 싹 다 초기화할 때도 13으로 세팅된데이
+            circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 13, level: 1 }));
             
             activeSources.forEach(arr => {
                 arr.forEach(source => { try { source.stop(); } catch(e) {} });
