@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <!-- 화면 확대 못 하구로 user-scalable=no, maximum-scale=1.0을 추가했데이 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>오늘 하루동안 보지 않기</title>
     <style>
@@ -16,9 +15,7 @@
             overflow: hidden;
             color: white;
             font-family: sans-serif;
-            /* 더블 탭 확대랑 스크롤 등 기본 터치 동작을 아예 다 막아삐는 기다 */
             touch-action: none;
-            /* 연타할 때 글씨나 요소가 파랗게 선택되는 것도 보기 싫으니까 다 막아놨데이 */
             -webkit-user-select: none;
             user-select: none;
         }
@@ -130,15 +127,15 @@
             
             './notisounds/instagram02.wav', 
             './notisounds/galaxy02.wav',    
-            './notisounds/kakaotalk.wav',   
+            './notisounds/x.wav',   
             './notisounds/galaxy01.mp3',    
             './notisounds/iphone2.mp3',     
-            './notisounds/iphone01.wav',    
+            './notisounds/x.wav',    
             './notisounds/discord.mp3',     
             './notisounds/instagram01.wav', 
             './notisounds/facebook.mp3',    
             './notisounds/instagram02.wav', 
-            './notisounds/galaxy02.wav',    
+            './notisounds/x.wav',    
             './notisounds/kakaotalk.wav',   
             './notisounds/galaxy01.mp3',    
             './notisounds/iphone2.mp3',     
@@ -278,9 +275,11 @@
             let delay;
             
             if (isFirstTime) {
-                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 201 + 1100);
+                // 시작 딜레이를 1300에서 2400 사이로 바꿨데이
+                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 1101 + 1300);
             } else {
-                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 901 + 300);
+                // 반복 주기를 600에서 1800 사이로 바꿨데이
+                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 1201 + 600);
             }
 
             timers[index] = setTimeout(() => {
