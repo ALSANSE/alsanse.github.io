@@ -24,22 +24,42 @@
         #start-screen {
             position: absolute;
             z-index: 100;
-            font-size: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 233px;
+
+
+        }
+
+        #notice{
+
+            background-color: #f1f3f9;
+            color: #313339;
+            width: 233px;
+            height: 377px;
+            border-radius: 3px;
+            padding: 21px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
         }
         
         .checkbox-label {
             display: flex;
             align-items: center;
+
             gap: 10px;
+                        font-size: 16px;
+                        margin: 0;
             cursor: pointer;
         }
 
         .checkbox-label input[type="checkbox"] {
             width: 20px;
             height: 20px;
+            margin: 0;
             cursor: pointer;
         }
 
@@ -75,9 +95,12 @@
 </head>
 <body>
     <div id="start-screen">
+        <h2 id="notice">
+            본 콘텐츠는<br>오디오가<br>포함되어있습니다.
+        </h2>
         <label class="checkbox-label">
             <input type="checkbox" id="hide-today-checkbox">
-            오늘 하루동안 보지 않기
+           오늘 하루동안 보지 않기
         </label>
     </div>
     
@@ -109,8 +132,7 @@
         
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
-        <div class="grid-cell"><div class="circle"></div></div>
-        <div class="grid-cell"><div class="circle"></div></div>
+
     </div>
 
     <script>
