@@ -41,17 +41,17 @@
 
         #grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            width: 90vmin;
-            height: 90vmin;
-            max-width: 800px;
-            max-height: 800px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            width: 90vw;
+            max-width: calc(90vh * (4 / 6));
+            aspect-ratio: 4 / 6;
         }
 
         .grid-cell {
             position: relative;
             cursor: pointer; 
+            padding: 20px
         }
 
         .circle {
@@ -60,8 +60,8 @@
             background-color: #ff6442;
             border-radius: 50%;
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 100%;
+            top: 00%;
             transform: translate(-50%, -50%);
             display: none;
             z-index: 10; 
@@ -82,43 +82,105 @@
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
+        
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
+        
         <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+
     </div>
 
     <script>
+        // 여기에 니가 쓸 조건부 무한 반복 소리 파일 경로를 딱 적어라
+        const SPECIAL_SOUND_FILE = './notisounds/50-1.mp3';
+
         const AUDIO_FILES = [
             './notisounds/instagram02.wav', 
-            './notisounds/galaxy02.wav', 
-            './notisounds/kakaotalk.wav', 
-            './notisounds/galaxy01.mp3', 
-            './notisounds/iphone2.mp3', 
-            './notisounds/iphone01.wav', 
-            './notisounds/discord.mp3', 
+            './notisounds/galaxy02.wav',    
+            './notisounds/kakaotalk.wav',   
+            './notisounds/galaxy01.mp3',    
+            './notisounds/iphone2.mp3',     
+            './notisounds/iphone01.wav',    
+            './notisounds/discord.mp3',     
             './notisounds/instagram01.wav', 
-            './notisounds/facebook.mp3'  
+            './notisounds/facebook.mp3',    
+            
+            './notisounds/instagram02.wav', 
+            './notisounds/galaxy02.wav',    
+            './notisounds/kakaotalk.wav',   
+            './notisounds/galaxy01.mp3',    
+            './notisounds/iphone2.mp3',     
+            './notisounds/iphone01.wav',    
+            './notisounds/discord.mp3',     
+            './notisounds/instagram01.wav', 
+            './notisounds/facebook.mp3',    
+            './notisounds/instagram02.wav', 
+            './notisounds/galaxy02.wav',    
+            './notisounds/kakaotalk.wav',   
+            './notisounds/galaxy01.mp3',    
+            './notisounds/iphone2.mp3',     
+            './notisounds/iphone01.wav'     
         ];
 
+        const TOTAL_ITEMS = AUDIO_FILES.length;
+
         let audioCtx;
-        let audioArrayBuffers = new Array(9).fill(null);
-        let audioBuffers = new Array(9).fill(null);
+        let audioArrayBuffers = new Array(TOTAL_ITEMS).fill(null);
+        let audioBuffers = new Array(TOTAL_ITEMS).fill(null);
+        
+        // 특수 소리 전용으로 쓸 변수들을 요래 맹글어 놨다
+        let specialAudioArrayBuffer = null;
+        let specialAudioBuffer = null;
+        let specialSource = null;
+        let specialGainNode = null;
+        let isSpecialPlaying = false;
         
         let isRunning = false;
         
-        let activeSources = Array.from({length: 9}, () => []); 
+        let activeSources = Array.from({length: TOTAL_ITEMS}, () => []); 
         
-        let activeIndices = [4]; 
+        let initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
+        let activeIndices = [initialIndex]; 
 
-        let circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
+        let circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 8, level: 1 }));
         
-        let timers = new Array(9).fill(null);
+        let timers = new Array(TOTAL_ITEMS).fill(null);
 
         const circles = document.querySelectorAll('.circle');
         const cells = document.querySelectorAll('.grid-cell');
         const startScreen = document.getElementById('start-screen');
+
+        // 특수 소리 파일을 배경에서 미리 땡겨오는 기다
+        fetch(SPECIAL_SOUND_FILE)
+            .then(response => response.arrayBuffer())
+            .then(buffer => {
+                specialAudioArrayBuffer = buffer;
+                if (audioCtx && !specialAudioBuffer) {
+                    audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
+                        specialAudioBuffer = decoded;
+                        setupSpecialSound();
+                    });
+                }
+            })
+            .catch(err => console.log("특수 소리 파일 경로 확인해 봐라."));
 
         AUDIO_FILES.forEach((path, i) => {
             fetch(path)
@@ -135,6 +197,49 @@
                     console.log(i + "번째 파일 경로 확인해 봐라.");
                 });
         });
+
+        // 특수 소리 재생 준비하고 무음으로 일단 틀어놓는 함수다
+        function setupSpecialSound() {
+            if (!audioCtx || !specialAudioBuffer || specialSource) return;
+            
+            specialSource = audioCtx.createBufferSource();
+            specialSource.buffer = specialAudioBuffer;
+            specialSource.loop = true; // 무한 반복되구로 잡았다
+
+            specialGainNode = audioCtx.createGain();
+            specialGainNode.gain.setValueAtTime(0, audioCtx.currentTime); // 처음엔 조용하게 꺼둔다
+
+            specialSource.connect(specialGainNode);
+            specialGainNode.connect(audioCtx.destination);
+
+            specialSource.start(0);
+        }
+
+        // 화면에 켜진 원이 6개 이상인지 검사해서 특수 소리 볼륨을 키우거나 줄이는 함수다
+        function updateSpecialSoundState() {
+            if (!specialGainNode || !audioCtx) return;
+            
+            // 화면에 찐짜로 떠 있는 원 개수를 싹 센데이
+            let visibleCount = Array.from(circles).filter(c => c.style.display === 'block').length;
+            
+            if (visibleCount >= 6) {
+                if (!isSpecialPlaying) {
+                    // 6개 이상이마 볼륨을 서서히 올려서 소리가 나구로 한다
+                    specialGainNode.gain.cancelScheduledValues(audioCtx.currentTime);
+                    specialGainNode.gain.setValueAtTime(specialGainNode.gain.value, audioCtx.currentTime);
+                    specialGainNode.gain.linearRampToValueAtTime(0.5, audioCtx.currentTime + 0.5);
+                    isSpecialPlaying = true;
+                }
+            } else {
+                if (isSpecialPlaying) {
+                    // 6개 미만이마 다시 볼륨을 0으로 스르륵 줄여서 일시중지 느낌을 준다
+                    specialGainNode.gain.cancelScheduledValues(audioCtx.currentTime);
+                    specialGainNode.gain.setValueAtTime(specialGainNode.gain.value, audioCtx.currentTime);
+                    specialGainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.5);
+                    isSpecialPlaying = false;
+                }
+            }
+        }
 
         function playSound(index, currentLevel) {
             if (!audioCtx) return;
@@ -174,9 +279,9 @@
             let delay;
             
             if (isFirstTime) {
-                delay = (index === 4) ? 1000 : Math.floor(Math.random() * 201 + 1100);
+                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 201 + 1100);
             } else {
-                delay = (index === 4) ? 1000 : Math.floor(Math.random() * 901 + 300);
+                delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 901 + 300);
             }
 
             timers[index] = setTimeout(() => {
@@ -199,6 +304,9 @@
             state.size *= 1.5;
             state.level++;
 
+            // 원이 하나 켜졌으니까 특수 소리 조건 검사를 해본데이
+            updateSpecialSoundState();
+
             scheduleNextCircleLoop(index, false);
         }
 
@@ -212,10 +320,13 @@
 
             circleStates[index] = { size: 8, level: 1 };
             circles[index].style.display = 'none';
+            
+            // 원이 꺼졌으니까 또 특수 소리 조건 검사를 한데이
+            updateSpecialSoundState();
 
-            if (activeIndices.length < 9) {
+            if (activeIndices.length < TOTAL_ITEMS) {
                 let available = [];
-                for (let i = 0; i < 9; i++) {
+                for (let i = 0; i < TOTAL_ITEMS; i++) {
                     if (!activeIndices.includes(i)) available.push(i);
                 }
                 
@@ -240,13 +351,23 @@
             clearAllTimers();
             
             isRunning = false;
-            activeIndices = [4]; 
-            circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
+            
+            initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
+            activeIndices = [initialIndex]; 
+            
+            circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 8, level: 1 }));
             
             activeSources.forEach(arr => {
                 arr.forEach(source => { try { source.stop(); } catch(e) {} });
             });
-            activeSources = Array.from({length: 9}, () => []);
+            activeSources = Array.from({length: TOTAL_ITEMS}, () => []);
+            
+            if (specialSource) {
+                try { specialSource.stop(); } catch(e) {}
+                specialSource = null;
+                specialGainNode = null;
+                isSpecialPlaying = false;
+            }
             
             if (audioCtx) {
                 audioCtx.close();
@@ -307,6 +428,16 @@
             
             if (audioCtx.state === 'suspended') {
                 audioCtx.resume();
+            }
+            
+            // 특수 소리 준비 안 됐으마 여기서 맹글어준다
+            if (specialAudioArrayBuffer && !specialAudioBuffer) {
+                audioCtx.decodeAudioData(specialAudioArrayBuffer.slice(0), (decoded) => {
+                    specialAudioBuffer = decoded;
+                    setupSpecialSound();
+                });
+            } else if (specialAudioBuffer) {
+                setupSpecialSound();
             }
             
             audioArrayBuffers.forEach((buffer, i) => {
