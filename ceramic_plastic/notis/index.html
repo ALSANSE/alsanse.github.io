@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 화면 확대 못 하구로 user-scalable=no, maximum-scale=1.0을 추가했데이 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>오늘 하루동안 보지 않기</title>
     <style>
         body {
@@ -15,6 +16,11 @@
             overflow: hidden;
             color: white;
             font-family: sans-serif;
+            /* 더블 탭 확대랑 스크롤 등 기본 터치 동작을 아예 다 막아삐는 기다 */
+            touch-action: none;
+            /* 연타할 때 글씨나 요소가 파랗게 선택되는 것도 보기 싫으니까 다 막아놨데이 */
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         #start-screen {
@@ -46,7 +52,7 @@
             width: 90vw;
             max-width: calc(90vh * (4 / 6));
             aspect-ratio: 4 / 6;
-            padding: 10px;
+            padding: 20px;
         }
 
         .grid-cell {
@@ -55,7 +61,6 @@
         }
 
         .circle {
-            /* 기초 크기를 13px로 키웠데이 */
             width: 13px;
             height: 13px;
             background-color: #ff6442;
@@ -110,7 +115,6 @@
     </div>
 
     <script>
-        // 니가 준 경로로 특수 사운드 파일 위치를 바꿨데이
         const SPECIAL_SOUND_FILE = './notisounds/50-1.mp3';
 
         const AUDIO_FILES = [
@@ -160,7 +164,6 @@
         let initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
         let activeIndices = [initialIndex]; 
 
-        // 기초 크기 상태값도 13으로 다 고쳐놨데이
         let circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 13, level: 1 }));
         
         let timers = new Array(TOTAL_ITEMS).fill(null);
@@ -297,7 +300,6 @@
 
             playSound(index, state.level);
 
-            // 커지는 배율을 1.5에서 1.618로 바꿨데이
             state.size *= 1.618;
             state.level++;
 
@@ -314,7 +316,6 @@
             });
             activeSources[index] = [];
 
-            // 다시 켤 때도 13부터 시작하구로 고쳤다
             circleStates[index] = { size: 13, level: 1 };
             circles[index].style.display = 'none';
             
@@ -351,7 +352,6 @@
             initialIndex = Math.floor(Math.random() * TOTAL_ITEMS);
             activeIndices = [initialIndex]; 
             
-            // 싹 다 초기화할 때도 13으로 세팅된데이
             circleStates = Array.from({length: TOTAL_ITEMS}, () => ({ size: 13, level: 1 }));
             
             activeSources.forEach(arr => {
