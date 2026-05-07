@@ -29,13 +29,9 @@
             align-items: flex-start;
             flex-direction: column;
             width: 233px;
-
-
-
         }
 
         #notice{
-
             background-color: #f1f3f9;
             color: #313339;
             width: 233px;
@@ -50,10 +46,9 @@
         .checkbox-label {
             display: flex;
             align-items: center;
-
             gap: 10px;
-                        font-size: 16px;
-                        margin: 0;
+            font-size: 16px;
+            margin: 0;
             cursor: pointer;
         }
 
@@ -133,10 +128,27 @@
         
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
-
     </div>
 
     <script>
+        // 아이폰 사파리에서 더블탭 확대 억지로 막는 코드데이
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            let now = (new Date()).getTime();
+            // 0.3초 안에 연달아 터치하마 동작 씹어삔다
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+
+        // 손가락 두 개로 꼬집어서 확대하는 것도 덤으로 막아놨데이
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
         const SPECIAL_SOUND_FILE = './notisounds/50-1.mp3';
 
         const AUDIO_FILES = [
@@ -172,7 +184,6 @@
         let audioCtx;
         let audioBuffers = new Array(TOTAL_ITEMS).fill(null);
         
-        // 최적화 1: 중복된 주소는 빼고 딱 필요한 파일만 한 번씩 받구로 Set을 썼데이
         const uniqueUrls = [...new Set(AUDIO_FILES)];
         let urlToArrayBuffer = {};
         
@@ -199,7 +210,6 @@
         const gridContainer = document.getElementById('grid-container');
         const hideCheckbox = document.getElementById('hide-today-checkbox');
 
-        // 특수 사운드 땡겨오는 부분이다
         fetch(SPECIAL_SOUND_FILE)
             .then(response => response.arrayBuffer())
             .then(buffer => {
@@ -213,7 +223,6 @@
             })
             .catch(err => console.log("특수 소리 파일 경로 확인해 봐라."));
 
-        // 최적화된 다운로드 방식이다, 이제 똑같은 파일은 여러 번 안 받는데이
         uniqueUrls.forEach(url => {
             fetch(url)
                 .then(response => response.arrayBuffer())
@@ -234,7 +243,6 @@
                 });
         });
 
-        // HTML 태그에다가 몇 번째 칸인지 인덱스 번호를 이름표처럼 달아놨데이
         cells.forEach((cell, index) => {
             cell.dataset.index = index;
         });
@@ -415,7 +423,6 @@
             hideCheckbox.checked = false;
         }
 
-        // 최적화 2: 48개씩 달리던 이벤트 감지기를 바깥 판때기에 하나만 딱 달았데이
         gridContainer.addEventListener('pointerdown', (e) => {
             if (!isRunning) return;
             
@@ -429,7 +436,6 @@
             }
         });
 
-        // 엉뚱한 데 눌러도 켜지는 버그 잡으려고 체크박스 상태 변할 때만 시작하게 바꿨데이
         hideCheckbox.addEventListener('change', () => {
             if (!isRunning) {
                 setTimeout(() => {
@@ -458,7 +464,6 @@
                 setupSpecialSound();
             }
             
-            // 캐시해둔 오디오 파일들을 다 풀어주는 기다
             AUDIO_FILES.forEach((url, i) => {
                 const buffer = urlToArrayBuffer[url];
                 if (buffer && !audioBuffers[i]) {
