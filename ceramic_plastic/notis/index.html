@@ -53,8 +53,7 @@
         }
 
         .grid-cell {
-            position: relative;
-            cursor: pointer; 
+            position: relative; 
         }
 
         .circle {
@@ -69,6 +68,7 @@
             display: none;
             z-index: 10; 
             cursor: pointer;
+            box-shadow: 0px 0px 21px rgba(128,0,0,0.5);
         }
     </style>
 </head>
@@ -108,7 +108,8 @@
         
         <div class="grid-cell"><div class="circle"></div></div>
         <div class="grid-cell"><div class="circle"></div></div>
-
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
     </div>
 
     <script>
@@ -127,15 +128,15 @@
             
             './notisounds/instagram02.wav', 
             './notisounds/galaxy02.wav',    
-            './notisounds/x.wav',   
+            './notisounds/kakaotalk.wav',   
             './notisounds/galaxy01.mp3',    
             './notisounds/iphone2.mp3',     
-            './notisounds/x.wav',    
+            './notisounds/iphone01.wav',    
             './notisounds/discord.mp3',     
             './notisounds/instagram01.wav', 
             './notisounds/facebook.mp3',    
             './notisounds/instagram02.wav', 
-            './notisounds/x.wav',    
+            './notisounds/galaxy02.wav',    
             './notisounds/kakaotalk.wav',   
             './notisounds/galaxy01.mp3',    
             './notisounds/iphone2.mp3',     
@@ -145,8 +146,11 @@
         const TOTAL_ITEMS = AUDIO_FILES.length;
 
         let audioCtx;
-        let audioArrayBuffers = new Array(TOTAL_ITEMS).fill(null);
         let audioBuffers = new Array(TOTAL_ITEMS).fill(null);
+        
+        // 최적화 1: 중복된 주소는 빼고 딱 필요한 파일만 한 번씩 받구로 Set을 썼데이
+        const uniqueUrls = [...new Set(AUDIO_FILES)];
+        let urlToArrayBuffer = {};
         
         let specialAudioArrayBuffer = null;
         let specialAudioBuffer = null;
@@ -168,7 +172,10 @@
         const circles = document.querySelectorAll('.circle');
         const cells = document.querySelectorAll('.grid-cell');
         const startScreen = document.getElementById('start-screen');
+        const gridContainer = document.getElementById('grid-container');
+        const hideCheckbox = document.getElementById('hide-today-checkbox');
 
+        // 특수 사운드 땡겨오는 부분이다
         fetch(SPECIAL_SOUND_FILE)
             .then(response => response.arrayBuffer())
             .then(buffer => {
@@ -182,20 +189,30 @@
             })
             .catch(err => console.log("특수 소리 파일 경로 확인해 봐라."));
 
-        AUDIO_FILES.forEach((path, i) => {
-            fetch(path)
+        // 최적화된 다운로드 방식이다, 이제 똑같은 파일은 여러 번 안 받는데이
+        uniqueUrls.forEach(url => {
+            fetch(url)
                 .then(response => response.arrayBuffer())
                 .then(buffer => {
-                    audioArrayBuffers[i] = buffer;
-                    if (audioCtx && !audioBuffers[i]) {
-                        audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
-                            audioBuffers[i] = decoded;
+                    urlToArrayBuffer[url] = buffer;
+                    if (audioCtx) {
+                        AUDIO_FILES.forEach((path, i) => {
+                            if (path === url && !audioBuffers[i]) {
+                                audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
+                                    audioBuffers[i] = decoded;
+                                });
+                            }
                         });
                     }
                 })
                 .catch(err => {
-                    console.log(i + "번째 파일 경로 확인해 봐라.");
+                    console.log("파일 경로 확인해 봐라: " + url);
                 });
+        });
+
+        // HTML 태그에다가 몇 번째 칸인지 인덱스 번호를 이름표처럼 달아놨데이
+        cells.forEach((cell, index) => {
+            cell.dataset.index = index;
         });
 
         function setupSpecialSound() {
@@ -275,10 +292,8 @@
             let delay;
             
             if (isFirstTime) {
-                // 시작 딜레이를 1300에서 2400 사이로 바꿨데이
                 delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 1101 + 1300);
             } else {
-                // 반복 주기를 600에서 1800 사이로 바꿨데이
                 delay = (index === initialIndex) ? 1000 : Math.floor(Math.random() * 1201 + 600);
             }
 
@@ -373,45 +388,29 @@
             circles.forEach(c => c.style.display = 'none');
             startScreen.style.display = 'block';
             
-            document.getElementById('hide-today-checkbox').checked = false;
+            hideCheckbox.checked = false;
         }
 
-        cells.forEach((cell, index) => {
-            cell.addEventListener('click', (e) => {
-                if (!isRunning) return;
-                
-                e.stopPropagation(); 
-                
-                if (activeIndices.includes(index)) {
-                    resetSingle(index);
-                }
-            });
-        });
-
-        circles.forEach((circle, index) => {
-            circle.addEventListener('click', (e) => {
-                if (!isRunning) return;
-                
-                e.stopPropagation(); 
-                
-                if (activeIndices.includes(index)) {
-                    resetSingle(index);
-                }
-            });
-        });
-
-        document.body.addEventListener('click', (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') {
-                if (!isRunning) {
-                    setTimeout(() => {
-                        startApp();
-                    }, 300);
-                }
-                return;
-            }
+        // 최적화 2: 48개씩 달리던 이벤트 감지기를 바깥 판때기에 하나만 딱 달았데이
+        gridContainer.addEventListener('pointerdown', (e) => {
+            if (!isRunning) return;
             
+            const cell = e.target.closest('.grid-cell');
+            if (cell) {
+                e.stopPropagation(); 
+                const index = parseInt(cell.dataset.index, 10);
+                if (activeIndices.includes(index)) {
+                    resetSingle(index);
+                }
+            }
+        });
+
+        // 엉뚱한 데 눌러도 켜지는 버그 잡으려고 체크박스 상태 변할 때만 시작하게 바꿨데이
+        hideCheckbox.addEventListener('change', () => {
             if (!isRunning) {
-                startApp();
+                setTimeout(() => {
+                    startApp();
+                }, 300);
             }
         });
         
@@ -435,7 +434,9 @@
                 setupSpecialSound();
             }
             
-            audioArrayBuffers.forEach((buffer, i) => {
+            // 캐시해둔 오디오 파일들을 다 풀어주는 기다
+            AUDIO_FILES.forEach((url, i) => {
+                const buffer = urlToArrayBuffer[url];
                 if (buffer && !audioBuffers[i]) {
                     audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
                         audioBuffers[i] = decoded;
