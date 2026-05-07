@@ -51,6 +51,7 @@
 
         .grid-cell {
             position: relative;
+            cursor: pointer; /* 누를 수 있다는 걸 마우스 모양으로 보여준데이 */
         }
 
         .circle {
@@ -104,9 +105,10 @@
         let audioBuffers = new Array(9).fill(null);
         
         let isRunning = false;
-        let activeSources = []; 
         
-        let currentStage = 0; 
+        // 9개 원이 각자 자기 소리를 따로 담아둘 수 있게 배열을 9개로 쪼갰데이
+        let activeSources = Array.from({length: 9}, () => []); 
+        
         let activeIndices = [4]; 
 
         let circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
@@ -114,6 +116,7 @@
         let timers = new Array(9).fill(null);
 
         const circles = document.querySelectorAll('.circle');
+        const cells = document.querySelectorAll('.grid-cell');
         const startScreen = document.getElementById('start-screen');
 
         AUDIO_FILES.forEach((path, i) => {
@@ -151,10 +154,12 @@
                 gainNode.connect(audioCtx.destination);
 
                 source.start(0);
-                activeSources.push(source);
+                
+                // 해당 원의 전용 소리통에만 집어넣는 기다
+                activeSources[index].push(source);
 
                 source.onended = () => {
-                    activeSources = activeSources.filter(s => s !== source);
+                    activeSources[index] = activeSources[index].filter(s => s !== source);
                 };
             }
         }
@@ -197,21 +202,36 @@
             scheduleNextCircleLoop(index, false);
         }
 
-        function advanceStage() {
-            const targetCounts = [1, 2, 5, 9];
-            
-            if (currentStage < 3) {
-                currentStage++;
-            }
-            
-            const target = targetCounts[currentStage];
+        // 특정 원 하나만 콕 집어가 초기화하고 새 원 켜는 함수다
+        function resetSingle(index) {
+            if (timers[index]) clearTimeout(timers[index]);
 
-            while(activeIndices.length < target) {
-                let rand = Math.floor(Math.random() * 9);
-                if (!activeIndices.includes(rand)) {
-                    activeIndices.push(rand);
+            // 그 놈아 전용 소리통만 싹 다 뒤져서 소리 꺼삔다
+            activeSources[index].forEach(source => {
+                try { source.stop(); } catch(e) {}
+            });
+            activeSources[index] = [];
+
+            // 크기랑 레벨 초기화하고 화면에서 일단 숨긴다
+            circleStates[index] = { size: 8, level: 1 };
+            circles[index].style.display = 'none';
+
+            // 만약에 9개가 아직 다 안 켜졌으마 남은 자리 중에 하나 랜덤으로 뽑아가 켠데이
+            if (activeIndices.length < 9) {
+                let available = [];
+                for (let i = 0; i < 9; i++) {
+                    if (!activeIndices.includes(i)) available.push(i);
+                }
+                
+                if (available.length > 0) {
+                    let randIdx = available[Math.floor(Math.random() * available.length)];
+                    activeIndices.push(randIdx);
+                    scheduleNextCircleLoop(randIdx, true);
                 }
             }
+
+            // 초기화된 놈아도 처음 딜레이부터 다시 시작하구로 걸어준다
+            scheduleNextCircleLoop(index, true);
         }
 
         function clearAllTimers() {
@@ -221,37 +241,18 @@
             timers.fill(null);
         }
 
-        function reset() {
-            clearAllTimers();
-            
-            circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
-            
-            activeSources.forEach(source => {
-                try { source.stop(); } catch(e) {}
-            });
-            activeSources = []; 
-            
-            advanceStage();
-            
-            circles.forEach(c => c.style.display = 'none');
-
-            activeIndices.forEach(index => {
-                scheduleNextCircleLoop(index, true);
-            });
-        }
-
         function hardReset() {
             clearAllTimers();
             
             isRunning = false;
-            currentStage = 0;
             activeIndices = [4]; 
             circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
             
-            activeSources.forEach(source => {
-                try { source.stop(); } catch(e) {}
+            // 9개 소리통 싹 다 돌아가면서 끄는 기다
+            activeSources.forEach(arr => {
+                arr.forEach(source => { try { source.stop(); } catch(e) {} });
             });
-            activeSources = [];
+            activeSources = Array.from({length: 9}, () => []);
             
             if (audioCtx) {
                 audioCtx.close();
@@ -264,6 +265,22 @@
             document.getElementById('hide-today-checkbox').checked = false;
         }
 
+        // 각각의 칸(셀)에다가 클릭 감지기를 달아놨다
+        cells.forEach((cell, index) => {
+            cell.addEventListener('click', (e) => {
+                if (!isRunning) return;
+                
+                // 이거 안 적으마 밑에 있는 전체 화면 클릭까지 같이 반응해삐서 에러 난데이
+                e.stopPropagation(); 
+                
+                // 이미 켜진 놈아를 눌렀을 때만 작동하게 막아놨다
+                if (activeIndices.includes(index)) {
+                    resetSingle(index);
+                }
+            });
+        });
+
+        // 이건 처음에 시작할 때만 반응하구로 역할이 확 쪼그라들었다
         document.body.addEventListener('click', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') {
                 if (!isRunning) {
@@ -276,9 +293,8 @@
             
             if (!isRunning) {
                 startApp();
-            } else {
-                reset();
             }
+            // 전체 초기화하던 코드는 없애삤다
         });
         
         function startApp() {
@@ -288,7 +304,6 @@
             
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             
-            // 만약에 브라우저가 소리 내는 걸 일시정지 시켜놨으마 다시 풀게 하는기다
             if (audioCtx.state === 'suspended') {
                 audioCtx.resume();
             }
