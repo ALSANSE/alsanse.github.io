@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커지는 원과 소리</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #start-screen {
+            position: absolute;
+            z-index: 10;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        #grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 90vw;
+            height: 90vh;
+            max-width: 1000px;
+            max-height: 1000px;
+        }
+
+        .grid-cell {
+            position: relative;
+        }
+
+        .circle {
+            width: 8px;
+            height: 8px;
+            background-color: #ff6442;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="start-screen">
+        <label class="checkbox-label">
+            <input type="checkbox" id="hide-today-checkbox">
+            오늘 하루동안 보지 않기
+        </label>
+    </div>
+    
+    <div id="grid-container">
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+        <div class="grid-cell"><div class="circle"></div></div>
+    </div>
+
+    <script>
+        const AUDIO_FILES = [
+            './notisounds/instagram02.wav', 
+            './notisounds/galaxy02.wav', 
+            './notisounds/kakaotalk.wav', 
+            './notisounds/galaxy01.mp3', 
+            './notisounds/iphone2.mp3', 
+            './notisounds/iphone01.wav', 
+            './notisounds/discord.mp3', 
+            './notisounds/instagram01.wav', 
+            './notisounds/facebook.mp3'  
+        ];
+
+        let audioCtx;
+        let audioArrayBuffers = new Array(9).fill(null);
+        let audioBuffers = new Array(9).fill(null);
+        
+        let isRunning = false;
+        let activeSources = []; 
+        
+        let currentStage = 0; 
+        let activeIndices = [4]; 
+
+        let circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
+        
+        let timers = new Array(9).fill(null);
+
+        const circles = document.querySelectorAll('.circle');
+        const startScreen = document.getElementById('start-screen');
+
+        AUDIO_FILES.forEach((path, i) => {
+            fetch(path)
+                .then(response => response.arrayBuffer())
+                .then(buffer => {
+                    audioArrayBuffers[i] = buffer;
+                    if (audioCtx && !audioBuffers[i]) {
+                        audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
+                            audioBuffers[i] = decoded;
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.log(i + "번째 파일 경로 확인해 봐라.");
+                });
+        });
+
+        function playSound(index, currentLevel) {
+            if (!audioCtx) return;
+            const buffer = audioBuffers[index];
+            if (!buffer) return;
+
+            for (let i = 0; i < currentLevel; i++) {
+                const source = audioCtx.createBufferSource();
+                source.buffer = buffer;
+
+                const gainNode = audioCtx.createGain();
+                
+                gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.5, audioCtx.currentTime + 0.02);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 1.5);
+
+                source.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                source.start(0);
+                activeSources.push(source);
+
+                source.onended = () => {
+                    activeSources = activeSources.filter(s => s !== source);
+                };
+            }
+        }
+
+        function scheduleNextCircleLoop(index, isFirstTime) {
+            if (!isRunning) return;
+
+            if (timers[index]) {
+                clearTimeout(timers[index]);
+            }
+
+            let delay;
+            
+            if (isFirstTime) {
+                delay = (index === 4) ? 1000 : Math.floor(Math.random() * 201 + 1100);
+            } else {
+                delay = (index === 4) ? 1000 : Math.floor(Math.random() * 901 + 300);
+            }
+
+            timers[index] = setTimeout(() => {
+                executeCircleAction(index);
+            }, delay);
+        }
+
+        function executeCircleAction(index) {
+            if (!isRunning) return;
+
+            const circle = circles[index];
+            const state = circleStates[index];
+
+            circle.style.display = 'block';
+            circle.style.width = state.size + 'px';
+            circle.style.height = state.size + 'px';
+
+            playSound(index, state.level);
+
+            state.size *= 1.5;
+            state.level++;
+
+            scheduleNextCircleLoop(index, false);
+        }
+
+        function advanceStage() {
+            const targetCounts = [1, 2, 5, 9];
+            
+            if (currentStage < 3) {
+                currentStage++;
+            }
+            
+            const target = targetCounts[currentStage];
+
+            while(activeIndices.length < target) {
+                let rand = Math.floor(Math.random() * 9);
+                if (!activeIndices.includes(rand)) {
+                    activeIndices.push(rand);
+                }
+            }
+        }
+
+        function clearAllTimers() {
+            timers.forEach(t => {
+                if (t) clearTimeout(t);
+            });
+            timers.fill(null);
+        }
+
+        function reset() {
+            clearAllTimers();
+            
+            circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
+            
+            activeSources.forEach(source => {
+                try { source.stop(); } catch(e) {}
+            });
+            activeSources = []; 
+            
+            advanceStage();
+            
+            circles.forEach(c => c.style.display = 'none');
+
+            activeIndices.forEach(index => {
+                scheduleNextCircleLoop(index, true);
+            });
+        }
+
+        function hardReset() {
+            clearAllTimers();
+            
+            isRunning = false;
+            currentStage = 0;
+            activeIndices = [4]; 
+            circleStates = Array.from({length: 9}, () => ({ size: 8, level: 1 }));
+            
+            activeSources.forEach(source => {
+                try { source.stop(); } catch(e) {}
+            });
+            activeSources = [];
+            
+            if (audioCtx) {
+                audioCtx.close();
+                audioCtx = null;
+            }
+            
+            circles.forEach(c => c.style.display = 'none');
+            startScreen.style.display = 'block';
+            
+            document.getElementById('hide-today-checkbox').checked = false;
+        }
+
+        document.body.addEventListener('click', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') {
+                if (!isRunning) {
+                    setTimeout(() => {
+                        startApp();
+                    }, 300);
+                }
+                return;
+            }
+            
+            if (!isRunning) {
+                startApp();
+            } else {
+                reset();
+            }
+        });
+        
+        function startApp() {
+            if (isRunning) return;
+            isRunning = true;
+            startScreen.style.display = 'none';
+            
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            
+            // 만약에 브라우저가 소리 내는 걸 일시정지 시켜놨으마 다시 풀게 하는기다
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            
+            audioArrayBuffers.forEach((buffer, i) => {
+                if (buffer && !audioBuffers[i]) {
+                    audioCtx.decodeAudioData(buffer.slice(0), (decoded) => {
+                        audioBuffers[i] = decoded;
+                    });
+                }
+            });
+
+            activeIndices.forEach(index => {
+                scheduleNextCircleLoop(index, true);
+            });
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hardReset();
+            }
+        });
+    </script>
+</body>
+</html>
