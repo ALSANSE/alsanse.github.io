@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SVG QR코드 생성기</title>
   <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script>
+    if (typeof QRCode === 'undefined') {
+      document.write('<script src="https://unpkg.com/qrcode@1.5.3/build/qrcode.min.js"><\/script>');
+    }
+  </script>
   <style>
     body {
       font-family: sans-serif;
@@ -125,7 +130,14 @@
     function generateQR() {
       const url = urlInput.value.trim();
 
+      if (typeof QRCode === 'undefined') {
+        errorMsg.textContent = 'QR 라이브러리를 아예 못 불러왔습니데이. 광고 차단기를 끄거나 네트워크를 확인하소.';
+        errorMsg.style.display = 'block';
+        return;
+      }
+
       if (!url.startsWith('https://') || url === 'https://') {
+        errorMsg.textContent = '주소는 무조건 https:// 로 시작해야 됩니데이.';
         errorMsg.style.display = 'block';
         qrContainer.innerHTML = '<span style="color: #888;">올바른 주소를 입력하소</span>';
         downloadBtn.disabled = true;
@@ -142,7 +154,9 @@
         width: 200
       }, function (err, svg) {
         if (err) {
-          qrContainer.innerHTML = '<span style="color: #e53e3e;">생성하다 에러 났삤다.</span>';
+          errorMsg.textContent = '생성하다 에러 났삤다: ' + err.message;
+          errorMsg.style.display = 'block';
+          qrContainer.innerHTML = '<span style="color: #e53e3e;">생성 실패</span>';
           downloadBtn.disabled = true;
           return;
         }
