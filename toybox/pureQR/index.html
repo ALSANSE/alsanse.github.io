@@ -5,12 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SVG QR코드 생성기</title>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-  <script>
-    if (typeof QRCode === 'undefined') {
-      document.write('<script src="https://unpkg.com/qrcode@1.5.3/build/qrcode.min.js"><\/script>');
-    }
-  </script>
   <style>
     body {
       font-family: sans-serif;
@@ -101,16 +95,23 @@
       display: none;
       text-align: left;
     }
+
+    .status-msg {
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <h2>SVG QR코드 생성기</h2>
+    <div id="status-msg" class="status-msg">엔진 준비 중입니데이...</div>
     <input type="text" id="url-input" placeholder="https://example.com" value="https://" />
     <div id="error-msg" class="error-msg">주소는 무조건 https:// 로 시작해야 됩니데이.</div>
     <div class="btn-group">
-      <button id="generate-btn">QR코드 생성</button>
+      <button id="generate-btn" disabled>QR코드 생성</button>
       <button id="download-btn" disabled>SVG 다운로드</button>
     </div>
     <div id="qr-container">
@@ -124,14 +125,42 @@
     const downloadBtn = document.getElementById('download-btn');
     const qrContainer = document.getElementById('qr-container');
     const errorMsg = document.getElementById('error-msg');
+    const statusMsg = document.getElementById('status-msg');
 
     let currentSvgString = '';
+
+    const cdns = [
+      'https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js',
+      'https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js',
+      'https://unpkg.com/qrcode-generator@1.4.4/qrcode.min.js'
+    ];
+
+    function initLibrary(index) {
+      if (index >= cdns.length) {
+        statusMsg.textContent = '라이브러리 로드 실패. 네트워크를 확인하소.';
+        statusMsg.style.color = '#e53e3e';
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = cdns[index];
+      script.onload = function () {
+        statusMsg.style.display = 'none';
+        generateBtn.disabled = false;
+      };
+      script.onerror = function () {
+        initLibrary(index + 1);
+      };
+      document.head.appendChild(script);
+    }
+
+    initLibrary(0);
 
     function generateQR() {
       const url = urlInput.value.trim();
 
-      if (typeof QRCode === 'undefined') {
-        errorMsg.textContent = 'QR 라이브러리를 아예 못 불러왔습니데이. 광고 차단기를 끄거나 네트워크를 확인하소.';
+      if (typeof qrcode === 'undefined') {
+        errorMsg.textContent = '엔진을 아직 다 못 불러왔습니데이. 쪼매만 기다리소.';
         errorMsg.style.display = 'block';
         return;
       }
@@ -147,23 +176,20 @@
 
       errorMsg.style.display = 'none';
 
-      QRCode.toString(url, {
-        type: 'svg',
-        errorCorrectionLevel: 'M',
-        margin: 2,
-        width: 200
-      }, function (err, svg) {
-        if (err) {
-          errorMsg.textContent = '생성하다 에러 났삤다: ' + err.message;
-          errorMsg.style.display = 'block';
-          qrContainer.innerHTML = '<span style="color: #e53e3e;">생성 실패</span>';
-          downloadBtn.disabled = true;
-          return;
-        }
+      try {
+        const qr = qrcode(0, 'M');
+        qr.addData(encodeURI(url));
+        qr.make();
+        const svg = qr.createSvgTag(6, 2);
         currentSvgString = svg;
         qrContainer.innerHTML = svg;
         downloadBtn.disabled = false;
-      });
+      } catch (err) {
+        errorMsg.textContent = '생성하다 에러 났삤다: ' + err.message;
+        errorMsg.style.display = 'block';
+        qrContainer.innerHTML = '<span style="color: #e53e3e;">생성 실패</span>';
+        downloadBtn.disabled = true;
+      }
     }
 
     function downloadSVG() {
@@ -184,7 +210,7 @@
     downloadBtn.addEventListener('click', downloadSVG);
 
     urlInput.addEventListener('keypress', function (e) {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' && !generateBtn.disabled) {
         generateQR();
       }
     });
