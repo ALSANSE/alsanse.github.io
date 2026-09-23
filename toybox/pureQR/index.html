@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG QR코드 생성기</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f6f8;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #0066ff;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #0052cc;
+    }
+
+    button:disabled {
+      background-color: #d1d5db;
+      cursor: not-allowed;
+    }
+
+    #qr-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 220px;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fafafa;
+    }
+
+    #qr-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .error-msg {
+      color: #e53e3e;
+      font-size: 13px;
+      margin-bottom: 8px;
+      display: none;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>SVG QR코드 생성기</h2>
+    <input type="text" id="url-input" placeholder="https://example.com" value="https://" />
+    <div id="error-msg" class="error-msg">주소는 무조건 https:// 로 시작해야 됩니데이.</div>
+    <div class="btn-group">
+      <button id="generate-btn">QR코드 생성</button>
+      <button id="download-btn" disabled>SVG 다운로드</button>
+    </div>
+    <div id="qr-container">
+      <span style="color: #888;">주소 넣고 생성 버튼 누르소</span>
+    </div>
+  </div>
+
+  <script>
+    const urlInput = document.getElementById('url-input');
+    const generateBtn = document.getElementById('generate-btn');
+    const downloadBtn = document.getElementById('download-btn');
+    const qrContainer = document.getElementById('qr-container');
+    const errorMsg = document.getElementById('error-msg');
+
+    let currentSvgString = '';
+
+    function generateQR() {
+      const url = urlInput.value.trim();
+
+      if (!url.startsWith('https://') || url === 'https://') {
+        errorMsg.style.display = 'block';
+        qrContainer.innerHTML = '<span style="color: #888;">올바른 주소를 입력하소</span>';
+        downloadBtn.disabled = true;
+        currentSvgString = '';
+        return;
+      }
+
+      errorMsg.style.display = 'none';
+
+      QRCode.toString(url, {
+        type: 'svg',
+        errorCorrectionLevel: 'M',
+        margin: 2,
+        width: 200
+      }, function (err, svg) {
+        if (err) {
+          qrContainer.innerHTML = '<span style="color: #e53e3e;">생성하다 에러 났삤다.</span>';
+          downloadBtn.disabled = true;
+          return;
+        }
+        currentSvgString = svg;
+        qrContainer.innerHTML = svg;
+        downloadBtn.disabled = false;
+      });
+    }
+
+    function downloadSVG() {
+      if (!currentSvgString) return;
+
+      const blob = new Blob([currentSvgString], { type: 'image/svg+xml;charset=utf-8' });
+      const blobUrl = URL.createObjectURL(blob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = blobUrl;
+      downloadLink.download = 'qrcode.svg';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      URL.revokeObjectURL(blobUrl);
+    }
+
+    generateBtn.addEventListener('click', generateQR);
+    downloadBtn.addEventListener('click', downloadSVG);
+
+    urlInput.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        generateQR();
+      }
+    });
+  </script>
+</body>
+
+</html>
